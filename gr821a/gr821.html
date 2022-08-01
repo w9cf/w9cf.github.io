@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE> GR821A </TITLE>
+</HEAD>
+<BODY>
+<center>
+<h1>
+Convert GR821A readings to admittance/impedance
+</h1>
+Kevin Schmidt, <a href="mailto:w9cf@ptolemy.la.asu.edu">W9CF</a>
+</center>
+
+<p>
+This applet converts the dial readings of a General Radio GR821A
+Twin-T impedance measuring circuit to admittance and impedance
+values incorporating residual corrections.
+</p>
+<p>
+The input fields are
+the measurement frequency in MHz; the frequency scale
+of the conductance dial (either 1, 3, 10, or 30 MHz) used; the initial
+value of the capacitor; the final value of the capacitor, and the
+value read directly off the conductivity dial. The applet uses the
+default values from GR821A manual for the residual parameters. These
+can be changed by clicking Setup.
+<hr>
+<APPLET CODE="Gr821applet.class" WIDTH=800 HEIGHT=200 archive=gr821.jar>
+Your browser can't run Java Applets:
+</APPLET>
+<hr>
+<p>
+The <a href="gr821a.tar.gz">source and compiled class</a>
+files are available under the <a href="copying">GNU general
+public license</a>.
+</p>
+<a href="http://fermi.la.asu.edu/w9cf/index.html">w9cf home</a>
+</BODY>
+</HTML>

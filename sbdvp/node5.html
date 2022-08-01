@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>4 Sampling rate selection</TITLE>
+<META NAME="description" CONTENT="4 Sampling rate selection">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html95"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html92"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html86"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html94"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html96"
+ HREF="node6.html">5 Push to Talk</A>
+<B> Up:</B> <A NAME="tex2html93"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html87"
+ HREF="node4.html">3 Program Operation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00050000000000000000">
+4 Sampling rate selection</A>
+</H1>
+<P>
+The default sampling rate of 12048 Hz is a compromise between
+sampling quality and speed. Higher rates with only 
+8 bit samples don't increase the quality substantially since the signal
+to noise ratio is not very high. Lower rates will give lower 
+quality audio, but the recordings will take up less memory. 
+If you want to change the sampling rate, start SBDVP with the  
+command
+<BR>
+SBDVP -rnnnn
+<BR>
+where nnnn is the sampling integer rate in Hertz. For example,
+<BR>
+SBDVP -r8000
+<BR>
+will set the sampling rate to 8000 Hz. If you record at one
+setting and play back at another you get the usual frequency 
+and speed shift. This will be most useful to annoy your friends 
+during multiops. The -r option can be used with the -p or -s options
+for push to talk operation.
+<P>
+<BR><HR>
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

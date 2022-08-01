@@ -1,0 +1,85 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 97.8.22)  12 JUN 1998 18:21
+**./images.tex
+(images.tex
+LaTeX2e <1996/12/01> patch level 1
+Babel <v3.6h> and hyphenation patterns for american, german, loaded.
+
+(/usr/local/teTeX/texmf/tex/latex/base/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/local/teTeX/texmf/tex/latex/base/size12.clo
+File: size12.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/teTeX/texmf/tex/latex/latex2html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=632.5pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00002pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=39.0pt
+latex2htmlLength evensidemargin=39.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 86.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 86.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 86.
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 86.
+
+l2hSize :tex2html_wrap_inline269:7.75pt::0.0pt::0.0pt.
+[1
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 467 strings out of 10906
+ 5009 string characters out of 72145
+ 47338 words of memory out of 262141
+ 3407 multiletter control sequences out of 9500
+ 6676 words of font info for 24 fonts, out of 150000 for 255
+ 14 hyphenation exceptions out of 607
+ 22i,4n,21p,583b,207s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on images.dvi (1 page, 192 bytes).

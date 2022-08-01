@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>14 Program internal operation</TITLE>
+<META NAME="description" CONTENT="14 Program internal operation">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html205"
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html202"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html196"
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html204"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html206"
+ HREF="node16.html">15 Sound Quality</A>
+<B> Up:</B> <A NAME="tex2html203"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html197"
+ HREF="node14.html">13 Memory management</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION000150000000000000000">
+14 Program internal operation</A>
+</H1>
+<P>
+When the DVP is enabled in TR, it looks to see if DVPTSR is loaded
+by examining the 0x60 interrupt address to see if the label
+DVPTSR00 is in the eight bytes before the interrupt driver. SBDVP
+also sets itself up this way so that TR will know that the DVP
+interrupt is available. TR then queries the DVP driver to find
+a shared memory area where it transfers file names and commands.
+When you press function keys on TR that need to communicate
+with the DVP, TR puts filenames and commands in the shared memory
+area and generates interrupt 0x60. SBDVP installs an interrupt
+routine that is called when TR generates interrupt 0x60. This
+routine parses the commands from TR to see what to do.
+<P>
+SBDVP when first installed not only takes over interrupt 0x60,
+but it also installs an interrupt routine that copies data
+between extended memory and a buffer that is used by the
+direct memory access chips that connect to the sound card.
+<P>
+If TR tells SBDVP to transmit CQF1.DVP, the following steps
+are taken
+<DL COMPACT>
+<DT>1.
+<DD>TR executes interrupt(s) 0x60 with filename CQF1.DVP, and the
+commands to transmit the audio
+<DT>2.
+<DD>The SBDVP interrupt 0x60 routine parses the commands and then
+locates the extended memory area that contains the audio to be
+sent. It communicates with the DMA controller and the sound card
+to tell them to work together to transmit the audio in autoinitiate
+mode. This means the DMA just sends the same buffer over
+and over until it is told to stop. SBDVP copies
+the first data from  extended memory to a conventional memory buffer,
+tells the DMA to start transmitting the buffer to the sound card,
+and tells the sound card to output the audio
+and to interrupt after half the buffer is sent.
+<DT>3.
+<DD>When the sound card sends the interrupt, the half of the buffer
+that has been sent is overwritten with new data that is
+copied from extended memory, and the interrupt
+controller is reset.
+<DT>4.
+<DD>When the audio is all sent the sound card is reset
+</DL>
+<P>
+Recording is done similarly except that all the data directions
+are reversed. Additionally, a note is made of any newly recorded
+audio. When SBDVP is unloaded, using SBDVP -u,
+any newly recorded data is copied to hard disk so that it can be
+reloaded if desired. If the computer is shut off or crashes before
+SBDVP is unloaded, any newly recorded data will be lost. If you want
+to make sure that a recording is saved you must unload SBDVP and
+then restart it with the appropriate SBDVPCFG.DAT file.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html205"
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html202"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html196"
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html204"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html206"
+ HREF="node16.html">15 Sound Quality</A>
+<B> Up:</B> <A NAME="tex2html203"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html197"
+ HREF="node14.html">13 Memory management</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>2 A two wire transmission line as a three terminal Device</TITLE>
+<META NAME="description" CONTENT="2 A two wire transmission line as a three terminal Device">
+<META NAME="keywords" CONTENT="balun">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="balun.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="balun.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html66"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html63"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html57"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html65"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html67"
+ HREF="node4.html">3 The W2DU and</A>
+<B> Up:</B> <A NAME="tex2html64"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html58"
+ HREF="node2.html">1 Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00030000000000000000">
+2 A two wire transmission line as a three terminal Device</A>
+</H1>
+<P>
+Commercial transmitters have unbalanced outputs. That is
+the output is taken between the output connectors center conductor
+and the transmitter case. I will call the transmitter case ground.
+That is, whenever an impedance is measured between a point in
+the circuit and ground, it means that the point is close to the
+transmitter case, and the impedance is measured between that point
+and the transmitter case.
+<P>
+The two wires
+of our balanced transmission line are two connections with some
+impedance across them from the antenna. In addition, the lines
+will have an impedance to ground. For example a quarter
+wave length of twinlead, both wires connected together and driven
+against ground will would look like a quarter wave monopole.
+If the antenna is not well balanced or if one of the transmission
+line  wires runs close to another conductor, the line can be
+unbalanced to some extent. That means that the impedance measured
+between one of the lines and ground is not the same as between
+the other line and ground. A general two-wire transmission line
+ending up near our transmitter can be represented as a T equivalent
+circuit as shown in figure <A HREF="node3.html#f4">4</A>. If I put a current into
+one wire of the transmission line and remove it from the other,
+this is the differential mode of the line. The resulting impedance
+I will call  <I>Z</I><SUB>D</SUB>  or the differential mode impedance. If I connect
+both wires together, and drive them against ground, I call
+the resulting impedance the common mode impedance  <I>Z</I><SUB>C</SUB> . Finally, if the
+impedance from each wire to ground is not the same, this is unbalance
+which I'll represent as  <I>Z</I><SUB>U</SUB> . The labeling in figure <A HREF="node3.html#f4">4</A> shows
+how these impedances relate to the three impedances of the T equivalent
+circuit. Notice if the twinlead is well balanced that  <I>Z</I><SUB>U</SUB> = 0 ,
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f4">&#160;</A><A NAME="251">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 4:</STRONG>
+The two wires of a balanced transmission line are labeled
+connections 1 and 2, and the case of the transmitter is labeled
+as connection 3. The impedances between these three points when
+they are close together can be
+represented in a T-equivalent circuit by three impedances:
+a differential mode impedance  <I>Z</I><SUB>D</SUB> , a common mode impedance  <I>Z</I><SUB>C</SUB> 
+and an unbalancing impedance  <I>Z</I><SUB>U</SUB> .</CAPTION>
+<TR><TD><IMG WIDTH="506" HEIGHT="231"
+ SRC="img4.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...1.917in width0pt height 0pt}\kern 4.165in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+These impedances can be measured with inexpensive equipment.
+One of my antennas is a ``dipole'' about 60 feet on a leg running
+around the outside of my 1 story house. It is fed by about 30 feet
+of 300 ohm TV twinlead. The legs of the ``dipole''
+are not straight, and it isn't symmetric about the feedpoint since
+the shack is at a corner of the house. I have measured
+ <I>Z</I><SUB>D</SUB> ,  <I>Z</I><SUB>U</SUB> , and  <I>Z</I><SUB>C</SUB> , at 3.52 MHz to be:
+<BR>
+
+<!-- MATH: Z_D &=& 158~+~j~533~\Omega\nonumber\\Z_U &=& 224~+~j~182~\Omega\nonumber\\Z_C &=& 887~+~j~622~\Omega\nonumber. -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>Z</I><SUB>D</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+158&nbsp; + &nbsp;<I>j</I>&nbsp;533&nbsp;<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\Omega$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>Z</I><SUB>U</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+224&nbsp; + &nbsp;<I>j</I>&nbsp;182&nbsp;<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\Omega$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>Z</I><SUB>C</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+887&nbsp; + &nbsp;<I>j</I>&nbsp;622&nbsp;<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\Omega$">. 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+As you can see the system is not well balanced at all
+The method of measuring these impedances is described in the
+appendix. I highly recommend making some measurements
+to better determine the best solution to match the feedline impedance.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html66"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html63"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html57"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html65"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html67"
+ HREF="node4.html">3 The W2DU and</A>
+<B> Up:</B> <A NAME="tex2html64"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html58"
+ HREF="node2.html">1 Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

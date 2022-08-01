@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>2 The Effects of Phasing Errors on Sideband Suppression
+</TITLE>
+<META NAME="description" CONTENT="2 The Effects of Phasing Errors on Sideband Suppression
+">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="phase.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html63"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html60"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html54"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html62"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html64"
+ HREF="node4.html">3 Analyzing the HA5WH</A>
+<B> Up:</B> <A NAME="tex2html61"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html55"
+ HREF="node2.html">1 Introduction</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00030000000000000000">
+2 
+The Effects of Phasing Errors on Sideband Suppression
+</A>
+</H1>
+<A NAME="sec2">&#160;</A>
+The phasing method generates a single sideband signal, given
+mathematically as 
+<!-- MATH: \cos( (\omega_c \pm \omega_a ) t ) -->
+ cos((<IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\omega_{c}^{}$"> <IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\pm$"> <IMG WIDTH="24" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\omega_{a}^{}$">)<I>t</I>) , where
+the + (-) sign gives the upper (lower) sideband, and
+
+<!-- MATH: \omega_c = 2 \pi f_c -->
+ <IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\omega_{c}^{}$"> = 2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\pi$"><I>f</I><SUB>c</SUB>  where  <I>f</I><SUB>c</SUB>  is the carrier frequency.
+Similarly, 
+<!-- MATH: \omega_a = 2 \pi f_a -->
+ <IMG WIDTH="24" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\omega_{a}^{}$"> = 2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\pi$"><I>f</I><SUB>a</SUB>  where  <I>f</I><SUB>a</SUB>  is the audio modulating frequency.
+The cosine can be written as
+<P ALIGN="CENTER"><A NAME="eq1">&#160;</A>
+<!-- MATH: \cos( (\omega_c \pm \omega_a ) t ) = \cos( \omega_c t) \cos( \omega_a t)
+\mp \sin(\omega_c t) \sin( \omega_a t) , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+cos((<IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\displaystyle\omega_{c}^{}$"> <IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\displaystyle\pm$"> <IMG WIDTH="24" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\displaystyle\omega_{a}^{}$">)<I>t</I>) = cos(<IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\displaystyle\omega_{c}^{}$"><I>t</I>)cos(<IMG WIDTH="24" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle\omega_{a}^{}$"><I>t</I>) <IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\displaystyle\mp$"> sin(<IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\displaystyle\omega_{c}^{}$"><I>t</I>)sin(<IMG WIDTH="24" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\displaystyle\omega_{a}^{}$"><I>t</I>), 
+</TD><TD ALIGN="CENTER">(1)
+</TD></TR></TABLE></P>
+the  basic equation of the phasing method.
+The multiplications on the right-hand side are accomplished using
+balanced modulators, and the two audio frequencies (as well as
+the two radio frequencies) must be  90<SUP> <TT>o</TT> </SUP> out of phase and
+of equal amplitude.
+I will assume that the radio frequencies are exactly  90<SUP> <TT>o</TT> </SUP>
+out of phase, and of equal amplitude.
+Using the usual
+complex notation with 
+<!-- MATH: V_A e^{j \omega_a t} -->
+ <I>V</I><SUB>A</SUB><I>e</I><SUP> j<IMG WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\scriptstyle\omega_{a}$">t</SUP> to be one audio
+signal, and 
+<!-- MATH: V_B e^{j \omega_a t} -->
+ <I>V</I><SUB>B</SUB><I>e</I><SUP> j<IMG WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\scriptstyle\omega_{a}$">t</SUP> to be the other, the result
+of using a nonideal phasing network will be
+<P ALIGN="CENTER"><A NAME="eq2">&#160;</A>
+<!-- MATH: Re[ \cos (\omega_c t) V_A e^{j \omega_a t} +
+\sin(\omega_c t) V_B e^{j \omega_a t}]
+= \frac{1}{2} Re [ e^{j (\omega_c+\omega_a)t} (V_A - j V_B)
++e^{-j (\omega_c-\omega_a)t} (V_A + j V_B)] , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>Re</I>[cos(<IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\displaystyle\omega_{c}^{}$"><I>t</I>)<I>V</I><SUB>A</SUB><I>e</I><SUP> j<IMG WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\scriptstyle\omega_{a}$">t</SUP> + sin(<IMG WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\displaystyle\omega_{c}^{}$"><I>t</I>)<I>V</I><SUB>B</SUB><I>e</I><SUP> j<IMG WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\scriptstyle\omega_{a}$">t</SUP>] = <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{2}}$"><I>Re</I>[<I>e</I><SUP> j(<IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\scriptstyle\omega_{c}$"> + <IMG WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\scriptstyle\omega_{a}$">)t</SUP>(<I>V</I><SUB>A</SUB> - <I>jV</I><SUB>B</SUB>) + <I>e</I><SUP> - j(<IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\scriptstyle\omega_{c}$"> - <IMG WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\scriptstyle\omega_{a}$">)t</SUP>(<I>V</I><SUB>A</SUB> + <I>jV</I><SUB>B</SUB>)], 
+</TD><TD ALIGN="CENTER">(2)
+</TD></TR></TABLE></P>
+and the sideband suppression (or enhancement) is given by
+<P ALIGN="CENTER"><A NAME="eq3">&#160;</A>
+<!-- MATH: 20 \log_{10} \left | \frac{V_A + j V_B}{V_A - j V_B} \right | . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+20<IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\displaystyle\log_{10}^{}$"><IMG WIDTH="107" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\displaystyle\left \vert \frac{V_A + j V_B}{V_A - j V_B} \right\vert.$"> 
+</TD><TD ALIGN="CENTER">(3)
+</TD></TR></TABLE></P>
+Notice if  |<I>V</I><SUB>A</SUB>|  equals  |<I>V</I><SUB>B</SUB>| , that is if the two signals have
+equal amplitude then for a phase error of  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\delta$"> , the suppression
+in dB is simply,
+<P ALIGN="CENTER"><A NAME="eq4">&#160;</A>
+<!-- MATH: -20 \log_{10} | tan(\frac{\delta}{2}) | . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+ - 20<IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\displaystyle\log_{10}^{}$">|<I>tan</I>(<IMG WIDTH="17" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\displaystyle{\frac{\delta}{2}}$">)|. 
+</TD><TD ALIGN="CENTER">(4)
+</TD></TR></TABLE></P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html63"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html60"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html54"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html62"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html64"
+ HREF="node4.html">3 Analyzing the HA5WH</A>
+<B> Up:</B> <A NAME="tex2html61"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html55"
+ HREF="node2.html">1 Introduction</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

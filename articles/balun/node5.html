@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>4 Baluns on the input and output of unbalanced tuners</TITLE>
+<META NAME="description" CONTENT="4 Baluns on the input and output of unbalanced tuners">
+<META NAME="keywords" CONTENT="balun">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="balun.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="balun.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html88"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html85"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html79"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html87"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html89"
+ HREF="node6.html">5 The effectiveness of</A>
+<B> Up:</B> <A NAME="tex2html86"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html80"
+ HREF="node4.html">3 The W2DU and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00050000000000000000">
+4 Baluns on the input and output of unbalanced tuners</A>
+</H1>
+<P>
+Roy, W7EL,  worked out the math for moving a current balun from output
+to input of an unbalanced tuner using his model of a choke
+balun and found that essentially nothing
+changed.[<A
+ HREF="node9.html#lewallen">2</A>] I'll look at a particular case later, but it
+is easy to see this result using the W2DU model of
+a choke balun.
+<P>
+Look at the equipment shown in figure <A HREF="node4.html#f6">6</A>. The transmitter
+is connected with a short length of coax to a well shielded unbalanced
+tuner which is connected to another short piece of coax to our
+twinlead. 
+Assume that while the transmitter may be grounded, that the
+rest of this does not have additional connections.
+<P>
+Since the shield is continuous from the transmitter around
+the tuner to the end of the output coax, I can apply the same
+analysis as Walter Maxwell did and what happens inside the tuner
+and coax is immaterial for what happens outside.  Changing the
+tuner adjustment will change the impedance the transmitter sees,
+but it does nothing
+else. In any case, assume that the tuner is always adjusted so
+the transmitter sees a 50 ohm load.
+<P>
+Now replace the output coax jumper with a 1:1 current balun
+at the output of the tuner. W2DU's model tells us to replace
+the inner conductor with a generator across the balun output,
+and an additional impedance from the choke in series with the shield
+impedance back to the transmitter.
+<P>
+Move the balun to the coax at the input to the tuner, and analyze the
+system. In this case, because the tuner is also shielded, the generator
+that W2DU tells us should be at the tuner input can be moved (with a different
+source impedance) to
+the tuner output. In that case all that has changed is the position
+of the choke.
+<P>
+The only difference between these situations is
+that we have moved the choke balun to a slightly different point on a
+feedline. If you built a tuner so that it was a cylinder a foot long
+with the same outside diameter as RG-8, with the input on one end and
+the output on the other, you could move the balun from input to output
+by simply sliding the your ferrite beads along the &quot;feedline&quot; by a foot
+or so.  If you use a air wound coild, you would simply move the coil
+one foot along the feedline. This really can't do anything
+useful unless the tuner is poorly constructed. In that
+case fixing the tuner would be more useful. The one difference that
+you might see in the two cases would be if the tuner case itself had
+substantial self capacitance or if it had capacitance back to the
+transmitter case. In the latter case, a balun at the input of the
+tuner could be ``short-circuited'' by the tuner-transmitter case capacitance.
+This might happen if both rested close to a large metal desk or shelves.
+The tuner case self capacitance is easily estimated. A rough estimate
+is to take the largest dimension of the case in centimeters, divide
+this by 2 and you have a rough estimate of the self capacitance of
+the cabinet in picofarads. For a cabinet of 30 cm on a side this would
+give 15 pF, or about 3000 ohms at 80 meters - probably not low enough to
+worry too much about, but the most sensible place to put a balun
+is on an unbalanced tuner's output, like it is on nearly all commercial
+tuners, and not on its input.
+<P>
+Notice that the above says
+nothing about the effectiveness or lack of effectiveness of the balun.
+It simply says it is essentially
+equally effective or ineffective on the input and
+output sides of an unbalanced tuner.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html88"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html85"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html79"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html87"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html89"
+ HREF="node6.html">5 The effectiveness of</A>
+<B> Up:</B> <A NAME="tex2html86"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html80"
+ HREF="node4.html">3 The W2DU and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

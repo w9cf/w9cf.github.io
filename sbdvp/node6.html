@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>5 Push to Talk</TITLE>
+<META NAME="description" CONTENT="5 Push to Talk">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html106"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html103"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html97"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html105"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html107"
+ HREF="node7.html">6 Switching the rig</A>
+<B> Up:</B> <A NAME="tex2html104"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html98"
+ HREF="node5.html">4 Sampling rate selection</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00060000000000000000">
+5 Push to Talk</A>
+</H1>
+<P>
+As mentioned above,
+if you use push to talk, you need to have a push to talk interface
+attached to a serial or parallel port as described in the TR manual.
+Include on the command line either -pn where n is replaced by the number of
+the parallel port (1, 2, or 3), or include -sn where n is replaced
+by the number of the serial port (1, 2, 3, or 4). SBDVP.EXE
+looks up the corresponding port address in the ROM bios area and
+toggles the request to send line on the serial port or it toggles
+the init and strobe lines on the parallel port. This should work
+fine for single radio contesting. Two radio contesting with one
+radio calling CQ using the voice keyer while you are copying
+an exchange on a second radio (or whatever you two radio guys
+do - I can barely operate one) will require Tree to modify
+TR to operate the push to talk in SSB mode and keep track of which
+radio is transmitting. If neither a -pn or -sn option is included
+on the command line of SBDVP.EXE push to talk output from SBDVP
+will be disabled, and you need to use vox.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html106"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html103"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html97"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html105"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html107"
+ HREF="node7.html">6 Switching the rig</A>
+<B> Up:</B> <A NAME="tex2html104"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html98"
+ HREF="node5.html">4 Sampling rate selection</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

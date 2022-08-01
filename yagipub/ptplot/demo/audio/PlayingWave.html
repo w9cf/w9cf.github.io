@@ -1,0 +1,69 @@
+<!-- @(#)PlayingWave.html	1.16 10/31/97 -->
+<html>
+<head>
+<Title>Plotting Real Time Audio</Title>
+</head>
+<body bgcolor="#faf0e6">
+<h1>Plotting Real Time Audio</h1>
+The applet below combines Gabriele Bulfon's 
+
+<A HREF="http://users.iol.it/gabriele.bulfon/PlayingWave/index.html">Playing Wave</A> applet and the
+<A HREF="../../doc/codeDoc/ptplot.PlotLive.html"><CODE>PlotLive</CODE></A>
+Ptplot class.  The <A HREF="PlayingWave.java"><CODE>PlayingWave.java</CODE></A>
+sources show how we added a PlotLive widget.  This demo is not very
+polished, we did it so that we could experiment with multithreaded applets.
+
+ <P>This demo simulates a plucked string sound using the
+Karplus-Strong algorithm.  The user can control the various features
+of the new sound, and then mouse on the action button, which will create the 
+new sound.
+ <P>The user controlled features are:
+<DL>
+<DT> <CODE>Replace</CODE>/<CODE>Add</CODE>
+<DD> This widget determines whether the new sound replaces the
+old sound or adds to the old sound.
+
+<DT> <CODE>Random</CODE>/<CODE>Sine</CODE>
+<DD> This widget determines whether the new sound will be a random
+wave, or a sine wave.
+
+<DT> Text entry widget
+<DD> This widget is used to set the period of the sine wave.
+
+<DT> <CODE>Action</CODE> button
+<DD> This button causes the new sound to be generated
+
+<DT> <CODE>Damp</CODE> slider and entry widget
+<DD> This controls the damping.  If the value is more than <CODE>50</CODE>,
+then the sound gets louder, if the value is less than <CODE>50</CODE>, it
+gets softer.
+
+</DL>
+Note that the wave plot on the left side is mouse sensitive.  If you
+depress and hold the left mouse button while over the signal, you 
+can drag the signal around.
+ <P>
+<applet name="PlayingWave" code="ptplot.demo.audio.PlayingWave.class"
+	width=600 height=400
+	codebase="../../.."
+	archive="ptplot/ptplot.zip,ptplot/demo/audio/ptplot.demo.audio.zip"
+	alt="If you had a java-enabled browser, you would see an applet here."
+>
+<param name="background" value="faf0e6">
+<param name="WAVEWIDTH" value="128">
+<param name="WAVEHEIGHT" value="300">
+</applet>
+
+ <P>For more information about this applet, see the
+<A HREF="http://users.iol.it/gabriele.bulfon/PlayingWave/index.html">Playing Wave</A> webpage
+<HR>
+<A HREF="../index.html">Up</A> to the Example index -
+<A HREF="../Butterfly.html">Back</A> to a Plot of 10,000 binary points
+<HR>
+Copyright &#169 1997, The Regents of the University of California.
+All rights reserved.
+<br>
+Last updated: 10/31/97
+comments to: <author>cxh@eecs.berkeley.edu</author>
+</body>
+</html>

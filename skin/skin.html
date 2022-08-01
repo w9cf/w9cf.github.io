@@ -1,0 +1,615 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Some Skin Effect Notes</TITLE>
+<META NAME="description" CONTENT="Some Skin Effect Notes">
+<META NAME="keywords" CONTENT="skin">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="skin.css">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html1"
+ HREF="../index.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html2"
+ HREF="../index.html">W9CF Links</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<P><body background="../bk10.gif" text=#000000 bgcolor=#ffffff>
+<P><H1 ALIGN="CENTER">Some Skin Effect Notes</H1>
+<P ALIGN="CENTER"><STRONG>Kevin Schmidt, W9CF
+<BR>
+</STRONG></P>
+<P ALIGN="CENTER"><STRONG></STRONG></P>
+<P ALIGN="LEFT"></P>
+<P><H3 CLASS="ABSTRACT">Abstract:</H3>
+<P CLASS="ABSTRACT">
+I give an animated plot of the radio frequency current and magnetic
+field in a conductor. For completeness,
+I include the derivation of the result, however
+similar descriptions can be found in most electromagnetism texts.
+</P>
+<P>
+<P><H1><A NAME="SECTION00010000000000000000">
+1 Skin Effect</A>
+</H1>
+The skin effect is the description given to the phenomenon where
+electromagnetic fields (and therefore the current) decay rapidly
+with depth inside a good conductor. In fig. <A HREF="skin.html#fig1">1</A> I show the
+result, derived below, for the magnetic field and current density
+in a conductor with surface radius of curvature much larger than the
+skin depth i.e. the surface is reasonably flat on the skin depth length
+scale.
+<br>
+<br>
+Figure 1. Here is the current density and magnetic
+field as a function of depth d in a conductor.
+<br>
+<br>
+<IMG WIDTH="464" HEIGHT="463" ALIGN="BOTTOM" BORDER="0" ALT="Skin depth plot"
+SRC="skin.gif">
+<br>
+If I look at Maxwell's equations in Gaussian units,
+at a single frequency, and use the convention for linear
+media that the time
+dependence of all fields and currents is given by 
+<!-- MATH: \exp(-i \omega t) -->
+ exp(- <I>i</I><IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\omega$"><I>t</I>) 
+and the real part is taken, the curl equation are
+<BR><A NAME="eq1">&#160;</A>
+
+<!-- MATH: \vec \nabla \times \vec E_c &=& \frac{i \omega \mu}{c} \vec H_c
+\nonumber\\\vec \nabla \times \vec H_c &=& \frac{4 \pi}{c} \vec J
+- \frac{i \omega \epsilon}{c} \vec E_c -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> <IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="39" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\displaystyle{\frac{i \omega \mu}{c}}$"><IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="29" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\displaystyle{\frac{4 \pi}{c}}$"><IMG WIDTH="16" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\displaystyle\vec{J}$"> - <IMG WIDTH="35" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\displaystyle{\frac{i \omega \epsilon}{c}}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> 
+</TD><TD ALIGN="RIGHT">(1)</TD></TR>
+</TABLE></DIV>
+If I am looking for solutions inside a metal, I can
+evaluate the conduction current  <IMG WIDTH="16" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\vec{J}$">  using Ohm's law. The
+second equation becomes
+<BR>
+
+<!-- MATH: \vec \nabla \times \vec H_c &=& \frac{4 \pi \sigma }{c} \vec E_c
+- \frac{i \omega \epsilon}{c} \vec E_c -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="41" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\displaystyle{\frac{4 \pi \sigma }{c}}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> - <IMG WIDTH="35" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\displaystyle{\frac{i \omega \epsilon}{c}}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> 
+</TD><TD ALIGN="RIGHT">(2)</TD></TR>
+</TABLE></DIV>
+Since the conductivity of copper is 
+<!-- MATH: 5.2 \times 10^{17} -->
+ 5.2 <TT>x</TT> 10<SUP>17</SUP> second <SUP>- 1</SUP>,
+and  <IMG WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\epsilon$">  is of order unity, the term with 
+<!-- MATH: \epsilon \omega -->
+ <IMG WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\epsilon$"><IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\omega$"> 
+is neglible for all radio frequencies, and can be dropped. Taking the
+curl of the first equation and substituting the second, I get
+<P ALIGN="CENTER">
+<!-- MATH: \vec \nabla \times (\vec \nabla \times \vec E_c) =
+\frac{i 4 \pi \sigma \omega \mu}{c} \vec E_c -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> (<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> <IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$">) = <IMG WIDTH="72" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle{\frac{i 4 \pi \sigma \omega \mu}{c}}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER">(3)
+</TD></TR></TABLE></P>
+Notice that taking the divergence of the second equation shows
+that 
+<!-- MATH: \vec \nabla \cdot \vec E_c = 0 -->
+ <IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\vec{\nabla}$"> <IMG WIDTH="9" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\cdot$"> <IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\vec{E}_{c}^{}$"> = 0 , so that using the
+identity
+<P ALIGN="CENTER">
+<!-- MATH: \vec \nabla \times (\vec \nabla \times \vec E_c) = \vec \nabla ( \vec \nabla
+\cdot \vec E_c ) - \nabla^2 \vec E_c = -\nabla^2 \vec E_c -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> (<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <TT>x</TT> <IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$">) = <IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$">(<IMG WIDTH="20" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle\vec{\nabla}$"> <IMG WIDTH="9" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\displaystyle\cdot$"> <IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$">) - <IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> = - <IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER">(4)
+</TD></TR></TABLE></P>
+waves in the metal must satisfy the equation
+<P ALIGN="CENTER">
+<!-- MATH: \nabla^2 \vec E_c + \frac{i 4 \pi \sigma \omega \mu}{c} \vec E_c = 0 \,. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> + <IMG WIDTH="72" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle{\frac{i 4 \pi \sigma \omega \mu}{c}}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> = 0 . 
+</TD><TD ALIGN="CENTER">(5)
+</TD></TR></TABLE></P>
+The skin depth  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\delta$">  is defined to be
+<P ALIGN="CENTER">
+<!-- MATH: \delta = \frac{c}{\sqrt{2\pi \sigma \omega \mu}} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\displaystyle\delta$"> = <IMG WIDTH="82" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\displaystyle{\frac{c}{\sqrt{2\pi \sigma \omega \mu}}}$"> 
+</TD><TD ALIGN="CENTER">(6)
+</TD></TR></TABLE></P>
+so that the equation above becomes
+<P ALIGN="CENTER">
+<!-- MATH: \nabla^2 \vec E_c + \frac{2i}{\delta^2}\vec E_c = 0 \,. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> + <IMG WIDTH="25" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\displaystyle{\frac{2i}{\delta^2}}$"><IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> = 0 . 
+</TD><TD ALIGN="CENTER">(7)
+</TD></TR></TABLE></P>
+Repeating the calculation for the magnetic field shows that it satisfies
+the same differential equation
+<P ALIGN="CENTER">
+<!-- MATH: \nabla^2 \vec H_c + \frac{2i}{\delta^2}\vec H_c = 0 \,. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> + <IMG WIDTH="25" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\displaystyle{\frac{2i}{\delta^2}}$"><IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> = 0 . 
+</TD><TD ALIGN="CENTER">(8)
+</TD></TR></TABLE></P>
+The solutions for the two fields are still related by Maxwell's equations.
+<P>
+Outside the conductors, the same calculation shows that the fields
+satisfy the wave equations
+<BR>
+
+<!-- MATH: \nabla^2 \vec E + \frac{\omega^2}{c^2} \vec E =0  &&
+\nonumber\\\nabla^2 \vec H + \frac{\omega^2}{c^2} \vec H = 0 && \,. -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\displaystyle\vec{E}$"> + <IMG WIDTH="28" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\displaystyle{\frac{\omega^2}{c^2}}$"><IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\displaystyle\vec{E}$"> = 0 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\displaystyle\vec{H}$"> + <IMG WIDTH="28" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\displaystyle{\frac{\omega^2}{c^2}}$"><IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\displaystyle\vec{H}$"> = 0 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+ . 
+</TD><TD ALIGN="RIGHT">(9)</TD></TR>
+</TABLE></DIV>
+Notice that 
+<!-- MATH: \omega/c = 2\pi/\lambda -->
+ <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\omega$">/<I>c</I> = 2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\pi$">/<IMG WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\lambda$">  where  <IMG WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\lambda$">  is the free space
+wave length. Except for the various factors of  2<I>i</I>  and  2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\pi$"> , the
+skin depth is essentially the wave length in the metal. The main thing
+to notice are that the free space wave length is enormously larger than
+the skin depth. The other length scales that enter the problem are the
+size of the conductors and the distances over which the conductor is
+not essentially flat.
+<P>
+The skin depth in copper is about
+.005 centimeters for the 160 meter band,
+.002 centimeters for the 20 meter band,
+.001 centimeters for the 6 meter band,
+and .0003 centimers for the 70 centimeter band. It is easy to see that
+the spatial variation of the fields in vacuum is much smaller than
+the spatial variation in the metal.
+Therefore, for the purposes of evaluating the fields in the conductor,
+the spatial variation from the wave length outside the conductor can be
+ignored.
+<P>
+The main effect on the form of the fields inside the conductor is governed
+by the shape of the conductor. For the usual case where the surface of the
+conductor is flat on the length scale of the skin depth, and the conductor
+is much thicker than the skin depth, the solution is straightforward.
+Note that flat on the length scale of the skin depth means that the
+radii of curvature of the surface should be much larger than a skin depth.
+Since the external fields are changing on the scale of either the curvature
+of the conductor or the wave length, and the tangential components of
+ <IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\vec{E}$">  and  <IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\vec{H}$">  must be continous across the boundary (this is
+normally shown by applying Stokes theorem to Maxwell's curl equations above)
+the tangential components inside also change tangentially in the same way.
+Similarly the normal component of  <IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\vec{B}$">  is continuous, so the normal
+component of  <IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\mu$"><IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\vec{H}$">  is continuous. The result is that the tangential
+dependence of the magnetic field just inside the material is identical
+to the dependence outside. The second derivatives in the tangential direction
+will be of order one over the length scale squared. Since the length scales
+outside are so much larger than those inside, these second derivatives
+cannot give a contribution anywhere near the value of 
+<!-- MATH: 2i/\delta^2 \vec H -->
+ 2<I>i</I>/<IMG WIDTH="21" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\delta^{2}_{}$"><IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\vec{H}$">  
+needed to solve Maxwell's equations inside. To an excellent approximation,
+the dependence of the fields normal to the surface must give this entire
+contribution and
+<P ALIGN="CENTER"><A NAME="helmskin">&#160;</A>
+<!-- MATH: \frac{\partial^2}{\partial d^2}  \vec H_c + \frac{2i}{\delta^2} \vec H_c = 0 -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="37" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\displaystyle{\frac{\partial^2}{\partial d^2}}$"><IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> + <IMG WIDTH="25" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\displaystyle{\frac{2i}{\delta^2}}$"><IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> = 0 
+</TD><TD ALIGN="CENTER">(10)
+</TD></TR></TABLE></P>
+where  <I>d</I>  is the distance perpendicular to the conductor surface. The
+solution to these equations with the boundary condition that there is
+no energy source deep in the conductor is
+<P ALIGN="CENTER">
+<!-- MATH: \vec H_c = \vec H_0 e^{(i-1)d/\delta} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> = <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\displaystyle\vec{H}_{0}^{}$"><I>e</I><SUP> (i - 1)d/<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\scriptstyle\delta$"></SUP>
+</TD><TD ALIGN="CENTER">(11)
+</TD></TR></TABLE></P>
+where  <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$\vec{H}_{0}^{}$">  is the component of the magnetic field just outside
+the surface.
+<P>
+If we take the divergence of the curl of  <IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\vec{E}$">  Maxwell equation,
+we get the divergence of  <IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\vec{H}$">  is zero. Taking the divergence of
+this, the largest terms are from the normal component. Again, since the
+skin depth is so much smaller than the other length scales, the only way
+to obtain a zero divergence result is to have a negligible component of
+ <IMG WIDTH="21" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\vec{H}$">  normal to the surface.  Plugging back in to Maxwell's equations,
+the magnetic and electric fields in the conductor are
+<BR>
+
+<!-- MATH: \vec H_c &=& \vec H_\parallel e^{(i-1)d/\delta}
+\nonumber\\\vec E_c &=& -\frac{(i-1)\mu\omega \delta}{2c}\hat n \times \vec H_\parallel
+e^{(i-1)d/\delta} -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{H}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\displaystyle\vec{H}_{\parallel}^{}$"><I>e</I><SUP> (i - 1)d/<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\scriptstyle\delta$"></SUP>
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="25" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle\vec{E}_{c}^{}$"> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+ - <IMG WIDTH="97" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$\displaystyle{\frac{(i-1)\mu\omega \delta}{2c}}$"><IMG WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\displaystyle\hat{n}$"> <TT>x</TT> <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\displaystyle\vec{H}_{\parallel}^{}$"><I>e</I><SUP> (i - 1)d/<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\scriptstyle\delta$"></SUP>
+</TD><TD ALIGN="RIGHT">(12)</TD></TR>
+</TABLE></DIV>
+where  <IMG WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\hat{n}$">  is the normal to the surface and 
+<!-- MATH: \vec H_\parallel -->
+ <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\vec{H}_{\parallel}^{}$"> 
+is the tangential magnetic field just outside the surface. This shows
+that the electric
+field in the conductor is smaller than the magnetic field
+by roughly the ratio of the skin depth to the free space wave length.
+<P>
+Notice that the skin depth being so small dominates Eq. <A HREF="skin.html#helmskin">10</A>,
+so for conductors many skin depths thick, you will always get this exponential
+decay as you move away from the surface. In particular you will still
+get this behavior even for surfaces with large radii of curvature once
+you are many skin depths from the surface.
+<P>
+The current density is given by Ohm's law 
+<!-- MATH: \vec J = \sigma \vec E -->
+ <IMG WIDTH="16" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\vec{J}$"> = <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\sigma$"><IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\vec{E}$"> , or
+<P ALIGN="CENTER">
+<!-- MATH: \vec J =
+-\frac{(i-1)c}{4\pi \delta} \hat n \times \vec H_\parallel 
+e^{(i-1)d/\delta} \,.
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="16" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\displaystyle\vec{J}$"> = - <IMG WIDTH="72" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\displaystyle{\frac{(i-1)c}{4\pi \delta}}$"><IMG WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\displaystyle\hat{n}$"> <TT>x</TT> <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\displaystyle\vec{H}_{\parallel}^{}$"><I>e</I><SUP> (i - 1)d/<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\scriptstyle\delta$"></SUP> . 
+</TD><TD ALIGN="CENTER">(13)
+</TD></TR></TABLE></P>
+<P>
+Plots of the magnetic field and the current density are shown
+in figure <A HREF="skin.html#fig1">1</A>. It is amusing to see that the current is not
+all flowing in the same direction in the conductor. From the figure,
+we see that there is a wave traveling and decaying into the conductor.
+When the current density is a maximum at the surface, the current deeper
+than about 1.5 skin depths is flowing in the opposite direction. The
+magnetic and electric fields have the same behavior.
+<P>
+To verify the usual results, integrate the current density to get
+the equivalent surface current,
+<P ALIGN="CENTER">
+<!-- MATH: \vec K_{\rm eff} = \int_0^\infty dd \vec J =
+\frac{c}{4\pi} \hat n \times \vec H_\parallel -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="36" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$\displaystyle\vec{K}_{\rm eff}^{}$"> = <IMG WIDTH="35" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\displaystyle\int_{0}^{\infty}$"><I>dd</I><IMG WIDTH="16" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\displaystyle\vec{J}$"> = <IMG WIDTH="29" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$\displaystyle{\frac{c}{4\pi}}$"><IMG WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\displaystyle\hat{n}$"> <TT>x</TT> <IMG WIDTH="27" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\displaystyle\vec{H}_{\parallel}^{}$"> 
+</TD><TD ALIGN="CENTER">(14)
+</TD></TR></TABLE></P>
+which agrees with the surface current of a perfect conductor.
+The power dissipated per unit area in the conductor resistance is
+<P ALIGN="CENTER">
+<!-- MATH: p = {\rm Re} \frac{1}{2}\int_0^\infty dd\vec E \cdot \vec J^* =
+\frac{1}{2 \sigma \delta} |\vec K_{\rm eff}|^2 \,. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>p</I> = <I>Re</I> <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{2}}$"><IMG WIDTH="35" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\displaystyle\int_{0}^{\infty}$"><I>dd</I><IMG WIDTH="19" HEIGHT="23" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\displaystyle\vec{E}$"> <IMG WIDTH="9" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\displaystyle\cdot$"> <IMG WIDTH="24" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\displaystyle\vec{J}^{*}_{}$"> = <IMG WIDTH="30" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{2 \sigma \delta}}$">|<IMG WIDTH="36" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$\displaystyle\vec{K}_{\rm eff}^{}$">|<SUP>2</SUP> . 
+</TD><TD ALIGN="CENTER">(15)
+</TD></TR></TABLE></P>
+These are the usual results that agree with modeling the current as
+being constant to a depth of  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\delta$"> . However, notice that the physical
+current is quite different.
+<P><HR>
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html1"
+ HREF="../index.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html2"
+ HREF="../index.html">W9CF Links</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

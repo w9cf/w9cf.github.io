@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>5 Optimizing the Sideband Suppression
+</TITLE>
+<META NAME="description" CONTENT="5 Optimizing the Sideband Suppression
+">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="phase.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html96"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html93"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html87"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html95"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html97"
+ HREF="node7.html">6 Effects of Amplitude</A>
+<B> Up:</B> <A NAME="tex2html94"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html88"
+ HREF="node5.html">4 Analysis of the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00060000000000000000">
+5 
+Optimizing the Sideband Suppression
+</A>
+</H1>
+<A NAME="sec5">&#160;</A>The optimum values of  <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  can be easily calculated using elliptic
+functions. Typically, we want the worst case suppression to be the highest
+possible. This leads us to the equal ripple or Chebychev approximation.
+The mathematics is straightforward and given in detail by Saraga[<A
+ HREF="node10.html#saraga50">3</A>].
+For an upper and lower frequency of  <I>f</I><SUB>u</SUB>  and  <I>f</I><SUB>l</SUB> 
+respectively, the  <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  values for an n section network are,
+<P ALIGN="CENTER"><A NAME="eq27">&#160;</A>
+<!-- MATH: R_i C_i = \frac{{\rm dn}( \frac{2i-1}{2n} {\rm K}(k),k)}{2 \pi f_l}, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB> = <IMG WIDTH="139" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.gif"
+ ALT="$\displaystyle{\frac{{\rm dn}( \frac{2i-1}{2n} {\rm K}(k),k)}{2 \pi f_l}}$">, 
+</TD><TD ALIGN="CENTER">(28)
+</TD></TR></TABLE></P>
+where 
+<!-- MATH: k = \sqrt{1-(f_l/f_u)^2} -->
+ <I>k</I> = <IMG WIDTH="120" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.gif"
+ ALT="$\sqrt{1-(f_l/f_u)^2}$"> ,  <I>K</I> (<I>k</I>)  is the complete elliptic
+integral of the first kind, and 
+<!-- MATH: {\rm dn}(u,k) -->
+ <I>dn</I> (<I>u</I>,<I>k</I>)  is a Jacobi elliptic
+function[<A
+ HREF="node10.html#cayley95">4</A>,<A
+ HREF="node10.html#abramowitz64">5</A>].
+<P>
+In the Appendix, I provide a listing of a computer program to calculate
+the  <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  values given the upper and lower frequencies and the n
+value. In table <A HREF="node6.html#t1">1</A>, I give some calculated values for some networks of
+interest to hams, and their theoretical sideband suppression. These
+theoretical results will of course be best cases assuming perfect
+components.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t1">&#160;</A>
+<A NAME="1483">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 1:</STRONG>
+The optimal Chebychev values for some ideal HA5WH type phasing networks
+ <I>f</I><SUB>l</SUB>  and  <I>f</I><SUB>u</SUB>  are the upper and lower frequencies, n is the
+order of the network, and  <I>f</I><SUB>i</SUB> , where i is 1 through n, are the frequencies
+of exact  90<SUP> <TT>o</TT> </SUP> phase shift.
+The corresponding RC values are
+1/(2  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img137.gif"
+ ALT="$\pi$"><I>f</I><SUB>i</SUB> ).
+Sup is the minimum sideband suppression over the network range in dB.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>l</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>u</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP>n</TD>
+<TD ALIGN="RIGHT" NOWRAP>Sup(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>1</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>2</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>3</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>4</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>5</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>6</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>7</SUB> </TD>
+<TD ALIGN="RIGHT" NOWRAP> <I>f</I><SUB>8</SUB> </TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>300</TD>
+<TD ALIGN="RIGHT" NOWRAP>3000</TD>
+<TD ALIGN="RIGHT" NOWRAP>4</TD>
+<TD ALIGN="RIGHT" NOWRAP>40.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>332.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>629.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>1429.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>2709.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>300</TD>
+<TD ALIGN="RIGHT" NOWRAP>3000</TD>
+<TD ALIGN="RIGHT" NOWRAP>5</TD>
+<TD ALIGN="RIGHT" NOWRAP>52.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>320.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>500.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>948.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>1797.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>2808.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>300</TD>
+<TD ALIGN="RIGHT" NOWRAP>3000</TD>
+<TD ALIGN="RIGHT" NOWRAP>6</TD>
+<TD ALIGN="RIGHT" NOWRAP>63.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>314.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>435.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>720.3</TD>
+<TD ALIGN="RIGHT" NOWRAP>1249.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>2066.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>2864.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>300</TD>
+<TD ALIGN="RIGHT" NOWRAP>3000</TD>
+<TD ALIGN="RIGHT" NOWRAP>7</TD>
+<TD ALIGN="RIGHT" NOWRAP>75.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>310.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>397.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>595.3</TD>
+<TD ALIGN="RIGHT" NOWRAP>948.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>1511.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>2262.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>2899.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>300</TD>
+<TD ALIGN="RIGHT" NOWRAP>3000</TD>
+<TD ALIGN="RIGHT" NOWRAP>8</TD>
+<TD ALIGN="RIGHT" NOWRAP>87.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>308.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>374.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>519.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>771.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>1167.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>1732.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>2406.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>2922.5</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>200</TD>
+<TD ALIGN="RIGHT" NOWRAP>4000</TD>
+<TD ALIGN="RIGHT" NOWRAP>5</TD>
+<TD ALIGN="RIGHT" NOWRAP>42.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>219.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>398.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>894.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>2008.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>3645.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>200</TD>
+<TD ALIGN="RIGHT" NOWRAP>4000</TD>
+<TD ALIGN="RIGHT" NOWRAP>6</TD>
+<TD ALIGN="RIGHT" NOWRAP>52.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>213.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>332.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>633.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>1263.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>2408.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>3747.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>200</TD>
+<TD ALIGN="RIGHT" NOWRAP>4000</TD>
+<TD ALIGN="RIGHT" NOWRAP>7</TD>
+<TD ALIGN="RIGHT" NOWRAP>62.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>209.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>294.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>497.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>894.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>1608.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>2715.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>3812.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>200</TD>
+<TD ALIGN="RIGHT" NOWRAP>4000</TD>
+<TD ALIGN="RIGHT" NOWRAP>8</TD>
+<TD ALIGN="RIGHT" NOWRAP>72.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>207.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>271.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>417.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>689.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>1159.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>1915.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>2949.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>3854.8</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>150</TD>
+<TD ALIGN="RIGHT" NOWRAP>6000</TD>
+<TD ALIGN="RIGHT" NOWRAP>6</TD>
+<TD ALIGN="RIGHT" NOWRAP>44.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>163.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>287.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>628.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>1431.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>3128.3</TD>
+<TD ALIGN="RIGHT" NOWRAP>5500.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>150</TD>
+<TD ALIGN="RIGHT" NOWRAP>6000</TD>
+<TD ALIGN="RIGHT" NOWRAP>7</TD>
+<TD ALIGN="RIGHT" NOWRAP>53.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>160.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>247.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>471.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>948.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>1910.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>3633.0</TD>
+<TD ALIGN="RIGHT" NOWRAP>5626.4</TD>
+<TD ALIGN="RIGHT" NOWRAP>-</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>150</TD>
+<TD ALIGN="RIGHT" NOWRAP>6000</TD>
+<TD ALIGN="RIGHT" NOWRAP>8</TD>
+<TD ALIGN="RIGHT" NOWRAP>61.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>157.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>223.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>381.3</TD>
+<TD ALIGN="RIGHT" NOWRAP>696.7</TD>
+<TD ALIGN="RIGHT" NOWRAP>1291.9</TD>
+<TD ALIGN="RIGHT" NOWRAP>2360.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>4033.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>5710.4</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+In passing, I note that Saraga's Taylor approximation[<A
+ HREF="node10.html#saraga50">3</A>] is given
+by simply choosing all the  <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  values to be the same and
+equal to 
+<!-- MATH: \frac{1}{2 \pi \sqrt{f_u f_l}} -->
+ <IMG WIDTH="66" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.gif"
+ ALT="${\frac{1}{2 \pi \sqrt{f_u f_l}}}$"> . Also, if maximum
+suppression is needed at a particular frequency (for example
+if you wanted to use audio tones in a single-sideband transmitter
+to produce frequency shift keying), it is simple to select
+ <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  values appropriate for these frequencies, and then
+optimize the other network sections.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html96"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html93"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html87"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html95"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html97"
+ HREF="node7.html">6 Effects of Amplitude</A>
+<B> Up:</B> <A NAME="tex2html94"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html88"
+ HREF="node5.html">4 Analysis of the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

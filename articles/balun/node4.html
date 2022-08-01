@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>3 The W2DU and W7EL models of a choke balun</TITLE>
+<META NAME="description" CONTENT="3 The W2DU and W7EL models of a choke balun">
+<META NAME="keywords" CONTENT="balun">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="balun.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="balun.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html77"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html68"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html76"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html78"
+ HREF="node5.html">4 Baluns on the</A>
+<B> Up:</B> <A NAME="tex2html75"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html69"
+ HREF="node3.html">2 A two wire</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00040000000000000000">
+3 The W2DU and W7EL models of a choke balun</A>
+</H1>
+<P>
+I now have a circuit equivalent of our antenna and transmission line.
+Since the circuit for tuners is well known, this leaves only the
+equivalent circuit for a choke balun to allow us to analyze
+our tuner-balun-antenna sytem using standard circuit theory.
+<P>
+Two useful and equivalent models of a choke balun are those
+described by Walter Maxwell, W2DU and Roy Lewallen, W7EL. 
+In Maxwell's model, of a choke balun, he uses the fact that
+the coax shield is many skin depths thick so that it shields
+the outside from fields on the inside of the coax.
+The only place the fields can
+escape is therefore at the end where the coax is connected
+to a balun or to some other load. A well shielded transmitter
+driving one end of the coax therefore can only produce external
+fields
+at the other end of the coax. You can think of the transmitter as
+producing a voltage across the points where the center
+conductor and the shield of the coax attach. At this point,
+the internal fields escape, and can cause
+currents to flow on the outside of the outer conductor of the
+coax.
+<P>
+The equivalent setup is is shown in figure <A HREF="node4.html#f5">5</A>. The transmitter
+applies a voltage between the inner and outer conductors
+of the coax, and the outside of the outer conductor of the coax
+is then another part of the system.  If I use no balun, and simply
+connect our coax to the twinlead, center conductor to terminal 1 and
+shield to terminal 2, the transmitter applies a voltage
+across terminals 1 and 2 in figure <A HREF="node3.html#f4">4</A>. The outside of the outer
+conductor presents an impedance 
+<!-- MATH: Z_{\rm Shield} -->
+ <I>Z</I><SUB>Shield</SUB> 
+back to the case of the transmitter
+which I have taken to be terminal 3. That means that this impedance is
+placed from terminal 2 to 3 as shown in figure <A HREF="node4.html#f5">5</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f5">&#160;</A><A NAME="362">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 5:</STRONG>
+The W2DU model of coaxial cable connected directly to a balanced line.</CAPTION>
+<TR><TD><IMG WIDTH="485" HEIGHT="331"
+ SRC="img6.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.583in width0pt height 0pt}\kern 4.020in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+A choke balun made by coiling up coax would change the impedance
+of the outside of the coax shield to the inductive reactance of the
+coil. A choke balun made from ferrite beads slipped over the outside
+of the coax will also increase this impedance. In his July 1983 QST
+article 
+Maxwell gave measurements of about  15.6 + <I>j</I>13.1  ohms per bead at 4 MHz
+for #73 beads.
+(However, I recently bought a bead balun kit at a hamfest which claimed to be
+50 #73 beads. My balun measured  660 + <I>j</I>438  ohms or  13 + <I>j</I>9  ohms
+per bead 4 MHz. Apparently, all beads are not created equal, and
+it is prudent to make a few measurements to see how many beads
+are needed to make a good balun with the your materials.)
+Adding this impedance in series with 
+<!-- MATH: Z_{\rm Shield} -->
+ <I>Z</I><SUB>Shield</SUB>  gives
+the balun common mode impedance  <I>Z</I><SUB>Balun</SUB>  and 
+the circuit shown in figure <A HREF="node4.html#f6">6</A>. Since there is only a single
+connection to ground, I have dropped this connection to simplify the
+circuit diagram. Notice that  <I>Z</I><SUB>Balun</SUB>  is
+connected in series with  <I>Z</I><SUB>C</SUB>  so it effectively just increases  <I>Z</I><SUB>C</SUB> .
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f6">&#160;</A><A NAME="513">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 6:</STRONG>
+The W2DU model of a coaxial cable choke balun driving a balanced
+transmission line.</CAPTION>
+<TR><TD><IMG WIDTH="512" HEIGHT="331"
+ SRC="img7.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.583in width0pt height 0pt}\kern 4.245in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Maxwell's analysis gives a simple rule for understanding a choke
+balun connected to the three terminal network given by our twinlead
+fed antenna. Simply connect the balun common mode impedance from
+the terminal 2 to 3, and drive the antenna across terminals 1 and
+2. If the current through terminal 3 is made small enough by
+the balun impedance, then the drive current is balanced between
+terminals 1 and 2.
+<P>
+Roy Lewallen, W7EL, has given model of a choke balun by using
+an ideal transformer as shown in figure <A HREF="node4.html#f7">7</A>.
+The connection shown is schematically the same
+as that normally drawn for a bifilar wound choke balun.
+A real balun is not an ideal
+transformer (nothing is), so the impedance  <I>Z</I><SUB>Balun</SUB>  is added.
+The ideal transformer performs exactly the same task as the
+independent generator in the W2DU model.
+The W7EL model is equivalent to W2DU's
+model. The advantage is that you can write down a complete equivalent
+circuit for the tuner, balun, and antenna immediately without
+applying Maxwell's rules.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f7">&#160;</A><A NAME="689">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 7:</STRONG>
+The W7EL model of a current balun as an ideal transformer
+and an extra impedance</CAPTION>
+<TR><TD><IMG WIDTH="472" HEIGHT="149"
+ SRC="img8.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...1.228in width0pt height 0pt}\kern 3.250in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html77"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html74"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html68"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html76"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html78"
+ HREF="node5.html">4 Baluns on the</A>
+<B> Up:</B> <A NAME="tex2html75"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html69"
+ HREF="node3.html">2 A two wire</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

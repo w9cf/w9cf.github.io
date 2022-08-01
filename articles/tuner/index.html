@@ -1,0 +1,993 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Originally published in July 1997 QEX, Copyright &#169;1997,
+American Radio Relay League Estimating T-network losses at 80 and 160 meters
+</TITLE>
+<META NAME="description" CONTENT="Originally published in July 1997 QEX, Copyright &#169;1997,
+American Radio Relay League Estimating T-network losses at 80 and 160 meters
+">
+<META NAME="keywords" CONTENT="tuner">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="tuner.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html11"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html9"
+ HREF="http://fermi.la.asu.edu/w9cf">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html12"
+ HREF="node1.html">References</A>
+<B> Up:</B> <A NAME="tex2html10"
+ HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<P><H1 ALIGN="CENTER">Originally published in July 1997 QEX, Copyright &#169;1997,
+<BR>
+<A NAME="tex2html1"
+ HREF="http://www.arrl.org">American Radio Relay League</A>
+<BR>
+ <BR>
+ <BR>
+Estimating T-network losses at 80 and 160 meters
+</H1>
+<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
+ HREF="
+mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF
+<BR></A>
+6510 S. Roosevelt St.
+<BR>
+Tempe, Arizona 85283
+<BR>
+</STRONG></P>
+<P ALIGN="LEFT"></P>
+T-network tuners are popular for matching antennas for 160 through
+10 meters. Recent articles by Frank Witt, AI1H[<A
+ HREF="node1.html#witt">1</A>] and
+Andrew Griffith, W4ULD,[<A
+ HREF="node1.html#griffith">2</A>]
+addressed how to measure
+tuner loss for various resistive loads; gave some example
+calculations and measurements; and showed how to adjust the tuner
+for minimum loss.
+Measuring your tuner's loss is the only sure way to know, but
+by examining the worst case losses at various standing wave ratios,
+some useful simplifications and estimates of tuner losses can be
+made. Simple computer programs can accurately analyze your tuner once you
+know the component values and all the numerical results here can be
+obtained in this way, but
+often a ``back of the envelope'' calculation can give
+additional insight. You can, for example, look at a hamfest tuner,
+or read the advertised specifications of a tuner,
+and easily make an educated guess of the sort of power loss that you
+can expect on 80 and 160 meters.
+<P>
+Figure&nbsp;<A HREF="tuner.html#f1">1</A>a gives the schematic diagram of a typical T-network
+tuner. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f1">&#160;</A><A NAME="15">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 1:</STRONG>
+A Typical T-network connected between a source designed for
+a termination of  <I>R</I><SUB>0</SUB> , and a load impedance consisting of a resistance
+ <I>R</I>  and a reactance  <I>X</I> . The coil loss is shown as a parallel equivalent
+resistance (a). An equivalent circuit for the T-network where all
+elements have been transformed into parallel equivalents (b). Matching
+requires the load and source parallel equivalent resistances to
+be equal, and for all the parallel equivalent reactors to resonate.</CAPTION>
+<TR><TD><IMG WIDTH="709" HEIGHT="416"
+ SRC="img1.gif"
+ ALT="\begin{figure}
+\includegraphics [height=180mm,width=160mm]{fig1.ps}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+Since most of the loss
+is in the coil, lossless capacitors are assumed, and
+coil loss is included by the equivalent
+parallel resistance   <I>QX</I><SUB>L</SUB> .
+Figure&nbsp;<A HREF="tuner.html#f1">1</A>b shows an equivalent circuit where the
+desired impedance  <I>R</I><SUB>0</SUB> = 50  ohms
+in series with the input capacitor  <I>C</I><SUB>1</SUB>  is transformed into its equivalent
+parallel resistance and reactance.
+The output resistance R and reactance X in series with the output
+capacitor  <I>C</I><SUB>2</SUB>  are also transformed into their parallel equivalents.
+<P>
+The input impedance will be 50 ohms if the
+tuner elements are selected so that the
+parallel equivalent output resistance in parallel
+with the coil loss resistance
+gives the parallel equivalent input resistance,
+<P ALIGN="CENTER"><A NAME="eq1">&#160;</A>
+<!-- MATH: \frac{R_0}{R^2_0+X^2_{C1}} = \frac{R}{R^2+(X_{C2}+X)^2} +\frac{1}{Q X_L}, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="89" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle{\frac{R_0}{R^2_0+X^2_{C1}}}$"> = <IMG WIDTH="154" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle{\frac{R}{R^2+(X_{C2}+X)^2}}$"> + <IMG WIDTH="39" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{Q X_L}}$">, 
+</TD><TD ALIGN="CENTER">(1)
+</TD></TR></TABLE></P>
+and if the parallel reactances are tuned to resonance,
+<P ALIGN="CENTER"><A NAME="eq2">&#160;</A>
+<!-- MATH: 0 = \frac{X_{C1}}{R^2_0+X^2_{C1}} + \frac{X_{C2}+X}{R^2+(X_{C2}+X)^2}
++\frac{1}{X_L}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+0 = <IMG WIDTH="89" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle{\frac{X_{C1}}{R^2_0+X^2_{C1}}}$"> + <IMG WIDTH="154" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\displaystyle{\frac{X_{C2}+X}{R^2+(X_{C2}+X)^2}}$"> + <IMG WIDTH="28" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{X_L}}$">. 
+</TD><TD ALIGN="CENTER">(2)
+</TD></TR></TABLE></P>
+<P>
+The usual T-network has  <I>C</I><SUB>1</SUB> ,  <I>C</I><SUB>2</SUB> , and  <I>L</I>  all variable. Since there
+are only two matching equations, many combinations will provide a match.
+The optimum combination is the one that minimizes power loss.
+The fractional power loss is the ratio of
+parallel equivalent input resistance to the
+the parallel coil resistance.
+<P>
+Notice that the parallel equivalent source and load resistances are
+larger than either of the original source or load resistances. In
+other words, any T-network will transform the load resistance
+to a higher value which must also be higher than 50 ohms. It then
+transforms this high value down to 50 ohms to produce a match.
+Typical examples at
+80 meters would be a 10 ohm load resistance transformed to a 4000 ohm
+parallel equivalent which is transformed back to 50 ohms, while a
+100 ohm load resistance might be transformed to 1000 ohms before
+being transformed back to 50 ohms. The loss mechanism is now easier
+to see. For these typical cases, the coil reactance will be 
+around a few hundred ohms. The parallel equivalent coil resistance
+for a coil of Q=100 would be 10 or 20 thousand ohms.
+This resistance is enormous compared to 50 ohms and initially you might
+be tempted to ignore it, but it is placed across a point in the circuit
+where the impedance is transformed to a few thousand ohms. This means that
+the loss would be of order 10 percent, hardly negligible if
+a 1500 watt transmitter is used unless your coil is designed to
+dissipate 150 watts.
+<P>
+As discussed by Griffith,
+a typical T-network designed for 160 through 10 meters
+has compromises. One of these is that the capacitors typically
+have a maximum value of 200 to 300 pF. Another is that
+L is usually a roller inductor. Tom Rauch, W8JI,
+who has investigated the Q of some roller inductors
+tells me that a rough estimate of the Q of
+high quality, off the shelf, commercial roller inductors would range
+from a low of around 20 at low values of inductance, up to
+a maximum Q around 100. Custom roller inductors can have
+a higher Q.  Since
+80 and 160 meters are the lower frequency limits of these tuners,
+and the antennas to be tuned there are often relatively short or far
+from resonance, losses for these bands are important concerns.
+Problems also occur at the high frequency limit of these tuners with
+large stray reactances, component minimum
+values, and low coil Q. Here I will concentrate only on performance
+at lower frequencies.
+<P>
+Maximum loss occurs for low impedance loads. In figure <A HREF="tuner.html#f1.5">2</A>, I show
+a smith chart where I have plotted points joined by straight lines
+to approximate contours of constant loss. The inner group of points
+corresponds to a loss of 0.3 dB, the middle group 0.5 dB, and the outer
+group 1.0 dB loss. Because the contours are centered toward the right hand
+side of the chart which corresponds to higher impedances, lower losses
+tend to occur at higher impedances and higher losses at lower impedances
+for a given SWR.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f1.5">&#160;</A><A NAME="39">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 2:</STRONG>
+A Smith chart, normalized to 50 ohms,
+showing points of constant loss for a T network
+with 250 pF capacitors and coil Q of 100. The inner set of dots 
+are at points with 0.3 dB loss. The points have been joined by
+lines to guide the eye. The outer set of points correspond to 1 dB
+loss, and middle set correspond to 0.5 dB loss.</CAPTION>
+<TR><TD><IMG WIDTH="418" HEIGHT="417"
+ SRC="img8.gif"
+ ALT="\begin{figure}
+\includegraphics [width=100mm]{smith1.ps}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+The contours are shifted toward the top of the chart which
+indicates somewhat lower losses for inductive rather than capacitive
+loads.
+In table&nbsp;<A HREF="tuner.html#t1">1</A>, I show
+the loss at 3.7MHz for a tuner with capacitors
+with a maximum value of 250 pF, coil Qs of 50, 100, and 200,
+and purely resistive loads. The tuner is adjusted to give
+the least loss.
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t1">&#160;</A>
+<A NAME="264">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 1:</STRONG>
+Calculated Loss in dB for a T-network tuner at 3.7 MHz 
+using the full equivalent
+circuit of
+figure <A HREF="tuner.html#f1">1</A>b
+with input and output capacitances
+of 250 pF, with resistive loads, R, and coil Q shown.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>R</TD>
+<TD ALIGN="RIGHT" NOWRAP>SWR</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=50</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=100</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=200</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1</TD>
+<TD ALIGN="RIGHT" NOWRAP>50:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>7.47</TD>
+<TD ALIGN="RIGHT" NOWRAP>4.99</TD>
+<TD ALIGN="RIGHT" NOWRAP>3.08</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>20:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>4.62</TD>
+<TD ALIGN="RIGHT" NOWRAP>2.79</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.57</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>5</TD>
+<TD ALIGN="RIGHT" NOWRAP>10:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>3.00</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.69</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.91</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>10</TD>
+<TD ALIGN="RIGHT" NOWRAP>5:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.85</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.00</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.52</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>25</TD>
+<TD ALIGN="RIGHT" NOWRAP>2:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.95</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.49</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.25</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>50</TD>
+<TD ALIGN="RIGHT" NOWRAP>1:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.62</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.31</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.15</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>100</TD>
+<TD ALIGN="RIGHT" NOWRAP>2:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.53</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.26</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.13</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>250</TD>
+<TD ALIGN="RIGHT" NOWRAP>5:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.43</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.21</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.10</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>500</TD>
+<TD ALIGN="RIGHT" NOWRAP>10:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.37</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.18</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.08</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1000</TD>
+<TD ALIGN="RIGHT" NOWRAP>20:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.39</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.20</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.10</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2500</TD>
+<TD ALIGN="RIGHT" NOWRAP>50:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.61</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.31</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.15</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Loads with significant reactance also can be matched
+with a T-network. In table&nbsp;<A HREF="tuner.html#t2">2</A>, I show the worst case loss and the
+load that causes the maximum loss in the network for an SWR of  <I>s</I> ,
+calculated by a straightforward numerical search on a computer.
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t2">&#160;</A>
+<A NAME="265">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 2:</STRONG>
+Calculated worst case loss and corresponding load
+for a T-network tuner at 3.7 MHz
+using the full equivalent
+circuit of figure reff1b with input and output capacitances
+of 250 pF. The R and X values shown are for
+Q=100.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>R</TD>
+<TD ALIGN="RIGHT" NOWRAP>X</TD>
+<TD ALIGN="RIGHT" NOWRAP>SWR</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=50</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=100</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=200</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>50</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>1:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.62</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.31</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.15</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>26</TD>
+<TD ALIGN="RIGHT" NOWRAP>-7</TD>
+<TD ALIGN="RIGHT" NOWRAP>2:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.97</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.50</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.25</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>10</TD>
+<TD ALIGN="RIGHT" NOWRAP>-8</TD>
+<TD ALIGN="RIGHT" NOWRAP>5:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.89</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.02</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.53</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>5</TD>
+<TD ALIGN="RIGHT" NOWRAP>-8</TD>
+<TD ALIGN="RIGHT" NOWRAP>10:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>3.05</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.72</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.93</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2.5</TD>
+<TD ALIGN="RIGHT" NOWRAP>-8</TD>
+<TD ALIGN="RIGHT" NOWRAP>20:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>4.69</TD>
+<TD ALIGN="RIGHT" NOWRAP>2.84</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.60</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1</TD>
+<TD ALIGN="RIGHT" NOWRAP>-8</TD>
+<TD ALIGN="RIGHT" NOWRAP>50:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>7.56</TD>
+<TD ALIGN="RIGHT" NOWRAP>5.06</TD>
+<TD ALIGN="RIGHT" NOWRAP>3.13</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+The
+load shown is that for Q of 100. Detailed analytic calculations show that the
+worst case loss for SWRs greater than about 2 occurs at an impedance
+that is slightly capacitive, and is given approximately by
+<BR>
+
+<!-- MATH: R &=& \frac{R_0}{s}\nonumber,\\X &=& \frac{R_0^2}{2 X_{C2}}, -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>R</I> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="30" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\displaystyle{\frac{R_0}{s}}$">, 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>X</I> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="52" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\displaystyle{\frac{R_0^2}{2 X_{C2}}}$">, 
+</TD><TD ALIGN="RIGHT">(3)</TD></TR>
+</TABLE></DIV>
+which agrees with the load calculated numerically and shown in table&nbsp;<A HREF="tuner.html#t2">2</A>.
+<P>
+A comparison of tables <A HREF="tuner.html#t1">1</A> and <A HREF="tuner.html#t2">2</A>
+shows that while the maximum loss for a given SWR is at a slightly
+capacitive load, an excellent approximation to the worst case
+loss at a given SWR is given by calculating with a purely resistive
+load with
+<P ALIGN="CENTER"><A NAME="eq3">&#160;</A>
+<!-- MATH: R = \frac{R_0}{s}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>R</I> = <IMG WIDTH="30" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\displaystyle{\frac{R_0}{s}}$">. 
+</TD><TD ALIGN="CENTER">(4)
+</TD></TR></TABLE></P>
+This numerical result is verified by analytical calculations which
+show that the additional loss for the reactive load over the purely resistive
+is given roughly by
+an additional factor of 
+<!-- MATH: R^2_0/(4 X^2_{C2}) -->
+ <I>R</I><SUP> 2</SUP><SUB>0</SUB>/(4<I>X</I><SUP> 2</SUP><SUB>C2</SUB>)  which
+changes the calculated loss by only a few percent.
+<P>
+The usefulness of these results is that the worst case loss can be approximated
+simply. For typical capacitor values used and these low resistance loads,
+the magnitude of the
+capacitive reactances of  <I>C</I><SUB>1</SUB>  and  <I>C</I><SUB>2</SUB>  at 80 and 160 meters
+is significantly larger than
+either  <I>R</I><SUB>0</SUB>  or the load resistance  <I>R</I> ; a 250 pF capacitance
+corresponds to roughly 175 ohms at 80 meters and 350 ohms at 160 meters.
+If the loss is assumed small,
+Eqs.&nbsp;<A HREF="tuner.html#eq1">1</A> and <A HREF="tuner.html#eq2">2</A> can be approximated by
+<P ALIGN="CENTER"><A NAME="eq4">&#160;</A>
+<!-- MATH: X^2_{C1} = \frac{R_0}{R} X^2_{C2} = s X^2_{C2}, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>X</I><SUP> 2</SUP><SUB>C1</SUB> = <IMG WIDTH="30" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\displaystyle{\frac{R_0}{R}}$"><I>X</I><SUP> 2</SUP><SUB>C2</SUB> = <I>sX</I><SUP> 2</SUP><SUB>C2</SUB>, 
+</TD><TD ALIGN="CENTER">(5)
+</TD></TR></TABLE></P>
+and 
+<P ALIGN="CENTER"><A NAME="eq5">&#160;</A>
+<!-- MATH: \frac{1}{X_L} = -\frac{1}{X_{C1}} - \frac{1}{X_{C2}}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="28" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{X_L}}$"> = - <IMG WIDTH="35" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{X_{C1}}}$"> - <IMG WIDTH="35" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{X_{C2}}}$">. 
+</TD><TD ALIGN="CENTER">(6)
+</TD></TR></TABLE></P>
+The ratio of the power dissipated in the coil 
+<!-- MATH: P_{\rm loss} -->
+ <I>P</I><SUB>loss</SUB> 
+to the power input  <I>P</I> 
+is approximately
+<P ALIGN="CENTER"><A NAME="eq6">&#160;</A>
+<!-- MATH: \frac{P_{\rm loss}}{P} = \frac{X^2_{C1}}{R_0 Q X_L} . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="43" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\displaystyle{\frac{P_{\rm loss}}{P}}$"> = <IMG WIDTH="72" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\displaystyle{\frac{X^2_{C1}}{R_0 Q X_L}}$">. 
+</TD><TD ALIGN="CENTER">(7)
+</TD></TR></TABLE></P>
+Using Eqs. <A HREF="tuner.html#eq4">5</A> and <A HREF="tuner.html#eq5">6</A>, this becomes,
+<P ALIGN="CENTER">
+<!-- MATH: \frac{P_{\rm loss}}{P} = \frac{(s + \sqrt{s}) |X_{C2}|}{R_0 Q}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="43" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\displaystyle{\frac{P_{\rm loss}}{P}}$"> = <IMG WIDTH="128" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\displaystyle{\frac{(s + \sqrt{s}) \vert X_{C2}\vert}{R_0 Q}}$">. 
+</TD><TD ALIGN="CENTER">(8)
+</TD></TR></TABLE></P>
+This equation shows that the value of  |<I>X</I><SUB>C2</SUB>|  should be minimized
+to minimize the loss. Therefore the capacitors should be adjusted
+to have the largest value they can while achieving a match. For this
+low impedance case,  <I>C</I><SUB>2</SUB>  should be set to its maximum value.
+The loss in the T network in dB is
+<P ALIGN="CENTER">
+<!-- MATH: L^T_{dB} = -10 \log_{10}( 1 - \frac{P_{\rm loss}}{P} ). -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>L</I><SUP> T</SUP><SUB>dB</SUB> = - 10<IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\log_{10}^{}$">(1 - <IMG WIDTH="43" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\displaystyle{\frac{P_{\rm loss}}{P}}$">). 
+</TD><TD ALIGN="CENTER">(9)
+</TD></TR></TABLE></P>
+Since the approximate formula is only good at small values of loss,
+I can expand the logarithm without making the approximation worse, using
+<P ALIGN="CENTER">
+<!-- MATH: \log_{10}(1-x) \approx -\frac{x}{\ln(10)}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\log_{10}^{}$">(1 - <I>x</I>) <IMG WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\displaystyle\approx$"> - <IMG WIDTH="58" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\displaystyle{\frac{x}{\ln(10)}}$">. 
+</TD><TD ALIGN="CENTER">(10)
+</TD></TR></TABLE></P>
+If the frequency  <I>f</I>  is given in MHz, the maximum capacitance of the
+capacitors is written as  <I>C</I><SUB>max</SUB>  and given in pF, then using
+ <I>R</I><SUB>0</SUB> = 50  ohms,
+<P ALIGN="CENTER"><A NAME="eq7">&#160;</A>
+<!-- MATH: L^T_{dB} \approx 14,000 \frac{s + \sqrt{s}}{C_{max} f Q} . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>L</I><SUP> T</SUP><SUB>dB</SUB> <IMG WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\displaystyle\approx$"> 14,000<IMG WIDTH="77" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\displaystyle{\frac{s + \sqrt{s}}{C_{max} f Q}}$">. 
+</TD><TD ALIGN="CENTER">(11)
+</TD></TR></TABLE></P>
+The results of Eq. <A HREF="tuner.html#eq7">11</A> are shown in table&nbsp;<A HREF="tuner.html#t3">3</A>, and can be
+compared with those of table&nbsp;<A HREF="tuner.html#t2">2</A>. For losses less than a dB or two,
+the agreement is good.
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t3">&#160;</A>
+<A NAME="276">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 3:</STRONG>
+Worst case loss for a T-network tuner at 3.7 MHz
+with input and output capacitances 
+of 250 pF, using Eq. <A HREF="tuner.html#eq7">11</A>.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>SWR</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Loss(dB)</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=50</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=100</TD>
+<TD ALIGN="RIGHT" NOWRAP>Q=200</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.61</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.30</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.15</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.03</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.52</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.26</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>5:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>2.19</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.10</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.55</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>10:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>3.98</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.99</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.00</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>20:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>7.41</TD>
+<TD ALIGN="RIGHT" NOWRAP>3.70</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.85</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>50:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>17.28</TD>
+<TD ALIGN="RIGHT" NOWRAP>8.64</TD>
+<TD ALIGN="RIGHT" NOWRAP>4.32</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+Eq. <A HREF="tuner.html#eq7">11</A> allows us to estimate the worst possible loss that
+can occur with an output swr of  <I>s</I> . The loss can be a lot smaller;
+for example if the swr is 5, but corresponds to a purely resistive
+load of 250 ohms, Eq.&nbsp;<A HREF="tuner.html#eq7">11</A> greatly overestimates the loss.
+However if the swr of 5 corresponds to a purely resistive load of
+10 ohms, Eq.&nbsp;<A HREF="tuner.html#eq7">11</A> should fairly accurately predict the loss
+<P>
+Analytic calculations show that the least loss with a purely resistive
+load will occur approximately when both capacitors are set to
+the maximum value,
+and the load resistance is R =  <I>X</I><SUP> 2</SUP><SUB>C</SUB>/<I>R</I><SUB>0</SUB>  where  <I>X</I><SUB>C</SUB>  is the reactance
+of one of the capacitors. The minimum loss with a resistive
+load is approximately half that of the loss for a matched load of
+ <I>R</I><SUB>0</SUB> = 50  ohms if the coil Q remains the same.
+This result and Eq. <A HREF="tuner.html#eq7">11</A> give reasonable upper
+and lower bounds to the loss.
+<P>
+Only the product of the Q value of the coil and the maximum value
+of the output capacitor needs to be measured or estimated to use Eq.&nbsp;<A HREF="tuner.html#eq7">11</A>.
+The
+maximum value of the capacitor is often given in the tuner specifications;
+if not, it can be easily measured or estimated from handbook formulas
+from the size, spacing, and number of plates. The coil Q can be guessed,
+or, for a more accurate estimate,  measured using an r.f. bridge or Q meter.
+Alternatively, measuring
+the loss for a 50 ohm
+load and then applying Eq.&nbsp;<A HREF="tuner.html#eq7">11</A> will give a value of  <I>QC</I><SUB>max</SUB> 
+at the measurement frequency.
+This matched loss can be measured by matching a 50 ohm dummy load with
+your tuner and using
+a power meter to measure the input and output powers.
+Once  <I>QC</I><SUB>max</SUB>  is known, it can be used to calculate the worst
+case loss at other SWR values.
+<P>
+Another popular tuner uses a differential T-network. In this
+network the capacitors  <I>C</I><SUB>1</SUB>  and  <I>C</I><SUB>2</SUB>  are ganged together so
+that their values sum to approximately  <I>C</I><SUB>max</SUB> . The worst case loss
+can be calculated as before and is
+<P ALIGN="CENTER">
+<!-- MATH: L^{diff T}_{dB} \approx 14,000 \frac{(1 + \sqrt{s})^2}{C_{max} f Q}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>L</I><SUP> diffT</SUP><SUB>dB</SUB> <IMG WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\displaystyle\approx$"> 14,000<IMG WIDTH="90" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\displaystyle{\frac{(1 + \sqrt{s})^2}{C_{max} f Q}}$">. 
+</TD><TD ALIGN="CENTER">(12)
+</TD></TR></TABLE></P>
+The worst case loss of the differential T network is a factor of
+2 worse at an SWR of 1, but becomes the same as the standard
+T for large values of
+SWR. This disadvantage is offset by the convenience of
+having only 2 components
+to adjust, and by the fact that one source of operator error is eliminated
+since a really bad set of component
+values cannot be chosen. This is unlike the standard network where the
+operator can set the components to values that produce a match
+but greatly increase losses.
+<P>
+Other T type configurations can be examined. The ultimate[<A
+ HREF="node1.html#ultimate">3</A>]
+and SPC[<A
+ HREF="node1.html#spc">4</A>] transmatches are shown in figures&nbsp;<A HREF="tuner.html#f2">3</A>a and <A HREF="tuner.html#f2">3</A>b
+respectively.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f2">&#160;</A><A NAME="159">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 3:</STRONG>
+The ultimate transmatch circuit (a). The SPC
+transmatch circuit (b). An L-network for matching low resistance loads (c).</CAPTION>
+<TR><TD><IMG WIDTH="558" HEIGHT="619"
+ SRC="img22.gif"
+ ALT="\begin{figure}
+\includegraphics [height=180mm,width=190mm]{fig3.ps}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+In these, one of the capacitors in the network is replaced with a
+two-section variable. For the ultimate transmatch, at 80 or 160 meters,
+the reactance of the capacitor across the input is significantly larger than
+50 ohms, so it has little effect. You can simply ignore it in the
+loss analysis here; the extra section just increases the cost
+of the transmatch without improving it.  The SPC transmatch has the
+second section of the output capacitor connected across the
+coil. The worst case loss of this circuit is always greater than
+the standard T network.
+The analysis above is easily extended by adding this
+additional capacitance across the coil. For the SPC network, the
+loss, when matching load resistances smaller than  <I>R</I><SUB>0</SUB> , is given by
+<P ALIGN="CENTER">
+<!-- MATH: L^{SPC}_{dB} \approx 14,000 \frac{2 s + \sqrt{s}}{C_{max} f Q}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>L</I><SUP> SPC</SUP><SUB>dB</SUB> <IMG WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\displaystyle\approx$"> 14,000<IMG WIDTH="77" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\displaystyle{\frac{2 s + \sqrt{s}}{C_{max} f Q}}$">. 
+</TD><TD ALIGN="CENTER">(13)
+</TD></TR></TABLE></P>
+where  <I>C</I><SUB>max</SUB>  is the maximum capacitance of one section of
+the output capacitor for the SPC circuit. The loss is 50 percent
+more than a standard T-network for an SWR of 1,
+increasing to double the loss as the
+output resistance drops. Unlike the differential T-network,
+there does not appear to me to be any benefits from this
+circuit that offset this additional loss.
+<P>
+It is amusing to compare the T-network results with those
+of a simple L-network designed
+to match a resistive low impedance load as shown in figure&nbsp;<A HREF="tuner.html#f2">3</A>c.
+The result is
+<P ALIGN="CENTER">
+<!-- MATH: L^{L}_{dB} = \frac{10}{\ln(10)}\frac{\sqrt{s-1}}{Q}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>L</I><SUP> L</SUP><SUB>dB</SUB> = <IMG WIDTH="44" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\displaystyle{\textstyle\frac{10}{\ln(10)}}$"><IMG WIDTH="67" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\displaystyle{\frac{\sqrt{s-1}}{Q}}$">. 
+</TD><TD ALIGN="CENTER">(14)
+</TD></TR></TABLE></P>
+For this resistive load, the simple L network is better by an overall factor of
+
+<!-- MATH: |X_{C2}|/R_0 -->
+ |<I>X</I><SUB>C2</SUB>|/<I>R</I><SUB>0</SUB>  which is  about a factor of 7 for  <I>C</I><SUB>max</SUB> 
+of 250 pF at 160 meters. In addition, the loss for a load of 50 ohms
+is zero (where the L and C values are both zero) and it increases
+slower with SWR than for the T networks. The penalty is the limited matching
+range. An L network tuner needs to be reconfigured to match a wide
+range of loads; this switching of components can get complicated.
+<P>
+The peak voltage across the output capacitor of a T-network
+for these loads can
+also be calculated within these same approximations. Since the
+series capacitors' reactance is significantly larger than 50 ohms,
+the voltage across the source can be ignored to get an
+estimate of the peak voltage.
+The peak input current is 
+<!-- MATH: I = \sqrt{2 P/R_0 } -->
+ <I>I</I> = <IMG WIDTH="76" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\sqrt{2 P/R_0 }$"> . The peak voltage
+across the input capacitor is therefore,
+<P ALIGN="CENTER">
+<!-- MATH: V = I |X_{C1}| = \sqrt{\frac{2 P}{R_0} } |X_{C1}|. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>V</I> = <I>I</I>|<I>X</I><SUB>C1</SUB>| = <IMG WIDTH="49" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\displaystyle\sqrt{\frac{2 P}{R_0} }$">|<I>X</I><SUB>C1</SUB>|. 
+</TD><TD ALIGN="CENTER">(15)
+</TD></TR></TABLE></P>
+Substituting as above for the value of  <I>X</I><SUB>C1</SUB>  in terms of  <I>C</I><SUB>max</SUB>  in pF,
+the frequency  <I>f</I>  in MHz, and the swr  <I>s</I>  gives
+the approximate peak voltage across the capacitors for the standard T-network
+with  <I>R</I><SUB>0</SUB> = 50  ohms,
+<P ALIGN="CENTER">
+<!-- MATH: V = \frac{100,000}{\pi} \frac{\sqrt{P}}{f C_{max}} \sqrt{s}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>V</I> = <IMG WIDTH="75" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\displaystyle{\frac{100,000}{\pi}}$"><IMG WIDTH="62" HEIGHT="69" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\displaystyle{\frac{\sqrt{P}}{f C_{max}}}$"><IMG WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\displaystyle\sqrt{s}$">. 
+</TD><TD ALIGN="CENTER">(16)
+</TD></TR></TABLE></P>
+This equation also works for both the
+ultimate transmatch and SPC tuner circuits.
+For the differential T network, the relationship between  <I>C</I><SUB>1</SUB>  and  <I>C</I><SUB>2</SUB> 
+changes the result to,
+<P ALIGN="CENTER">
+<!-- MATH: V = \frac{100,000}{\pi} \frac{\sqrt{P}}{f C_{max}} (1 + \sqrt{s}). -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>V</I> = <IMG WIDTH="75" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\displaystyle{\frac{100,000}{\pi}}$"><IMG WIDTH="62" HEIGHT="69" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\displaystyle{\frac{\sqrt{P}}{f C_{max}}}$">(1 + <IMG WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\displaystyle\sqrt{s}$">). 
+</TD><TD ALIGN="CENTER">(17)
+</TD></TR></TABLE></P>
+<P>
+The power loss equations can be compared to some measurements given
+in Frank Witt's article[<A
+ HREF="node1.html#witt">1</A>]. The only T-network that he
+measured was a Heath SA-2040 which has the ultimate transmatch
+configuration. This tuner does not cover 160 meters.
+The input capacitor has a maximum value of 125 pF, and the output
+capacitor has a maximum value of 170 pF.
+Because these values are not equal, a little care is needed.
+For a 50 ohm input and output impedance, the capacitor values must
+be equal. This means that the output capacitor can have a maximum
+value of 125 pF for a match. However, when the output
+resistance is reduced, Eq.&nbsp;<A HREF="tuner.html#eq4">5</A> can be applied to show that
+for loads below about 
+<!-- MATH: (125/170)^2 50 -->
+ (125/170)<SUP>2</SUP>50  ohms or about 27 ohms, the full
+170 pF value of the output capacitor can be used. The measured
+loss with a 50 ohm load at 80 meters was 13 percent which corresponds
+to 0.6 dB. Converting this into a Q value using  <I>C</I><SUB>max</SUB>  of 125 pF,
+gives a Q of approximately 100, a reasonable value.
+Using this Q value and a  <I>C</I><SUB>max</SUB>  value of 170 pF in Eq.&nbsp;<A HREF="tuner.html#eq7">11</A>,
+gives the calculated values at other loads
+shown in table&nbsp;<A HREF="tuner.html#t4">4</A> along with the
+measured values. The values agree within about 10 percent. This
+level of agreement is partially fortuitous,
+but these results show that the simple ``back
+of the envelope'' calculations work.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t4">&#160;</A>
+<A NAME="287">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 4:</STRONG>
+Worst case loss on 80 meters calculated from Eq. <A HREF="tuner.html#eq7">11</A>,
+and compared to the loss measured in ref. 1 for the
+Heathkit SA-2040 tuner.</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>SWR</TD>
+<TD ALIGN="RIGHT" NOWRAP>Measured Loss (dB)</TD>
+<TD ALIGN="RIGHT" NOWRAP>Calculated Loss (dB)</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.6</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.8</TD>
+<TD ALIGN="RIGHT" NOWRAP>0.8</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>4:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.2</TD>
+<TD ALIGN="RIGHT" NOWRAP>1.3</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>8:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>2.6</TD>
+<TD ALIGN="RIGHT" NOWRAP>2.4</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>16:1</TD>
+<TD ALIGN="RIGHT" NOWRAP>4.1</TD>
+<TD ALIGN="RIGHT" NOWRAP>4.5</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+For convenience, I have gathered the approximate
+loss and peak voltage formulas in table <A HREF="tuner.html#t5">5</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t5">&#160;</A>
+<A NAME="288">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 5:</STRONG>
+The ``back of the envelope'' formulas for the worst case loss and maximum peak
+voltage as a function of the swr  <I>s</I>  derived
+in the text.
+ <I>f</I>  is the frequency in MHz,  <I>C</I><SUB>max</SUB>  is the maximum value of the output
+capacitor in pF, Q is the coil Q, and P is the power.
+The formulas for
+the ultimate transmatch are the same as for the Standard T network.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>Network</TD>
+<TD ALIGN="CENTER" NOWRAP>Loss in dB</TD>
+<TD ALIGN="CENTER" NOWRAP>Peak Voltage</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>Standard T</TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: 14,000 \frac{s + \sqrt{s}}{C_{max} f Q} -->
+ 14,000<IMG WIDTH="62" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="${\frac{s + \sqrt{s}}{C_{max} f Q}}$"> </TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: \frac{100,000}{\pi} \frac{\sqrt{P}}{f C_{max}} \sqrt{s} -->
+ <IMG WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="${\frac{100,000}{\pi}}$"><IMG WIDTH="51" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="${\frac{\sqrt{P}}{f C_{max}}}$"><IMG WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\sqrt{s}$"> </TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>Differential T</TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: 14,000 \frac{(1 + \sqrt{s})^2}{C_{max} f Q} -->
+ 14,000<IMG WIDTH="62" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="${\frac{(1 + \sqrt{s})^2}{C_{max} f Q}}$"> </TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: \frac{100,000}{\pi} \frac{\sqrt{P}}{f C_{max}} (1 + \sqrt{s}) -->
+ <IMG WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="${\frac{100,000}{\pi}}$"><IMG WIDTH="51" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="${\frac{\sqrt{P}}{f C_{max}}}$">(1 + <IMG WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\sqrt{s}$">) </TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>SPC</TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: 14,000 \frac{2 s + \sqrt{s}}{C_{max} f Q} -->
+ 14,000<IMG WIDTH="62" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="${\frac{2 s + \sqrt{s}}{C_{max} f Q}}$"> </TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: \frac{100,000}{\pi} \frac{\sqrt{P}}{f C_{max}} \sqrt{s} -->
+ <IMG WIDTH="54" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="${\frac{100,000}{\pi}}$"><IMG WIDTH="51" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="${\frac{\sqrt{P}}{f C_{max}}}$"><IMG WIDTH="29" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\sqrt{s}$"> </TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+These results point out some fundamental problems
+in using a 160 through 10 meter T-network
+tuner at 80 and especially 160 meters.
+Even feeding a resistive 50 ohm load with a tuner with
+250 pF capacitors and a coil Q of 100 gives a loss of
+about 0.6 dB. With a 1500 watt transmitter, the coil will
+have to dissipate about 180 watts. I doubt if many tuners can
+stand up to that. Increasing the SWR to 3, increases the worst
+case loss to 1.3 dB, and the dissipation could increase to almost 400 watts.
+Clearly a real 1500 watt 160 meter T-network tuner needs to have
+significantly larger capacitors and a high quality coil in
+a large cabinet to minimize loss.
+<P>
+I would like to thank Tom Rauch, W8JI, for reading a preliminary
+version of this work, for many helpful comments,
+and for providing me with reasonable estimates of the Q of the
+coils in these networks.
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html13"
+ HREF="node1.html#SECTION00010000000000000000">
+References</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html11"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html9"
+ HREF="http://fermi.la.asu.edu/w9cf">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html12"
+ HREF="node1.html">References</A>
+<B> Up:</B> <A NAME="tex2html10"
+ HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Using the #math17# SoundBlaster TM 1.X</TITLE>
+<META NAME="description" CONTENT="Using the #math17# SoundBlaster TM 1.X">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html150"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html147"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html141"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html149"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html151"
+ HREF="node11.html">10 Windows Sound System</A>
+<B> Up:</B> <A NAME="tex2html148"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html142"
+ HREF="node9.html">8 Switching off the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION000100000000000000000">
+Using the 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 1.X</A>
+</H1>
+<P>
+The older 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 1.0 and 1.5 cards do not support autoinitiate DMA
+transfers. This means that the CPU has to intervene to reprogram
+the sound card at the end of every buffer transfer, leading to
+gaps that make the sound quality poorer. I have found that 
+sound quality for playing sound files is adequate without autoinitiate
+mode, but the recording quality is somewhere between terrible and
+almost acceptable.
+If for some reason your card doesn't support
+autoinitiate transfers and doesn't have T1 set in the blaster environment
+variable, you can force autoinitiate DMA transfers off by including
+-a on the command line, i.e.,
+<BR>
+SBDVP -a
+<BR>
+To make the record quality better, the sound buffer can be made larger
+so the gaps occur less frequently. I have included a version of the
+executable SBDVPB.EXE that is identical to SBDVP.EXE except that it
+has been compiled with the option -DBLOCK_LENGTH=4096, which increases
+the sound buffer to 8K. This necessarily increases the code size by
+16K, and the memory use will be around 40K. If you can use the loadhigh
+command, this doesn't matter, otherwise this memory cannot be used by
+TR, and you need to decide what to do. One ``solution'' is to use
+SBDVPB before the contest to record your files, and then use SBDVP
+during the contest, but don't make any recordings with it. Another
+``solution'' is to record on a friends computer that has a newer
+card, and use these files during the contest.
+<P>
+If you have a 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 2.0, Pro, or 16, none of this concerns you and you should
+always use SBDVP <EM>without</EM> -a.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html150"
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html147"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html141"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html149"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html151"
+ HREF="node11.html">10 Windows Sound System</A>
+<B> Up:</B> <A NAME="tex2html148"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html142"
+ HREF="node9.html">8 Switching off the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,490 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A less than magic bullet
+&nbsp;&nbsp;&nbsp; </TITLE>
+<META NAME="description" CONTENT="A less than magic bullet
+&nbsp;&nbsp;&nbsp; ">
+<META NAME="keywords" CONTENT="magic">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="magic.css">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html1"
+ HREF="../../index.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html2"
+ HREF="../../index.html">W9CF Home</A>
+<BR><BR>
+<!--End of Navigation Panel-->
+This is the text accompanying a letter I sent to QST in January 1996,
+suggesting this for a possible technical correspondence column. It
+was rejected by the editors.
+<P><BR>
+<BR>
+<H1 ALIGN="CENTER">A less than magic bullet<BR>
+&nbsp;&nbsp;&nbsp;      <BR>
+</H1>
+<P ALIGN="CENTER"><STRONG>Kevin Schmidt, W9CF</STRONG></P>
+<P ALIGN="LEFT"></P>
+<P><H1><A NAME="SECTION00010000000000000000">
+1 Magic Bullet</A>
+</H1>
+Roy Lewallen in the <I>ARRL Antenna Book</I>[<A
+ HREF="magic.html#lewallen">1</A>] named
+a lossless network that would produce currents
+through two driven impedances
+with equal magnitude, and a relative 90
+degree phase, independent of
+the values of the two driven impedances, a ``magic bullet.''
+If the magic bullet existed, it would make it possible to
+feed antenna elements in quadrature without having
+to make accurate measurements of
+the self and mutual impedances of the elements.
+<P>
+The general magic bullet would produce any desired relative phase.
+In the following I show that such a network cannot be realized
+with a reciprocal lossless network
+except for phase differences of 0 or 180 degrees.
+A nonreciprocal lossless network can produce other phase shifts.
+I show how to make a nonreciprocal transmission line
+by using a circulator. This produces the magic bullet, but
+the requirement that nonreciprocal elements are needed will
+probably limit the usefulness to UHF and microwave frequencies.
+<P><H1><A NAME="SECTION00020000000000000000">
+2 Three-Port Analysis</A>
+</H1>
+The system can be thought of as a general three-port network. Take
+port 1 to be the input port, and
+ports 2 and 3 to be output ports.  Define the current to flow
+out of the network when the current is positive.
+The admittance parameters  <I>y</I><SUB>ij</SUB>  are defined
+by
+
+<!-- MATH: \left (
+\begin{array}{c}
+I_1 \\I_2 \\I_3
+\end{array}
+\right )
+=
+\left [
+\begin{array}{ccc}
+y_{11} & y_{12} & y_{13} \\y_{21} & y_{22} & y_{23} \\y_{31} & y_{32} & y_{33} 
+\end{array}
+\right ]
+\left (
+\begin{array}{c}
+V_1 \\V_2 \\V_3 
+\end{array}
+\right ) .
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP><IMG WIDTH="443" HEIGHT="80" ALIGN="left" ALIGN="middle"
+ SRC="img4.gif"
+ ALT="\begin{equation}
+\left (
+\begin{array}
+{c}
+I_1 \ I_2 \ I_3 \end{array}\right )...
+ ...
+\left (
+\begin{array}
+{c}
+V_1 \ V_2 \ V_3 \end{array}\right ) .\end{equation}"></TD><TD ALIGN="CENTER">(1)
+</TD></TR></TABLE>
+For convenience, I take the driving voltage on port 1 to be 1.
+The impedances
+connected to ports 2 and 3 are  <I>Z</I><SUB>2</SUB>  and  <I>Z</I><SUB>3</SUB> , so that 
+<!-- MATH: V_2 = Z_2 I_2 -->
+ <I>V</I><SUB>2</SUB> = <I>Z</I><SUB>2</SUB><I>I</I><SUB>2</SUB> 
+and 
+<!-- MATH: V_3 = Z_3 I_3 -->
+ <I>V</I><SUB>3</SUB> = <I>Z</I><SUB>3</SUB><I>I</I><SUB>3</SUB> . Plugging these in to the admittance equation
+gives the equations
+<BR>
+
+<!-- MATH: ( 1 -y_{22} Z_2) I_2 - y_{23}Z_3 I_3 = y_{21}, \nonumber\\- y_{32}Z_2 I_2 + (1-y_{33}Z_3)I_3 = y_{31}. -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+(1 - <I>y</I><SUB>22</SUB><I>Z</I><SUB>2</SUB>)<I>I</I><SUB>2</SUB> - <I>y</I><SUB>23</SUB><I>Z</I><SUB>3</SUB><I>I</I><SUB>3</SUB> = <I>y</I><SUB>21</SUB>, 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+ - <I>y</I><SUB>32</SUB><I>Z</I><SUB>2</SUB><I>I</I><SUB>2</SUB> + (1 - <I>y</I><SUB>33</SUB><I>Z</I><SUB>3</SUB>)<I>I</I><SUB>3</SUB> = <I>y</I><SUB>31</SUB>. 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">(2)</TD></TR>
+</TABLE></DIV>
+<P>
+Solving for the ratio of the currents gives,
+<P ALIGN="CENTER">
+<!-- MATH: \frac{I_2}{I_3} = \frac{y_{21} -y_{33} y_{21} Z_3 + y_{23} y_{31} Z_3 }
+{ y_{31} -y_{22}y_{31}Z_2 + y_{32} y_{21} Z_2 } . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="24" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle{\frac{I_2}{I_3}}$"> = <IMG WIDTH="220" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\displaystyle{\frac{y_{21} -y_{33} y_{21} Z_3 + y_{23} y_{31} Z_3 }{ y_{31} -y_{22}y_{31}Z_2 + y_{32} y_{21} Z_2 }}$">. 
+</TD><TD ALIGN="CENTER">(3)
+</TD></TR></TABLE></P>
+This ratio must be constant
+independent of
+ <I>Z</I><SUB>2</SUB>  and  <I>Z</I><SUB>3</SUB>  for there to be a ``magic bullet.''
+This requires that the numerator and denominator be the
+same function of  <I>Z</I><SUB>2</SUB>  and  <I>Z</I><SUB>3</SUB>  except for an overall constant factor.
+Since the numerator has no  <I>Z</I><SUB>2</SUB>  dependence, the coeficient of the
+ <I>Z</I><SUB>2</SUB>  term in the denominator must be zero. Similarly since the denominator
+has no  <I>Z</I><SUB>3</SUB>  dependence the coefficient of  <I>Z</I><SUB>3</SUB>  in the numerator
+must be zero. The condition on the constant term for a magic bullet
+with a phase difference of  <IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\phi$">  radians is
+<P ALIGN="CENTER">
+<!-- MATH: \frac{y_{21}}{y_{31}} = \exp(j \phi). -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="32" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\displaystyle{\frac{y_{21}}{y_{31}}}$"> = exp(<I>j</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\displaystyle\phi$">). 
+</TD><TD ALIGN="CENTER">(4)
+</TD></TR></TABLE></P>
+Therefore  <I>y</I><SUB>21</SUB>  and  <I>y</I><SUB>31</SUB>  cannot be zero, and the requirements
+on the coefficients of  <I>Z</I><SUB>2</SUB>  and  <I>Z</I><SUB>3</SUB>  give:
+<P ALIGN="CENTER">
+<!-- MATH: y_{22} = y_{23} = y_{32} = y_{33} = 0. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>y</I><SUB>22</SUB> = <I>y</I><SUB>23</SUB> = <I>y</I><SUB>32</SUB> = <I>y</I><SUB>33</SUB> = 0. 
+</TD><TD ALIGN="CENTER">(5)
+</TD></TR></TABLE></P>
+<P>
+For the cases of 0 and 180 degrees, Lewallen's current forcing
+solution using
+ 1/4  wavelength lines, gives 
+<!-- MATH: y_{22} = y_{32} = y_{23} = y_{33} = 0 -->
+ <I>y</I><SUB>22</SUB> = <I>y</I><SUB>32</SUB> = <I>y</I><SUB>23</SUB> = <I>y</I><SUB>33</SUB> = 0 ,
+and 
+<!-- MATH: y_{21}/y_{31} = \pm 1 -->
+ <I>y</I><SUB>21</SUB>/<I>y</I><SUB>31</SUB> = <IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\pm$"> 1 , as required.
+<P>
+A lossless network cannot absorb power. This requirement is
+expressed by the equation
+<P ALIGN="CENTER">
+<!-- MATH: \sum_{m,n} V^*_m (y_{mn}+y^*_{nm}) V_n = 0, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="28" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\displaystyle\sum_{m,n}^{}$"><I>V</I><SUP> *</SUP><SUB>m</SUB>(<I>y</I><SUB>mn</SUB> + <I>y</I><SUP> *</SUP><SUB>nm</SUB>)<I>V</I><SUB>n</SUB> = 0, 
+</TD><TD ALIGN="CENTER">(6)
+</TD></TR></TABLE></P>
+and must hold for all driving voltages.
+If I terminate two of the ports with short circuits, and drive
+the third, I find
+that the diagonal elements of the  <I>y</I>  matrix must
+be purely imaginary. If I terminate one of the ports with a short circuit,
+and drive the other two at various relative phases, I
+get the requirement 
+<!-- MATH: y^*_{mn} = - y_{nm} -->
+ <I>y</I><SUP> *</SUP><SUB>mn</SUB> = - <I>y</I><SUB>nm</SUB>  for a lossless
+network.
+<P>
+If I now assume that the network is reciprocal,
+
+<!-- MATH: y_{mn} = y_{nm} -->
+ <I>y</I><SUB>mn</SUB> = <I>y</I><SUB>nm</SUB> . Therefore the off diagonal
+elements must be purely imaginary as well. The ratio of two of
+these admittances can have only a phase of 0 or 180 degrees.
+<P>
+This says that for a reciprocal lossless network, only 0 or 180
+degree phase differences can be ``current forced.'' Since capacitors,
+inductors, transformers, and normal transmission lines
+are reciprocal elements, no combination of them can produce
+the magic bullet.
+<P>
+If I introduce ferrites, or other nonreciprocal elements, it is
+possible to current force other phase differences.
+<P>
+The form of the admittance matrix required for current forcing is suggestive,
+<P ALIGN="CENTER">
+<!-- MATH: \left [
+\begin{array}{ccc}
+y_{11} & -y^*_{21} & -y^*_{31} \\y_{21} & 0 & 0 \\y_{31} & 0 & 0
+\end{array}
+\right ].
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="188" HEIGHT="88" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle\left [
+\begin{array}
+{ccc}
+y_{11} & -y^*_{21} & -y^*_{31} \ y_{21} & 0 & 0 \ y_{31} & 0 & 0 \end{array}\right].$"> 
+</TD><TD ALIGN="CENTER">(7)
+</TD></TR></TABLE></P>
+This form says that there cannot be any interaction between ports
+2 and 3 except through their connection to port 1. That means that
+this form is synthesized by connecting two 2-port networks. One
+from port 1 to port 2, and the other from port 1 to port 3.
+These networks must have admittance matrices with a lossless
+``current forcing'' form:
+<P ALIGN="CENTER">
+<!-- MATH: \left [
+\begin{array}{cc}
+0 & -\alpha^* \\\alpha & 0
+\end{array}
+\right ] . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="113" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\displaystyle\left [
+\begin{array}
+{cc}
+ 0 & -\alpha^* \ \alpha & 0\end{array}\right].$"> 
+</TD><TD ALIGN="CENTER">(8)
+</TD></TR></TABLE></P><H1><A NAME="SECTION00030000000000000000">
+3 Synthesis</A>
+</H1>
+Since the reciprocal case can be synthesized using a transmission
+line, I attempt to synthesize the nonreciprocal case using a lossless
+nonreciprocal transmission line. Such a line that can be physically
+realized has a 
+characteristic impedance  <I>Z</I><SUB>0</SUB> , with an electrical length for
+the forward mode of  <I>a</I>  radians, and  <I>b</I>  radians for the reverse
+mode. Its ABCD parameters are obtained by expanding in the
+modes:
+
+<!-- MATH: \left [
+\begin{array}{cc}
+A & B \\ C & D
+\end{array}
+\right ]
+= \frac{1}{2}
+\left [
+\begin{array}{cc}
+ 1 & 1 \\ 1/Z_0 & -1/Z_0
+\end{array}
+\right ]
+\left [
+\begin{array}{cc}
+ \exp ( -j a ) & 0 \\ 0 & \exp( j b)
+\end{array}
+\right ]
+\left [
+\begin{array}{cc}
+ 1 & Z_0 \\ 1 & -Z_0
+\end{array}
+\right ]
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP><IMG WIDTH="572" HEIGHT="60" ALIGN="left" ALIGN="middle"
+ SRC="img19.gif"
+ ALT="\begin{equation}
+\left [
+\begin{array}
+{cc}
+ A & B \  C & D\end{array}\right ]
+...
+ ...gin{array}
+{cc}
+ 1 & Z_0 \  1 & -Z_0\end{array}\right ]
+\nonumber\end{equation}"></TD><TD ALIGN="CENTER">&nbsp;&nbsp;
+</TD></TR></TABLE>
+<P ALIGN="CENTER">
+<!-- MATH: = \frac{1}{2}
+\left [
+\begin{array}{cc}
+\exp(-ja)+\exp(j b) & Z_0 ( \exp(-ja) - \exp(jb)) \\( \exp(-ja)-\exp(j b))/Z_0 & \exp(-ja)+\exp(j b)
+\end{array}
+\right ] . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+ = <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{2}}$"><IMG WIDTH="479" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\displaystyle\left [
+\begin{array}
+{cc}
+ \exp(-ja)+\exp(j b) & Z_0 ( \exp(-ja) - \exp(jb)) \ ( \exp(-ja)-\exp(j b))/Z_0 & \exp(-ja)+\exp(j b)\end{array}\right].$"> 
+</TD><TD ALIGN="CENTER">(9)
+</TD></TR></TABLE></P>
+To have the current forcing form, we need to zero the diagonal terms.
+That requires  <I>a</I> + <I>b</I>  to be an odd multiple of  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\pi$"> , which then
+gives 
+<!-- MATH: \exp(j b ) = -\exp(-ja) -->
+ exp(<I>jb</I>) = - exp (- <I>ja</I>) . The result for the ABCD matrix
+is
+<P ALIGN="CENTER">
+<!-- MATH: \left [
+\begin{array}{cc}
+A & B \\ C & D
+\end{array}
+\right ]
+=
+\left [
+\begin{array}{cc}
+ 0 & Z_0 \exp(-ja) \\\exp(-ja)/Z_0 & 0
+\end{array}
+\right ] . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="109" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\displaystyle\left [
+\begin{array}
+{cc}
+ A & B \  C & D\end{array}\right]=$"><IMG WIDTH="279" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\displaystyle\left [
+\begin{array}
+{cc}
+ 0 & Z_0 \exp(-ja) \ \exp(-ja)/Z_0 & 0\end{array}\right].$"> 
+</TD><TD ALIGN="CENTER">(10)
+</TD></TR></TABLE></P>
+These are lines that force a current of magnitude  <I>V</I>/<I>Z</I><SUB>0</SUB>  with
+a phase lag of  <I>a</I> . Notice that only for the case of  <I>a</I> = <I>b</I> ,
+both equal to an odd multiple of  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\pi$">/2 
+will the line be reciprocal. These reciprocal lines
+are Lewallen's odd multiple of a quarter wavelength lines.
+<P>
+The admittance matrix can be derived from the ABCD matrix
+to give:
+<P ALIGN="CENTER">
+<!-- MATH: \alpha = \exp(-ja)/Z_0 -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\displaystyle\alpha$"> = exp(- <I>ja</I>)/<I>Z</I><SUB>0</SUB> 
+</TD><TD ALIGN="CENTER">(11)
+</TD></TR></TABLE></P>
+<P>
+A standard circulator
+can be used to produce current forcing lines with any phase
+shift.
+The general line can be produced using a circulator where power into
+port 1 goes to port 2, power into port 2 goes to port 3, and power into
+port 3 goes to port 1. If I put an adjustable shorted line on
+port 3, the forward wave travels ``directly'' to port 2, the reverse
+wave travels from 2 to 3 where it travels up the adjustable line, reflects,
+and then travels back to port 1. By adjusting the line, I can make
+the electrical length in the reverse direction anything I want.
+I now simply add extra line to port 2 so the electrical length
+from 1 to 2 is what I need, and adjust the shorted stub on 3 to give
+a total electrical length that is an odd  multiple of a half wavelength.
+<P>
+The problem with this nonreciprocal technology is that it works
+well only at UHF or higher frequencies.
+<P>
+The special case of the nonreciprocal element with  <I>a</I> = 0  and
+ <I>b</I> = <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\pi$">  was postulated by Tellegen[<A
+ HREF="magic.html#tellegen">2</A>] in 1948. He
+called it a gyrator using
+a mechanical analogy where nonreciprocal elements correspond to
+spinning flywheels (i.e. gyroscopes).
+Within a few years, a ferrite gyrator and other nonreciprocal elements
+for microwave frequencies had been described[<A
+ HREF="magic.html#hogan">3</A>].
+If a medium or high frequency gyrator
+could be constructed, it would provide the necessary element
+to produce a quadrature feed without measuring element impedances.
+<P>
+For a quadrature feed,
+one antenna is connected to a quarter wavelength
+transmission line, and the other to a gyrator of the same
+characteristic impedance. The ends of the gyrator and the quarter
+wavelength line are
+connected together and driven by the same source.
+<P> <H2><A NAME="SECTIONREF">References</A>
+</H2>
+<DL COMPACT><P></P><DT><A NAME="lewallen"><STRONG>1</STRONG></A>
+<DD>
+R.W. Lewallen, page 8-14 in <I>The ARRL Antenna Book</I>, 17th Edition,
+edited by R.D. Straw, (ARRL,Newington,1994).
+<P><P></P><DT><A NAME="tellegen"><STRONG>2</STRONG></A>
+<DD>
+B.D.H. Tellegen, <I>The Gyrator, a New Electric Network Element</I>,
+Philips Research Reports <B>3</B>, 81 (1948).
+<P><P></P><DT><A NAME="hogan"><STRONG>3</STRONG></A>
+<DD>
+C.L. Hogan, <I>The Ferromagnetic Faraday Effect at Microwave Frequencies
+and Its Applications</I>, Reviews of Modern Physics <B>25</B>, 253 (1953).
+</DL>
+<P><BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><strong>Subsections</strong></A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="magic.html#SECTION00010000000000000000">
+1 Magic Bullet</A>
+<LI><A NAME="tex2html4"
+ HREF="magic.html#SECTION00020000000000000000">
+2 Three-Port Analysis</A>
+<LI><A NAME="tex2html5"
+ HREF="magic.html#SECTION00030000000000000000">
+3 Synthesis</A>
+<LI><A NAME="tex2html6"
+ HREF="magic.html#SECTION00040000000000000000">
+References</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html1"
+ HREF="../../index.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html2"
+ HREF="../../index.html">W9CF Home</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

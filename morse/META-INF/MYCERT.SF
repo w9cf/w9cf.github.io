@@ -1,0 +1,89 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest-Main-Attributes: ggcPNDmSO7pHPX9PtXsN74yNfTQ=
+Created-By: 1.6.0 (Sun Microsystems Inc.)
+SHA1-Digest-Manifest: nAvVPX6wIYU8m6oU+mPMxZja8RE=
+
+Name: morse/resources/Morse.properties
+SHA1-Digest: CeCIiCIhnbH82Jmqb/ushw+Vfe4=
+
+Name: morse/gui/BasicMenu$1.class
+SHA1-Digest: ngTbZtjS1TcchuKUm4O8T81Zs/Y=
+
+Name: morse/gui/BasicMenu.class
+SHA1-Digest: WTq7z5auCBg0nWCKplwTQReBd1A=
+
+Name: morse/gui/BasicMenu$2.class
+SHA1-Digest: rTifhX2o1z32wIMbpOuHBuJE8kQ=
+
+Name: morse/gui/LSSHelp.class
+SHA1-Digest: zCytCx5AN2Pki/H/910JqQAFepU=
+
+Name: morse/gui/BasicMenu$5.class
+SHA1-Digest: olm4Cw3K1L2zZ8T0n3sRewlL5mk=
+
+Name: morse/audio/ErrorFunction.class
+SHA1-Digest: c3ix3Np2OvqCoqd2Eq+fS5EHjqk=
+
+Name: morse/resources/morsetoc.html
+SHA1-Digest: GmutbgsAZWoei9NRU0Y3K1fUx+I=
+
+Name: morse/gui/MorsePanel.class
+SHA1-Digest: GCambOmYvS8lMMT8NUm/puwid4s=
+
+Name: morse/resources/MorseMenu.properties
+SHA1-Digest: VMdspHfHV8+ZQ9IYCAhp6L3s0qQ=
+
+Name: morse/gui/MorseApplet$3.class
+SHA1-Digest: u/ENhLhbsotaD+DyfmXZgyRpsGo=
+
+Name: morse/gui/BasicMenu$3.class
+SHA1-Digest: JGYQ9QuTo8tOw5vfX5RSmAVWKYg=
+
+Name: morse/gui/MorseApplet$1.class
+SHA1-Digest: 6aWFurtuPtqonNEvX4ocWpl4Szc=
+
+Name: morse/gui/BasicMenu$6.class
+SHA1-Digest: tFieniYNIPM2uItu1bxWLzviyuk=
+
+Name: morse/gui/MorseApplet.class
+SHA1-Digest: iDeAdrRrDbuXqsY8lLK6Ty/qBQ0=
+
+Name: morse/resources/DocumentOut.gif
+SHA1-Digest: fcOBRiif/1pQG+ACtQGxG21yL0s=
+
+Name: morse/resources/DocumentIn.gif
+SHA1-Digest: bxJ6MlRAOtih1mzXqTfTqzVuBH4=
+
+Name: morse/resources/Print.gif
+SHA1-Digest: XfUcF1V/4kvvmrEzD5YQrBy9x6s=
+
+Name: morse/gui/BasicMenu$7.class
+SHA1-Digest: QrTl7XlnwhkNXA2wxhqa7LkSrFs=
+
+Name: morse/gui/MorseApplet$2.class
+SHA1-Digest: KLd8qz0rprxsUiVJFyp0XKhr8i4=
+
+Name: morse/resources/Bomb.gif
+SHA1-Digest: bAVA5kI5n4Cki+udV/YrtU6V9Js=
+
+Name: morse/resources/Help.gif
+SHA1-Digest: jjDJFiIuX70rsLYuXXQFplI5y9U=
+
+Name: morse/gui/HtmlPane.class
+SHA1-Digest: jLFdR4yFYe3pVU9FLOLxZfXVUeo=
+
+Name: morse/audio/MorseAudio.class
+SHA1-Digest: BCYyAaCRryFLBulXlVQKBIv5/lY=
+
+Name: morse/gui/TwoPanels.class
+SHA1-Digest: 60Ub73LQYRdO8Q2bQyUPJ6NDjfk=
+
+Name: morse/gui/HtmlPane$PageLoader.class
+SHA1-Digest: 8xvkJLW2WtUrXI+yzM1RNZeOjng=
+
+Name: morse/gui/BasicMenu$4.class
+SHA1-Digest: 67/X/FtRO/HiAQ5SN1ofhNuPNPA=
+
+Name: morse/gui/ControlPanel.class
+SHA1-Digest: j+9fLpqK5aP8F6/Zg+f9xLjm2ZI=
+

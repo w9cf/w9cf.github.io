@@ -1,0 +1,640 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>References</TITLE>
+<META NAME="description" CONTENT="References">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="phase.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html135"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html131"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html137"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Up:</B> <A NAME="tex2html136"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html132"
+ HREF="node9.html">8 Erratum and Addendum</A>
+<BR><BR>
+<!--End of Navigation Panel-->
+ <H2><A NAME="SECTIONREF">References</A>
+</H2>
+<DL COMPACT><P></P><DT><A NAME="arrl93"><STRONG>1</STRONG></A>
+<DD> See, ``The ARRL Handbook for the Radio Amateur'',
+(American Radio Relay League, Newington, 1993), and many previous editions.
+<P><P></P><DT><A NAME="group"><STRONG>2</STRONG></A>
+<DD> See for example, A.P. Cracknell, ``Applied Group Theory'',
+(Pergaman, Oxford, 1968) for an introduction to group theory, with
+reprints of selected original papers.
+<P><P></P><DT><A NAME="saraga50"><STRONG>3</STRONG></A>
+<DD> W. Saraga, ``The Design of Wide-Band Phase Splitting
+Networks'', <EM>Proc. I.R.E.</EM> <B>38</B>, 754 (1950).
+<P><P></P><DT><A NAME="cayley95"><STRONG>4</STRONG></A>
+<DD> A. Cayley, ``An Elementary Treatise on Elliptic Functions'',
+(Dover, New York, 1961).
+<P><P></P><DT><A NAME="abramowitz64"><STRONG>5</STRONG></A>
+<DD> M. Abramowitz and I. Stegun, ``Handbook of
+Mathematical Functions with Formulas, Graphs, and Mathematical Tables'',
+National Bureau of Standsards, Applied Mathematics Series, 55,
+(U.S. Government Printing Office, Washington, 1964).
+</DL>
+
+<A NAME="ap1">&#160;</A>The Fortran listing for the program that calculates the response
+of the general network. The input data is  the number
+of network sections. This is followed by  <I>f</I><SUB>l</SUB> ,  <I>f</I><SUB>u</SUB> , and the
+number of intermediate frequency values to calculate. The 4 R
+values and then the 4 C values for each of the n sections is
+then input, and finally the 4 load resistor values. If the
+first load resistor value is negative, the load is taken to be
+infinite resistance.
+<P>
+A sample data file follows the listing. The data is for the
+original HA5WH network as given in the handbook.
+<P><PRE>
+      program phase
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      parameter (nsecmx=20)
+      double complex at11(4,4),at12(4,4),at21(4,4),at22(4,4)
+      double complex vout(4),va,vb,rat
+      dimension r(4,nsecmx),c(4,nsecmx),rout(4)
+      read (5,*) n
+      if (n.gt.nsecmx) then
+         write (6,'(1x,''nsecmx needs to be increased'')')
+         stop
+         endif
+      read (5,*) flow,fhigh,nf
+      do 10 i=1,n
+      read (5,*) (r(j,i),j=1,4)
+      read (5,*) (c(j,i),j=1,4)
+   10 continue
+      read (5,*) (rout(j),j=1,4)
+      pi=four*atan(one)
+      df=(fhigh-flow)/(nf-1)
+      write (6,'(''#'',t7,''freq'',t22,''mag(VA)'',t35,''phase-shift''
+     +  ,t52,''sup(dB)'',t67,''sup'')')
+      do 20 kf=1,nf
+      f=flow+(kf-1)*df
+      om=two*pi*f
+      do 30 i=1,4
+      do 30 j=1,4
+      at11(j,i)=dcmplx(zero,zero)
+      at12(j,i)=dcmplx(zero,zero)
+      at21(j,i)=dcmplx(zero,zero)
+   30 at22(j,i)=dcmplx(zero,zero)
+      do 40 i=1,4
+      at11(i,i)=dcmplx(one,zero)
+   40 at22(i,i)=dcmplx(one,zero)
+      do 50 i=1,n
+   50 call calca(om,r(1,i),c(1,i),at11,at12,at21,at22)
+      call getv(at11,at12,at21,at22,rout,vout)
+      va=vout(1)-vout(3)
+      vb=vout(2)-vout(4)
+      amag=(va*dconjg(va))
+      amag=sqrt(amag)
+      ph=atan2(dimag(va),dreal(va))-atan2(dimag(vb),dreal(vb))
+      if (ph.lt.zero) ph=ph+two*pi
+      ph=180.d0*ph/pi
+      rat=(va+dcmplx(zero,one)*vb)/(va-dcmplx(zero,one)*vb)
+      sup=rat*dconjg(rat)
+      s=one/sqrt(sup)
+      sup=ten*log10(sup)
+      write (6,'(1p,5e15.5)') f,amag,ph,sup,s
+   20 continue
+      end
+      subroutine calca(om,r,c,at11,at12,at21,at22)
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      dimension r(4),c(4)
+      double complex at11(4,4),at12(4,4),at21(4,4),at22(4,4)
+      double complex em11(4,4),em12(4,4),em21(4,4),em22(4,4)
+      double complex a11(4,4),a12(4,4),a21(4,4),a22(4,4)
+      double complex czero,det,a1(8,8),a2(8,8),a3(8,8)
+      czero=dcmplx(zero,zero)
+      do 10 i=1,4
+      do 10 j=1,4
+      em11(j,i)=dcmplx(zero,zero)
+      em12(j,i)=dcmplx(zero,zero)
+      em21(j,i)=dcmplx(zero,zero)
+   10 em22(j,i)=dcmplx(zero,zero)
+c
+c note em11 = -em11 of notes
+c
+      do 20 i=1,4
+      ip=i+1
+      im=i-1
+      if (ip.gt.4) ip=1
+      if (im.lt.1) im=4
+      ar=one/r(i)
+      em11(i,i)=dcmplx(-ar,-om*c(i))
+      em22(i,i)=dcmplx(-ar,-om*c(ip))
+      em12(i,i)=dcmplx(-ar,zero)
+      em12(i,im)=dcmplx(zero,-om*c(i))
+      em21(i,i)=dcmplx(ar,zero)
+   20 em21(i,ip)=dcmplx(zero,om*c(ip))
+      call cmati(em12,4,det)
+      call cmatm(em12,em11,a11)
+      call cmatm(em22,em12,a22)
+      call cmatm(em22,a11,a21)
+      do 30 i=1,4
+      do 30 j=1,4
+      a12(j,i)=em12(j,i)
+   30 a21(j,i)=em21(j,i)+a21(j,i)
+      do 40 i=1,4
+      do 40 j=1,4
+      a1(i,j)=a11(i,j)
+      a1(i,j+4)=a12(i,j)
+      a1(i+4,j)=a21(i,j)
+      a1(i+4,j+4)=a22(i,j)
+      a2(i,j)=at11(i,j)
+      a2(i,j+4)=at12(i,j)
+      a2(i+4,j)=at21(i,j)
+   40 a2(i+4,j+4)=at22(i,j)
+      do 50 i=1,8
+      do 50 j=1,8
+      a3(i,j)=dcmplx(zero,zero)
+      do 50 k=1,8
+   50 a3(i,j)=a3(i,j)+a1(i,k)*a2(k,j)
+      do 60 i=1,4
+      do 60 j=1,4
+      at11(i,j)=a3(i,j)
+      at12(i,j)=a3(i,j+4)
+      at21(i,j)=a3(i+4,j)
+   60 at22(i,j)=a3(i+4,j+4)
+      return
+      end
+      subroutine getv(at11,at12,at21,at22,rout,vout)
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      double complex at11(4,4),at12(4,4),at21(4,4),at22(4,4),vout(4)
+      double complex det,b(4,4),ax(4,4),vtemp(4)
+      dimension rout(4)
+c
+c solve for the output voltage given balanced input drive
+c
+      call cmati(at22,4,det)
+      call cmatm(at12,at22,ax)
+      call cmatm(ax,at21,b)
+      do 10 i=1,4
+      do 10 j=1,4
+   10 b(j,i)=-b(j,i)+at11(j,i)
+      do 20 i=1,4
+   20 vout(i)=b(i,1)+b(i,2)-b(i,3)-b(i,4)
+c
+c if there is a load on the network, calculate its effect
+c
+      if (rout(1).ge.zero) then
+         do 30 i=1,4
+         vtemp(i)=vout(i)
+         ri=one/rout(i)
+         do 30 j=1,4
+   30    ax(j,i)=-ax(j,i)*ri
+         do 40 i=1,4
+   40    ax(i,i)=one+ax(i,i)
+         call cmati(ax,4,det)
+         do 50 i=1,4
+         vout(i)=dcmplx(zero,zero)
+         do 50 j=1,4
+   50    vout(i)=vout(i)+ax(i,j)*vtemp(j)
+         endif
+      return
+      end
+      subroutine cmatm(a,b,c)
+      double complex a(4,4),b(4,4),c(4,4)
+      do 10 i=1,4
+      do 10 j=1,4
+   10 c(i,j)=a(i,1)*b(1,j)+a(i,2)*b(2,j)+a(i,3)*b(3,j)+a(i,4)*b(4,j)
+      return
+      end
+      subroutine cmati(a,n,det)
+c
+c invert a complex nxn matrix using gauss elimination
+c with row pivoting. Note matrix must be dimension (n,n) or equivalently
+c
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      parameter (nmax=100)
+      double complex a,det,adiag,adiagi,t,cone,czero,atemp
+      dimension a(n,n)
+      dimension atemp(nmax),ipvt(nmax)
+      cone=dcmplx(one,zero)
+      czero=dcmplx(zero,zero)
+      if (n.gt.nmax) then
+         write (6,'(1x,'' nmax too small in cmati'')')
+         stop
+         endif
+      do 10 i=1,n
+   10 ipvt(i)=i
+      det=cone
+c
+c loop through columns
+      do 20 i=1,n
+      adiag=a(ipvt(i),i)
+      idiag=i
+c
+c find best pivot element in column and record pivot
+c
+      do 30 k=i,n
+      if (abs(a(ipvt(k),i)).gt.abs(adiag)) then
+         adiag=a(ipvt(k),i)
+         idiag=k
+         endif
+   30 continue
+      if (idiag.ne.i) then
+         det=-det
+         itemp=ipvt(i)
+         ipvt(i)=ipvt(idiag)
+         ipvt(idiag)=itemp
+         endif
+      det=adiag*det      
+c
+c row reduce matrix
+c
+      a(ipvt(i),i)=cone
+      adiagi=cone/adiag
+      do 40 k=1,n
+   40 a(ipvt(i),k)=a(ipvt(i),k)*adiagi
+      do 50 j=1,n
+      if (j.ne.ipvt(i)) then
+         t=-a(j,i)
+         a(j,i)=czero
+         do 60 k=1,n
+   60    a(j,k)=a(j,k)+t*a(ipvt(i),k)
+         endif
+   50 continue
+   20 continue
+c
+c interchange elements to unpivot inverse matrix
+c the following is equivalent to:
+c      anew(i,ipvt(j))=aold(ipvt(i),j)
+c
+      do 70 j=1,n
+      do 80 i=1,n
+   80 atemp(i)=a(i,j)
+      do 90 i=1,n
+   90 a(i,j)=atemp(ipvt(i))
+   70 continue
+      do 100 i=1,n
+      do 110 j=1,n
+  110 atemp(j)=a(i,j)
+      do 120 j=1,n
+  120 a(i,ipvt(j))=atemp(j)
+  100 continue
+      return
+      end
+</PRE>
+<P>
+Handbook data file:
+<P><A NAME="1535">&#160;</A>
+<TABLE CELLPADDING=3>
+<CAPTION><STRONG>Figure 6:</STRONG>
+The schematic diagram of one operational amplifier section.</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>6</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>sections</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>300.</TD>
+<TD ALIGN="RIGHT" NOWRAP>3000.</TD>
+<TD ALIGN="RIGHT" NOWRAP>28</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>flow fhigh nf</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>R values 1st section</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>.044e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.044e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.044e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.044e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>C values 1st section</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>.033e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.033e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.033e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.033e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>.02e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.02e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.02e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.02e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>.01e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.01e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.01e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>.01e-6</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>5600.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>5600.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>5600.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>5600.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>12.0e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>4700.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>4700.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>4700.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>4700.e-12</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>150.e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>200.e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>150.e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>200.e3</TD>
+<TD ALIGN="RIGHT" NOWRAP>Output load resistance</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+<TD ALIGN="RIGHT" NOWRAP>&nbsp;</TD>
+</TR>
+</TABLE>
+<P>
+The Fortran listing for the program that calculates the Chebychev
+values for  <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  and  <I>f</I><SUB>i</SUB> , for the ideal filter is:
+<P><PRE>
+      program nodes
+c
+c calculate the node frequencies for a Tchebychev approximation
+c to the 90 degree phase shift problem
+c
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      write (6,'(1x,'' number of sections?'')')
+      read (5,*) n
+      write (6,'(1x,'' lower frequency?'')')
+      read (5,*) fl
+      write (6,'(1x,'' upper frequency?'')')
+      read (5,*) fu
+      pi=four*atan(one)
+      b=fu/fl
+      ak=one/b
+      akp=sqrt(one-ak**2)
+c
+c calculate complete elliptic integral
+c
+      call ck(capkp,ak)
+      facp=one
+      facm=one
+c
+c calculate jacobi elliptic function to get nodes
+c
+      write (6,'(1x,''   section '','' frequency '', ''   RC '')')
+      do 10 i=1,n
+      arg=(2*i-1)*capkp/(two*n)
+      call ddn(arg,akp,dn)
+      fi=fl/dn
+      write (6,'(1x,i10,f10.1,1p,e12.4)') i,fi,one/(two*pi*fi)
+      facp=facp*(fu+fi)
+      facm=facm*(fu-fi)
+   10 continue
+      sup=two*ten*log10(facp/facm)
+      write (6,'(1x,''sideband suppression (dB) = '',f10.3)') sup
+      end
+      subroutine ck(compk,ak)
+c
+c calculate the complete elliptic integral of the first kind
+c with complementary argument ak, using the arithmetic
+c geometric mean method
+c
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      parameter (error=1.d-12,nitmx=1000)
+      pi=four*atan(one)
+      a0=one
+      b0=ak
+      do 10 i=1,nitmx
+      a1=half*(a0+b0)
+      b1=sqrt(a0*b0)
+      if (abs(a1-b1).lt.error) go to 20
+      a0=a1
+   10 b0=b1
+      write (6,'(1x,''warning no convergence in ck'')')
+   20 continue
+      compk=pi/(two*a1)
+      return
+      end
+      subroutine ddn(u,ak,dn)
+c
+c calculate the jacobi elliptic function dn(u,ak)
+c with argument ak, using the arithmetic geometric mean method
+c
+      implicit double precision (a-h,o-z)
+      parameter (zero=0.d0,one=1.d0,two=2.d0,three=3.d0,four=4.d0)
+      parameter (five=5.d0,six=6.d0,seven=7.d0,eight=8.d0,anine=9.d0)
+      parameter (ten=10.d0,tenth=.1d0,half=.5d0,third=1.d0/3.d0)
+      parameter (error=1.d-12,nitmx=100)
+      dimension a(0:nitmx),c(0:nitmx)
+      if (abs(ak).gt.one) then
+         write (6,'(1x,''ak out of range in ddn'')')
+         stop
+         endif
+      a(0)=one
+      b=sqrt(one-ak**2)
+      c(0)=ak
+      do 10 i=1,nitmx
+      j=i
+      c(i)=half*(a(i-1)-b)
+      a(i)=half*(a(i-1)+b)
+      b=sqrt(a(i-1)*b)
+      if (abs(c(i)).lt.error) go to 20
+   10 b0=b1
+      write (6,'(1x,''warning no convergence in ck'')')
+   20 continue
+      phi0=two**j*a(j)*u
+      do 30 i=j-1,0,-1
+      phi1=phi0
+   30 phi0=half*(phi1+asin(c(i+1)*sin(phi1)/a(i+1)))
+      dn=cos(phi0)/cos(phi1-phi0)
+      return
+      end
+</PRE>
+<P><HR>
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html135"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html131"
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html137"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Up:</B> <A NAME="tex2html136"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html132"
+ HREF="node9.html">8 Erratum and Addendum</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

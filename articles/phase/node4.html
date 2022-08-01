@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>3 Analyzing the HA5WH Network
+</TITLE>
+<META NAME="description" CONTENT="3 Analyzing the HA5WH Network
+">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="phase.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html74"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html71"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html65"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html73"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html75"
+ HREF="node5.html">4 Analysis of the</A>
+<B> Up:</B> <A NAME="tex2html72"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html66"
+ HREF="node3.html">2 The Effects of</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00040000000000000000">
+3 
+Analyzing the HA5WH Network
+</A>
+</H1>
+<A NAME="sec3">&#160;</A>
+Fig. <A HREF="node4.html#f1">1</A> gives the circuit diagram of the HA5WH network as shown
+in the ARRL Handbook.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f1">&#160;</A><A NAME="983">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 1:</STRONG>
+The schematic diagram of the HA5WH wideband phase shift network.</CAPTION>
+<TR><TD><IMG WIDTH="890" HEIGHT="918"
+ SRC="img32.gif"
+ ALT="\begin{figure}
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endc...
+ ...7.574in width0pt height 0pt}\kern 6.993in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+Given this circuit, it is easy to analyze
+the network numerically using a mesh or nodal analysis. The
+disadvantage of this brute force approach is that it gives
+no insight into why the network works, or how changes in the
+network affect its performance. I will therefore describe a
+method that is both more efficient numerically, and by using
+the symmetry of the ideal network, leads to simple design
+equations.
+<P>
+Clearly, the network consists of 6 sections each with 4 input
+connections and 4 output connections. One of these sections is
+shown in fig. <A HREF="node4.html#f2">2</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f2">&#160;</A><A NAME="988">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 2:</STRONG>
+The schematic diagram of 1 section of an HA5WH network.</CAPTION>
+<TR><TD><IMG WIDTH="256" HEIGHT="472"
+ SRC="img33.gif"
+ ALT="\begin{figure}
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endc...
+ ...3.774in width0pt height 0pt}\kern 2.250in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+I have labeled the input voltages and currents
+ <I>V</I><SUB>1</SUB> ,  <I>V</I><SUB>2</SUB> ,  <I>V</I><SUB>3</SUB> ,  <I>V</I><SUB>4</SUB> ,  <I>I</I><SUB>1</SUB> ,  <I>I</I><SUB>2</SUB> ,  <I>I</I><SUB>3</SUB> ,  <I>I</I><SUB>4</SUB> . The
+corresponding output voltages and currents are labeled
+ <I>V</I>'<SUB>1</SUB> ,  <I>V</I>'<SUB>2</SUB> ,  <I>V</I>'<SUB>3</SUB> ,  <I>V</I>'<SUB>4</SUB> ,  <I>I</I>'<SUB>1</SUB> ,  <I>I</I>'<SUB>2</SUB> ,  <I>I</I>'<SUB>3</SUB> ,  <I>I</I>'<SUB>4</SUB> .
+A straightforward nodal analysis of this network gives the
+8 linear equations represented by the matrix equation
+
+<!-- MATH: \left(
+\begin{array}{c}
+I \\I' \\\end{array}
+\right ) = \left (
+\begin{array}{cc}
+M_{11} & M_{12} \\M_{21} & M_{22} \\\end{array}
+\right )
+\left(
+\begin{array}{c}
+V \\V' \\\end{array}
+\right ) -->
+<A NAME="eq5">&#160;</A>
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP><A NAME="eq5">&#160;</A><IMG WIDTH="423" HEIGHT="60" ALIGN="left" ALIGN="middle"
+ SRC="img37.gif"
+ ALT="\begin{equation}
+\left(
+\begin{array}
+{c}
+I \\ I' \\ \end{array}\right ) = \left...
+ ...y}\right )
+\left(
+\begin{array}
+{c}
+V \\ V' \\ \end{array}\right )\end{equation}"></TD><TD ALIGN="CENTER">(5)
+</TD></TR></TABLE>
+where  <I>V</I> ,  <I>V</I>' ,  <I>I</I> ,  <I>I</I>'  are length 4 vectors, and the  <I>M</I><SUB>ij</SUB> 
+are 4 by 4 matrices. Eq. <A HREF="node4.html#eq5">5</A> compactly represents the
+8 equations that are the requirements of current conservation
+at each of the nodes of the network section. The  <I>M</I><SUB>ij</SUB> 
+matrices are
+<P ALIGN="CENTER">
+<!-- MATH: M_{11} =
+\left (
+\begin{array}{cccc}
+\frac{1}{R_1}+j \omega C_1 & 0 & 0 & 0 \\0 &\frac{1}{R_2}+j \omega C_2 & 0 & 0 \\0 & 0 &\frac{1}{R_3}+j \omega C_3 & 0 \\0 & 0 & 0 &\frac{1}{R_4}+j \omega C_4 \\\end{array}
+\right ) , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>M</I><SUB>11</SUB> = <IMG WIDTH="465" HEIGHT="118" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cccc}
+\frac{1}{R_1}+j \omega C_1 & 0 & 0 & ...
+ ... \omega C_3 & 0 \\ 0 & 0 & 0 &\frac{1}{R_4}+j \omega C_4 \\ \end{array}\right),$"> 
+</TD><TD ALIGN="CENTER">&nbsp;&nbsp;
+</TD></TR></TABLE></P>
+<P ALIGN="CENTER">
+<!-- MATH: M_{12} =
+\left (
+\begin{array}{cccc}
+-\frac{1}{R_1}& 0 & 0 & -j \omega C_1 \\-j \omega C_2 & -\frac{1}{R_2} & 0 & 0 \\0 & -j \omega C_3 & -\frac{1}{R_3} & 0 \\0 & 0 & -j \omega C_4 & -\frac{1}{R_4} \\\end{array}
+\right ) , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>M</I><SUB>12</SUB> = <IMG WIDTH="345" HEIGHT="118" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cccc}
+-\frac{1}{R_1}& 0 & 0 & -j \omega C_1...
+ ...ac{1}{R_3} & 0 \\ 0 & 0 & -j \omega C_4 & -\frac{1}{R_4} \\ \end{array}\right),$"> 
+</TD><TD ALIGN="CENTER">&nbsp;&nbsp;
+</TD></TR></TABLE></P>
+<P ALIGN="CENTER">
+<!-- MATH: M_{21} =
+\left (
+\begin{array}{cccc}
+\frac{1}{R_1} & j \omega C_2 & 0 & 0 \\0 & \frac{1}{R_2} & j \omega C_3 & 0 \\0 & 0 & \frac{1}{R_3} & j \omega C_4  \\j \omega C_1 & 0 & 0 & \frac{1}{R_4}  \\\end{array}
+\right ), -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>M</I><SUB>21</SUB> = <IMG WIDTH="283" HEIGHT="118" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cccc}
+\frac{1}{R_1} & j \omega C_2 & 0 & 0 ...
+ ...} & j \omega C_4 \\ j \omega C_1 & 0 & 0 & \frac{1}{R_4} \\ \end{array}\right),$"> 
+</TD><TD ALIGN="CENTER">&nbsp;&nbsp;
+</TD></TR></TABLE></P>
+<P ALIGN="CENTER"><A NAME="eq6">&#160;</A>
+<!-- MATH: M_{22} =
+\left (
+\begin{array}{cccc}
+-\frac{1}{R_1}-j \omega C_2 & 0 & 0 & 0 \\0 &-\frac{1}{R_2}-j \omega C_3 & 0 & 0 \\0 & 0 &-\frac{1}{R_3}-j \omega C_4 & 0 \\0 & 0 & 0 &-\frac{1}{R_4}-j \omega C_1 \\\end{array}
+\right ). -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>M</I><SUB>22</SUB> = <IMG WIDTH="528" HEIGHT="118" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cccc}
+-\frac{1}{R_1}-j \omega C_2 & 0 & 0 &...
+ ...\omega C_4 & 0 \\ 0 & 0 & 0 &-\frac{1}{R_4}-j \omega C_1 \\ \end{array}\right).$"> 
+</TD><TD ALIGN="CENTER">(6)
+</TD></TR></TABLE></P>
+In exact analogy with cascading two-port networks using ABCD matrices,
+to cascade these network sections, I define a new matrix equation,
+
+<!-- MATH: \left(
+\begin{array}{c}
+V' \\I' \\\end{array}
+\right ) = \left (
+\begin{array}{cc}
+A_{11} & A_{12} \\A_{21} & A_{22} \\\end{array}
+\right )
+\left(
+\begin{array}{c}
+V \\I \\\end{array}
+\right ) -->
+<A NAME="eq7">&#160;</A>
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP><A NAME="eq7">&#160;</A><IMG WIDTH="420" HEIGHT="60" ALIGN="left" ALIGN="middle"
+ SRC="img45.gif"
+ ALT="\begin{equation}
+\left(
+\begin{array}
+{c}
+V' \\ I' \\ \end{array}\right ) = \lef...
+ ...ay}\right )
+\left(
+\begin{array}
+{c}
+V \\ I \\ \end{array}\right )\end{equation}"></TD><TD ALIGN="CENTER">(7)
+</TD></TR></TABLE>
+Solving for the  <I>A</I><SUB>ij</SUB>  matrices gives,
+<BR><A NAME="eq8">&#160;</A>
+
+<!-- MATH: \nonumber
+A_{11} & = & - M^{-1}_{12} M_{11}, \\\nonumber
+A_{12} & = &  M^{-1}_{12} \\\nonumber
+A_{21} & = & M_{21} - M_{22} M^{-1}_{12} M_{11}\\A_{22} & = & M_{22} M^{-1}_{12} -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>A</I><SUB>11</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+ - <I>M</I><SUP> - 1</SUP><SUB>12</SUB><I>M</I><SUB>11</SUB>, 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>A</I><SUB>12</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<I>M</I><SUP> - 1</SUP><SUB>12</SUB> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>A</I><SUB>21</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<I>M</I><SUB>21</SUB> - <I>M</I><SUB>22</SUB><I>M</I><SUP> - 1</SUP><SUB>12</SUB><I>M</I><SUB>11</SUB> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>A</I><SUB>22</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<I>M</I><SUB>22</SUB><I>M</I><SUP> - 1</SUP><SUB>12</SUB> 
+</TD><TD ALIGN="RIGHT">(8)</TD></TR>
+</TABLE></DIV>
+where  <I>M</I><SUB>12</SUB><SUP>- 1</SUP> is the inverse of the matrix  <I>M</I><SUB>12</SUB> .
+<P>
+Labeling the 8 by 8 matrices for each of the n sections of the
+network by  <I>A</I><SUP> (1)</SUP>,  <I>A</I><SUP> (2)</SUP>, ...  <I>A</I><SUP> (n)</SUP>, the matrix relating
+the input to the output of the full network is  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\tilde{A}$"> , made
+up of the four 4 by 4 matrices 
+<!-- MATH: \tilde A_{ij} -->
+ <IMG WIDTH="30" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\tilde{A}_{ij}^{}$"> ,
+
+<!-- MATH: \left(
+\begin{array}{c}
+V_{out} \\I_{out} \\\end{array}
+\right ) = \left (
+\begin{array}{cc}
+\tilde A_{11} & \tilde A_{12} \\\tilde A_{21} & \tilde A_{22} \\\end{array}
+\right )
+\left(
+\begin{array}{c}
+V_{in} \\I_{in} \\\end{array}
+\right ) -->
+<A NAME="eq9">&#160;</A>
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP><A NAME="eq9">&#160;</A><IMG WIDTH="430" HEIGHT="60" ALIGN="left" ALIGN="middle"
+ SRC="img51.gif"
+ ALT="\begin{equation}
+\left(
+\begin{array}
+{c}
+V_{out} \\ I_{out} \\ \end{array}\righ...
+ ...)
+\left(
+\begin{array}
+{c}
+V_{in} \\ I_{in} \\ \end{array}\right )\end{equation}"></TD><TD ALIGN="CENTER">(9)
+</TD></TR></TABLE>
+where  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\tilde{A}$">  is the matrix product 
+<!-- MATH: A^{(1)} A^{(2)} A^{(3)} ...  A^{(n)} -->
+ <I>A</I><SUP> (1)</SUP><I>A</I><SUP> (2)</SUP><I>A</I><SUP> (3)</SUP>...<I>A</I><SUP> (n)</SUP>.
+<P>
+The handbook circuit drives 4 resistors on the 4 output connections.
+Labeling these as  <I>R</I><SUP> (out)</SUP><SUB>1</SUB> ,  <I>R</I><SUP> (out)</SUP><SUB>2</SUB> ,  <I>R</I><SUP> (out)</SUP><SUB>3</SUB> ,  <I>R</I><SUP> (out)</SUP><SUB>4</SUB> ,
+and defining a 4 by 4 load matrix L,
+<P ALIGN="CENTER"><A NAME="eq10">&#160;</A>
+<!-- MATH: L = \left (
+\begin{array}{cccc}
+\frac{1}{R^{(out)}_1} & 0 & 0 & 0 \\0 & \frac{1}{R^{(out)}_2} & 0 & 0 \\0 & 0 & \frac{1}{R^{(out)}_3} & 0 \\0 & 0 & 0 & \frac{1}{R^{(out)}_4} \\\end{array}
+\right ) -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>L</I> = <IMG WIDTH="272" HEIGHT="143" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cccc}
+\frac{1}{R^{(out)}_1} & 0 & 0 & 0 \\ ...
+ ...{1}{R^{(out)}_3} & 0 \\ 0 & 0 & 0 & \frac{1}{R^{(out)}_4} \\ \end{array}\right)$"> 
+</TD><TD ALIGN="CENTER">(10)
+</TD></TR></TABLE></P>
+I can write the relationship between the output voltage and current as,
+<P ALIGN="CENTER"><A NAME="eq11">&#160;</A>
+<!-- MATH: (I_{out}) = L ( V_{out} ). -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+(<I>I</I><SUB>out</SUB>) = <I>L</I>(<I>V</I><SUB>out</SUB>). 
+</TD><TD ALIGN="CENTER">(11)
+</TD></TR></TABLE></P>
+Solving for  <I>I</I><SUB>out</SUB> , and back substituting gives the final network
+matrix
+equation relating the 4 output voltages to the 4 input voltages,
+<P ALIGN="CENTER"><A NAME="eq12">&#160;</A>
+<!-- MATH: (V_{out}) = (1 - \tilde A_{12} \tilde A^{-1}_{22} L )^{-1}
+(\tilde A_{11} - \tilde A_{12} \tilde A^{-1}_{22}\tilde A_{21}) (V_{in}) , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+(<I>V</I><SUB>out</SUB>) = (1 - <IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\displaystyle\tilde{A}_{12}^{}$"><IMG WIDTH="37" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\displaystyle\tilde{A}^{-1}_{22}$"><I>L</I>)<SUP>- 1</SUP>(<IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\displaystyle\tilde{A}_{11}^{}$"> - <IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\displaystyle\tilde{A}_{12}^{}$"><IMG WIDTH="37" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\displaystyle\tilde{A}^{-1}_{22}$"><IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\displaystyle\tilde{A}_{21}^{}$">)(<I>V</I><SUB>in</SUB>), 
+</TD><TD ALIGN="CENTER">(12)
+</TD></TR></TABLE></P>
+where 1 in Eq. <A HREF="node4.html#eq12">15</A> stands for the unit matrix
+<P ALIGN="CENTER"><A NAME="eq13">&#160;</A>
+<!-- MATH: \left (
+\begin{array}{cccc}
+1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\0 & 0 & 0 & 1 \\\end{array}
+\right ) . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="146" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cccc}
+1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ \end{array}\right).$"> 
+</TD><TD ALIGN="CENTER">(13)
+</TD></TR></TABLE></P>
+<P>
+If the output resistors are large compared to the other circuit impedances,
+L can be taken to be zero. In that case the equations simplify to,
+<P ALIGN="CENTER"><A NAME="eq14">&#160;</A>
+<!-- MATH: (V_{out}) =
+(\tilde A_{11} - \tilde A_{12} \tilde A^{-1}_{22}\tilde A_{21}) (V_{in}) .
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+(<I>V</I><SUB>out</SUB>) = (<IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\displaystyle\tilde{A}_{11}^{}$"> - <IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.gif"
+ ALT="$\displaystyle\tilde{A}_{12}^{}$"><IMG WIDTH="37" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\displaystyle\tilde{A}^{-1}_{22}$"><IMG WIDTH="33" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\displaystyle\tilde{A}_{21}^{}$">)(<I>V</I><SUB>in</SUB>). 
+</TD><TD ALIGN="CENTER">(14)
+</TD></TR></TABLE></P>
+<P>
+The handbook network has  (<I>V</I><SUB>in</SUB>)  proportional to
+<P ALIGN="CENTER"><A NAME="eq15">&#160;</A>
+<!-- MATH: (V_{in})  \propto \left (
+\begin{array}{c}
+1 \\1 \\-1 \\-1 \\\end{array}
+\right ) . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+(<I>V</I><SUB>in</SUB>) <IMG WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\displaystyle\propto$"> <IMG WIDTH="83" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ 1 \\ -1 \\ -1 \\ \end{array}\right).$"> 
+</TD><TD ALIGN="CENTER">(15)
+</TD></TR></TABLE></P>
+<P>
+After calculating the  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\tilde{A}$">  and L matrices from the circuit values,
+the output signals need to be combined as,
+<BR><A NAME="eq16">&#160;</A>
+
+<!-- MATH: \nonumber
+V_{out,1} - V_{out,3} = V_A \\V_{out,2} - V_{out,4} = V_B -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>V</I><SUB>out,1</SUB> - <I>V</I><SUB>out,3</SUB> = <I>V</I><SUB>A</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>V</I><SUB>out,2</SUB> - <I>V</I><SUB>out,4</SUB> = <I>V</I><SUB>B</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">(16)</TD></TR>
+</TABLE></DIV>
+and the sideband suppression is given by Eq. <A HREF="node3.html#eq3">3</A>. The relative
+amplitude and phase of the signals can also be calculated. Most phase
+shift networks are based on all pass networks so that the amplitude
+of all signals are equally attenuated. The HA5WH network is not an all pass
+network. Ideally, we want both good sideband suppression and we
+want  <I>V</I><SUB>A</SUB>  and  <I>V</I><SUB>B</SUB>  to be constant in amplitude and phase across
+the passband of the audio circuit.
+<P>
+I have written a Fortran program to implement the analysis of this
+section. It is given in the Appendix. If the matrices
+that are inverted
+become singular, the above analysis breaks down at the singular points.
+For example,  <I>M</I><SUB>12</SUB>  becomes singular when
+<P ALIGN="CENTER"><A NAME="eq16.1">&#160;</A>
+<!-- MATH: \omega^4 = \frac{1}{ R_1 R_2 R_3 R_4 C_1 C_2 C_3 C_4}. -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="24" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\displaystyle\omega^{4}_{}$"> = <IMG WIDTH="145" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{ R_1 R_2 R_3 R_4 C_1 C_2 C_3 C_4}}$">. 
+</TD><TD ALIGN="CENTER">(17)
+</TD></TR></TABLE></P>
+Near these points, roundoff error in the calculations will be large.
+For the analysis done here, this is not a big problem. However,
+analysis on networks with many sections or near singular points
+will require more numerical care than I have taken in the program
+in the appendix, or the use of a the standard formulation where the full
+set of network equations are solved at once.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html74"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html71"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html65"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html73"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html75"
+ HREF="node5.html">4 Analysis of the</A>
+<B> Up:</B> <A NAME="tex2html72"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html66"
+ HREF="node3.html">2 The Effects of</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

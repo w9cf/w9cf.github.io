@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>1 Introduction</TITLE>
+<META NAME="description" CONTENT="1 Introduction">
+<META NAME="keywords" CONTENT="balun">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="balun.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="balun.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html55"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html52"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html46"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html54"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html56"
+ HREF="node3.html">2 A two wire</A>
+<B> Up:</B> <A NAME="tex2html53"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html47"
+ HREF="node1.html">Contents</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00020000000000000000">
+1 Introduction</A>
+</H1>
+Commercial antenna tuners use unbalanced circuits such a Pi-, T-, or
+L-network to match unbalanced loads to 50 ohms for our transmitters.
+A simple way to include the capability to handle
+balanced loads is to include a balun somewhere
+in the circuit.
+Johnson Matchbox tuners, which are no longer produced, but
+can sometimes be found at hamfests, have a balanced output
+circuit and a link coupled input to make the transformation
+from the unbalanced input to a balanced output. Some
+hams still build tuners this way too.
+<P>
+Since a simple multiband antenna is a center fed wire fed
+with twinlead or windowline to an antenna tuner,
+a beginning ham (and even
+some old timers) can wonder what is the best or at least a
+good way of handling the two jobs of impedance matching and
+changing from twinlead or windowline from the antenna
+to coax at the transmitter.
+<P>
+Typical solutions are summarized as:
+<UL>
+<LI>
+Use a balun to connect from the twinlead to an unbalanced tuner.
+That is use a balun on the output of an unbalanced tuner as shown
+in figure <A HREF="node2.html#f1">1</A>.
+<LI>
+Connect a balun to the input of an unbalanced tuner and ``float''
+the tuner. The output of the tuner is connected to the twinlead; one
+side of the twinlead goes to the center conductor of the unbalanced
+output connector and the other to the case of the tuner.
+That is, use a balun at the input of an unbalanced tuner as shown
+in figure <A HREF="node2.html#f2">2</A>.
+<LI>
+Use a balanced tuner configuration to convert the twinlead impedance
+to 50 ohms balanced and then use a 1:1 balun to convert to 50
+ohms unbalanced. That is, use a balun on the input of a balanced
+tuner as shown in figure <A HREF="node2.html#f3">3</A>.
+</UL>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f1">&#160;</A><A NAME="15">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 1:</STRONG>
+A transmitter connected to an unbalanced tuner with a balun on its
+output connecting to a balanced feedline.</CAPTION>
+<TR><TD><IMG WIDTH="419" HEIGHT="287"
+ SRC="img1.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.300in width0pt height 0pt}\kern 3.440in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+In all of the following, I will assume that the balun is a 1:1
+choke or current type. Examples are the ferrite bead balun
+described by Walter Maxwell, W2DU[<A
+ HREF="node9.html#maxwell83">1</A>], coiled up coax,
+and coax or a bifilar winding through a toroidal core.
+A nonradiating balanced transmission line requires that the current
+in the two conductors be the same. If, for example,
+the balanced line is poorly routed, the currents in the two wires 
+can become different because of unequal coupling to their surroundings.
+Even so, to minimize transmission line radiation near the
+transmitter (and operator) the currents in the two wires should still be
+equalized at the transmitter. Again, this tells us that the best choice
+will be a choke or current balun.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f2">&#160;</A><A NAME="74">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 2:</STRONG>
+A transmitter connected
+to a balun to an unbalanced tuner to a balanced feedline.</CAPTION>
+<TR><TD><IMG WIDTH="419" HEIGHT="400"
+ SRC="img2.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...3.240in width0pt height 0pt}\kern 3.440in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f3">&#160;</A><A NAME="159">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 3:</STRONG>
+A transmitter connected to a balun to a balanced tuner to a balanced
+feedline.</CAPTION>
+<TR><TD><IMG WIDTH="508" HEIGHT="287"
+ SRC="img3.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.300in width0pt height 0pt}\kern 4.180in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html55"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html52"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html46"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html54"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html56"
+ HREF="node3.html">2 A two wire</A>
+<B> Up:</B> <A NAME="tex2html53"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html47"
+ HREF="node1.html">Contents</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

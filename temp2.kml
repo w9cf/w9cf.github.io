@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+W1AW
+ARRL HQ OPERATORS CLUB
+225 MAIN ST
+NEWINGTON, CT  06111
+41.714775
+-72.72726
+
+   <Placemark>
+<name>K4AXF</name>
+<description>JAMES N STONEBACK
+57 Ellen Drive
+Strasburg, VA  22657-2863
+</description>
+<Point>
+<coordinates>38.987689,-78.359876,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N9NE</name>
+<description>TODD A FONSTAD
+1586 Brentwood Circle
+OSHKOSH, WI  54904
+</description>
+<Point>
+<coordinates>44.024527,-88.617096,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K3PH</name>
+<description>ROBERT A SCHREIBMAIER
+PO BOX 166
+KRESGEVILLE, PA  18333
+</description>
+<Point>
+<coordinates>40.883333,-75.533333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>WA9TZE</name>
+<description>James L Akre
+1795 Spruce Ct
+South Milwaukee, WI  53172-1044
+</description>
+<Point>
+<coordinates>42.909971,-87.866551,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>NU4I</name>
+<description>KENNETH A MOORMAN
+2808 Blue Lake Court
+WILLIAMSBURG, VA  23185
+</description>
+<Point>
+<coordinates>37.266334,-76.709764,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K8KFJ</name>
+<description>GARIE C HALSTEAD
+810 SEVENTH AVE
+SAINT ALBANS, WV  25177
+</description>
+<Point>
+<coordinates>38.381638,-81.823224,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>WD9F</name>
+<description>FORREST G HESTER, III
+5109 MOUNTAIN VIEW DRIVE
+SPRINGFIELD, IL  62711
+</description>
+<Point>
+<coordinates>39.779212,-89.6864,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KG4YLZ</name>
+<description>James J Vital
+12217 Randle Ln
+Culpeper, VA  22701
+</description>
+<Point>
+<coordinates>38.47164,-78.013989,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KC1FB</name>
+<description>JAMES R FRANCOEUR
+8 REGENCY DR
+NORWALK, CT  06851
+</description>
+<Point>
+<coordinates>41.132278,-73.40446,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K9IUA</name>
+<description>Kevin L Anderson
+1565 Alta Place
+Dubuque, IA  52001-5849
+</description>
+<Point>
+<coordinates>42.464496,-90.687515,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KF8K</name>
+<description>Clifford J Smith
+5615 Starr Ave
+Oregon, OH  43616
+</description>
+<Point>
+<coordinates>41.648315,-83.466213,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W9LR</name>
+<description>WILLIAM L RIBISH
+4340 Regal Ct
+NEW BERLIN, WI  53151-6737
+</description>
+<Point>
+<coordinates>42.981442,-88.105576,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AB3CV</name>
+<description>James T Miller
+19900 Bentley Ridge Ct
+Parkton, MD  21120
+</description>
+<Point>
+<coordinates>39.639703,-76.68275,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W2LJ</name>
+<description>LAWRENCE J MAKOSKI
+327 CLINTON PLACE
+SOUTH PLAINFIELD, NJ  07080
+</description>
+<Point>
+<coordinates>40.580048,-74.415333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K9CW</name>
+<description>ANDREW B WHITE
+1725 CR 2500 N
+THOMASBORO, IL  61878-9642
+</description>
+<Point>
+<coordinates>40.238073,-88.130884,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>NG7Z</name>
+<description>PAUL J BERINGER
+4702 200 ST SE
+BOTHELL, WA  98012
+</description>
+<Point>
+<coordinates>47.71589,-122.300279,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N8ZYA</name>
+<description>John W Smithson, Jr
+1529 Virginia St. E.
+Charleston, WV  25311
+</description>
+<Point>
+<coordinates>38.351903,-81.592292,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>WB9HFK</name>
+<description>MARK A PRATHER
+1804 JEAN LEE CT
+URBANA, IL  61802-7056
+</description>
+<Point>
+<coordinates>40.126026,-88.171678,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K5DI</name>
+<description>KARL F LARSEN
+3310 East Street
+Las Cruces, NM  88005
+</description>
+<Point>
+<coordinates>32.238073,-106.737794,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KB5FCF</name>
+<description>JOEL T BEASLEY
+1221 PEPPERDINE AVE
+EDMOND, OK  73034
+</description>
+<Point>
+<coordinates>35.697131,-97.433009,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AB7R</name>
+<description>GREGORY FISCHER
+1191 WATERLOO RD
+OAK HARBOR, WA  98277
+</description>
+<Point>
+<coordinates>48.304739,-122.641697,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KT5E</name>
+<description>Jay A Schwisow
+47400 Becky Circle
+Elizabeth, CO  80107
+</description>
+<Point>
+<coordinates>39.552509,-104.503345,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>NU8S</name>
+<description>DENNIS J BERRY
+1013 HICKORY RIDGE LA
+LOVELAND, OH  45140
+</description>
+<Point>
+<coordinates>39.267042,-84.292122,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W5AJD</name>
+<description>JERRY G HUNT
+554 ELIZABETH ST
+BATON ROUGE, LA  70815
+</description>
+<Point>
+<coordinates>30.454915,-91.063684,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>WB8WTU</name>
+<description>DENNIS D DORAN
+4185 PLEASANT VALLEY LN
+CANFIELD, OH  44406
+</description>
+<Point>
+<coordinates>41.027539,-80.7592,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KZ5J</name>
+<description>Patrick J Whelton
+6713 Carvel
+Houston, TX  77074
+</description>
+<Point>
+<coordinates>29.688351,-95.514496,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W9JOP</name>
+<description>Robert H Chapman
+13047 Elk Run Rd
+Bealeton, VA  22712-7325
+</description>
+<Point>
+<coordinates>38.576702,-77.77949,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W9QS</name>
+<description>KENNETH M BROGA
+205 WEST INDIANA AVENUE
+URBANA, IL  61801
+</description>
+<Point>
+<coordinates>40.110872,-88.196993,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N1VWD</name>
+<description>Bradford B Mc Kirryher
+2317 Maple St
+Waltham, VT  05491-9419
+</description>
+<Point>
+<coordinates>44.14854,-73.27536,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>VE1ZAC</name>
+<description>Jeffrey H Smith
+7 LETSON COURT
+HALIFAX, NS  B3P 2P4,   
+</description>
+<Point>
+<coordinates>NULL,,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AF4LQ</name>
+<description>MICHAEL J LYNESS
+836 EVELYN AVE
+LOUISVILLE, KY  40215
+</description>
+<Point>
+<coordinates>38.190024,-85.785564,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K5DF</name>
+<description>L WAYNE GORDON
+11007 TOLEDO BEND AVE
+BATON ROUGE, LA  70814
+</description>
+<Point>
+<coordinates>30.486773,-91.067329,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N9AW</name>
+<description>Gerald J Scherkenbach
+11300 Bridget Ln
+Hales Corners, WI  53130
+</description>
+<Point>
+<coordinates>42.939685,-88.050138,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N1FN</name>
+<description>MARSHALL G EMM
+2460 S MOLINE WAY
+AURORA, CO  80014
+</description>
+<Point>
+<coordinates>39.65988,-104.83698,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K2ZC</name>
+<description>DAVID A WALSH
+40 HILLSIDE DR
+NORTH HALEDON, NJ  07508
+</description>
+<Point>
+<coordinates>40.951433,-74.185795,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K0LOA</name>
+<description>DWAIN D LAWHON
+1515 MEADOW VIEW DR
+RICHARDSON, TX  75080
+</description>
+<Point>
+<coordinates>32.962545,-96.744763,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K5OT</name>
+<description>LAWRENCE W HAMMEL
+630 W. RIDGEWOOD RD
+GEORGETOWN, TX  78628-9508
+</description>
+<Point>
+<coordinates>30.708363,-97.785006,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K0EVZ</name>
+<description>WILFORD D LINDSEY
+5 TIERRA LINDA
+EDGEWOOD, NM  87015
+</description>
+<Point>
+<coordinates>35.038748,-106.187474,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K5JHP</name>
+<description>WILLIAM E PIERRARD
+8106 TIGER LN
+HOUSTON, TX  77040-2425
+</description>
+<Point>
+<coordinates>29.89416,-95.57934,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>WA8BXN</name>
+<description>MICHAEL A PECHURA
+10809 BEECHWOOD DR
+KIRTLAND, OH  44094
+</description>
+<Point>
+<coordinates>41.637224,-81.418352,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K5OI</name>
+<description>Timothy J Pettibone
+113 Granite Dr 18
+Ruidoso, NM  88345
+</description>
+<Point>
+<coordinates>33.341149,-105.667861,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>NK6A</name>
+<description>M DON MINKOFF
+12567 BROOKLAKE ST
+MAR VISTA, CA  90066
+</description>
+<Point>
+<coordinates>34.002509,-118.427539,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W9UQB</name>
+<description>Michael C Todd
+16820 N 1st Dr Spc 14
+Phoenix, AZ  85023-3616
+</description>
+<Point>
+<coordinates>33.632395,-112.111758,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KT4LF</name>
+<description>WILLIAM R D SHARPE
+PO BOX 1319
+MILLIGAN COLLEGE, TN  37682-1319
+</description>
+<Point>
+<coordinates>36.341697,-82.225866,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N8WS</name>
+<description>WILLIAM J SQUIRES
+13431 ZAREMBA DR
+BROOK PARK, OH  44142
+</description>
+<Point>
+<coordinates>41.399781,-81.819733,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K0FRP</name>
+<description>ALAN V DAWKINS
+11904 E KENTUCKY  AVE
+AURORA, CO  80012
+</description>
+<Point>
+<coordinates>39.698108,-104.831163,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N5DGK</name>
+<description>W BROOK Samuel
+1344 Rollins Road
+Zachary, LA  70791
+</description>
+<Point>
+<coordinates>30.671685,-91.187515,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K5JHP</name>
+<description>WILLIAM E PIERRARD
+8106 TIGER LN
+HOUSTON, TX  77040-2425
+</description>
+<Point>
+<coordinates>29.89416,-95.57934,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N0AR</name>
+<description>SCOTT E HOLISKY
+633 SPRING HILL RD
+VADNAIS HEIGHTS, MN  55127
+</description>
+<Point>
+<coordinates>45.070848,-93.066169,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AC5JH</name>
+<description>THOMAS H WAITS
+4749 SW 22nd St.
+BLANCHARD, OK  73010
+</description>
+<Point>
+<coordinates>35.135006,-97.647272,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KD5ONS</name>
+<description>Kevin J Rock
+31380 NW Buxton Lookout Road
+Buxton, OR  97109
+</description>
+<Point>
+<coordinates>35.101115,-106.51366,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N3VF</name>
+<description>Ronald E Moorman
+24 Booker Road
+Martinsville, VA  24112
+</description>
+<Point>
+<coordinates>36.685246,-79.865321,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N5BUD</name>
+<description>RICHARD H BROWN, JR
+13126 O LEARY AVE
+BATON ROUGE, LA  70814
+</description>
+<Point>
+<coordinates>30.486773,-91.067329,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AE5BH</name>
+<description>Scott P Faasse
+PO BOX 11214
+Spring, TX  77391
+</description>
+<Point>
+<coordinates>30.021537,-95.569341,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W0IIT</name>
+<description>WILLIAM B LAWSON
+711 East 31st Street
+Pittsburg, KS  66762
+</description>
+<Point>
+<coordinates>37.412275,-94.698359,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AC7A</name>
+<description>Thomas E Kuehl
+620 S Avenida Princesa
+Tucson, AZ  85748
+</description>
+<Point>
+<coordinates>32.215054,-110.003903,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>NK9G</name>
+<description>Richard Mc Gaver
+6026 S New York Ave
+Cudahy, WI  53110
+</description>
+<Point>
+<coordinates>42.947125,-87.861954,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AB0CD</name>
+<description>RICHARD J SCHNEIDER
+5630 E BATES AVE
+DENVER, CO  80222
+</description>
+<Point>
+<coordinates>39.681163,-104.925309,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>W3MF</name>
+<description>JOHN J SCHREIBMAIER
+PO BOX 166
+KRESGEVILLE, PA  18333
+</description>
+<Point>
+<coordinates>40.956412,-75.50446,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K9XE</name>
+<description>RAY F BOEHMER
+210 W IOWA ST
+URBANA, IL  61801
+</description>
+<Point>
+<coordinates>40.111668,-88.198416,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>N5KIP</name>
+<description>RICHARD F BURROUGHS
+1163 CHEVELLE DR
+BATON ROUGE, LA  70806
+</description>
+<Point>
+<coordinates>30.447231,-91.129088,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K2ZN</name>
+<description>ALAN A SCANANDOAH
+125 IRVINGTON RD
+ROCHESTER, NY  14620
+</description>
+<Point>
+<coordinates>43.119176,-77.623636,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>K7TQ</name>
+<description>RANDY B FOLTZ
+809 LEITH ST
+MOSCOW, ID  83843
+</description>
+<Point>
+<coordinates>46.728363,-116.968109,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AB9QN</name>
+<description>Lincoln Thormahlen
+3587 N 400 W
+Winamac, IN  46996
+</description>
+<Point>
+<coordinates>41.054144,-86.603068,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>KKK00KKK</name>
+<description>
+
+
+</description>
+<Point>
+<coordinates>NULL,,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>AA4LR</name>
+<description>GEORGE W COLEMAN
+1770 GLEN RYAN CT
+LOGANVILLE, GA  30052
+</description>
+<Point>
+<coordinates>33.810339,-83.891909,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<name>WC7S</name>
+<description>DALE E PUTNAM
+5503 N COLLEGE DR
+CHEYENNE, WY  82009-4601
+</description>
+<Point>
+<coordinates>41.205297,-104.827818,0</coordinates>
+</Point>
+</Placemark>
+</Document>
+</kml>

@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>
+SBDVP with CT and NA
+</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+
+<h1>Does SBDVP work with CT and NA?</h1>
+
+Several people have asked me if SBDVP,
+which uses the DVP interface of TRlog to make a sound card voice
+keyer, will also work with CT and NA.
+I haven't tried it, and no one has reported it working, so 
+the short answer is no. There are several issues:
+
+<ul>
+<li>I believe that CT and NA use extended memory to store the log.
+If they happen to grab all available extended memory, SBDVP
+would need to be changed to allocate a fixed amount of extended
+memory when it is first started. The current algorithm allocates
+memory only when a recording is started or when an audio file
+is read in.
+
+<li>I believe CT and NA can be set up to send call signs and exchanges
+that change, e.g. serial numbers, without a human saying anything into
+the microphone by using the dvp to send separate letter/number audio
+files as well as other canned messages.  Because of the way I set up
+the extended memory for SBDVP, there is a limit of around 100 audio
+files that can be sent using SBDVP. This could be fixed, but TR can't
+use this many anyway, so I didn't put in better memory management. If
+you want to save some CQs and fixed exchanges, etc. the current method
+should work fine in CT or NA too.
+
+<li>I don't have documentation for the K1EA DVP, so I wrote a little
+code that intercepted the commands that TR sends to the DVP when I push
+various keys. After looking at this output I was able to reverse
+engineer enough of the interface to the DVP to make TR use SBDVP as a
+simple voice keyer. It is likely that CT and NA will make somewhat
+different calls to the DVP and therefore SBDVP won't work with
+them.  Since I give away the C source code to SBDVP, It is probably an
+evening's work to make SBDVP work, as a simple voice keyer, with CT and NA
+for anyone who:
+<ul>
+
+   <li>Is a competent C programmer.
+   <li>Has a copy of the Borland Turbo-C compiler that SBDVP was written
+      in (or any other DOS C compiler if you translate the Borland
+      library calls, etc.).
+   <li>Has a copy of CT or NA -- in addition a copy of any programming
+      documentation for the K1EA DVP would be a big help.
+   <li>Is able to figure out what I did in my code -- various ugly
+      coding is used since I don't understand DOS.  For example I store
+      lots of stuff in static global variables, because I don't know
+      how local variables are allocated for interrupt routines.
+      I normally write scientific codes mostly on unix systems.
+      I hate working with Microsoft operating systems,
+      particularly the toy ones i.e. DOS and Windows 95/98,
+      so I keep my use of them
+      to a minimum. I may be doing something stupid because of my lack
+      of DOS knowledge.
+</ul>
+
+<li>It is possible that there are other problems with using SBDVP with
+CT and NA that I am unaware of since I don't have or use those loggers.
+</ul>
+
+</body>
+</html>

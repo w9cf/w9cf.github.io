@@ -1,0 +1,23 @@
+Here is the source for the rectangular cross section equivalent diameter
+applet. I put a copyright and the GNU general public license on it. This
+makes it legal to copy and modify it as much as you want. It mostly
+only requires you to label any changes as your own and make the source
+available if you distribute it.  Read the copying file for details. If
+this is a problem for someone, let me know, and we can discuss it.
+
+Equiv.java = the main applet code. This sets up the GUI stuff, and calls
+the RectangularCrossSection class that does all the real work.
+
+RectangularCrossSection.java = class that calculates the equivalant
+diameters as described in my notes at http://fermi.la.asu.edu/w9cf
+
+EllipticIntegral.java = this are the elliptic integral routines. They
+are mostly a straight rewrite of the slatec fortran routines drd.f drf.f
+available from http://www.netlib.org.
+
+ptplot subdirectory contains a modified version of ptplot. The original
+version is available free from http://ptolemy.eecs.berkeley.edu/java/ptplot.
+
+The Makefile shows how I compile everything under unix.
+
+73 Kevin w9cf

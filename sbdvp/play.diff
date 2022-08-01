@@ -1,0 +1,16 @@
+Index: src/arch/linux/dosext/sound/linux_sound.c
+===================================================================
+RCS file: /cvsroot/dosemu/dosemu/src/arch/linux/dosext/sound/linux_sound.c,v
+retrieving revision 1.8
+diff -u -r1.8 linux_sound.c
+--- src/arch/linux/dosext/sound/linux_sound.c	30 Nov 2004 19:44:50 -0000	1.8
++++ src/arch/linux/dosext/sound/linux_sound.c	2 Dec 2004 00:55:20 -0000
+@@ -220,7 +220,7 @@
+   {
+     S_printf ("SB:[Linux] Syncing DSP\n");
+     /* don't use blocking ioctl's like DSP_SYNC!!! */
+-    ioctl(dsp_fd, SNDCTL_DSP_POST);
++    ioctl(dsp_fd, SNDCTL_DSP_SYNC);
+     close (dsp_fd);
+     dsp_fd = -1;
+   } else {

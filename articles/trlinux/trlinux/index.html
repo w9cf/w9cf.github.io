@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Notes on running TR under Linux</TITLE>
+<META NAME="description" CONTENT="Notes on running TR under Linux">
+<META NAME="keywords" CONTENT="trlinux">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="trlinux.css">
+
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive" SRC="nx_grp_g.gif"> 
+<A NAME="tex2html3"
+  HREF="../index.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html4"
+  HREF="../index.html">W9CF Home</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1 ALIGN="CENTER">Notes on running TR under Linux</H1>
+<DIV>
+
+<P ALIGN="CENTER"><STRONG>Kevin Schmidt, W9CF</STRONG></P>
+<P ALIGN="CENTER"><I>6510 S. Roosevelt St.</I></P>
+<P ALIGN="LEFT"><SMALL>Tempe, Arizona 85283</SMALL></P>
+</DIV>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+1 Dosemu and Freedos</A>
+</H1>
+You need to have Dosemu with Freedos installed. These are available from
+<A NAME="tex2html1"
+  HREF="http://dosemu.org">http://dosemu.org</A>.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+1.1 Installing</A>
+</H2>
+Download the stable release
+and install it. I use the binary version of Freedos (currently beta 0.95)
+and compile the source for dosemu (currently dosemu-1.2.2.tgz).
+Follow the directions in the file INSTALL.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+1.2 Configuration</A>
+</H2>
+
+<P>
+After installation edit the global configuration file
+(/etc/dosemu/dosemu.conf by default). I added the following lines:
+
+<P>
+<PRE>
+$_rdtsc = (on)
+$_com3 = "/dev/ptyq1"
+$_com4 = "/dev/ptyq2"
+$_ports = " device /dev/lp0 fast range 0x378 0x37f"
+$_ports = $_ports, " device /dev/null fast range 0x3f8 0x3ff"
+$_ports = $_ports, " device /dev/null fast range 0x2f8 0x2ff"
+</PRE>
+The first line uses the pentium timer. I don't know if this is necessary,
+but I never turned it off. The second two lines tell dosemu to
+use the linux
+pseudottys /dev/ptyq1 and /dev/ptyq2 as the com3 and com4
+serial ports rather than
+hardware serial ports. This will allow us to connect these fake serial
+ports to linux applications like telnet or secure shell for packet or
+networking. Note that no other application should be using the pseudottys
+specified. The proper way to do this is to use system calls to open
+/dev/ptmx to get a unique pseudotty. Here we just pick some pseudottys
+and hope that no other application will use them.
+The last three lines gives Dosemu permission to use
+the port range range needed for direct hardware
+serial and parallel port access so TRlog
+can key through the serial or parallel port. Notice that it associates the
+parallel
+port with the linux device /dev/lp0, so if something else in linux
+is using /dev/lp0, these ports will not be available.
+
+<P>
+My shack computer has two serial and one parallel port. I can tell
+TRlog to use serial 1 or 2 or parallel 1 for keying, etc. Packet and
+networking between computers running TR is done using the fake serial
+ports 3 or 4.
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+1.3 Running as root</A>
+</H2>
+For TRlog to have permission to have direct access to the parallel or
+serial ports, unfortunately, Dosemu must be run as root. The safest
+way to do this is to use visudo to edit the sudo configuration file.
+My shack computer is called boltzmann, so to allow user w1aw to run
+dosemu on boltzmann as root without typing a password, I add the lines
+<PRE>
+w1aw boltzmann=(root) NOPASSWD: /usr/local/bin/dosemu.bin
+w1aw boltzmann=(root) NOPASSWD: /usr/local/bin/xdosemu
+</PRE>
+be sure to change w1aw, boltzmann, and the location of dosemu.bin and
+xdosemu to the appropriate values for your set up.
+
+<P>
+I start dosemu under X windows with the command
+<PRE>
+sudo xdosemu
+</PRE>
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+2 Packet with telnet</A>
+</H1>
+With the configuration I use, com1 under dos is connected to pseudotty
+q1. With the shack computer connected to the internet (I have a dsl
+line at home with a wireless network, so the shack computer is connected
+whenever it is on.) After starting TRlog in the xdosemu window, with
+TRlog's logcfg.dat having the lines:
+<PRE>
+PACKET PORT = SERIAL 3
+EIGHT BIT PACKET PORT = TRUE
+</PRE>
+I open a shell and type:
+<PRE>
+stty icrnl erase '^h'  &lt; /dev/ttyq1
+telnet n7us.net &lt; /dev/ttyq1 &gt; /dev/ttyq1
+</PRE>
+The first line tells the pseudotty to use control-h as the backspace
+key and to add carriage-returns to the newlines.
+The second line
+connects the pseudotty to N7US's telnet cluster in Mesa, Arizona.
+You should use a cluster close to you.
+At this point I can use ctrl-b in TRlog to log in to the packet
+cluster and receive spots.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+3 Connecting TRlog using linux networking</A>
+</H1>
+With the configuration I use, com4 under dos is connected to pseudotty
+q2. Turning on the networking in TRlog with
+<PRE>
+MULTI PORT = SERIAL 4
+</PRE>
+I then open a shell on each computer and type
+<PRE>
+ssh recievecomputer "cat &lt; /dev/ttyq2" &gt; /dev/ttyq2
+</PRE>
+where receivecomputer is the name of the computer I want to send my data to
+around the networking loop. 
+Do the same on the other computers to complete the loop. I have assumed
+that they all are using pseudotty q2. If not adjust the devices accordingly
+when performing the ssh command. Notice that
+this uses whatever hardware you have set up for networking under linux.
+It will work with ethernet, wireless, parallel or serial port ip, ppp,
+ieee1394, or whatever else you have. My set up uses ethernet and wireless.
+
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+4 Voice Keyers</A>
+</H1>
+sbdvp is available at
+<A NAME="tex2html2"
+  HREF="http://fermi.la.asu.edu/w9cf">http://fermi.la.asu.edu/w9cf</A>
+can integrate a sound card with TRlog. However, it only partially works
+under Dosemu. Dosemu emulates to some extent a soundblaster. Run sbdvp
+as under DOS. There are two main problems. First, sbdvp will <EM>not</EM>
+record under Dosemu. You must record your files under linux before
+loading them with sbdvp. Second, under Dosemu, the last half second or
+so of audio is not played. Therefore you will need to make sure that
+a little dead air is left at the end of the messages.
+
+<P>
+Most linux distribution come with the sox package
+which contains frontends rec and play. For example, to record cqf2.dvp
+in an sbdvp compatible format, use
+<PRE>
+rec -r12048 -c1 -fu -b -t raw cqf2.dvp
+</PRE>
+You can play the file under linux as
+<PRE>
+play -r12048 -c1 -fu -b -t raw cqf2.dvp
+</PRE>
+to see how it sounds.
+The flags on these commands say to use a rate of 12048 Hz, one channel, i.e.
+not stereo, use unsigned, data is in bytes, write raw data to file cqf2.dvp.
+
+<P>
+External voice keyers should work as under DOS if the corresponding
+ports are set up correctly.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive" SRC="nx_grp_g.gif"> 
+<A NAME="tex2html3"
+  HREF="../index.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html4"
+  HREF="../index.html">W9CF Home</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

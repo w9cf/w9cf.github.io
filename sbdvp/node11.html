@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>10 Windows Sound System Compatible Sound Cards</TITLE>
+<META NAME="description" CONTENT="10 Windows Sound System Compatible Sound Cards">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html161"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html158"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html152"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html160"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html162"
+ HREF="node12.html">11 Mixer Settings</A>
+<B> Up:</B> <A NAME="tex2html159"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html153"
+ HREF="node10.html">Using the #math17# SoundBlaster<SUP> TM</SUP></A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION000110000000000000000">
+10 Windows Sound System Compatible Sound Cards</A>
+</H1>
+<P><A NAME="wss">&#160;</A>
+I have included experimental support for Windows Sound System compatible
+chips. To use these you need to include the command line flag -w8 or -w16,
+i.e. use
+<BR>
+SBDVP -w8
+<BR>
+or
+<BR>
+SBDVP -w16
+<BR>
+which will play/record 8 bit samples at a 11KHz rate or 16 bit samples
+at at 16 KHz sampling rate.  In addition you must set the environment
+variable WSS for example,
+set WSS=A530 I5 D1
+where 530 should be replaced by the I/O address of the WSS card,
+5 with the hardware interrupt, and 1 with the playback DMA of the
+WSS card (this is normally the first DMA listed when 2 are given).
+<P>
+The Windows Sound System (WSS) or Microsoft Sound System was a sound
+card produced by Microsoft that is no longer made; I don't think
+Microsoft makes any sound hardware now.  It used an Analog Devices
+AD1848 as its sound chip. I think that when manufacturers say that
+their sound card is Windows Sound System compatible, they mean that to
+some degree it is compatible with the AD1848 chip. I could not find a
+data sheet for the AD1848, but the Analog Devices web site says that
+the AD1845 is the nearest current equivalent, and its data sheet is
+available on line. I have access to two computers that have sound cards
+that claim to be WSS compatible. The first uses an Opti 82C924 chip,
+and the second uses a Crystal CS4236 chip. Data sheets for both of
+these chips are available at the Opti and Cirrus Logic Web sites
+respectively. The data sheets for the CS4236 and AD1845 give enough
+details to learn how to program the WSS.
+<P>
+The documentation for my soundcards gives the usual default
+Windows Sound System ``I/O Address'' as hex 530.
+Other standard
+I/O addresses are hex 640, E80, and F40.
+To use the Opti sound
+card in WSS mode, I first make sure that the DOS initialization utility
+has initialized the card in WSS mode.
+I then set the
+WSS environment variable to tell SBDVP
+that the I/O address is 0x530, the DMA is 1, and the interrupt is 5.
+My Crystal CS4236 based sound system is the sound system on the
+Intel PRO 440FX motherboard. It automatically detects whether it
+is being used in 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> or WSS mode. I have both the BLASTER and WSS
+environment variables defined, and by firing up SBDVP with or
+without the -w8 option I can use it in either WSS or 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> mode.
+<P>
+Nearly all of the newer WSS compatible chips allow the use
+of 2 DMA channels and can be set up for simultaneous 16 bit
+playback and record. While this would be useful to properly emulate the
+back copy function of the K1EA DVP, I haven't bothered with this.
+If yours is setup with separate DMA channels just list the playback
+channel as the DMA in the WSS statement.
+<P>
+The advantages to using the WSS driver are that it can use 16 bit
+samples for higher quality, and some WSS chips have a FIFO to reduce
+or eliminate pops due to other computer activity. The Soundblaster
+16 has these same advantages, but I do not have access to one
+to test out code, so I do not support these Soundblaster 16 features.
+If you are having trouble in Sound Blaster mode and your card is
+WSS compatible, consider trying it in WSS mode.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html161"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html158"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html152"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html160"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html162"
+ HREF="node12.html">11 Mixer Settings</A>
+<B> Up:</B> <A NAME="tex2html159"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html153"
+ HREF="node10.html">Using the #math17# SoundBlaster<SUP> TM</SUP></A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

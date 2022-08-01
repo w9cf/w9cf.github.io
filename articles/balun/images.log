@@ -1,0 +1,185 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 97.10.4)  4 JUN 1998 23:03
+**./images.tex
+(images.tex
+LaTeX2e <1996/12/01>
+Babel <v3.6h> and hyphenation patterns for american, german, italian, loaded.
+
+(/usr/lib/texmf/texmf/tex/latex/base/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/lib/texmf/texmf/tex/latex/base/size12.clo
+File: size12.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/lib/texmf/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1996/10/31 v1.0c Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/lib/texmf/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1995/09/21 v1.09 key=value parser (DPC)
+) (/usr/lib/texmf/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1996/10/31 v1.0c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/lib/texmf/texmf/tex/latex/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+) (/usr/lib/texmf/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 82.
+(/usr/lib/texmf/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1996/12/12 v3.0d Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/lib/texmf/texmf/tex/latex/latex2html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux (/home/schmidt/sun/hamtext/balun/fig1.aux) (/home/schmidt/sun/hamte
+xt/balun/fig2.aux) (/home/schmidt/sun/hamtext/balun/fig3.aux) (/home/schmidt/su
+n/hamtext/balun/fig4.aux) (/home/schmidt/sun/hamtext/balun/fig5.aux) (/home/sch
+midt/sun/hamtext/balun/fig6.aux) (/home/schmidt/sun/hamtext/balun/fig7.aux) (/h
+ome/schmidt/sun/hamtext/balun/fig8.aux) (/home/schmidt/sun/hamtext/balun/fig9.a
+ux) (/home/schmidt/sun/hamtext/balun/fig10.aux) (/home/schmidt/sun/hamtext/balu
+n/fig11.aux) (/home/schmidt/sun/hamtext/balun/fig12.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=632.5pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00002pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=39.0pt
+latex2htmlLength evensidemargin=39.0pt
+\graph=\box27
+\graphtemp=\dimen105
+l2hSize :figure14:171.97119pt::0.0pt::349.0pt.
+[1
+
+
+]
+l2hSize :figure73:239.90517pt::0.0pt::349.0pt.
+[2
+
+
+]
+l2hSize :figure158:171.97119pt::0.0pt::349.0pt.
+[3
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 153.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 153.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 153.
+l2hSize :figure250:138.54211pt::0.0pt::349.0pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_indisplay3380:8.2pt::0.0pt::8.48602pt.
+[5
+
+
+]
+l2hSize :figure361:199.53954pt::0.0pt::349.0pt.
+[6
+
+
+]
+l2hSize :figure512:199.53954pt::0.0pt::349.0pt.
+[7
+
+
+]
+l2hSize :figure688:88.74733pt::0.0pt::349.0pt.
+[8
+
+
+]
+l2hSize :figure826:186.67287pt::0.0pt::349.0pt.
+[9
+
+
+]
+l2hSize :figure968:229.67667pt::0.0pt::349.0pt.
+[10
+
+
+]
+l2hSize :figure1160:200.7691pt::0.0pt::349.0pt.
+[11
+
+
+]
+l2hSize :figure1327:221.22075pt::0.0pt::349.0pt.
+[12
+
+
+]
+l2hSize :figure1526:242.90198pt::0.0pt::349.0pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline3419:10.82275pt::10.82275pt::63.3469pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_indisplay3435:17.62836pt::17.62836pt::50.74893pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_indisplay3436:17.62836pt::17.62836pt::97.71733pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_indisplay3442:16.31808pt::16.31808pt::51.16443pt.
+[17
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 853 strings out of 10902
+ 9194 string characters out of 72114
+ 58826 words of memory out of 262141
+ 3703 multiletter control sequences out of 9500
+ 6683 words of font info for 24 fonts, out of 150000 for 255
+ 14 hyphenation exceptions out of 607
+ 25i,7n,21p,1147b,265s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on images.dvi (17 pages, 16820 bytes).

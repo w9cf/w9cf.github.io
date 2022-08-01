@@ -1,0 +1,112 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 97.8.22)  12 AUG 1999 01:40
+**./images.tex
+(images.tex
+LaTeX2e <1996/12/01> patch level 1
+Babel <v3.6h> and hyphenation patterns for american, german, loaded.
+
+(/usr/local/teTeX/texmf/tex/latex/base/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/local/teTeX/texmf/tex/latex/base/size12.clo
+File: size12.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/teTeX/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1996/10/31 v1.0c Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/teTeX/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1995/09/21 v1.09 key=value parser (DPC)
+) (/usr/local/teTeX/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1996/10/31 v1.0c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/teTeX/texmf/tex/latex/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+) (/usr/local/teTeX/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 82.
+(/usr/local/teTeX/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1996/12/12 v3.0d Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/local/teTeX/texmf/tex/latex/latex2html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=664.50787pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00002pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=5.69054pt
+latex2htmlLength oddsidemargin=-28.45274pt
+latex2htmlLength evensidemargin=-28.45274pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 85.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 85.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 85.
+l2hSize :tex2html_wrap_indisplay60:7.75pt::7.75pt::11.65506pt.
+[1
+
+
+]
+l2hSize :tex2html_wrap_indisplay61:16.31808pt::16.31808pt::33.15883pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_indisplay62:18.00014pt::18.00014pt::117.79669pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_indisplay64:16.4514pt::16.4514pt::48.65268pt.
+[4
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 762 strings out of 10906
+ 8327 string characters out of 72145
+ 53308 words of memory out of 262141
+ 3672 multiletter control sequences out of 9500
+ 6376 words of font info for 23 fonts, out of 150000 for 255
+ 14 hyphenation exceptions out of 607
+ 25i,4n,21p,202b,209s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on images.dvi (4 pages, 1312 bytes).

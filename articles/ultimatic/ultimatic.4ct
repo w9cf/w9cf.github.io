@@ -1,0 +1,23 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Introduction}}{3}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Ultimatic mode}}{4}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{Logic Design}}{5}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-40004}{QQ2-1-4}{Hardware design}}{7}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-50005}{QQ2-1-5}{NOR gate circuit}}{7}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-60006}{QQ2-1-6}{Microcontroller implementation}}{7}\relax 
+\doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-70007}{QQ2-1-7}{Tests and conclusion}}{9}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-80008}{QQ2-1-8}{Addendum}}{10}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-80031}{}{\ignorespaces  The transition state table. In the entries, the first number is the new state, and the numbers in parentheses are outputs, $(L_{out},R_{out})$. The dash indicates a state that should not occur so we do not care what the result is. The inputs are the values of $L_{in},R_{in}$ }}{table}\relax 
+\doTocEntry\toclot{2}{\csname a:TocLink\endcsname{1}{x1-80042}{}{\ignorespaces  The reduced transition state table after combining equivalent states in table 1\hbox {}.}}{table}\relax 
+\doTocEntry\toclot{3}{\csname a:TocLink\endcsname{1}{x1-80053}{}{\ignorespaces The truth table for the reduced transition state table.}}{table}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-80061}{}{\ignorespaces S equation realization. At a. the expression for $S$ in Eq. 1\hbox {} is used directly. At b. a negation at the input of the AND gate allows us to use $L_{in}$, while negating the output of the OR gate and the other input of the AND gate does not change the logic. At c. the negated input AND gate is changed to the equivalent NOR gate.}}{figure}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-80072}{}{\ignorespaces The $L_{out}$ equation realization. At a. the expression for $L_{out}$ in Eq. 1\hbox {} is used directly. At b. and c. the same manipulations are used as in figure 1\hbox {}. }}{figure}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-80083}{}{\ignorespaces The complete NOR gate circuit. Values are what I had available.}}{figure}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-80094}{}{\ignorespaces A quick prototype of the NOR gate circuit using parts on hand. The prototype board is sitting on a homebrew adjustable power supply. The circuit is connected between the Bencher BY-1 paddle and the Elecraft K2's keyer input. }}{figure}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-80105}{}{\ignorespaces A close up photograph of the NOR gate prototype. }}{figure}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-80116}{}{\ignorespaces  The PIC16F690-I/P circuit. Most of the pins are not connected.}}{figure}\relax 
+\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-80127}{}{\ignorespaces The prototyped PIC16F690-I/P circuit connected between the paddles and the K2. The CMOS Superkeyer III is the aluminum box with 6 pushbuttons to the right. The microprocessor is being powered by the PICkit 2 programmer shown connected to the in-circuit serial programming header. }}{figure}\relax 
+\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-80138}{}{\ignorespaces A close-up photograph of the PIC16F690-I/P circuit. The 16F690 is the larger chip on the bottom half of the prototype board. The parts on the upper half are for the prototyped PIC10F200-I/P circuit that was abandoned. }}{figure}\relax 
+\doTocEntry\toclof{9}{\csname a:TocLink\endcsname{1}{x1-80149}{}{\ignorespaces The improved nor gate circuit suggested by John Crabtree, KC0G. See caption to figure 3\hbox {} for component details.}}{figure}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-90008}{QQ2-1-21}{Appendix}}{53}\relax 
+\par 

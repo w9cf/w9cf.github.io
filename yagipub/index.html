@@ -1,0 +1,272 @@
+<html>
+<HEAD>
+<TITLE>Yagi Modeler Applet/Application</TITLE>
+</HEAD>
+<body>
+
+<center>
+<h2>
+Yagi Modeler
+</h2>
+</center>
+
+<APPLET CODE="AppletButton.class" WIDTH=300 HEIGHT=100
+codebase=classes
+archive=yagi.zip
+alt="You would see a button here if Java worked."
+>
+<param name=windowClass value=YagiModel>
+<param name=buttonText value="Click Here for the Yagi Modeler">
+<param name=cabinets value=YagiModel.cab>
+</APPLET>
+
+<p>
+This java applet/application implements a simple yagi modeling code. 
+The initial input is a really trivial 2 elmenent yagi. Click on
+calculate to have the applet calculate the driven element input impedance,
+gain, front to back ratio. The pattern is displayed on the graph.
+The upper part of the graph is the azimuthal pattern (E-plane)
+for a horizontally
+polarized yagi. The lower part of the graph is the elevation pattern (H-plane).
+
+The yagi is pictured in the upper panel. The boom is blue, the elements
+are red except for the driven element which is green.
+</p>
+<p>
+You can choose some example yagis from the example input menu. You must
+click calculate to calculate their properties.
+</p>
+<p>
+You can change the frequency, element diameter, and number of segments
+used to solve the equations by typing in the input fields provided.
+</p>
+<p>
+You can change the units by using the "Units" menu. You can change
+the element conductivity by using the "Conductivity" menu. If the
+units are radians or wave lengths, the conductivity is assumed
+perfect.
+</p>
+<p>
+You can edit the element positions and lengths by either moving the
+mouse on top of an element and clicking to select it, or you can
+select "List Elements" in the File menu to show the element positions
+and lengths. Double clicking on one of these entries will select
+that element for editing. The edit panel allows you to type in the
+element length, and the element position. If you check the driven
+element checkbox, this element becomes the driven element. Clicking
+cancel will leave the values as displayed when the edit panel first
+came up. Clicking OK will change the values to the values now displayed.
+Clicking delete will delete this element. To add a new element, select
+Add Element in the Edit menu.
+</p>
+<p>
+You can save the results to a file by selecting "Write File" in the
+File menu. Because of applet security, you can only do this if
+you are running as a Java application from your own computer,
+or if you are running with your browser pointed to a file on
+your own computer (i.e. not over the net).
+You can read these files back into the modeler using the Read File
+item in the File menu. Again, you can only read files when running
+the applet on your own computer.
+<p>
+I use a completely straightforward method of moments
+solution using a piecewise sinusoidal current and the thinwire
+approximation. It is not based
+on either Mininec or NEC sources.
+Since only
+a single yagi is modeled, the current in each element is symmetrical
+about the center of the element. The half element is divided into
+equal sized segments, and the current in each segment is assumed
+sinusoidal with the free space wave length. The mutual impedance
+between two such thinwire sinusoidal currents can be calculated analytically
+(see any antenna text, or for a general orientation, you can look at my
+note,
+IEEE Trans. on Antennas and Propagation, 44, 1298 (1996), also at
+http://fermi.la.asu.edu/w9cf/articles/mutual).
+Given a driving voltage
+across the feedpoint, and zero voltage across the junctions of other
+segments, I solve the resulting linear equations for all the currents
+using straightforward LU decomposition.  The ratio of the feed voltage to
+feed current gives the input impedance in this delta gap feed model, and
+once the currents in all the elements are known, it is easy to calculate
+the far field and therefore the pattern, gain, and front to back ratio.
+</p>
+
+<p>
+This applet can be used to scale the example yagis or any others to
+new frequencies. The naive way to do this is:
+<br>
+1. Model the yagi at the design frequency 
+<br>
+2. Change the units to radians (or wavelengths). This will convert
+all dimensions to radians or wavelengths.
+<br>
+3. Change the frequency to the new desired frequency.
+<br>
+4. Change the units to Centimeters, Millimeters, Meters, Inches,
+or feet. This will scale all the values to the new frequency.
+</p>
+<p>
+The only problem with this approach is that the element diameters also get
+scaled, often  to values that are mechanically inconvenient or structurally
+unsound. You need to change the element diameter
+to one you really want. If the frequency change has been large,
+this will completely ruin the pattern, etc. A quick and dirty fix is
+to adjust the frequency and recalculate until the gain, pattern, etc.
+are reasonable.  This new frequency should be near the desired frequency.
+Simply repeat the steps 1-4 above to scale from this nearby frequency
+to your final desired frequency. Then again change the diameter to
+the one you want and see if the results are acceptable. Repeat until
+they are.
+<p>
+Here is an example you can try.
+To scale the K1FO 12 element 2 meter yagi to
+432.1 MHz with 4.7625 mm diameter elements, first select the 12 element
+K1FO 2 meter yagi from the Examples menu
+it has 6.35 mm diameter elements. It has a gain of about
+14.5 dB and f/b 22.9 dB with a nice pattern at 144.1 MHz. Select Radians
+from the Units menu. Then change the frequency from 144.1 to 432.1.
+Then select Millimeters from the Units menu. Clicking calculate,
+I get the same results at 432.1 MHz that I got at 144.1 MHz originally
+but the element diameter is now 2.1179 mm for the 432.1 MHz yagi.
+</p>
+<p>
+Now change the element diameter to the desired 4.7625,
+and click calculate again.
+The gain is 14.5 dB, the f/b is 16.5 dB,
+but the pattern is ugly. Since you have increased the
+diameter of the elements, they are a bit too long. You could now shorten
+each of them, but this isn't built into the code. The simple thing to do is
+to lower the frequency and see if the pattern cleans up.
+Lower the frequency a few MHz at a time, click calculate,
+and look at the pattern. I found that I get a pretty nice 
+pattern at 420 MHz. I now scale the antenna
+from this frequency as before. That is I select Radians from the
+Units menu, change the frequency to 432.1, and then select Millimeters
+from the Units menu. This gives me a 432.1 MHz antenna
+with element diameters of 4.62890. I change this element diameter
+to my desired 4.7625 mm, and
+note that when I click calculate
+the pattern, gain, and front to back don't change substantially.
+This is my final scaled design. Comparing with the K1FO 12 element 432 MHz
+design, I have about .2 dB more gain, 0.4dB more front to back, but the
+pattern is a little worse. The rear lobe of the scaled yagi is not as
+small as the designed at frequency one, but it isn't really bad either.
+The scaled yagi is about 6 cm longer.
+Considering that I scaled the original yagi by a factor of 3 in frequency
+the results are pretty good.
+</p>
+<p>
+The plotting
+is implemented using <a href="http://ptolemy.eecs.berkeley.edu/java/ptplot">
+ptplot</a> by Edward A. Lee and Christopher Hylands,
+copyright University of California.
+</p>
+<p>
+You can download the complete applet/application and source code in the gzipped
+tar file <a href="http://fermi.la.asu.edu/w9cf/yagi.tar.gz">
+http://fermi.la.asu.edu/w9cf/yagi.tar.gz</a>.
+Gunzip and Untar this file on your system, and point your browser at the
+file yagipub/index.html, to run within your Web browser.
+</p>
+<p>
+For full functionality of all IO operations the Applet requires
+JDK1.1 support. This is available in the
+Netscape 4.05 preview 1 (AWT 1.1.5) version.
+This preview version is only available from
+Netscape at
+its <a href="http://developer.netscape.com/software/jdk/download.htm">
+developers download </a> location at the time of this
+writing. Internet Explorer 4.0 should also work. I believe that
+everything but file IO should work on all netscape versions 2.0 or
+higher and Internet Explorer 3.0, but I haven't tested this.
+</p>
+
+<strong> Security Issues</strong><br>
+<UL>
+<LI>
+The Applet requires permissions to read and write files. These
+considerations only apply if you have downloaded the applet to your
+own computer and are running from your own filesystem (not over the net).
+</LI>
+
+<LI>
+Internet Explorer 4.0 will pop up a screen when the Applet is first loaded
+asking if you want to allow the applet full access to your computer. You
+must answer yes to this. Alternatively,
+you can rename the yagipub/classes/YagiModel.cab file. The Applet will
+no longer require permission to run, but will not be able to read/write
+files.
+Granting these permissions
+at most makes the Applet have the same capabilities as any other executable
+that you would run from your own account on your computer.
+</LI>
+
+<LI>
+Netscape 4.05 preview release 1 (AWT 1.1.5) available at the
+<a href="http://developer.netscape.com/software/jdk/download.htm">
+developer's download site
+</a>
+will pop up a dialog that requests
+permission to print, read, or write files the first time each of these
+operations is attempted. You should grant the privilege if you want to
+allow the Applet to do this.
+Granting these permissions
+at most makes the Applet have the same capabilities as any other executable
+that you would run from your own account on your computer.
+</LI>
+</UL>
+
+<p>
+To run as an
+application (my preferred way) you need a Java run time environment
+or a Java Development kit. In the classes subdirectory type<br>
+java YagiModel<br>
+or equivalent to pop up the modeler.
+</p>
+<p>
+To build the applet from source you need a Java Development
+Kit from <a href="http://java.sun.com/">
+Sun Microsystems </a> at
+http://java.sun.com/,
+or Linux users may prefer the
+most recent  from the <a href="http://www.blackdown.org">
+Java-Linux porting project </a> at
+http://www.blackdown.org
+or you may find other related development kits.
+The Makefile I use on my unix/linux systems is in the javasrc directory.
+The first few lines are variables that point to the directories
+where the java compiler etc are. These may need to be changed for
+your system.
+</p>
+<p>
+<a href="http://fermi.la.asu.edu/w9cf/"> W9CF Home </a>
+</p>
+<p>
+73 Kevin w9cf
+</p>
+<p>
+Copyright (C) 1998, Kevin Schmidt
+</p>
+<p>
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+</p>
+<p>
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+</p>
+<p>
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+</body>
+</html>

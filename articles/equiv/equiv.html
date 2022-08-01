@@ -1,0 +1,800 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Approximate R.F. Resistance of Rectangular Cross Section Conductors
+</TITLE>
+<META NAME="description" CONTENT="Approximate R.F. Resistance of Rectangular Cross Section Conductors
+">
+<META NAME="keywords" CONTENT="equiv">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="equiv.css">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html9"
+ HREF="http://fermi.la.asu.edu/w9cf">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html10"
+ HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<P><H1 ALIGN="CENTER">Approximate R.F. Resistance of Rectangular Cross Section Conductors
+</H1>
+<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
+ HREF="
+mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF
+<BR></A>
+</STRONG></P>
+<P ALIGN="CENTER"><STRONG></STRONG></P>
+<P ALIGN="LEFT"></P>
+<P><H1><A NAME="SECTION00010000000000000000">
+1 Introduction</A>
+</H1>
+Small loop antennas such as the AEA-Isoloop sometimes use rectangular
+cross section conductors, and sometimes use circular cross section
+tubing for the antenna element. In these antennas, resistive losses
+are important in determining the efficiency. Here, I approximately
+calculate the resistance of rectangular cross section elements.
+For design purposes my results can be summarized by the equation
+<P ALIGN="CENTER"><A NAME="eq1">&#160;</A>
+<!-- MATH: d_{\rm effective} = \frac{w}{1 + 1.13 \log_{10} (w/t)}, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>d</I><SUB>effective</SUB> = <IMG WIDTH="166" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\displaystyle{\frac{w}{1 + 1.13 \log_{10} (w/t)}}$">, 
+</TD><TD ALIGN="CENTER">(1)
+</TD></TR></TABLE></P>
+where
+
+<!-- MATH: d_{\rm effective} -->
+ <I>d</I><SUB>effective</SUB>  is the diameter of a circular cross section conductor
+with the same r.f. resistance,  <I>w</I>  is the width of the rectangular
+conductor, and  <I>t</I>  is the thickness, with  <I>t</I>  less than  <I>w</I> .
+<P><H1><A NAME="SECTION00020000000000000000">
+2 Calculation Method</A>
+</H1>
+My approximate calculation is reasonable if:
+<DL COMPACT>
+<DT>1.
+<DD>The width of the strip is much much smaller than a wavelength,
+<DT>2.
+<DD>The strip is far enough from other conductors that their fields
+don't disturb the distribution,
+<DT>3.
+<DD>The strip is much thicker than a skin depth.
+</DL>
+You can think of the calculation as solving for the current distribution
+on the conductors of two conductor open wire transmission line
+where both conductors have the same
+rectangular cross section. I then let the separation between the 
+two conductors get large enough so the fields from the other conductor
+do not change the current distribution.
+<P>
+A two-wire transmission line with perfectly conducting wires
+operates in its TEM mode. The solution of Maxwell's equations
+for this mode can be calculated by solving
+the simpler 2-dimensional electrostatic problem for the surface
+charge density on the wires. The surface current distribution is identical
+to the charge distribution. Once I have the surface charge distribution,
+I then apply a very approximate perturbation of boundary conditions
+method. That is the tangential component of the magnetic field just outside
+the surface is proportional to the surface current at that point. If the
+surface is planar, the current in a good but imperfect conductor
+dies out exponentially with distance into the conductor. The usual skin depth
+gives the exponential decay rate. Obviously, near the corners, the
+assumption of a planar solution is incorrect. However, if the dimensions
+of the conductor are all large compared to the skin depth, this approximation
+will be reasonable since the regions where it breaks down will only
+contribute a small amount to the effective resistance. A true perturbation
+of boundary conditions method could be used to get a better approximation
+near the corners of the conductor, but I have not done that here.
+Using this simple planar approximation, the resistance per unit length
+of a conductor is
+<P ALIGN="CENTER"><A NAME="eq2">&#160;</A>
+<!-- MATH: \frac{|I|^2 R}{2} = \frac{\delta}{2}
+\oint d \vec r \frac{|J_z(\vec r)|^2}{\sigma} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="51" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\displaystyle{\frac{\vert I\vert^2 R}{2}}$"> = <IMG WIDTH="17" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\displaystyle{\frac{\delta}{2}}$"><IMG WIDTH="20" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\displaystyle\oint$"><I>d</I><IMG WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{r}$"><IMG WIDTH="70" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\displaystyle{\frac{\vert J_z(\vec r)\vert^2}{\sigma}}$"> 
+</TD><TD ALIGN="CENTER">(2)
+</TD></TR></TABLE></P>
+where
+<P ALIGN="CENTER"><A NAME="eq3">&#160;</A>
+<!-- MATH: I = \delta \oint d \vec r J_z(\vec r) -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>I</I> = <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\displaystyle\delta$"><IMG WIDTH="20" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\displaystyle\oint$"><I>d</I><IMG WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{r}$"><I>J</I><SUB>z</SUB>(<IMG WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle\vec{r}$">) 
+</TD><TD ALIGN="CENTER">(3)
+</TD></TR></TABLE></P>
+is the current on the conductor and the integrals are around the surface
+cross section of the conductor,  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\sigma$">  is the conductivity,
+and  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\delta$">  is the skin depth 
+<!-- MATH: \sqrt{1/(\mu \pi f \sigma)} -->
+ <IMG WIDTH="102" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\sqrt{1/(\mu \pi f \sigma)}$"> , and  <I>f</I> 
+is the frequency. Notice that if the current is uniformly distributed
+around the surface, that this formula reduces to
+
+<!-- MATH: R = 1/(p \delta \sigma) -->
+ <I>R</I> = 1/(<I>p</I><IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\delta$"><IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\sigma$">) 
+where  <I>p</I>  is the perimeter of the conductor cross section.
+The effective diameter 
+<!-- MATH: d_{\rm effective} -->
+ <I>d</I><SUB>effective</SUB>  is calculated as the diameter
+of the circular
+cross section conductor with the same resistance,
+<BR><A NAME="eq4">&#160;</A>
+
+<!-- MATH: d_{\rm effective} &=& \frac{1}{\pi \delta \sigma R}
+\nonumber\\&=& \frac{|\oint d \vec r J_z(\vec r)|^2}{\pi \oint d\vec r |J_z(\vec r)|^2 } -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>d</I><SUB>effective</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="42" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{\pi \delta \sigma R}}$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+&nbsp;
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="118" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\displaystyle{\frac{\vert\oint d \vec r J_z(\vec r)\vert^2}{\pi \oint d\vec r \vert J_z(\vec r)\vert^2 }}$"> 
+</TD><TD ALIGN="RIGHT">(4)</TD></TR>
+</TABLE></DIV>
+Since  <I>J</I><SUB>z</SUB>  has the same form as the charge density, I can
+use the charge density in place  <I>J</I><SUB>z</SUB>  in Eq. <A HREF="equiv.html#eq4">4</A>
+<P>
+To calculate the charge density, I divided the
+surface up into small segments and assumed the charge density was
+constant over each segment. I then solved for the magnitude of the
+charge on each segment by requiring the average potential on each
+segment to be the same. In figures <A HREF="equiv.html#fig2">1</A> and <A HREF="equiv.html#fig3">2</A>,
+I show the calculated
+charge density as a function of the distance from the edge of a square
+cross section conductor. 
+The surface
+charge density bunches at the corners. Figure <A HREF="equiv.html#fig3">2</A> displays
+the calculated charge density and the function 
+<!-- MATH: 0.124 x^{-1/3} -->
+ 0.124<I>x</I><SUP> - 1/3</SUP>.
+The calculated charge density has the correct 
+ <I>x</I><SUP> - 1/3</SUP> divergence at the corners just
+like analytic theory says should be true.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig2">&#160;</A><A NAME="52">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 1:</STRONG>
+The calculated charge density on a square cross section conductor
+with unit length side
+as a function of the distance from a corner.</CAPTION>
+<TR><TD><IMG WIDTH="491" HEIGHT="354"
+ SRC="img13.gif"
+ ALT="\begin{figure}
+
+\rotatebox {270}
+{\includegraphics[width=3in]{equiv.fig2}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig3">&#160;</A><A NAME="155">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 2:</STRONG>
+A log-log plot
+of the calculated charge density on a square cross section conductor
+with unit length side
+as a function of the distance from a corner. The dashed line is
+the function 
+<!-- MATH: 0.124 x^{-1/3} -->
+ 0.124<I>x</I><SUP> - 1/3</SUP>.</CAPTION>
+<TR><TD><IMG WIDTH="486" HEIGHT="354"
+ SRC="img14.gif"
+ ALT="\begin{figure}
+
+\rotatebox {270}
+{\includegraphics[width=3in]{equiv.fig3}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR><H1><A NAME="SECTION00030000000000000000">
+3 Results for Rectangular Conductors</A>
+</H1>
+Applying this method to a flat strip of rectangular cross section,
+I calculated the effective diameter. I increased the number of
+basis functions until the results converged to the accuracy shown.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t1">&#160;</A>
+<P><A NAME="62">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 1:</STRONG>
+The calculated effective diameter of rectangular strips with
+various width to thickness ratios.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP> <I>w</I>/<I>t</I> </TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: d_{\rm effective}/w -->
+ <I>d</I><SUB>effective</SUB>/<I>w</I> </TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1.02</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>0.74</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>0.54</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>0.46</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>20</TD>
+<TD ALIGN="CENTER" NOWRAP>0.40</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>50</TD>
+<TD ALIGN="CENTER" NOWRAP>0.34</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>0.31</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+Figure <A HREF="equiv.html#fig4">3</A> shows a plot of these results along with the function
+given in Eq. <A HREF="equiv.html#eq1">1</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig4">&#160;</A><A NAME="150">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 3:</STRONG>
+A plot
+of the calculated effective diameter of a rectangular cross section
+conductor. The points are the calculate values, and the curve is
+fit to this data and is given by Eq. <A HREF="equiv.html#eq1">1</A>.</CAPTION>
+<TR><TD><IMG WIDTH="484" HEIGHT="350"
+ SRC="img15.gif"
+ ALT="\begin{figure}
+
+\rotatebox {270}
+{\includegraphics[width=3in]{equiv.fig4}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR><H1><A NAME="SECTION00040000000000000000">
+4 Consistency Checks</A>
+</H1>
+To check that the code is giving sensible results, I applied it
+to the case of a microstrip transmission line with air insulation.
+In this case, the rectangular cross section conductor is suspended
+over a ground plane. Originally I checked 
+using some numbers
+out of Terman, Reference data for Radio Engineers. The microstrip
+results there are apparently from an approximate conformal mapping method
+of Assadourian and Rimai, Proc. IRE 40, 1651 (1952), but my values
+are in fairly good agreement with more modern calculations too.
+<P>
+The microstrip conductor has width  <I>w</I> , thickness  <I>t</I> , just like
+our previous calculations. The distance from the bottom of the strip
+to the ground plane is  <I>h</I> .
+Terman gives the following formula for the conductor loss
+<P ALIGN="CENTER">
+<!-- MATH: {\rm Loss_{Terman}~ dB/foot = 7.25 \times 10^{-5}
+\alpha \left [1/h(inches) \sqrt{f(MHz)} \right]}, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>Loss</I><SUB>Terman</SUB>&nbsp;<I>dB</I>/<I>foot</I>=7.25 <TT>x</TT> 10<SUP>- 5</SUP><IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\displaystyle\alpha$"><IMG WIDTH="215" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle\left [1/h(inches) \sqrt{f(MHz)} \right]$">, 
+</TD><TD ALIGN="CENTER">(5)
+</TD></TR></TABLE></P>
+with a graph for the value of  <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\alpha$"> .  Using the same electrostatic method
+as I used for the isolated conductor I calculated the resistance of the
+microstrip conductors. I calculated the characteristic
+impedance  <I>Z</I><SUB>0</SUB>  from the capacitance, and the
+ratio is proportionate to the attenuation.
+<P>
+Table <A HREF="equiv.html#t2">2</A> gives a comparison of values of 
+<!-- MATH: \alpha~7.25 \times 10^{-5} -->
+ <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\alpha$">&nbsp;7.25 <TT>x</TT> 10<SUP>- 5</SUP>
+from Terman and my calculations.
+The loss calculation includes loss in the ground plane copper.  I also
+give my calculated characteristic impedance  <I>Z</I><SUB>0</SUB> ,
+and the effective diameter of the strip. This is the diameter
+of an isolated circular rod with the same r.f. resistance as just the
+strip conductor (not ground plane).
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t2">&#160;</A>
+<P><A NAME="86">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 2:</STRONG>
+A comparison of loss calculations for microstrip line from my calculations
+and the tabulation of Terman.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>w/h</TD>
+<TD ALIGN="CENTER" NOWRAP>t/h</TD>
+<TD ALIGN="CENTER" NOWRAP>Terman</TD>
+<TD ALIGN="CENTER" NOWRAP>My Value</TD>
+<TD ALIGN="CENTER" NOWRAP>% difference</TD>
+<TD ALIGN="CENTER" NOWRAP>My( <I>Z</I><SUB>0</SUB> )</TD>
+<TD ALIGN="CENTER" NOWRAP>My(
+<!-- MATH: d_{\rm effective} -->
+ <I>d</I><SUB>effective</SUB> )</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>7.25 
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>7.16 
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>28.7</TD>
+<TD ALIGN="CENTER" NOWRAP>3.55 h</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>10.73 
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>9.46  
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>14</TD>
+<TD ALIGN="CENTER" NOWRAP>118.7</TD>
+<TD ALIGN="CENTER" NOWRAP>0.47 h</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>7.68 
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>8.42  
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>9</TD>
+<TD ALIGN="CENTER" NOWRAP>29.0</TD>
+<TD ALIGN="CENTER" NOWRAP>2.72 h</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>9.57  
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>9.90  
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>3</TD>
+<TD ALIGN="CENTER" NOWRAP>69.5</TD>
+<TD ALIGN="CENTER" NOWRAP>0.82 h</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>10.37  
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>10.82  
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>4</TD>
+<TD ALIGN="CENTER" NOWRAP>88.5</TD>
+<TD ALIGN="CENTER" NOWRAP>0.56 h</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>13.78 
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>13.18 
+<!-- MATH: \times 10^{-5} -->
+  <TT>x</TT> 10<SUP>- 5</SUP></TD>
+<TD ALIGN="CENTER" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>125.2</TD>
+<TD ALIGN="CENTER" NOWRAP>0.30 h</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+So mostly my code agrees with Terman within 5 to 10 percent.  The Terman
+data are old and not readily available. More modern results can be
+found at the link
+<A NAME="tex2html1"
+ HREF="
+http://www.mit.edu/~mcmahill/software/mstrip/mscalc.htm
+">
+http://www.mit.edu/~mcmahill/software/mstrip/mscalc.htm
+</A>
+It is a web based microstrip calculator. Change the input data on that
+web page to:
+<P><PRE>
+Width = 10
+Length = 1000
+Frequency = 30 GHz
+Er = 1.0001 (1 causes a problem)
+H = 10
+Tmet = 1
+Rho = 1
+Rough = 0.0
+Tand = 0.0
+Physical Units = mils
+</PRE>
+Then click on the   - - - - &gt;  button.
+This gives the calculator the input data
+that corresponds to  <I>w</I>/<I>h</I> = 1 ,  <I>t</I>/<I>h</I> = .1 .
+<P>
+Inputing my other values to this calculator gives  <I>Z</I><SUB>0</SUB>  values that
+agree within 0.1 ohm of mine, and reasonable agreement for the
+loss values. The web description claims the  <I>Z</I><SUB>0</SUB>  better than 1 percent
+of the correct answer; the loss results are stated to be less
+accurate but still useful. Converting Terman's and my numbers
+from table <A HREF="equiv.html#t2">2</A> to the same units as the web calculator gives
+the results shown in table <A HREF="equiv.html#t3">3</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t3">&#160;</A>
+<P><A NAME="110">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 3:</STRONG>
+A Comparison of Loss calculated using the web based calculator, my calculation,
+and the tabulation of Terman.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>Width=w</TD>
+<TD ALIGN="CENTER" NOWRAP>H=h</TD>
+<TD ALIGN="CENTER" NOWRAP>Tmet=t</TD>
+<TD ALIGN="CENTER" NOWRAP>Calculator dB/inch</TD>
+<TD ALIGN="CENTER" NOWRAP>My dB/inch</TD>
+<TD ALIGN="CENTER" NOWRAP>Terman dB/inch</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.103</TD>
+<TD ALIGN="CENTER" NOWRAP>0.105</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.14</TD>
+<TD ALIGN="CENTER" NOWRAP>0.137</TD>
+<TD ALIGN="CENTER" NOWRAP>0.155</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.11</TD>
+<TD ALIGN="CENTER" NOWRAP>0.122</TD>
+<TD ALIGN="CENTER" NOWRAP>0.111</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>30</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.13</TD>
+<TD ALIGN="CENTER" NOWRAP>0.143</TD>
+<TD ALIGN="CENTER" NOWRAP>0.138</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>20</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.14</TD>
+<TD ALIGN="CENTER" NOWRAP>0.156</TD>
+<TD ALIGN="CENTER" NOWRAP>0.150</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.18</TD>
+<TD ALIGN="CENTER" NOWRAP>0.190</TD>
+<TD ALIGN="CENTER" NOWRAP>0.199</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+I then used my code and allowed the height to get large. I used a piecewise
+constant charge density on the conductors with 100 elements along  <I>w</I>  and
+50 along  <I>t</I> , except for the infinite height values which are the well
+converged values given in table <A HREF="equiv.html#t1">1</A>.
+<P>
+For  <I>h</I>  very small the current on the bottom of the strip will be nearly
+uniform, and we expect d effective to go to  1/<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\pi$"> = .32 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t4">&#160;</A>
+<P><A NAME="118">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 4:</STRONG>
+Calculated effective diameter of the strip conductor of
+a microstrip line as a function of its height for various
+thicknesses.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>w</TD>
+<TD ALIGN="CENTER" NOWRAP>t</TD>
+<TD ALIGN="CENTER" NOWRAP>h</TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: d_{\rm effective} -->
+ <I>d</I><SUB>effective</SUB> </TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.001</TD>
+<TD ALIGN="CENTER" NOWRAP>.32</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>.37</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>.57</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.98</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>1.06</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>1.06</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\infty$"> </TD>
+<TD ALIGN="CENTER" NOWRAP>1.02</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>.001</TD>
+<TD ALIGN="CENTER" NOWRAP>.32</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>.35</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>.44</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.47</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.47</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>.47</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\infty$"> </TD>
+<TD ALIGN="CENTER" NOWRAP>.46</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>.001</TD>
+<TD ALIGN="CENTER" NOWRAP>.32</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>.34</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>.1</TD>
+<TD ALIGN="CENTER" NOWRAP>.35</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.29</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>.29</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>.29</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>.01</TD>
+<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\infty$"> </TD>
+<TD ALIGN="CENTER" NOWRAP>.31</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+So all my results seem to be consistent with standard microstrip
+values. As the height increases, there are two
+effects. One, substantial current starts to flow on the top surface of
+the strip, this decreases the resistance, and two, the current &quot;bunches&quot;
+at the edges. This increases the resistance.  These two effects tend
+to cancel.
+<P>
+I also did some calculations for a ``stadium'' geometry. This is a strip with 
+width  <I>w</I>  and thickness  <I>t</I> , but the edges have semicircles of diameter  <I>t</I>  so
+there aren't any sharp corners and the calculation converges faster.
+To be specific the cross section is a rectangle of width  <I>w</I> - <I>t</I>  and thickness
+ <I>t</I> , with semicircles of diameter  <I>t</I>  added to the edges.
+Calculating the effective diameter of the stadium geometry gives the
+results in table <A HREF="equiv.html#t5">5</A>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="t5">&#160;</A>
+<P><A NAME="127">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 5:</STRONG>
+The calculated effective diameter of stadium shaped strips with
+various width to thickness ratios.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP> <I>w</I>/<I>t</I> </TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: d_{\rm effective}/w -->
+ <I>d</I><SUB>effective</SUB>/<I>w</I> </TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>1.00</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>0.77</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>0.58</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>0.49</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>20</TD>
+<TD ALIGN="CENTER" NOWRAP>0.43</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>50</TD>
+<TD ALIGN="CENTER" NOWRAP>0.37</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="RIGHT" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>0.34</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+which I fit to the equation,
+<P ALIGN="CENTER">
+<!-- MATH: d_{\rm effective}=\frac{w}{1+\log_{10}(w/t)} \ \ {\rm stadium\ geometry} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>d</I><SUB>effective</SUB> = <IMG WIDTH="128" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\displaystyle{\frac{w}{1+\log_{10}(w/t)}}$">  <I>stadium</I> <I>geometry</I> 
+</TD><TD ALIGN="CENTER">(6)
+</TD></TR></TABLE></P><H1><A NAME="SECTION00050000000000000000">
+5 MFJ-1786 and AEA Isoloop</A>
+</H1>
+<P>
+According to W6TNS on his Web page
+<A NAME="tex2html1"
+ HREF="
+http://www.gate.net/~donstone/aea.html
+">
+http://www.gate.net/~donstone/aea.html
+</A>
+,
+the AEA Iso-loop has  <I>w</I> =1.5 inches,  <I>t</I> =.063 inches, which if you believe my
+numbers has an r.f. resistance equivalent to about 0.6 inch diameter
+tubing. The MFJ-1786 loop has a 1.05 inch diameter round conductor according
+to an MFJ advertisement in QST.
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><strong>Subsections</strong></A>
+<UL>
+<LI><A NAME="tex2html11"
+ HREF="equiv.html#SECTION00010000000000000000">
+1 Introduction</A>
+<LI><A NAME="tex2html12"
+ HREF="equiv.html#SECTION00020000000000000000">
+2 Calculation Method</A>
+<LI><A NAME="tex2html13"
+ HREF="equiv.html#SECTION00030000000000000000">
+3 Results for Rectangular Conductors</A>
+<LI><A NAME="tex2html14"
+ HREF="equiv.html#SECTION00040000000000000000">
+4 Consistency Checks</A>
+<LI><A NAME="tex2html15"
+ HREF="equiv.html#SECTION00050000000000000000">
+5 MFJ-1786 and AEA Isoloop</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html9"
+ HREF="http://fermi.la.asu.edu/w9cf">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html10"
+ HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

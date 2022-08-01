@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>5 The effectiveness of a balun</TITLE>
+<META NAME="description" CONTENT="5 The effectiveness of a balun">
+<META NAME="keywords" CONTENT="balun">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="balun.css">
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="balun.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html99"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html96"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html90"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html98"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html100"
+ HREF="node7.html">6 Conclusion</A>
+<B> Up:</B> <A NAME="tex2html97"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html91"
+ HREF="node5.html">4 Baluns on the</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00060000000000000000">
+5 The effectiveness of a balun</A>
+</H1>
+<P>
+Let me analyze a simple case of a perfect quarter wave balanced line
+with a 300 ohm characteristic impedance terminated in a 50 ohm
+resistor. The line goes vertically straight up and the ground is
+assumed perfectly conducting.  The reason for all of these assumptions
+is so I can make simple estimates of what the impedances are. The situation
+I am modeling is the case where the input to the feedline has
+a small common mode impedance, and a large differential mode impedance.
+<P>
+<!-- MATH: Z_D =  300^2/50 -->
+ <I>Z</I><SUB>D</SUB> = 300<SUP>2</SUP>/50  or 1800 ohms resistive.  <I>Z</I><SUB>C</SUB>  will be the impedance of
+a quarter wave vertical driven against ground or about 35 ohms resistive.
+ <I>Z</I><SUB>1</SUB>  =  <I>Z</I><SUB>2</SUB>  = 900 ohms,  <I>Z</I><SUB>3</SUB>  = -415 ohms, where the labeling is
+given in figure <A HREF="node3.html#f4">4</A>.
+<P>
+Now lets hook up our ferrite bead balun by connecting the
+shield of the coax to terminal 2 and the center conductor to 1.
+A large ferrite bead balun will introduce an impedance of around
+
+<!-- MATH: |Z_{Bal}| = 6000 -->
+ |<I>Z</I><SUB>Bal</SUB>| = 6000  ohms from point 2 to ground.  (Walter Maxwell's March
+1983 QST article gives these values,
+he measured about 6000 ohms with both R and X
+around 4000 at 4MHz for a bead balun made from 300 #73 beads).  Again,
+to simplify things I'll just assume the balun is resistive and has a
+resistance of 4000 ohms.  The circuit looks like a driving voltage
+across 
+<!-- MATH: Z_1 +(Z_2 ~~ ||~~ (Z_{Balun}+Z_3)) -->
+ <I>Z</I><SUB>1</SUB> + (<I>Z</I><SUB>2</SUB>&nbsp;&nbsp;||&nbsp;&nbsp;(<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>3</SUB>)) , where  ||  means take the
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f8">&#160;</A><A NAME="827">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 8:</STRONG>
+The W2DU model of a unbalanced line and current balun driving
+a balanced line with differential mode resistance of 1800 ohms and
+common mode resistance of 35 ohms.</CAPTION>
+<TR><TD><IMG WIDTH="452" HEIGHT="311"
+ SRC="img9.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.583in width0pt height 0pt}\kern 3.290in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+parallel combination. This is shown in figure <A HREF="node6.html#f8">8</A>.
+<P>
+The impedance is 
+<!-- MATH: Z_D/2+(Z_{Balun}+Z_C-Z_D/4)Z_D/(2 (Z_{Balun}+Z_C+Z_D/4)) -->
+ <I>Z</I><SUB>D</SUB>/2 + (<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> - <I>Z</I><SUB>D</SUB>/4)<I>Z</I><SUB>D</SUB>/(2(<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> + <I>Z</I><SUB>D</SUB>/4)) . For the
+balun to work well the second term should also contribute  <I>Z</I><SUB>D</SUB>/2 , so
+I want 
+<!-- MATH: (Z_{Balun}+Z_C-Z_D/4)/(Z_{Balun}+Z_C+Z_D/4) -->
+ (<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> - <I>Z</I><SUB>D</SUB>/4)/(<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> + <I>Z</I><SUB>D</SUB>/4)  to be close to one.
+That is I want
+
+<!-- MATH: Z_{Balun}+Z_C -->
+ <I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB>  to be much larger than  <I>Z</I><SUB>D</SUB>/2 . Checking this case,
+
+<!-- MATH: Z_{Balun}+Z_C -->
+ <I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB>  is about
+4000 ohms, and  <I>Z</I><SUB>D</SUB>/2  is 900 ohms, so the second term is about 80 percent
+of the first. That means for 1 volt across the terminals, there will be
+approximately 1/2 volt across the ferrite.  The relative dissipation in
+the balun is therefore 
+<!-- MATH: 1800/(4\times 4000) -->
+ 1800/(4 <TT>x</TT> 4000)  or 11 percent. At 1500 watts
+output that's about 170 watts dissipated in the balun which may be more
+than it can take.  A smaller balun with only a 1000 ohm impedance will
+be worse.
+<P>
+Another example is to simply take an 1800 ohm 1/2 watt resistor and
+hook it to your balun. Since the resistor has a very large common mode
+impedance, you would have  <I>Z</I><SUB>1</SUB> = <I>Z</I><SUB>2</SUB> = 900 and  <I>Z</I><SUB>3</SUB>  a very large value.  The
+balun is now in series with  <I>Z</I><SUB>3</SUB> , and since  <I>Z</I><SUB>3</SUB>  is very large, even
+though the differential mode impedance is identical, there is no
+problem, in fact in this case, you don't even need a balun since
+shorting 2 to ground still doesn't allow any substantial common
+mode current flow.
+<P>
+Now let's see what happens if a balanced tuner is added to the first
+case. Picking a balanced L network to transform to 50 ohms I can use a
+parallel capacitor of 304 ohms across terminals 1 and 2 as
+in figure <A HREF="node6.html#f9">9</A> which has the equivalent circuit shown in
+figure <A HREF="node6.html#f10">10</A>. 
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f9">&#160;</A><A NAME="979">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 9:</STRONG>
+The equivalent circuit of the balanced feedline of figure <A HREF="node6.html#f8">8</A> with 
+a 304 ohm capacitor across the feedline terminals.</CAPTION>
+<TR><TD><IMG WIDTH="520" HEIGHT="381"
+ SRC="img10.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...3.000in width0pt height 0pt}\kern 4.290in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f10">&#160;</A><A NAME="1169">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 10:</STRONG>
+The equivalent circuit of figure <A HREF="node6.html#f9">9</A>.</CAPTION>
+<TR><TD><IMG WIDTH="424" HEIGHT="333"
+ SRC="img11.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.600in width0pt height 0pt}\kern 3.490in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+A pair of
+series inductors of 148 ohms from terminal 1 to a new terminal 1' and
+from 2 to a new terminal 2' will cancel the differential mode
+capacitive reactance and when the W2DU balun is attached
+the equivalent circuit is shown in figure <A HREF="node6.html#f11">11</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f11">&#160;</A><A NAME="1338">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 11:</STRONG>
+The complete equivalent circuit of the example of figure <A HREF="node6.html#f8">8</A> with
+a balanced L-network transforming the differential mode impedance to
+50 ohms.</CAPTION>
+<TR><TD><IMG WIDTH="454" HEIGHT="367"
+ SRC="img12.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...2.883in width0pt height 0pt}\kern 3.290in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+The new differential mode impedance is 50
+ohms. The new common mode impedance is the old value plus the impedance
+of the two parallel inductors = 35 +j 74 ohms.
+<P>
+Clearly the balun will work exceptionally well now. For 1 volt across
+1' and 2', the power into the load will be 1/50 watt. The power into
+our balun will be roughly 
+<!-- MATH: 1/(4 Z_{Balun}) -->
+ 1/(4<I>Z</I><SUB>Balun</SUB>)  which will be about 1 percent of the
+of the power for a 1000 ohm balun and 4 times less for the 4000 ohm
+balun.  1500 watts input gives 5 to 20 watts dissipated which I think a bead
+balun can easily stand. So changing from an unbalanced tuner with a
+balun on either the input or output to a balanced tuner with the balun
+on the input can really help. An advantage a substantially resistive
+balun like a ferrite balun is that there is no danger of cancellation in
+the 
+<!-- MATH: Z_{Balun}+Z_C -->
+ <I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB>  term since the resistive parts of both must be positive.
+<P>
+The idea that an unbalanced tuner will transform the differential
+mode impedance to 50 ohms is correct. Why is it that it doesn't help
+in reducing the common mode currents? I have already shown that moving
+the balun to the input can't help matters. Let's see what happens
+to the equivalent circuit when an unbalanced tuner is added. An unbalanced
+L network would include a single series inductor rather than the
+two that I used above. Adding this single series inductor to
+the circuit of figure <A HREF="node6.html#f11">11</A> gives the circuit shown in
+figure <A HREF="node6.html#f12">12</A>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f12">&#160;</A><A NAME="1527">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 12:</STRONG>
+The equivalent circuit of the balun on the input of an unbalance tuner.</CAPTION>
+<TR><TD><IMG WIDTH="476" HEIGHT="403"
+ SRC="img13.gif"
+ ALT="\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
+ ...3.183in width0pt height 0pt}\kern 3.490in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+Notice that for the differential mode impedance is 50 ohms, but there
+is now a 148 ohm reactance that must be included in the unbalancing
+impedance  <I>Z</I><SUB>U</SUB>  of figure <A HREF="node3.html#f4">4</A>. The balun impedance must also
+be much larger than this impedance to be effective. An unbalanced tuner
+trades the large differential mode impedance for a large unbalanced
+impedance making the balun's job unchanged. I can calculate the approximate
+dissipation in our balun of figure <A HREF="node6.html#f12">12</A>. If I (correctly)
+assume that the balun current is low compared to the current through
+the 25 ohm load resistors, the power dissipated in the resistors
+will be  |<I>I</I>|<SUP>2</SUP>50  where  <I>I</I>  is the current through the resistors.
+Since the balun impedance is large, I can ignore the 74 ohm inductive
+reactance and the 22.5 ohm common mode resistance. The magnitude of the
+voltage
+across the balun in then approximately 
+<!-- MATH: |I|\sqrt{25^2+148^2} -->
+ |<I>I</I>|<IMG WIDTH="108" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\sqrt{25^2+148^2}$"> , and
+the power dissipated in the balun divided by the power dissipated in the
+load is 
+<!-- MATH: (25^2+148^2)/(50 \times 4000) -->
+ (25<SUP>2</SUP> + 148<SUP>2</SUP>)/(50 <TT>x</TT> 4000)  or 11 percent just as before
+I added the tuner. Notice that 
+<!-- MATH: 4(25^2+148^2)/50 = 1800 -->
+ 4(25<SUP>2</SUP> + 148<SUP>2</SUP>)/50 = 1800 ; this
+is simply the design equation used to calculate the L-network that
+transforms an 1800 ohm resistance to 50 ohms.
+<P>
+The result is that if you have a well balanced load, using
+a balanced tuner before the balun can be very helpful.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html99"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html96"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html90"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html98"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html100"
+ HREF="node7.html">6 Conclusion</A>
+<B> Up:</B> <A NAME="tex2html97"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html91"
+ HREF="node5.html">4 Baluns on the</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

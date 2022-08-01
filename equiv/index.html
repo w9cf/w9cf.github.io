@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<TITLE> Equivalent Diameter Calculator for Rectangular
+Cross Section Conductors</TITLE>
+</HEAD>
+<BODY>
+<center>
+An Equivalent Diameter Calculator For Rectangular Cross Section Conductors
+</center>
+
+<p>
+To use the applet type in new values in the width and thickness fields,
+and click the calculate button. You must click the calculate button for
+the new values to take effect.
+The self impedance equivalent diameter that you would use in antenna
+modeling is calculated, and the equivalent diameter for the r.f. resistivity
+is calculated as well. Be sure to use the same units for width and length
+that is both in millimeters, or both in inches etc. The equivalent diameters
+will be in the same units.
+<p>
+The plot on the right displays the calculated current distribution around
+the conductor in red.
+Zero on the x axis of the plot is the center of the wider
+dimension I'll assume that is the width.
+Larger x is moving along the perimeter of the conductor so
+the corner is at x=width/2. The current density diverges there (but the
+total current is of course finite) as is well known. Larger x values
+correspond to moving along the shorter side. Again only half the thickness
+is shown. The current on the other parts of the surface are given by
+symmetry. The blue line is the value of current that would occur if
+the same total current flowed uniformly around the surface.
+
+
+<APPLET CODE="Equiv.class" WIDTH=700 HEIGHT=350 archive="equiv.jar">
+Your browser can't run Java Applets.
+</APPLET>
+</BODY>
+<p>
+The expressions used and their derivation can be found at
+<a href="http://fermi.la.asu.edu/w9cf/articles/equiv/index.html">
+    Approximate R.F. Resistance of Rectangular Cross Section Conductors</a>
+or Download
+<a href="http://fermi.la.asu.edu/w9cf/articles/equiv.pdf">PDF file</a>
+and
+<a href="http://fermi.la.asu.edu/w9cf/articles/conform/index.html">
+Analytic expressions for the equivalent diameters of rectangular cross
+section conductors </a>
+or Download
+<a href="http://fermi.la.asu.edu/w9cf/articles/conf.pdf">PDF file</a>
+
+<p>
+Here is the Java source code for this applet,
+<a href="http://fermi.la.asu.edu/w9cf/equiv/equivsrc.zip">
+http://fermi.la.asu.edu/w9cf/equiv/equivsrc.zip </a> .
+</p>
+<p>
+To run applet locally without downloading and compiling the source,
+you can download the java class files from
+<a href="http://fermi.la.asu.edu/w9cf/equiv/equiv.zip">
+http://fermi.la.asu.edu/w9cf/equiv/equiv.zip</a> and unzip that file
+in any convenient directory on your system. Also download the file
+you are looking at now
+<a href="http://fermi.la.asu.edu/w9cf/equiv/index.html">
+http://fermi.la.asu.edu/w9cf/equiv/index.html</a>. You can use the
+save as function of your browser.  Call this file index.html, and place
+it in the
+same directory that you unzipped equiv.zip in, and point your browser
+at it.
+</p>
+<a href="http://fermi.la.asu.edu/w9cf/index.html">w9cf home</a>
+
+
+
+</HTML>

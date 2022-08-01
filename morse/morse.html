@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Morse Applet</title>
+</head>
+
+<body text=#000000 bgcolor=#cfcfcf>
+
+<center>
+Morse applet
+</center>
+<br>
+<br>
+This applet will send morse code, corresponding to
+the text in the box on the right, through your
+sound card (use your computer's volume controls to control the volume).
+It can import a text file using the <font color="blue">
+File->Read text file</font>
+menu item. It can produce a wave file as output using the
+<font color="blue"> File->Write wave file</font> menu item. The speed in
+words per minute, the tone frequency in Hz, and the rise
+time of the keying in milliseconds are input parameters.
+
+The speed uses the standard word PARIS, so a dot is 1200/wpm milliseconds
+full width at half maximum. The rise time is the smaller of the given
+rise time and 150/wpm.
+
+To start, type something in the large text area on the right and click the
+<font color="red">play</font> button.
+
+<br>
+<br>
+<applet code="morse.gui.MorseApplet.class"
+  width="800" height="470" align="baseline"
+  codebase="." archive="morse.jar">
+</applet>
+
+<br>
+You can also run this as a java application. Download (right click)
+<a href="http://fermi.la.asu.edu/w9cf/morse/morse.jar">morse.jar</a>,
+and either click on it to run it, or on a command line try
+<br>
+java -jar morse.jar
+<br>
+or
+<br>
+javaw -jar morse.jar
+<br>
+in the directory where you saved morse.jar.
+<br>
+<br>
+I use <a href="http://lame.sourceforge.net/">lame</a>
+to convert the wave files to mp3 files.
+I find that
+<br>
+lame --highpass 300 --lowpass 1500 -h filename.wav filename.mp3
+<br>
+works well and does not produce annoying artefacts.
+<br>
+<br>
+A command line text to wave converter is also included in morse.jar.
+I find it convenient to use in scripts. If you have downloaded morse.jar
+<br> 
+java -cp morse.jar morse.audio.MorseWave file.txt file.wav 45 600 1
+<br>
+will produce the wave file, file.wav, from the text file, file.txt,
+at 45 wpm, 600 Hz tone, with a 1 millisecond rise time.
+
+The source code is available <a href="http://fermi.la.asu.edu/w9cf/morse/morsesrc.jar">here</a>.
+</body>
+</html>

@@ -1,0 +1,1306 @@
+\batchmode
+\documentclass[12pt]{article}
+\makeatletter
+\usepackage{graphicx}
+\usepackage{html}
+
+\makeatother
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newenvironment{tex2html_wrap}{}{}
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\topskip=0pt
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize\parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetmath{\hbox{\vrule width.5pt\vtop{\vbox{%
+  \kern.5pt\kern1.25 pt\hbox{\hglue.5pt\copy\sizebox\hglue1.25 pt}\kern.5pt%
+  \ifdim\dp\sizebox>0pt\kern1.25 pt\fi}%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{\dimen1=\ht\sizebox
+  \ifdim\dimen1<\dp\sizebox \ht\sizebox=\dp\sizebox
+  \else \dp\sizebox=\ht\sizebox \fi}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+\stepcounter{section}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3026}%
+$\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3027}%
+$\pm$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3028}%
+$\omega_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3030}%
+$\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3031}%
+$\pi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3034}%
+$\omega_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3035}%
+$\pi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3038}%
+$\displaystyle\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3039}%
+$\displaystyle\pm$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3040}%
+$\displaystyle\omega_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3041}%
+$\displaystyle\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3042}%
+$\displaystyle\omega_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3043}%
+$\displaystyle\mp$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3044}%
+$\displaystyle\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3045}%
+$\displaystyle\omega_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3049}%
+$\scriptstyle\omega_{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3051}%
+$\scriptstyle\omega_{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3053}%
+$\displaystyle\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3054}%
+$\scriptstyle\omega_{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3055}%
+$\displaystyle\omega_{c}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3056}%
+$\scriptstyle\omega_{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3057}%
+$\displaystyle{\textstyle\frac{1}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3058}%
+$\scriptstyle\omega_{c}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3059}%
+$\scriptstyle\omega_{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3060}%
+$\scriptstyle\omega_{c}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3061}%
+$\scriptstyle\omega_{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3063}%
+$\displaystyle\log_{10}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3064}%
+$\displaystyle\left | \frac{V_A + j V_B}{V_A - j V_B} \right|.$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3068}%
+$\delta$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3070}%
+$\displaystyle\log_{10}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3071}%
+$\displaystyle{\frac{\delta}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure50}%
+\begin{figure}\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 430 3691 20 20 0 6.28319}\special{pa 430 3691}\special{pa 630 3691}\special{pa 672 3608}\special{pa 755 3774}\special{pa 838 3608}\special{pa 922 3774}\special{pa 1005 3608}\special{pa 1088 3774}\special{pa 1130 3691}\special{pa 1330 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_1$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1330 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 1.330in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$A$\hbox{$\:$}\hss}}\special{pa 1330 3691}\special{pa 1530 3691}\special{pa 1572 3608}\special{pa 1655 3774}\special{pa 1738 3608}\special{pa 1822 3774}\special{pa 1905 3608}\special{pa 1988 3774}\special{pa 2030 3691}\special{pa 2230 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 2230 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 2.230in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$B$\hbox{$\:$}\hss}}\special{pa 2230 3691}\special{pa 2430 3691}\special{pa 2472 3608}\special{pa 2555 3774}\special{pa 2638 3608}\special{pa 2722 3774}\special{pa 2805 3608}\special{pa 2888 3774}\special{pa 2930 3691}\special{pa 3130 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_3$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3130 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 3.130in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C$\hbox{$\:$}\hss}}\special{pa 3130 3691}\special{pa 3330 3691}\special{pa 3372 3608}\special{pa 3455 3774}\special{pa 3538 3608}\special{pa 3622 3774}\special{pa 3705 3608}\special{pa 3788 3774}\special{pa 3830 3691}\special{pa 4030 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_4$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4030 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 4.030in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$D$\hbox{$\:$}\hss}}\special{pa 4030 3691}\special{pa 4230 3691}\special{pa 4272 3608}\special{pa 4355 3774}\special{pa 4438 3608}\special{pa 4522 3774}\special{pa 4605 3608}\special{pa 4688 3774}\special{pa 4730 3691}\special{pa 4930 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_5$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4930 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 4.930in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$E$\hbox{$\:$}\hss}}\special{pa 4930 3691}\special{pa 5130 3691}\special{pa 5172 3608}\special{pa 5255 3774}\special{pa 5338 3608}\special{pa 5422 3774}\special{pa 5505 3608}\special{pa 5588 3774}\special{pa 5630 3691}\special{pa 5830 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_6$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 5830 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 5.830in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$F$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 430 2791 20 20 0 6.28319}\special{pa 430 2791}\special{pa 630 2791}\special{pa 672 2708}\special{pa 755 2874}\special{pa 838 2708}\special{pa 922 2874}\special{pa 1005 2708}\special{pa 1088 2874}\special{pa 1130 2791}\special{pa 1330 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_1$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1330 2791 20 20 0 6.28319}\special{pa 1330 2791}\special{pa 1530 2791}\special{pa 1572 2708}\special{pa 1655 2874}\special{pa 1738 2708}\special{pa 1822 2874}\special{pa 1905 2708}\special{pa 1988 2874}\special{pa 2030 2791}\special{pa 2230 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 2230 2791 20 20 0 6.28319}\special{pa 2230 2791}\special{pa 2430 2791}\special{pa 2472 2708}\special{pa 2555 2874}\special{pa 2638 2708}\special{pa 2722 2874}\special{pa 2805 2708}\special{pa 2888 2874}\special{pa 2930 2791}\special{pa 3130 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_3$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3130 2791 20 20 0 6.28319}\special{pa 3130 2791}\special{pa 3330 2791}\special{pa 3372 2708}\special{pa 3455 2874}\special{pa 3538 2708}\special{pa 3622 2874}\special{pa 3705 2708}\special{pa 3788 2874}\special{pa 3830 2791}\special{pa 4030 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_4$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4030 2791 20 20 0 6.28319}\special{pa 4030 2791}\special{pa 4230 2791}\special{pa 4272 2708}\special{pa 4355 2874}\special{pa 4438 2708}\special{pa 4522 2874}\special{pa 4605 2708}\special{pa 4688 2874}\special{pa 4730 2791}\special{pa 4930 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_5$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4930 2791 20 20 0 6.28319}\special{pa 4930 2791}\special{pa 5130 2791}\special{pa 5172 2708}\special{pa 5255 2874}\special{pa 5338 2708}\special{pa 5422 2874}\special{pa 5505 2708}\special{pa 5588 2874}\special{pa 5630 2791}\special{pa 5830 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_6$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 5830 2791 20 20 0 6.28319}\special{sh 1.000}\special{ar 430 1891 20 20 0 6.28319}\special{pa 430 1891}\special{pa 630 1891}\special{pa 672 1808}\special{pa 755 1974}\special{pa 838 1808}\special{pa 922 1974}\special{pa 1005 1808}\special{pa 1088 1974}\special{pa 1130 1891}\special{pa 1330 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_1$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1330 1891 20 20 0 6.28319}\special{pa 1330 1891}\special{pa 1530 1891}\special{pa 1572 1808}\special{pa 1655 1974}\special{pa 1738 1808}\special{pa 1822 1974}\special{pa 1905 1808}\special{pa 1988 1974}\special{pa 2030 1891}\special{pa 2230 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 2230 1891 20 20 0 6.28319}\special{pa 2230 1891}\special{pa 2430 1891}\special{pa 2472 1808}\special{pa 2555 1974}\special{pa 2638 1808}\special{pa 2722 1974}\special{pa 2805 1808}\special{pa 2888 1974}\special{pa 2930 1891}\special{pa 3130 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_3$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3130 1891 20 20 0 6.28319}\special{pa 3130 1891}\special{pa 3330 1891}\special{pa 3372 1808}\special{pa 3455 1974}\special{pa 3538 1808}\special{pa 3622 1974}\special{pa 3705 1808}\special{pa 3788 1974}\special{pa 3830 1891}\special{pa 4030 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_4$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4030 1891 20 20 0 6.28319}\special{pa 4030 1891}\special{pa 4230 1891}\special{pa 4272 1808}\special{pa 4355 1974}\special{pa 4438 1808}\special{pa 4522 1974}\special{pa 4605 1808}\special{pa 4688 1974}\special{pa 4730 1891}\special{pa 4930 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_5$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4930 1891 20 20 0 6.28319}\special{pa 4930 1891}\special{pa 5130 1891}\special{pa 5172 1808}\special{pa 5255 1974}\special{pa 5338 1808}\special{pa 5422 1974}\special{pa 5505 1808}\special{pa 5588 1974}\special{pa 5630 1891}\special{pa 5830 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_6$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 5830 1891 20 20 0 6.28319}\special{sh 1.000}\special{ar 430 991 20 20 0 6.28319}\special{pa 430 991}\special{pa 630 991}\special{pa 672 908}\special{pa 755 1074}\special{pa 838 908}\special{pa 922 1074}\special{pa 1005 908}\special{pa 1088 1074}\special{pa 1130 991}\special{pa 1330 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_1$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1330 991 20 20 0 6.28319}\special{pa 1330 991}\special{pa 1530 991}\special{pa 1572 908}\special{pa 1655 1074}\special{pa 1738 908}\special{pa 1822 1074}\special{pa 1905 908}\special{pa 1988 1074}\special{pa 2030 991}\special{pa 2230 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 2230 991 20 20 0 6.28319}\special{pa 2230 991}\special{pa 2430 991}\special{pa 2472 908}\special{pa 2555 1074}\special{pa 2638 908}\special{pa 2722 1074}\special{pa 2805 908}\special{pa 2888 1074}\special{pa 2930 991}\special{pa 3130 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_3$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3130 991 20 20 0 6.28319}\special{pa 3130 991}\special{pa 3330 991}\special{pa 3372 908}\special{pa 3455 1074}\special{pa 3538 908}\special{pa 3622 1074}\special{pa 3705 908}\special{pa 3788 1074}\special{pa 3830 991}\special{pa 4030 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_4$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4030 991 20 20 0 6.28319}\special{pa 4030 991}\special{pa 4230 991}\special{pa 4272 908}\special{pa 4355 1074}\special{pa 4438 908}\special{pa 4522 1074}\special{pa 4605 908}\special{pa 4688 1074}\special{pa 4730 991}\special{pa 4930 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_5$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 4930 991 20 20 0 6.28319}\special{pa 4930 991}\special{pa 5130 991}\special{pa 5172 908}\special{pa 5255 1074}\special{pa 5338 908}\special{pa 5422 1074}\special{pa 5505 908}\special{pa 5588 1074}\special{pa 5630 991}\special{pa 5830 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_6$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 5830 991 20 20 0 6.28319}\special{pa 1330 2791}\special{pa 915 3206}\special{fp}\special{pa 827 3117}\special{pa 1004 3294}\special{fp}\special{ar 692 3429 250 250 -1.308997 -0.261799}\special{pa 868 3253}\special{pa 430 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_1$\hbox{$\:$}\hss}}\special{pa 2230 2791}\special{pa 1815 3206}\special{fp}\special{pa 1727 3117}\special{pa 1904 3294}\special{fp}\special{ar 1592 3429 250 250 -1.308997 -0.261799}\special{pa 1768 3253}\special{pa 1330 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_2$\hbox{$\:$}\hss}}\special{pa 3130 2791}\special{pa 2715 3206}\special{fp}\special{pa 2627 3117}\special{pa 2804 3294}\special{fp}\special{ar 2492 3429 250 250 -1.308997 -0.261799}\special{pa 2668 3253}\special{pa 2230 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_3$\hbox{$\:$}\hss}}\special{pa 4030 2791}\special{pa 3615 3206}\special{fp}\special{pa 3527 3117}\special{pa 3704 3294}\special{fp}\special{ar 3392 3429 250 250 -1.308997 -0.261799}\special{pa 3568 3253}\special{pa 3130 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_4$\hbox{$\:$}\hss}}\special{pa 4930 2791}\special{pa 4515 3206}\special{fp}\special{pa 4427 3117}\special{pa 4604 3294}\special{fp}\special{ar 4292 3429 250 250 -1.308997 -0.261799}\special{pa 4468 3253}\special{pa 4030 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_5$\hbox{$\:$}\hss}}\special{pa 5830 2791}\special{pa 5415 3206}\special{fp}\special{pa 5327 3117}\special{pa 5504 3294}\special{fp}\special{ar 5192 3429 250 250 -1.308997 -0.261799}\special{pa 5368 3253}\special{pa 4930 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_6$\hbox{$\:$}\hss}}\special{pa 1330 1891}\special{pa 915 2306}\special{fp}\special{pa 827 2217}\special{pa 1004 2394}\special{fp}\special{ar 692 2529 250 250 -1.308997 -0.261799}\special{pa 868 2353}\special{pa 430 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_1$\hbox{$\:$}\hss}}\special{pa 2230 1891}\special{pa 1815 2306}\special{fp}\special{pa 1727 2217}\special{pa 1904 2394}\special{fp}\special{ar 1592 2529 250 250 -1.308997 -0.261799}\special{pa 1768 2353}\special{pa 1330 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_2$\hbox{$\:$}\hss}}\special{pa 3130 1891}\special{pa 2715 2306}\special{fp}\special{pa 2627 2217}\special{pa 2804 2394}\special{fp}\special{ar 2492 2529 250 250 -1.308997 -0.261799}\special{pa 2668 2353}\special{pa 2230 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_3$\hbox{$\:$}\hss}}\special{pa 4030 1891}\special{pa 3615 2306}\special{fp}\special{pa 3527 2217}\special{pa 3704 2394}\special{fp}\special{ar 3392 2529 250 250 -1.308997 -0.261799}\special{pa 3568 2353}\special{pa 3130 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_4$\hbox{$\:$}\hss}}\special{pa 4930 1891}\special{pa 4515 2306}\special{fp}\special{pa 4427 2217}\special{pa 4604 2394}\special{fp}\special{ar 4292 2529 250 250 -1.308997 -0.261799}\special{pa 4468 2353}\special{pa 4030 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_5$\hbox{$\:$}\hss}}\special{pa 5830 1891}\special{pa 5415 2306}\special{fp}\special{pa 5327 2217}\special{pa 5504 2394}\special{fp}\special{ar 5192 2529 250 250 -1.308997 -0.261799}\special{pa 5368 2353}\special{pa 4930 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_6$\hbox{$\:$}\hss}}\special{pa 1330 991}\special{pa 915 1406}\special{fp}\special{pa 827 1317}\special{pa 1004 1494}\special{fp}\special{ar 692 1629 250 250 -1.308997 -0.261799}\special{pa 868 1453}\special{pa 430 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_1$\hbox{$\:$}\hss}}\special{pa 2230 991}\special{pa 1815 1406}\special{fp}\special{pa 1727 1317}\special{pa 1904 1494}\special{fp}\special{ar 1592 1629 250 250 -1.308997 -0.261799}\special{pa 1768 1453}\special{pa 1330 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_2$\hbox{$\:$}\hss}}\special{pa 3130 991}\special{pa 2715 1406}\special{fp}\special{pa 2627 1317}\special{pa 2804 1494}\special{fp}\special{ar 2492 1629 250 250 -1.308997 -0.261799}\special{pa 2668 1453}\special{pa 2230 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_3$\hbox{$\:$}\hss}}\special{pa 4030 991}\special{pa 3615 1406}\special{fp}\special{pa 3527 1317}\special{pa 3704 1494}\special{fp}\special{ar 3392 1629 250 250 -1.308997 -0.261799}\special{pa 3568 1453}\special{pa 3130 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_4$\hbox{$\:$}\hss}}\special{pa 4930 991}\special{pa 4515 1406}\special{fp}\special{pa 4427 1317}\special{pa 4604 1494}\special{fp}\special{ar 4292 1629 250 250 -1.308997 -0.261799}\special{pa 4468 1453}\special{pa 4030 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_5$\hbox{$\:$}\hss}}\special{pa 5830 991}\special{pa 5415 1406}\special{fp}\special{pa 5327 1317}\special{pa 5504 1494}\special{fp}\special{ar 5192 1629 250 250 -1.308997 -0.261799}\special{pa 5368 1453}\special{pa 4930 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_6$\hbox{$\:$}\hss}}\special{pa 1330 91}\special{pa 915 506}\special{fp}\special{pa 827 417}\special{pa 1004 594}\special{fp}\special{ar 692 729 250 250 -1.308997 -0.261799}\special{pa 868 553}\special{pa 430 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 0.880in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_1$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 1.421in\lower\graphtemp\hbox to 0pt{\hss $to~ A$\hss}}\special{pa 2230 91}\special{pa 1815 506}\special{fp}\special{pa 1727 417}\special{pa 1904 594}\special{fp}\special{ar 1592 729 250 250 -1.308997 -0.261799}\special{pa 1768 553}\special{pa 1330 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 1.780in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_2$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 2.321in\lower\graphtemp\hbox to 0pt{\hss $to~ B$\hss}}\special{pa 3130 91}\special{pa 2715 506}\special{fp}\special{pa 2627 417}\special{pa 2804 594}\special{fp}\special{ar 2492 729 250 250 -1.308997 -0.261799}\special{pa 2668 553}\special{pa 2230 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 2.680in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_3$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 3.221in\lower\graphtemp\hbox to 0pt{\hss $to~ C$\hss}}\special{pa 4030 91}\special{pa 3615 506}\special{fp}\special{pa 3527 417}\special{pa 3704 594}\special{fp}\special{ar 3392 729 250 250 -1.308997 -0.261799}\special{pa 3568 553}\special{pa 3130 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 3.580in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_4$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 4.121in\lower\graphtemp\hbox to 0pt{\hss $to~ D$\hss}}\special{pa 4930 91}\special{pa 4515 506}\special{fp}\special{pa 4427 417}\special{pa 4604 594}\special{fp}\special{ar 4292 729 250 250 -1.308997 -0.261799}\special{pa 4468 553}\special{pa 4030 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 4.480in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_5$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 5.021in\lower\graphtemp\hbox to 0pt{\hss $to~ E$\hss}}\special{pa 5830 91}\special{pa 5415 506}\special{fp}\special{pa 5327 417}\special{pa 5504 594}\special{fp}\special{ar 5192 729 250 250 -1.308997 -0.261799}\special{pa 5368 553}\special{pa 4930 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 5.380in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_6$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 5.921in\lower\graphtemp\hbox to 0pt{\hss $to~ F$\hss}}\special{pa 430 3691}\special{pa 430 3241}\special{fp}\special{sh 1.000}\special{ar 430 3241 20 20 0 6.28319}\special{pa 430 3241}\special{pa 430 2791}\special{fp}\special{pa 430 1891}\special{pa 430 1441}\special{fp}\special{sh 1.000}\special{ar 430 1441 20 20 0 6.28319}\special{pa 430 1441}\special{pa 430 991}\special{fp}\special{pa 430 1441}\special{pa 250 1441}\special{fp}\special{pa 430 3241}\special{pa 250 3241}\special{fp}\special{pa 250 3241}\special{pa 250 2591}\special{fp}\special{ar 250 2341 250 250 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 2.466in
+    \rlap{\kern 0.250in\lower\graphtemp\hbox to 0pt{\hss $-$\hss}}\graphtemp=.5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 0.250in\lower\graphtemp\hbox to 0pt{\hss $+$\hss}}\special{pa 250 2091}\special{pa 250 1441}\special{fp}\special{pa 3930 4611}\special{pa 4930 4111}\special{pa 4930 5111}\special{pa 3930 4611}\special{pa 4180 4611}\special{fp}\graphtemp=.5ex\advance\graphtemp by 4.861in
+    \rlap{\kern 4.930in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}{\small$-$}\hbox{$\:$}}}\graphtemp=.5ex\advance\graphtemp by 4.361in
+    \rlap{\kern 4.930in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}{\small$+$}\hbox{$\:$}}}\special{pa 5830 3691}\special{pa 6055 3691}\special{fp}\special{pa 6055 3691}\special{pa 6055 3776}\special{pa 6138 3818}\special{pa 5972 3901}\special{pa 6138 3984}\special{pa 5972 4068}\special{pa 6138 4151}\special{pa 5972 4234}\special{pa 6055 4276}\special{pa 6055 4361}\special{fp}\graphtemp=.5ex\advance\graphtemp by 4.026in
+    \rlap{\kern 6.138in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 6055 4361}\special{pa 5555 4361}\special{pa 4930 4361}\special{fp}\special{pa 5830 1891}\special{pa 6280 1891}\special{fp}\special{pa 6280 1891}\special{pa 6280 3126}\special{pa 6363 3168}\special{pa 6197 3251}\special{pa 6363 3334}\special{pa 6197 3418}\special{pa 6363 3501}\special{pa 6197 3584}\special{pa 6280 3626}\special{pa 6280 4861}\special{fp}\graphtemp=.5ex\advance\graphtemp by 3.376in
+    \rlap{\kern 6.363in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 6280 4861}\special{pa 5780 4861}\special{pa 4930 4861}\special{fp}\special{pa 4180 4611}\special{pa 3730 4611}\special{fp}\special{pa 3730 4611}\special{pa 3730 5286}\special{fp}\special{pa 3730 5286}\special{pa 4080 5286}\special{pa 4122 5203}\special{pa 4205 5369}\special{pa 4288 5203}\special{pa 4372 5369}\special{pa 4455 5203}\special{pa 4538 5369}\special{pa 4580 5286}\special{pa 4930 5286}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 5.369in
+    \rlap{\kern 4.330in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 4930 5286}\special{pa 5155 5286}\special{fp}\special{pa 5155 5286}\special{pa 5155 4786}\special{pa 4930 4861}\special{fp}\special{sh 1.000}\special{ar 5380 4361 20 20 0 6.28319}\special{pa 5380 4361}\special{pa 5380 4561}\special{pa 5463 4603}\special{pa 5297 4686}\special{pa 5463 4769}\special{pa 5297 4853}\special{pa 5463 4936}\special{pa 5297 5019}\special{pa 5380 5061}\special{pa 5380 5261}\special{fp}\graphtemp=.5ex\advance\graphtemp by 4.811in
+    \rlap{\kern 5.463in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 5380 5261}\special{pa 5380 5511}\special{fp}\special{pa 5213 5511}\special{pa 5547 5511}\special{fp}\special{pa 5269 5553}\special{pa 5491 5553}\special{fp}\special{pa 5309 5594}\special{pa 5451 5594}\special{fp}\special{pa 3930 6591}\special{pa 4930 6091}\special{pa 4930 7091}\special{pa 3930 6591}\special{pa 4180 6591}\special{fp}\graphtemp=.5ex\advance\graphtemp by 6.841in
+    \rlap{\kern 4.930in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}{\small$-$}\hbox{$\:$}}}\graphtemp=.5ex\advance\graphtemp by 6.341in
+    \rlap{\kern 4.930in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}{\small$+$}\hbox{$\:$}}}\special{pa 5830 2791}\special{pa 6685 2791}\special{fp}\special{pa 6685 2791}\special{pa 6685 4316}\special{pa 6768 4358}\special{pa 6602 4441}\special{pa 6768 4524}\special{pa 6602 4608}\special{pa 6768 4691}\special{pa 6602 4774}\special{pa 6685 4816}\special{pa 6685 6341}\special{fp}\graphtemp=.5ex\advance\graphtemp by 4.566in
+    \rlap{\kern 6.768in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 6685 6341}\special{pa 6185 6341}\special{pa 4930 6341}\special{fp}\special{pa 5830 991}\special{pa 6910 991}\special{fp}\special{pa 6910 991}\special{pa 6910 3666}\special{pa 6993 3708}\special{pa 6827 3791}\special{pa 6993 3874}\special{pa 6827 3958}\special{pa 6993 4041}\special{pa 6827 4124}\special{pa 6910 4166}\special{pa 6910 6841}\special{fp}\graphtemp=.5ex\advance\graphtemp by 3.916in
+    \rlap{\kern 6.993in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 6910 6841}\special{pa 6410 6841}\special{pa 4930 6841}\special{fp}\special{pa 4180 6591}\special{pa 3730 6591}\special{fp}\special{pa 3730 6591}\special{pa 3730 7266}\special{fp}\special{pa 3730 7266}\special{pa 4080 7266}\special{pa 4122 7183}\special{pa 4205 7349}\special{pa 4288 7183}\special{pa 4372 7349}\special{pa 4455 7183}\special{pa 4538 7349}\special{pa 4580 7266}\special{pa 4930 7266}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 7.349in
+    \rlap{\kern 4.330in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 4930 7266}\special{pa 5155 7266}\special{fp}\special{pa 5155 7266}\special{pa 5155 6766}\special{pa 4930 6841}\special{fp}\special{sh 1.000}\special{ar 5380 6341 20 20 0 6.28319}\special{pa 5380 6341}\special{pa 5380 6541}\special{pa 5463 6583}\special{pa 5297 6666}\special{pa 5463 6749}\special{pa 5297 6833}\special{pa 5463 6916}\special{pa 5297 6999}\special{pa 5380 7041}\special{pa 5380 7241}\special{fp}\graphtemp=.5ex\advance\graphtemp by 6.791in
+    \rlap{\kern 5.463in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$100K$\hbox{$\:$}\hss}}\special{pa 5380 7241}\special{pa 5380 7491}\special{fp}\special{pa 5213 7491}\special{pa 5547 7491}\special{fp}\special{pa 5269 7533}\special{pa 5491 7533}\special{fp}\special{pa 5309 7574}\special{pa 5451 7574}\special{fp}\special{pa 4180 4611}\special{pa 3280 4611}\special{fp}\special{sh 1.000}\special{ar 3280 4611 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 4.591in
+    \rlap{\kern 3.280in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$Output\ a$\hbox{$\:$}\hss}}\special{pa 4180 6591}\special{pa 3280 6591}\special{fp}\special{sh 1.000}\special{ar 3280 6591 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 6.571in
+    \rlap{\kern 3.280in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$Output\ b$\hbox{$\:$}\hss}}\hbox{\vrule depth7.574in width0pt height 0pt}\kern 6.993in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure987}%
+\begin{figure}\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 450 3691 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 3.691in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss $V_4\ I_4$\hss}}\special{pa 450 3691}\special{pa 650 3691}\special{pa 692 3608}\special{pa 775 3774}\special{pa 858 3608}\special{pa 942 3774}\special{pa 1025 3608}\special{pa 1108 3774}\special{pa 1150 3691}\special{pa 1350 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.608in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_4$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1350 3691 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.711in
+    \rlap{\kern 1.350in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$A$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 3.691in
+    \rlap{\kern 1.800in\lower\graphtemp\hbox to 0pt{\hss $V_4^\prime\ I_4^\prime$\hss}}\special{sh 1.000}\special{ar 450 2791 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 2.791in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss $V_3\ I_3$\hss}}\special{pa 450 2791}\special{pa 650 2791}\special{pa 692 2708}\special{pa 775 2874}\special{pa 858 2708}\special{pa 942 2874}\special{pa 1025 2708}\special{pa 1108 2874}\special{pa 1150 2791}\special{pa 1350 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.708in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_3$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1350 2791 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 2.791in
+    \rlap{\kern 1.800in\lower\graphtemp\hbox to 0pt{\hss $V_3^\prime\ I_3^\prime$\hss}}\special{sh 1.000}\special{ar 450 1891 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 1.891in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss $V_2\ I_2$\hss}}\special{pa 450 1891}\special{pa 650 1891}\special{pa 692 1808}\special{pa 775 1974}\special{pa 858 1808}\special{pa 942 1974}\special{pa 1025 1808}\special{pa 1108 1974}\special{pa 1150 1891}\special{pa 1350 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.808in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1350 1891 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 1.891in
+    \rlap{\kern 1.800in\lower\graphtemp\hbox to 0pt{\hss $V_2^\prime\ I_2^\prime$\hss}}\special{sh 1.000}\special{ar 450 991 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.991in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss $V_1\ I_1$\hss}}\special{pa 450 991}\special{pa 650 991}\special{pa 692 908}\special{pa 775 1074}\special{pa 858 908}\special{pa 942 1074}\special{pa 1025 908}\special{pa 1108 1074}\special{pa 1150 991}\special{pa 1350 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.908in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_1$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1350 991 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.991in
+    \rlap{\kern 1.800in\lower\graphtemp\hbox to 0pt{\hss $V_1^\prime\ I_1^\prime$\hss}}\special{pa 1350 2791}\special{pa 935 3206}\special{fp}\special{pa 847 3117}\special{pa 1024 3294}\special{fp}\special{ar 712 3429 250 250 -1.308997 -0.261799}\special{pa 888 3253}\special{pa 450 3691}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 3.116in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_4$\hbox{$\:$}\hss}}\special{pa 1350 1891}\special{pa 935 2306}\special{fp}\special{pa 847 2217}\special{pa 1024 2394}\special{fp}\special{ar 712 2529 250 250 -1.308997 -0.261799}\special{pa 888 2353}\special{pa 450 2791}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.216in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_3$\hbox{$\:$}\hss}}\special{pa 1350 991}\special{pa 935 1406}\special{fp}\special{pa 847 1317}\special{pa 1024 1494}\special{fp}\special{ar 712 1629 250 250 -1.308997 -0.261799}\special{pa 888 1453}\special{pa 450 1891}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.316in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_2$\hbox{$\:$}\hss}}\special{pa 1350 91}\special{pa 935 506}\special{fp}\special{pa 847 417}\special{pa 1024 594}\special{fp}\special{ar 712 729 250 250 -1.308997 -0.261799}\special{pa 888 553}\special{pa 450 991}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.416in
+    \rlap{\kern 0.900in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$C_1$\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 1.441in\lower\graphtemp\hbox to 0pt{\hss $to~ A$\hss}}\hbox{\vrule depth3.774in width0pt height 0pt}\kern 2.250in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3089}%
+$\displaystyle\left(
+\begin{array}{c}
+I \\I' \\\end{array}
+\right)=$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3090}%
+$\displaystyle\left (
+\begin{array}{cc}
+M_{11} & M_{12} \\M_{21} & M_{22} \\\end{array}
+\right)\left$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3091}%
+$\displaystyle\begin{array}{c}
+V \\V' \\\end{array}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\setcounter{equation}{5}%
+\lthtmldisplayB{equation1121}%
+\begin{equation}
+\left(
+\begin{array}{c}
+I \\I' \\\end{array}
+\right ) = \left (
+\begin{array}{cc}
+M_{11} & M_{12} \\M_{21} & M_{22} \\\end{array}
+\right )
+\left(
+\begin{array}{c}
+V \\V' \\\end{array}
+\right )
+\end{equation}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3099}%
+$\displaystyle\left (
+\begin{array}{cccc}
+\frac{1}{R_1}+j \omega C_1 & 0 & 0 & 0 \\0 &\frac{1}{R_2}+j \omega C_2 & 0 & 0 \\0 & 0 &\frac{1}{R_3}+j \omega C_3 & 0 \\0 & 0 & 0 &\frac{1}{R_4}+j \omega C_4 \\\end{array}
+\right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3101}%
+$\displaystyle\left (
+\begin{array}{cccc}
+-\frac{1}{R_1}& 0 & 0 & -j \omega C_1 \\-j \omega C_2 & -\frac{1}{R_2} & 0 & 0 \\0 & -j \omega C_3 & -\frac{1}{R_3} & 0 \\0 & 0 & -j \omega C_4 & -\frac{1}{R_4} \\\end{array}
+\right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3103}%
+$\displaystyle\left (
+\begin{array}{cccc}
+\frac{1}{R_1} & j \omega C_2 & 0 & 0 \\0 & \frac{1}{R_2} & j \omega C_3 & 0 \\0 & 0 & \frac{1}{R_3} & j \omega C_4  \\j \omega C_1 & 0 & 0 & \frac{1}{R_4}  \\\end{array}
+\right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3105}%
+$\displaystyle\left (
+\begin{array}{cccc}
+-\frac{1}{R_1}-j \omega C_2 & 0 & 0 & 0 \\0 &-\frac{1}{R_2}-j \omega C_3 & 0 & 0 \\0 & 0 &-\frac{1}{R_3}-j \omega C_4 & 0 \\0 & 0 & 0 &-\frac{1}{R_4}-j \omega C_1 \\\end{array}
+\right).$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3107}%
+$\displaystyle\left(
+\begin{array}{c}
+V' \\I' \\\end{array}
+\right)=$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3108}%
+$\displaystyle\left (
+\begin{array}{cc}
+A_{11} & A_{12} \\A_{21} & A_{22} \\\end{array}
+\right)\left$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3109}%
+$\displaystyle\begin{array}{c}
+V \\I \\\end{array}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\setcounter{equation}{7}%
+\lthtmldisplayB{equation1197}%
+\begin{equation}
+\left(
+\begin{array}{c}
+V' \\I' \\\end{array}
+\right ) = \left (
+\begin{array}{cc}
+A_{11} & A_{12} \\A_{21} & A_{22} \\\end{array}
+\right )
+\left(
+\begin{array}{c}
+V \\I \\\end{array}
+\right )
+\end{equation}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3118}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3120}%
+$\tilde{A}_{ij}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3122}%
+$\displaystyle\left(
+\begin{array}{c}
+V_{out} \\I_{out} \\\end{array}
+\right)=$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3123}%
+$\displaystyle\left (
+\begin{array}{cc}
+\tilde A_{11} & \tilde A_{12} \\\tilde A_{21} & \tilde A_{22} \\\end{array}
+\right)\left$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3124}%
+$\displaystyle\begin{array}{c}
+V_{in} \\I_{in} \\\end{array}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\setcounter{equation}{9}%
+\lthtmldisplayB{equation1241}%
+\begin{equation}
+\left(
+\begin{array}{c}
+V_{out} \\I_{out} \\\end{array}
+\right ) = \left (
+\begin{array}{cc}
+\tilde A_{11} & \tilde A_{12} \\\tilde A_{21} & \tilde A_{22} \\\end{array}
+\right )
+\left(
+\begin{array}{c}
+V_{in} \\I_{in} \\\end{array}
+\right )
+\end{equation}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3126}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3133}%
+$\displaystyle\left (
+\begin{array}{cccc}
+\frac{1}{R^{(out)}_1} & 0 & 0 & 0 \\0 & \frac{1}{R^{(out)}_2} & 0 & 0 \\0 & 0 & \frac{1}{R^{(out)}_3} & 0 \\0 & 0 & 0 & \frac{1}{R^{(out)}_4} \\\end{array}
+\right)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3137}%
+$\displaystyle\tilde{A}_{12}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3138}%
+$\displaystyle\tilde{A}^{-1}_{22}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3139}%
+$\displaystyle\tilde{A}_{11}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3140}%
+$\displaystyle\tilde{A}_{12}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3141}%
+$\displaystyle\tilde{A}^{-1}_{22}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3142}%
+$\displaystyle\tilde{A}_{21}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3144}%
+$\displaystyle\left (
+\begin{array}{cccc}
+1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\0 & 0 & 0 & 1 \\\end{array}
+\right).$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3146}%
+$\displaystyle\tilde{A}_{11}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3147}%
+$\displaystyle\tilde{A}_{12}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3148}%
+$\displaystyle\tilde{A}^{-1}_{22}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3149}%
+$\displaystyle\tilde{A}_{21}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3152}%
+$\displaystyle\propto$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3153}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\1 \\-1 \\-1 \\\end{array}
+\right).$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3155}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3161}%
+$\displaystyle\omega^{4}_{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3162}%
+$\displaystyle{\textstyle\frac{1}{ R_1 R_2 R_3 R_4 C_1 C_2 C_3 C_4}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3166}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3168}%
+$\psi^{(m)}_{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3170}%
+$\lambda_{m}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3172}%
+$\displaystyle\psi^{(m)}_{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3173}%
+$\displaystyle\lambda_{m}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3174}%
+$\displaystyle\psi^{(m)}_{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3176}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\1 \\1 \\1 \\\end{array}
+\right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3177}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\-1 \\1 \\-1 \\\end{array}
+\right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3178}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\j \\-1 \\-j \\\end{array}
+\right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3179}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\-j \\-1 \\j \\\end{array}
+\right).$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3181}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3183}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3186}%
+$\tilde{A}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3192}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\1 \\-1 \\-1 \\\end{array}
+\right)=$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3193}%
+$\displaystyle{\frac{1-j}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3194}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\j \\-1 \\-j \\\end{array}
+\right)+$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3195}%
+$\displaystyle{\frac{1+j}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3196}%
+$\displaystyle\left (
+\begin{array}{c}
+1 \\j \\-1 \\-j \\\end{array}
+\right)\equiv$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3197}%
+$\displaystyle{\frac{1-j}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3198}%
+$\displaystyle\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3199}%
+$\displaystyle{\frac{1+j}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3200}%
+$\displaystyle\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3202}%
+$\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3204}%
+$\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3206}%
+$\displaystyle{\frac{1-j}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3207}%
+$\displaystyle\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3208}%
+$\displaystyle{\frac{1+j}{2}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3209}%
+$\displaystyle\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3212}%
+$\displaystyle\log_{10}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3213}%
+$\displaystyle\left | \frac{g_a}{g_b} \right|.$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3226}%
+$\displaystyle\lambda_{11}^{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3227}%
+$\displaystyle\lambda_{11}^{b}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3228}%
+$\displaystyle{\textstyle\frac{1}{R}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3229}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3230}%
+$\displaystyle\lambda_{12}^{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3231}%
+$\displaystyle{\textstyle\frac{1}{R}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3232}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3233}%
+$\displaystyle\lambda_{12}^{b}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3234}%
+$\displaystyle{\textstyle\frac{1}{R}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3235}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3236}%
+$\displaystyle\lambda_{21}^{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3237}%
+$\displaystyle{\textstyle\frac{1}{R}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3238}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3239}%
+$\displaystyle\lambda_{21}^{b}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3240}%
+$\displaystyle{\textstyle\frac{1}{R}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3241}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3242}%
+$\displaystyle\lambda_{22}^{a}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3243}%
+$\displaystyle\lambda_{22}^{b}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3244}%
+$\displaystyle{\textstyle\frac{1}{R}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3245}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3247}%
+$\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3249}%
+$\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3251}%
+$\displaystyle{\textstyle\frac{1}{1+\omega R C }}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3252}%
+$\displaystyle\left (
+\begin{array}{cc}
+1+j \omega R C & -R \\-2j \omega C & 1+j \omega R C\\\end{array}
+\right)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3254}%
+$\displaystyle{\textstyle\frac{1}{1-\omega R C }}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3255}%
+$\displaystyle\left (
+\begin{array}{cc}
+1+j \omega R C & -R \\-2j \omega C & 1+j \omega R C\\\end{array}
+\right)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3259}%
+$\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3261}%
+$\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3263}%
+$\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3265}%
+$\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3267}%
+$\displaystyle{\frac{1- \omega R C }{1 + \omega R C }}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3269}%
+$\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3276}%
+$\displaystyle\sum_{i=1}^{n}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3277}%
+$\displaystyle\log_{10}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3278}%
+$\displaystyle\left | \frac
+{1 - \omega R_i C_i}
+{1 + \omega R_i C_i} \right|.$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3285}%
+$\displaystyle{\frac{{\rm dn}( \frac{2i-1}{2n} {\rm K}(k),k)}{2 \pi f_l}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3287}%
+$\sqrt{1-(f_l/f_u)^2}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3296}%
+$\pi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3302}%
+$\pi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3315}%
+${\frac{1}{2 \pi \sqrt{f_u f_l}}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3318}%
+$\pm$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1494}%
+\begin{figure}
+\rotatebox {270}{\includegraphics[width=100mm]{fig3.ps}}
+\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1500}%
+\begin{figure}
+\rotatebox {270}{\includegraphics[width=100mm]{fig4.ps}}
+\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1506}%
+\begin{figure}
+\rotatebox {270}{\includegraphics[width=100mm]{fig5.ps}}
+\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3320}%
+$\pi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3325}%
+$\psi_{a}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3327}%
+$\psi_{b}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3329}%
+$\displaystyle\left ( \frac{1}{R_1}+\frac{1}{R_3} \right)-$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3330}%
+$\displaystyle\left ( \frac{1}{R_2}+\frac{1}{R_4} \right),$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3332}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3333}%
+$\displaystyle\omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3335}%
+$\log_{10}^{}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3347}%
+${\frac{V_1 - V_2/2}{R_1}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1534}%
+\begin{figure}\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{pa 2850 983}\special{pa 1850 1483}\special{pa 1850 483}\special{pa 2850 983}\special{pa 2600 983}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.733in
+    \rlap{\kern 1.850in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}{\small$-$}\hbox{$\:$}\hss}}\graphtemp=.5ex\advance\graphtemp by 1.233in
+    \rlap{\kern 1.850in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}{\small$+$}\hbox{$\:$}\hss}}\special{pa 1850 733}\special{pa 1175 733}\special{fp}\special{pa 1175 733}\special{pa 975 733}\special{pa 933 817}\special{pa 850 650}\special{pa 767 817}\special{pa 683 650}\special{pa 600 817}\special{pa 517 650}\special{pa 475 733}\special{pa 275 733}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.650in
+    \rlap{\kern 0.725in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_1$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 275 733 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.733in
+    \rlap{\kern 0.050in\lower\graphtemp\hbox to 0pt{\hss $1$\hss}}\special{pa 2600 983}\special{pa 3325 983}\special{fp}\special{pa 3325 983}\special{pa 3325 83}\special{fp}\special{pa 3325 83}\special{pa 2875 83}\special{fp}\special{pa 2875 83}\special{pa 2675 83}\special{pa 2633 167}\special{pa 2550 0}\special{pa 2467 167}\special{pa 2383 0}\special{pa 2300 167}\special{pa 2217 0}\special{pa 2175 83}\special{pa 1975 83}\special{fp}\special{pa 1975 83}\special{pa 1525 83}\special{fp}\special{pa 1525 83}\special{pa 1525 583}\special{pa 1850 733}\special{fp}\special{pa 2600 983}\special{pa 3550 983}\special{fp}\special{sh 1.000}\special{ar 3550 983 20 20 0 6.28319}\special{pa 1850 1233}\special{pa 1125 1233}\special{fp}\special{sh 1.000}\special{ar 1125 1233 20 20 0 6.28319}\special{pa 1125 1233}\special{pa 1125 1433}\special{pa 1208 1475}\special{pa 1042 1558}\special{pa 1208 1642}\special{pa 1042 1725}\special{pa 1208 1808}\special{pa 1042 1892}\special{pa 1125 1933}\special{pa 1125 2133}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.683in
+    \rlap{\kern 1.208in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{pa 1125 2133}\special{pa 1125 2383}\special{fp}\special{pa 958 2383}\special{pa 1292 2383}\special{fp}\special{pa 1014 2425}\special{pa 1236 2425}\special{fp}\special{pa 1054 2467}\special{pa 1196 2467}\special{fp}\special{sh 1.000}\special{ar 1125 1233 20 20 0 6.28319}\special{pa 1125 1233}\special{pa 925 1233}\special{pa 883 1317}\special{pa 800 1150}\special{pa 717 1317}\special{pa 633 1150}\special{pa 550 1317}\special{pa 467 1150}\special{pa 425 1233}\special{pa 225 1233}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.150in
+    \rlap{\kern 0.675in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$R_2$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 225 1233 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 1.233in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss $2$\hss}}\hbox{\vrule depth2.467in width0pt height 0pt}\kern 3.570in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{section}
+\appendix
+
+\end{document}

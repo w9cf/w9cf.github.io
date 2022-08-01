@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>1 Introduction
+</TITLE>
+<META NAME="description" CONTENT="1 Introduction
+">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="phase.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html52"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html49"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html43"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html51"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html53"
+ HREF="node3.html">2 The Effects of</A>
+<B> Up:</B> <A NAME="tex2html50"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html44"
+ HREF="node1.html">Contents</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00020000000000000000">
+1 
+Introduction
+</A>
+</H1>
+<A NAME="sec1">&#160;</A>
+The Phasing method of single-sideband generation or detection
+requires two signals
+with a  90<SUP> <TT>o</TT> </SUP> relative phase shift over the audio frequency range.
+The phasing method has never been very popular, particularly once
+relatively inexpensive filters became available.
+In the future, presumably, digital signal-processing techniques will 
+perform the necessary audio phase shifting or directly generate
+the radio frequency single-sideband signal. Why then should you be
+interested in audio phase-shift networks? Perhaps because
+they are relatively low cost, easy to build, and are fun to play with.
+In addition, the techniques that
+I describe here are useful for efficient analysis of other cascaded networks.
+<P>
+For many years, the ARRL Handbook[<A
+ HREF="node10.html#arrl93">1</A>] has included a circuit for an
+audio phase shift network designed by HA5WH. I have not located
+the original reference for this network. The Handbook claims that
+the circuit gives approximately 60dB of opposite sideband suppression
+using 10 percent tolerance components. This flies in the face of the
+usual result that you need 1 percent components to get around 40dB
+suppression. In this article, I will analyze
+and give design equations for this type of network. Unfortunately,
+this analysis shows that using 10 percent tolerance components
+can lead to poor sideband suppression. With ideal components
+the network can give excellent performance, and by using either high
+tolerance components, or well matched
+lower tolerance components, the network still can give good performance.
+<P>
+In section <A HREF="node3.html#sec2">2</A>, I give the general formula for the sideband suppression
+in terms of the phase and amplitude errors in the phasing network. In
+section <A HREF="node4.html#sec3">3</A>, I derive an efficient method of analyzing a general
+network of the HA5WH type. Section <A HREF="node5.html#sec4">4</A> gives the analysis of an
+ideal realization of the network. Section <A HREF="node6.html#sec5">5</A> describes
+the  optimization of the network
+in terms of easily calculated elliptic functions, and
+section <A HREF="node7.html#sec6">6</A> gives the effects of component tolerances.
+The result is a set of simple design equations for the ideal network
+and an estimate of the sensitivity to component tolerances. The Appendix
+contains a listing of a set of Fortran programs that implement the methods
+described.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html52"
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html49"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html43"
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html51"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html53"
+ HREF="node3.html">2 The Effects of</A>
+<B> Up:</B> <A NAME="tex2html50"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html44"
+ HREF="node1.html">Contents</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

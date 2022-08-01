@@ -1,0 +1,516 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>4 Analysis of the Ideal Cyclic Network
+</TITLE>
+<META NAME="description" CONTENT="4 Analysis of the Ideal Cyclic Network
+">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="phase.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html85"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html82"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html76"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html84"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html86"
+ HREF="node6.html">5 Optimizing the Sideband</A>
+<B> Up:</B> <A NAME="tex2html83"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html77"
+ HREF="node4.html">3 Analyzing the HA5WH</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00050000000000000000">
+4 
+Analysis of the Ideal Cyclic Network
+</A>
+</H1>
+<A NAME="sec4">&#160;</A>The design of the HA5WH network, as shown
+in the handbook, has four identical resistors and four identical
+capacitors in each of the six network sections. This means the network
+is invariant under a cyclic interchange of the ordering of its ports.
+That is if we were to relabel the ports by letting 1 become 2, 2 become 3,
+3 become 4, and 4 become 1, we would obtain exactly the same equations
+describing the network. Such invariances are treated generally
+using the mathematics of group theory[<A
+ HREF="node10.html#group">2</A>], which greatly
+simplifies the study of system with symmetries. The ideal HA5WH network
+has what is known as cyclic 4 or  <I>C</I><SUB>4</SUB>  symmetry. The network equations
+can be analyzed using group theory. Analysis of the character of
+the matrix that represents the cyclic operator shows that each of the 4
+irreducible representation of  <I>C</I><SUB>4</SUB>  appears once. These therefore correspond
+to the 4 eigenvectors of the  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.gif"
+ ALT="$\tilde{A}$">  matrices, which can then
+be written down immediately.
+<P>
+Most hams probably are unfamiliar with group theory, however, the
+results can be easily verified without using group theory. The right
+eigenvectors  <IMG WIDTH="41" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.gif"
+ ALT="$\psi^{(m)}_{}$">  and the eigenvalues  <IMG WIDTH="28" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\lambda_{m}^{}$"> 
+of a matrix M are defined by
+finding the solutions to the equations,
+<P ALIGN="CENTER"><A NAME="eq17">&#160;</A>
+<!-- MATH: M \psi^{(m)} = \lambda_m \psi^{(m)} . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>M</I><IMG WIDTH="41" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$\displaystyle\psi^{(m)}_{}$"> = <IMG WIDTH="28" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.gif"
+ ALT="$\displaystyle\lambda_{m}^{}$"><IMG WIDTH="41" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$\displaystyle\psi^{(m)}_{}$">. 
+</TD><TD ALIGN="CENTER">(18)
+</TD></TR></TABLE></P>
+That is multiplying the eigenvector by the matrix gives the
+same eigenvector back as the result, simply multiplied by the eigenvalue.
+The effect of multiplying a matrix times one of its eigenvectors is
+to simply multiply the eigenvector by the eigenvalue.
+<P>
+The cyclic eigenvectors in our basis, are those that change by a
+constant phase between the elements, with the same phase change
+between the last and first elements. This gives,
+<P ALIGN="CENTER"><A NAME="eq18">&#160;</A>
+<!-- MATH: \left (
+\begin{array}{c}
+1 \\1 \\1 \\1 \\\end{array}
+\right ),
+\left (
+\begin{array}{c}
+1 \\-1 \\1 \\-1 \\\end{array}
+\right ),
+\left (
+\begin{array}{c}
+1 \\j \\-1 \\-j \\\end{array}
+\right ),
+\left (
+\begin{array}{c}
+1 \\-j \\-1 \\j \\\end{array}
+\right ). -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="67" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ 1 \\ 1 \\ 1 \\ \end{array}\right),$"><IMG WIDTH="83" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ -1 \\ 1 \\ -1 \\ \end{array}\right),$"><IMG WIDTH="83" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ j \\ -1 \\ -j \\ \end{array}\right),$"><IMG WIDTH="83" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ -j \\ -1 \\ j \\ \end{array}\right).$"> 
+</TD><TD ALIGN="CENTER">(19)
+</TD></TR></TABLE></P>
+By direct matrix multiplication, it is easily verified that these
+are the eigenvectors of <EM>all</EM> the M matrices if all the R
+and C values are the same in a network section. This is a direct
+consequence of the cyclic 4 symmetry. Further, since the  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img80.gif"
+ ALT="$\tilde{A}$"> 
+matrices are combinations of products of the M matrices, these same
+vectors are the eigenvectors of the  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\tilde{A}$">  matrices. Since
+ <I>V</I><SUB>out</SUB>  is given as a combination of  <IMG WIDTH="18" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img82.gif"
+ ALT="$\tilde{A}$">  matrices times  <I>V</I><SUB>in</SUB> ,
+if we express  <I>V</I><SUB>in</SUB>  as a linear combination of the four eigenvectors,
+ <I>V</I><SUB>out</SUB>  will be given by taking this same linear combination and
+multiplying each term
+by an appropriate eigenvalue. The network must then
+be designed to produce a  90<SUP> <TT>o</TT> </SUP> relative phase shift.
+<P>
+The input to the HA5WH network contains only the last two eigenvectors
+written above. That is
+<P ALIGN="CENTER"><A NAME="eq19">&#160;</A>
+<!-- MATH: V_{in} = \left (
+\begin{array}{c}
+1 \\1 \\-1 \\-1 \\\end{array}
+\right ) =
+\frac{1-j}{2} \left (
+\begin{array}{c}
+1 \\j \\-1 \\-j \\\end{array}
+\right )
++ \frac{1+j}{2} \left (
+\begin{array}{c}
+1 \\j \\-1 \\-j \\\end{array}
+\right )
+\equiv \frac{1-j}{2} \psi_a +\frac{1+j}{2} \psi_b , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>V</I><SUB>in</SUB> = <IMG WIDTH="95" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ 1 \\ -1 \\ -1 \\ \end{array}\right)=$"><IMG WIDTH="51" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$\displaystyle{\frac{1-j}{2}}$"><IMG WIDTH="93" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ j \\ -1 \\ -j \\ \end{array}\right)+$"><IMG WIDTH="50" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$\displaystyle{\frac{1+j}{2}}$"><IMG WIDTH="95" HEIGHT="112" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{c}
+1 \\ j \\ -1 \\ -j \\ \end{array}\right)\equiv$"><IMG WIDTH="51" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\displaystyle{\frac{1-j}{2}}$"><IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.gif"
+ ALT="$\displaystyle\psi_{a}^{}$"> + <IMG WIDTH="50" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.gif"
+ ALT="$\displaystyle{\frac{1+j}{2}}$"><IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$\displaystyle\psi_{b}^{}$">, 
+</TD><TD ALIGN="CENTER">(20)
+</TD></TR></TABLE></P>
+where the last line defines the relevant eigenvectors as  <IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$\psi_{a}^{}$"> 
+and  <IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$\psi_{b}^{}$"> .
+Further, the output is also not sensitive to the first 2 eigenvectors
+if the output impedances are identical and the operational amplifiers
+have good common mode rejection. Having both of the conditions will
+be helpful if the cyclic symmetry is broken because of component
+tolerances.
+<P>
+With the input as in Eq. <A HREF="node5.html#eq19">23</A>, the output will in general
+be
+<P ALIGN="CENTER"><A NAME="eq20">&#160;</A>
+<!-- MATH: V_{out} =
+\frac{1-j}{2} g_a \psi_a +\frac{1+j}{2} g_b \psi_b , -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>V</I><SUB>out</SUB> = <IMG WIDTH="51" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.gif"
+ ALT="$\displaystyle{\frac{1-j}{2}}$"><I>g</I><SUB>a</SUB><IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\displaystyle\psi_{a}^{}$"> + <IMG WIDTH="50" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$\displaystyle{\frac{1+j}{2}}$"><I>g</I><SUB>b</SUB><IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\displaystyle\psi_{b}^{}$">, 
+</TD><TD ALIGN="CENTER">(21)
+</TD></TR></TABLE></P>
+and the two outputs to the balanced modulators will be
+<BR><A NAME="eq21">&#160;</A>
+
+<!-- MATH: \nonumber
+V_A = (1-j) g_a + (1+j) g_b \\V_B = (1-j) j g_a - (1+j) j g_b -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>V</I><SUB>A</SUB> = (1 - <I>j</I>)<I>g</I><SUB>a</SUB> + (1 + <I>j</I>)<I>g</I><SUB>b</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>V</I><SUB>B</SUB> = (1 - <I>j</I>)<I>jg</I><SUB>a</SUB> - (1 + <I>j</I>)<I>jg</I><SUB>b</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">(22)</TD></TR>
+</TABLE></DIV>
+the suppression in dB is using Eq. <A HREF="node3.html#eq3">3</A>,
+<P ALIGN="CENTER"><A NAME="eq22">&#160;</A>
+<!-- MATH: 20 \log_{10} \left | \frac{g_a}{g_b} \right | . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+20<IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$\displaystyle\log_{10}^{}$"><IMG WIDTH="45" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$\displaystyle\left \vert \frac{g_a}{g_b} \right\vert.$"> 
+</TD><TD ALIGN="CENTER">(23)
+</TD></TR></TABLE></P>
+So to design a good network, we must eliminate one of these final
+two eigenvectors.
+<P>
+The analysis so far shows how the HA5WH network can be motivated.
+The  <I>C</I><SUB>4</SUB>  eigenvectors have equal amplitudes for the 4 voltages,
+and have a phase shift between adjacent ports of  0<SUP> <TT>o</TT> </SUP>,
+  + 90<SUP> <TT>o</TT> </SUP>,  180<SUP> <TT>o</TT> </SUP>, and  270<SUP> <TT>o</TT> </SUP>, this last is
+equivalent to a phase shift of   - 90<SUP> <TT>o</TT> </SUP>. We want to choose the network
+drive, connections, and component values to select out one of the
+two  90<SUP> <TT>o</TT> </SUP> phase shifted eigenvectors. As an aside, the same
+ideas could be used to design a  60<SUP> <TT>o</TT> </SUP> relative phase shift by
+using a network invariant under the group  <I>C</I><SUB>6</SUB> , or a  45<SUP> <TT>o</TT> </SUP> shift
+from  <I>C</I><SUB>8</SUB> , etc.
+<P>
+The first step in selecting the component values is to calculate
+the eigenvalues of the four M matrices. By direct multiplication,
+I get
+<BR><A NAME="eq23">&#160;</A>
+
+<!-- MATH: \nonumber
+\lambda_{11}^a = \lambda_{11}^b = \frac{1}{R}+j \omega C , \\\nonumber
+\lambda_{12}^a = -\frac{1}{R}-\omega C ,
+\lambda_{12}^b = -\frac{1}{R}+\omega C , \\\nonumber
+\lambda_{21}^a = \frac{1}{R}-\omega C ,
+\lambda_{21}^b = \frac{1}{R}+\omega C ,\\\lambda_{22}^a = \lambda_{22}^b = -\frac{1}{R}-j \omega C , -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="30" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$\displaystyle\lambda_{11}^{a}$"> = <IMG WIDTH="30" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.gif"
+ ALT="$\displaystyle\lambda_{11}^{b}$"> = <IMG WIDTH="18" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{R}}$"> + <I>j</I><IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img103.gif"
+ ALT="$\displaystyle\omega$"><I>C</I>, 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="30" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.gif"
+ ALT="$\displaystyle\lambda_{12}^{a}$"> = - <IMG WIDTH="18" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{R}}$"> - <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.gif"
+ ALT="$\displaystyle\omega$"><I>C</I>,<IMG WIDTH="30" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.gif"
+ ALT="$\displaystyle\lambda_{12}^{b}$"> = - <IMG WIDTH="18" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{R}}$"> + <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img109.gif"
+ ALT="$\displaystyle\omega$"><I>C</I>, 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="30" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.gif"
+ ALT="$\displaystyle\lambda_{21}^{a}$"> = <IMG WIDTH="18" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{R}}$"> - <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img112.gif"
+ ALT="$\displaystyle\omega$"><I>C</I>,<IMG WIDTH="30" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.gif"
+ ALT="$\displaystyle\lambda_{21}^{b}$"> = <IMG WIDTH="18" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{R}}$"> + <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.gif"
+ ALT="$\displaystyle\omega$"><I>C</I>, 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="30" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.gif"
+ ALT="$\displaystyle\lambda_{22}^{a}$"> = <IMG WIDTH="30" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.gif"
+ ALT="$\displaystyle\lambda_{22}^{b}$"> = - <IMG WIDTH="18" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{R}}$"> - <I>j</I><IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.gif"
+ ALT="$\displaystyle\omega$"><I>C</I>, 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">(24)</TD></TR>
+</TABLE></DIV>
+where the superscript a or b indicates the eigenvalue corresponds to the
+eigenvector  <IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.gif"
+ ALT="$\psi_{a}^{}$">  or  <IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.gif"
+ ALT="$\psi_{b}^{}$">  respectively.
+<P>
+The effect of one of the A matrices, when a single eigenvector is input, is
+given by replacing the M matrices in Eq. <A HREF="node4.html#eq8">11</A> by their eigenvalues.
+After a little algebra, I get,
+<P ALIGN="CENTER">
+<!-- MATH: A^a = \frac{1}{1+\omega R C } \left (
+\begin{array}{cc}
+1+j \omega R C & -R \\-2j \omega C & 1+j \omega R C\\\end{array}
+\right ) -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>A</I><SUP> a</SUP> = <IMG WIDTH="56" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{1+\omega R C }}$"><IMG WIDTH="235" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cc}
+1+j \omega R C & -R \\ -2j \omega C & 1+j \omega R C\\ \end{array}\right)$"> 
+</TD><TD ALIGN="CENTER">&nbsp;&nbsp;
+</TD></TR></TABLE></P>
+<P ALIGN="CENTER"><A NAME="eq24">&#160;</A>
+<!-- MATH: A^b = \frac{1}{1-\omega R C } \left (
+\begin{array}{cc}
+1+j \omega R C & -R \\-2j \omega C & 1+j \omega R C\\\end{array}
+\right ) -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>A</I><SUP> b</SUP> = <IMG WIDTH="56" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{1-\omega R C }}$"><IMG WIDTH="235" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.gif"
+ ALT="$\displaystyle\left (
+\begin{array}
+{cc}
+1+j \omega R C & -R \\ -2j \omega C & 1+j \omega R C\\ \end{array}\right)$"> 
+</TD><TD ALIGN="CENTER">(25)
+</TD></TR></TABLE></P>
+<P>
+The  <I>A</I><SUP> b</SUP> matrix is proportional to  <I>A</I><SUP> a</SUP>. If we feed the section of the
+network with a linear combination of  <IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.gif"
+ ALT="$\psi_{a}^{}$">  and  <IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.gif"
+ ALT="$\psi_{b}^{}$"> , the
+section suppresses  <IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img128.gif"
+ ALT="$\psi_{a}^{}$">  relative to  <IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.gif"
+ ALT="$\psi_{b}^{}$">  by a factor
+of
+<P ALIGN="CENTER"><A NAME="eq25">&#160;</A>
+<!-- MATH: \frac{1- \omega R C }{1 + \omega R C } . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="85" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.gif"
+ ALT="$\displaystyle{\frac{1- \omega R C }{1 + \omega R C }}$">. 
+</TD><TD ALIGN="CENTER">(26)
+</TD></TR></TABLE></P>
+<P>
+The HA5WH network has the properties that the magnitude of the ratio given in
+Eq. <A HREF="node5.html#eq25">30</A> is always less than 1 for positive frequencies,
+and it is exactly zero for 
+<!-- MATH: \omega = 1/(RC) -->
+ <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img131.gif"
+ ALT="$\omega$"> = 1/(<I>RC</I>) .
+The first property says that additional network sections can
+only improve the relative  90<SUP> <TT>o</TT> </SUP> phase shift of the outputs.
+The second says that we can set the frequencies of exact  90<SUP> <TT>o</TT> </SUP>
+phase shift by selecting the  <I>RC</I>  values of single network sections.
+These two properties greatly simplify the design and optimization
+of the network.
+<P>
+The sideband suppression at a single frequency is given for an n
+section network, with RC values in section i given by  <I>R</I><SUB>i</SUB>  and  <I>C</I><SUB>i</SUB> ,
+as
+<P ALIGN="CENTER"><A NAME="eq26">&#160;</A>
+<!-- MATH: Suppression = 20 \sum_{i=1}^n \log_{10} \left | \frac
+{1 - \omega R_i C_i}
+{1 + \omega R_i C_i} \right | . -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>Suppression</I> = 20<IMG WIDTH="27" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.gif"
+ ALT="$\displaystyle\sum_{i=1}^{n}$"><IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.gif"
+ ALT="$\displaystyle\log_{10}^{}$"><IMG WIDTH="114" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.gif"
+ ALT="$\displaystyle\left \vert \frac
+{1 - \omega R_i C_i}
+{1 + \omega R_i C_i} \right\vert.$"> 
+</TD><TD ALIGN="CENTER">(27)
+</TD></TR></TABLE></P>
+<P>
+A simple method of picking the RC values for each section is to use
+a computer to plot
+the above result, and adjust n and  <I>R</I><SUB>i</SUB><I>C</I><SUB>i</SUB>  to achieve the required
+suppression. This is in fact the obvious technique to use if you
+are trying to design with a set of parts already in your junk box.
+However, the form of the suppression makes it easy to select optimum
+values as seen in the next section.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html85"
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html82"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html76"
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html84"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html86"
+ HREF="node6.html">5 Optimizing the Sideband</A>
+<B> Up:</B> <A NAME="tex2html83"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html77"
+ HREF="node4.html">3 Analyzing the HA5WH</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

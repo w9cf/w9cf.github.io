@@ -1,0 +1,679 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Analytic expressions for the
+equivalent diameters of
+rectangular cross section conductors
+</TITLE>
+<META NAME="description" CONTENT="Analytic expressions for the
+equivalent diameters of
+rectangular cross section conductors
+">
+<META NAME="keywords" CONTENT="conf">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="conf.css">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html2"
+ HREF="http://fermi.la.asu.edu/w9cf">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html3"
+ HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<P><H1 ALIGN="CENTER">Analytic expressions for the
+equivalent diameters of
+rectangular cross section conductors
+</H1>
+<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
+ HREF="
+mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF
+<BR></A>
+</STRONG></P>
+<P ALIGN="CENTER"><STRONG></STRONG></P>
+<P ALIGN="LEFT"></P>
+<P>
+Previously I had written up some
+<A NAME="tex2html1"
+ HREF="../equiv/index.html">notes</A>
+where I calculated the equivalent
+resistance of a rectangular cross section conductor by dividing the surface
+up into segments, using a piecewise constant charge distribution
+over each segment, and solving for the charge distribution that
+gives an equipotential on the surface. I then calculated an equivalent
+diameter for the r.f. resistance of this conductor. It is also
+easy to calculate the equivalent diameter of a circular cross section
+conductor that gives the same capacitance per unit length. Since the
+capacitance is calculated as the ratio of the total charge to the
+potential difference. This equivalent
+diameter is the one used in replacing the rectangular cross
+section element with a circular cross section one for perfectly
+conducting approximation in antenna codes, while
+the resistive diameter can be used to evaluate the resistive loss terms.
+<P>
+Y.T. Lo, ``A note on the cylindrical antenna of noncircular
+cross section,'' J. App. Phys. 24, 1338 (1953),
+solved for the self impedance 
+equivalent diameter of regular polygon cross section conductors.
+Here I extend his analysis to rectangular cross section conductors.
+I calculate both the equivalent self impedance diameter and the
+equivalent r.f. resistance diameter.
+<P>
+Lo used the conformal mapping from the u to z planes given by
+<P ALIGN="CENTER"><A NAME="eq1">&#160;</A>
+<!-- MATH: dz = \prod_{i=1}^n (u-a_i)^{\alpha_i} u^{-2} du, -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>dz</I> = <IMG WIDTH="26" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\displaystyle\prod_{i=1}^{n}$">(<I>u</I> - <I>a</I><SUB>i</SUB>)<SUP><IMG WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\scriptstyle\alpha_{i}$"></SUP><I>u</I><SUP> - 2</SUP><I>du</I>, 
+</TD><TD ALIGN="CENTER">(1)
+</TD></TR></TABLE></P>
+and showed how it can map the exterior of a circle to the
+exterior of an n-sided regular polygon if the  <I>a</I><SUB>i</SUB>  are the n nth roots
+of 1, and  <IMG WIDTH="21" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\alpha_{i}^{}$">  are  2/<I>n</I> . For rectangles, we keep
+
+<!-- MATH: \alpha_i = 2/n -->
+ <IMG WIDTH="21" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\alpha_{i}^{}$"> = 2/<I>n</I>  and keep the
+the  <I>a</I><SUB>i</SUB>  on the unit circle, but not evenly spaced. Specifically,
+we take angles  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\theta$"> ,  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\pi$"> ,  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\pi$"> + <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\theta$"> ,  2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\pi$"> ,
+to make a rectangle. The value of  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\theta$">  determines the two sides of
+the rectangle. 
+<!-- MATH: \theta = \pi/2 -->
+ <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\theta$"> = <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\pi$">/2  gives a square and reduces to Lo's
+solution for n=4.
+The function Eq. <A HREF="conf.html#eq1">1</A> can now be written as
+<P ALIGN="CENTER">
+<!-- MATH: dz = [u^2e^{-i\theta}+u^{-2}e^{i\theta}-2 \cos(\theta)]^{\frac{1}{2}} u^{-1} du -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>dz</I> = [<I>u</I><SUP> 2</SUP><I>e</I><SUP> - i<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\scriptstyle\theta$"></SUP> + <I>u</I><SUP> - 2</SUP><I>e</I><SUP> i<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\scriptstyle\theta$"></SUP> - 2cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\displaystyle\theta$">)]<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>u</I><SUP> - 1</SUP><I>du</I> 
+</TD><TD ALIGN="CENTER">(2)
+</TD></TR></TABLE></P>
+where we drop an unimportant constant phase factor of 
+<!-- MATH: \exp(-i\theta/2) -->
+ exp(- <I>i</I><IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\theta$">/2) .
+The length of the two sides of the rectangle corresponding to
+the original unit circle are given by integrating  <I>u</I>  around the
+unit circle, That is with 
+<!-- MATH: u = \rho e^{i \phi} -->
+ <I>u</I> = <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\rho$"><I>e</I><SUP> i<IMG WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\scriptstyle\phi$"></SUP>, with  <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\rho$"> = 1 ,
+<P ALIGN="CENTER">
+<!-- MATH: dz = [2 \cos(2 \phi-\theta)-2 \cos(\theta)]^{\frac{1}{2}} d\phi -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>dz</I> = [2cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\displaystyle\theta$">) - 2cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$\displaystyle\theta$">)]<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\displaystyle\phi$"> 
+</TD><TD ALIGN="CENTER">(3)
+</TD></TR></TABLE></P>
+<P>
+Choosing  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\theta$">  less than or equal to  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="$\pi$">/2 , the lengths of the
+two sides of the rectangle corresponding to the unit circle are
+<BR>
+
+<!-- MATH: s_1 &=& \int_0^\theta \left | \frac{dz}{d\phi} \right | d\phi
+\nonumber\\  &=& \sqrt{2} ~ \int_0^\theta
+|\cos(2 \phi-\theta)-\cos(\theta)|^{\frac{1}{2}} d\phi
+\nonumber\\s_2 &=& \int_\theta^\pi\left | \frac{dz}{d\phi} \right | d\phi
+\nonumber\\  &=& \sqrt{2} ~ \int_\theta^\pi
+|\cos(2 \phi-\theta)-\cos(\theta)|^{\frac{1}{2}} d\phi -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>s</I><SUB>1</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="28" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\displaystyle\int_{0}^{\theta}$"><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\displaystyle\phi$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+&nbsp;
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="30" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\displaystyle\sqrt{2}$">&nbsp;<IMG WIDTH="28" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\displaystyle\int_{0}^{\theta}$">|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.gif"
+ ALT="$\displaystyle\theta$">)|<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$\displaystyle\phi$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>s</I><SUB>2</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="29" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$\displaystyle\int_{\theta}^{\pi}$"><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\displaystyle\phi$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+&nbsp;
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="30" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$\displaystyle\sqrt{2}$">&nbsp;<IMG WIDTH="29" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\displaystyle\int_{\theta}^{\pi}$">|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.gif"
+ ALT="$\displaystyle\theta$">)|<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\displaystyle\phi$"> 
+</TD><TD ALIGN="RIGHT">(4)</TD></TR>
+</TABLE></DIV>
+with  <I>s</I><SUB>2</SUB>  the longer side. The form of these integrals is very similar
+to
+the form we get when we solve for the exact dynamics of a simple pendulum.
+The integrals can be written in terms
+of complete elliptic integrals with the standard substitution
+<P ALIGN="CENTER">
+<!-- MATH: \sin(\phi-\theta/2) = \sin(\theta/2)\sin(\gamma) -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+sin(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.gif"
+ ALT="$\displaystyle\theta$">/2) = sin(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.gif"
+ ALT="$\displaystyle\theta$">/2)sin(<IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.gif"
+ ALT="$\displaystyle\gamma$">) 
+</TD><TD ALIGN="CENTER">(5)
+</TD></TR></TABLE></P>
+to be
+<BR>
+
+<!-- MATH: s_1 &=& 4 [E(k)-k'^2~K(k)]
+\nonumber\\s_2 &=& 4 [E(k')-k^2~K(k')] -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>s</I><SUB>1</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+4[<I>E</I>(<I>k</I>) - <I>k</I>'<SUP>2</SUP>&nbsp;<I>K</I>(<I>k</I>)] 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>s</I><SUB>2</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+4[<I>E</I>(<I>k</I>') - <I>k</I><SUP> 2</SUP>&nbsp;<I>K</I>(<I>k</I>')] 
+</TD><TD ALIGN="RIGHT">(6)</TD></TR>
+</TABLE></DIV>
+where 
+<!-- MATH: k = \sin(\theta/2) -->
+ <I>k</I> = sin(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\theta$">/2) , and 
+<!-- MATH: k' = \sqrt{1-k^2} -->
+ <I>k</I>' = <IMG WIDTH="73" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.gif"
+ ALT="$\sqrt{1-k^2}$">  is the complementary
+modulus.  <I>K</I>(<I>k</I>)  and  <I>E</I>(<I>k</I>)  are the complete elliptic integrals of
+the first and second kinds defined as usual as
+<BR>
+
+<!-- MATH: K(k)&=&\int_0^{\pi/2} \frac{1}{\sqrt{1-k^2 \sin^2(\gamma)}} d\gamma
+\nonumber\\E(k)&=&\int_0^{\pi/2} \sqrt{1-k^2 \sin^2(\gamma)} d\gamma -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>K</I>(<I>k</I>) 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="43" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.gif"
+ ALT="$\displaystyle\int_{0}^{\pi/2}$"><IMG WIDTH="102" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{\sqrt{1-k^2 \sin^2(\gamma)}}}$"><I>d</I><IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.gif"
+ ALT="$\displaystyle\gamma$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>E</I>(<I>k</I>) 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="43" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.gif"
+ ALT="$\displaystyle\int_{0}^{\pi/2}$"><IMG WIDTH="134" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.gif"
+ ALT="$\displaystyle\sqrt{1-k^2 \sin^2(\gamma)}$"><I>d</I><IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.gif"
+ ALT="$\displaystyle\gamma$"> 
+</TD><TD ALIGN="RIGHT">(7)</TD></TR>
+</TABLE></DIV>
+<P>
+The effective self impedance diameter for
+this size rectangle is two. The effective self impedance diameter
+of a rectangular
+cross section conductor of width  <I>w</I>  and thickness  <I>t</I>  is given
+by
+<P ALIGN="CENTER">
+<!-- MATH: d_{self} = \frac{2 w}{s_2} = w ~ \frac{1}{
+2 [E(k')-k^2~K(k')]} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>d</I><SUB>self</SUB> = <IMG WIDTH="32" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.gif"
+ ALT="$\displaystyle{\frac{2 w}{s_2}}$"> = <I>w</I>&nbsp;<IMG WIDTH="125" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{
+2 [E(k')-k^2~K(k')]}}$"> 
+</TD><TD ALIGN="CENTER">(8)
+</TD></TR></TABLE></P>
+where  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.gif"
+ ALT="$\theta$">  is chosen so that  <I>s</I><SUB>2</SUB>/<I>s</I><SUB>1</SUB>  equals  <I>w</I>/<I>t</I> , that is
+<P ALIGN="CENTER">
+<!-- MATH: \frac{w}{t} =
+\frac{E(k')-k^2~K(k')}{E(k)-k'^2~K(k)}
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="22" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.gif"
+ ALT="$\displaystyle{\frac{w}{t}}$"> = <IMG WIDTH="152" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.gif"
+ ALT="$\displaystyle{\frac{E(k')-k^2~K(k')}{E(k)-k'^2~K(k)}}$"> 
+</TD><TD ALIGN="CENTER">(9)
+</TD></TR></TABLE></P>
+<P>
+The charge density can be obtained similarly. The charge density is
+proportional to the perpendicular electric field. The equipotentials
+for the  <I>u</I>  system are circles, so we can calculate other equipotentials
+by choosing  <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.gif"
+ ALT="$\rho$"> &gt; 1 . We can take the normal derivative of the
+potential to get the perpendicular electric field. You can think of
+this as evaluating the distance  <I>h</I>  that a nearby equipotential is
+from the rectangle. The derivative of the potential is then just
+the difference in the potentials divided by this distance. Taking
+the derivative with respect to  <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.gif"
+ ALT="$\rho$">  and calculating this distance
+gives
+<BR>
+
+<!-- MATH: E(\phi) &=& \left [ 2^{\frac{3}{2}} \int_0^\phi \frac{\sin(2 \phi'-\theta)}
+{|\cos(2 \phi'-\theta)-\cos(\theta)|^{\frac{1}{2}}} d\phi'
+\right ]^{-1}
+\nonumber\\&=& 2^{-\frac{3}{2}}
+|\cos(2 \phi-\theta)-\cos(\theta)|^{-\frac{1}{2}} -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>E</I>(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.gif"
+ ALT="$\displaystyle\phi$">) 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="309" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.gif"
+ ALT="$\displaystyle\left [ 2^{\frac{3}{2}} \int_0^\phi \frac{\sin(2 \phi'-\theta)}
+{\vert\cos(2 \phi'-\theta)-\cos(\theta)\vert^{\frac{1}{2}}} d\phi'
+\right]^$">-1 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+&nbsp;
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+2<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.gif"
+ ALT="$\scriptstyle{\textstyle\frac{3}{2}}$"></SUP>|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.gif"
+ ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.gif"
+ ALT="$\displaystyle\theta$">)|<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP>
+</TD><TD ALIGN="RIGHT">(10)</TD></TR>
+</TABLE></DIV>
+<P>
+Normalizing this to 1, we get the normalized charge density to be
+<P ALIGN="CENTER">
+<!-- MATH: \sigma(\phi) = \frac{2^{-\frac{1}{2}} }{2 \pi}
+|\cos(\theta) - \cos(2 \phi-\theta)|^{-\frac{1}{2}} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.gif"
+ ALT="$\displaystyle\sigma$">(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.gif"
+ ALT="$\displaystyle\phi$">) = <IMG WIDTH="39" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.gif"
+ ALT="$\displaystyle{\frac{2^{-\frac{1}{2}} }{2 \pi}}$">|cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.gif"
+ ALT="$\displaystyle\theta$">) - cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.gif"
+ ALT="$\displaystyle\theta$">)|<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP>
+</TD><TD ALIGN="CENTER">(11)
+</TD></TR></TABLE></P>
+The integral of the charge density squared around the square is then
+<BR>
+
+<!-- MATH: \int_0^{2\pi} \sigma(\phi)^2
+\left | \frac{dz}{d\phi} \right | d\phi
+= \frac{1}{\sqrt{32} \pi^2}
+\int_0^\pi |\cos(2 \phi-\theta)-\cos(\theta)|^{-\frac{1}{2}} d\phi . -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<IMG WIDTH="36" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.gif"
+ ALT="$\displaystyle\int_{0}^{2\pi}$"><IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img82.gif"
+ ALT="$\displaystyle\sigma$">(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.gif"
+ ALT="$\displaystyle\phi$">)<SUP>2</SUP><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.gif"
+ ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.gif"
+ ALT="$\displaystyle\phi$"> = <IMG WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{\sqrt{32} \pi^2}}$"><IMG WIDTH="29" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.gif"
+ ALT="$\displaystyle\int_{0}^{\pi}$">|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.gif"
+ ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img89.gif"
+ ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img90.gif"
+ ALT="$\displaystyle\theta$">)|<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.gif"
+ ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.gif"
+ ALT="$\displaystyle\phi$">. 
+</TD><TD ALIGN="CENTER" NOWRAP>
+&nbsp;&nbsp;
+</TD><TD ALIGN="LEFT" NOWRAP>
+&nbsp;
+</TD><TD ALIGN="RIGHT">(12)</TD></TR>
+</TABLE></DIV>
+These integrals can also be done in terms of elliptic integrals
+giving
+<P ALIGN="CENTER">
+<!-- MATH: \int_0^{2\pi} \sigma(\phi)^2
+\left | \frac{dz}{d\phi} \right | d\phi
+=\frac{1}{4 \pi^2} [K(k)+K(k')] -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="36" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.gif"
+ ALT="$\displaystyle\int_{0}^{2\pi}$"><IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img94.gif"
+ ALT="$\displaystyle\sigma$">(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.gif"
+ ALT="$\displaystyle\phi$">)<SUP>2</SUP><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.gif"
+ ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.gif"
+ ALT="$\displaystyle\phi$"> = <IMG WIDTH="30" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{4 \pi^2}}$">[<I>K</I>(<I>k</I>) + <I>K</I>(<I>k</I>')] 
+</TD><TD ALIGN="CENTER">(13)
+</TD></TR></TABLE></P>
+and the effective resistance diameter is
+<P ALIGN="CENTER">
+<!-- MATH: d_{resistance} = w
+~ \frac{\pi}{2 [K(k)+K(k')] [E(k')-k^2~K(k')]} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>d</I><SUB>resistance</SUB> = <I>w</I>&nbsp;<IMG WIDTH="300" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.gif"
+ ALT="$\displaystyle{\frac{\pi}{2 [K(k)+K(k')] [E(k')-k^2~K(k')]}}$"> 
+</TD><TD ALIGN="CENTER">(14)
+</TD></TR></TABLE></P>
+<P>
+Previously, I fit my brute force numerical calculations to the expressions
+<P ALIGN="CENTER"><A NAME="eq15">&#160;</A>
+<!-- MATH: d_{self} = w [ 0.5 + 0.9 t/w -0.22 (t/w)^2 ] -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>d</I><SUB>self</SUB> = <I>w</I>[0.5 + 0.9<I>t</I>/<I>w</I> - 0.22(<I>t</I>/<I>w</I>)<SUP>2</SUP>] 
+</TD><TD ALIGN="CENTER">(15)
+</TD></TR></TABLE></P>
+and
+<P ALIGN="CENTER"><A NAME="eq16">&#160;</A>
+<!-- MATH: d_{resistance} = w\frac{1}{1+1.13 \log_{10}(w/t)} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>d</I><SUB>resistance</SUB> = <I>w</I><IMG WIDTH="118" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.gif"
+ ALT="$\displaystyle{\textstyle\frac{1}{1+1.13 \log_{10}(w/t)}}$"> 
+</TD><TD ALIGN="CENTER">(16)
+</TD></TR></TABLE></P>
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+<P><A NAME="119">&#160;</A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table 1:</STRONG>
+The calculated values of the self impedance effective diamter
+and the resistance effective diameter as a function of
+the cross section width divided by thickness compared
+to the fits. The value of  <I>k</I>  is the calculated value to
+get the correct  <I>w</I>/<I>t</I>  ratio.
+</CAPTION>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>w/t</TD>
+<TD ALIGN="CENTER" NOWRAP>k</TD>
+<TD ALIGN="CENTER" NOWRAP> <I>d</I><SUB>self</SUB> </TD>
+<TD ALIGN="CENTER" NOWRAP>Eq. <A HREF="conf.html#eq15">15</A></TD>
+<TD ALIGN="CENTER" NOWRAP>
+<!-- MATH: d_{resistance} -->
+ <I>d</I><SUB>resistance</SUB> </TD>
+<TD ALIGN="CENTER" NOWRAP>Eq. <A HREF="conf.html#eq16">16</A></TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
+<TD ALIGN="CENTER" NOWRAP>0.70711</TD>
+<TD ALIGN="CENTER" NOWRAP>1.18034 w</TD>
+<TD ALIGN="CENTER" NOWRAP>1.18 w</TD>
+<TD ALIGN="CENTER" NOWRAP>1.00000 w</TD>
+<TD ALIGN="CENTER" NOWRAP>1.00 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
+<TD ALIGN="CENTER" NOWRAP>0.58862</TD>
+<TD ALIGN="CENTER" NOWRAP>0.87476 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.90 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.73203 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.75 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>5</TD>
+<TD ALIGN="CENTER" NOWRAP>0.43001</TD>
+<TD ALIGN="CENTER" NOWRAP>0.67185 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.67 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.53502 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.56 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>10</TD>
+<TD ALIGN="CENTER" NOWRAP>0.32480</TD>
+<TD ALIGN="CENTER" NOWRAP>0.59529 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.59 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.44872 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.47 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>20</TD>
+<TD ALIGN="CENTER" NOWRAP>0.23912</TD>
+<TD ALIGN="CENTER" NOWRAP>0.55265 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.54 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.39123 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.40 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>50</TD>
+<TD ALIGN="CENTER" NOWRAP>0.15567</TD>
+<TD ALIGN="CENTER" NOWRAP>0.52383 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.52 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.33997 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.34 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>100</TD>
+<TD ALIGN="CENTER" NOWRAP>0.11131</TD>
+<TD ALIGN="CENTER" NOWRAP>0.51299 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.51 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.31200 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.31 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>200</TD>
+<TD ALIGN="CENTER" NOWRAP>0.07920</TD>
+<TD ALIGN="CENTER" NOWRAP>0.50704 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.50 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.28962 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.28 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>500</TD>
+<TD ALIGN="CENTER" NOWRAP>0.05030</TD>
+<TD ALIGN="CENTER" NOWRAP>0.50310 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.50 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.26564 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.25 w</TD>
+</TR>
+<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1000</TD>
+<TD ALIGN="CENTER" NOWRAP>0.03562</TD>
+<TD ALIGN="CENTER" NOWRAP>0.50166 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.50 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.25042 w</TD>
+<TD ALIGN="CENTER" NOWRAP>0.23 w</TD>
+</TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+It seems likely to me that this calculation would have been done
+long ago and is probably buried somewhere in the literature, however,
+I have not found it anywhere. All the integrals can be evaluated
+in terms of elliptic integrals, and tables of these have
+been available for a very long time.
+<P><HR>
+<!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
+<A NAME="tex2html2"
+ HREF="http://fermi.la.asu.edu/w9cf">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
+<BR>
+<B> Up:</B> <A NAME="tex2html3"
+ HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+<Style id="fox">
+  <IconStyle>
+    <Icon>
+      <href>http://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png</href>
+    </Icon>
+    <colorMode>normal</colorMode>
+    <color>ff0000ff</color>
+  </IconStyle>
+</Style> 
+
+<Style id="hound">
+  <IconStyle>
+    <Icon>
+      <href>http://maps.google.com/mapfiles/kml/pushpin/wht-diamond.png</href>
+    </Icon>
+    <colorMode>normal</colorMode>
+    <color>ff00ffff</color>
+  </IconStyle>
+</Style> 
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K4PIC</name>
+<description></description>
+<Point>
+<coordinates>-83.4572222222222,34.2036111111111,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K4BAI</name>
+<description></description>
+<Point>
+<coordinates>-84.9730555555556,32.4977777777778,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N9NE</name>
+<description></description>
+<Point>
+<coordinates>-88.6172222222222,44.0255555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W9XU</name>
+<description></description>
+<Point>
+<coordinates>-88.1955555555556,42.7947222222222,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KG0PP</name>
+<description></description>
+<Point>
+<coordinates>-104.83,39.70,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W0IIT</name>
+<description></description>
+<Point>
+<coordinates>-94.6997222222222,37.4130555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K9CW</name>
+<description></description>
+<Point>
+<coordinates>-88.1838888888889,40.2427777777778,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W0NTA</name>
+<description></description>
+<Point>
+<coordinates>-104.761666666667,40.4086111111111,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>WC7S</name>
+<description></description>
+<Point>
+<coordinates>-104.827777777778,41.2052777777778,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K6VNX</name>
+<description></description>
+<Point>
+<coordinates>-118.088611111111,34.1144444444444,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N1TP</name>
+<description></description>
+<Point>
+<coordinates>-81.7080555555556,26.1722222222222,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K5JHP</name>
+<description></description>
+<Point>
+<coordinates>-96.7447222222222,32.9625,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K6XR</name>
+<description></description>
+<Point>
+<coordinates>-119.0675,35.3369444444444,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KK5LD</name>
+<description></description>
+<Point>
+<coordinates>-97.5275,32.4505555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>NO2D</name>
+<description></description>
+<Point>
+<coordinates>-104.73,39.54,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KZ5J</name>
+<description></description>
+<Point>
+<coordinates>-95.5144444444445,29.6883333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N0TK</name>
+<description></description>
+<Point>
+<coordinates>-104.960555555556,39.5513888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N4DD</name>
+<description></description>
+<Point>
+<coordinates>-82.3586111111111,36.5336111111111,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N0UR</name>
+<description></description>
+<Point>
+<coordinates>-93.3008333333333,43.8719444444444,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K3ESE</name>
+<description></description>
+<Point>
+<coordinates>-76.8113888888889,39.4638888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>WB9HFK</name>
+<description></description>
+<Point>
+<coordinates>-88.18,40.08,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K0EVZ</name>
+<description></description>
+<Point>
+<coordinates>-106.186111111111,35.0388888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>WA9TZE</name>
+<description></description>
+<Point>
+<coordinates>-87.8655555555556,42.9113888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K5PSH</name>
+<description></description>
+<Point>
+<coordinates>-96.3308333333333,30.6597222222222,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W6UR</name>
+<description></description>
+<Point>
+<coordinates>-118.9325,35.3883333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K0FRP</name>
+<description></description>
+<Point>
+<coordinates>-104.831111111111,39.6980555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>NK6A</name>
+<description></description>
+<Point>
+<coordinates>-118.4275,34.0025,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K3PH</name>
+<description></description>
+<Point>
+<coordinates>-75.5044444444444,40.9563888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N1FN</name>
+<description></description>
+<Point>
+<coordinates>-104.835,39.6680555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N1VWD</name>
+<description></description>
+<Point>
+<coordinates>-73.2511111111111,44.1658333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N4KV</name>
+<description></description>
+<Point>
+<coordinates>-84.0066666666667,35.9258333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K5OI</name>
+<description></description>
+<Point>
+<coordinates>-105.668333333333,33.3416666666667,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KI0II</name>
+<description></description>
+<Point>
+<coordinates>-105.09,39.58,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>AA5CK</name>
+<description></description>
+<Point>
+<coordinates>-99.6388888888889,35.2986111111111,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N9AW</name>
+<description></description>
+<Point>
+<coordinates>-88.0497222222222,42.9408333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W9JOP</name>
+<description></description>
+<Point>
+<coordinates>-77.7794444444445,38.5766666666667,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W0LGU</name>
+<description></description>
+<Point>
+<coordinates>-92.7972222222222,45.4322222222222,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>NU4I</name>
+<description></description>
+<Point>
+<coordinates>-76.7097222222222,37.2655555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W9LR</name>
+<description></description>
+<Point>
+<coordinates>-88.1055555555556,42.9813888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K2ZN</name>
+<description></description>
+<Point>
+<coordinates>-77.6016666666667,43.1330555555556,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>VE4WI</name>
+<description></description>
+<Point>
+<coordinates>-97.7,49.9,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W9QS</name>
+<description></description>
+<Point>
+<coordinates>-88.1969444444444,40.1108333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>VE5DC</name>
+<description></description>
+<Point>
+<coordinates>-103.4,50.5,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KC1FB</name>
+<description></description>
+<Point>
+<coordinates>-73.4044444444445,41.1322222222222,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N4CY</name>
+<description></description>
+<Point>
+<coordinates>-78.0163888888889,38.4736111111111,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>VE5RC</name>
+<description></description>
+<Point>
+<coordinates>-104.6,50.4,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KB2FEL</name>
+<description></description>
+<Point>
+<coordinates>-73.7052777777778,40.6741666666667,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KI0G</name>
+<description></description>
+<Point>
+<coordinates>-107.326666666667,39.4944444444444,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N0AR</name>
+<description></description>
+<Point>
+<coordinates>-93.0661111111111,45.0708333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K4OSO</name>
+<description></description>
+<Point>
+<coordinates>-77.705,37.7025,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>NN5E</name>
+<description></description>
+<Point>
+<coordinates>-96.7722222222222,32.83,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>K5DI</name>
+<description></description>
+<Point>
+<coordinates>-106.803888888889,32.3222222222222,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>AC7A</name>
+<description></description>
+<Point>
+<coordinates>-110.770555555556,32.215,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W5AJD</name>
+<description></description>
+<Point>
+<coordinates>-91.0605555555556,30.4513888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>W3MF</name>
+<description></description>
+<Point>
+<coordinates>-75.5044444444444,40.9563888888889,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N7RN</name>
+<description></description>
+<Point>
+<coordinates>-110.191388888889,31.4416666666667,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>N4SAM</name>
+<description></description>
+<Point>
+<coordinates>-87.2955555555556,34.8283333333333,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KB5FCF</name>
+<description></description>
+<Point>
+<coordinates>-97.4683333333333,35.66,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#hound</styleUrl>
+<name>KK5NA</name>
+<description></description>
+<Point>
+<coordinates>-97.1902777777778,32.6877777777778,0</coordinates>
+</Point>
+</Placemark>
+
+   <Placemark>
+<styleUrl>#fox</styleUrl>
+<name>W9CF</name>
+<description></description>
+<Point>
+<coordinates>-111.928888888889,33.3652777777778,0</coordinates>
+</Point>
+</Placemark>
+</Document>
+</kml>

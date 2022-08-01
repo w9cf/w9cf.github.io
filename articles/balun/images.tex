@@ -1,0 +1,408 @@
+\batchmode
+\documentclass[12pt]{article}
+\makeatletter
+\usepackage{graphicx}
+\usepackage{html}
+
+\makeatother
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newenvironment{tex2html_wrap}{}{}
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\topskip=0pt
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize\parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetmath{\hbox{\vrule width.5pt\vtop{\vbox{%
+  \kern.5pt\kern1.25 pt\hbox{\hglue.5pt\copy\sizebox\hglue1.25 pt}\kern.5pt%
+  \ifdim\dp\sizebox>0pt\kern1.25 pt\fi}%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{\dimen1=\ht\sizebox
+  \ifdim\dimen1<\dp\sizebox \ht\sizebox=\dp\sizebox
+  \else \dp\sizebox=\ht\sizebox \fi}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure14}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 8}\special{pa 0 2300}\special{pa 1500 2300}\special{pa 1500 1300}\special{pa 0 1300}\special{pa 0 2300}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 0.750in\lower\graphtemp\hbox to 0pt{\hss {\bf Transmitter}\hss}}\special{pa 1500 1770}\special{pa 2440 1770}\special{fp}\special{pa 2440 1830}\special{pa 1500 1830}\special{fp}\special{pa 2440 2300}\special{pa 3440 2300}\special{pa 3440 1300}\special{pa 2440 1300}\special{pa 2440 2300}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -2\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Balanced}\hss}}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Tuner}\hss}}\special{pa 2840 1300}\special{pa 2840 200}\special{fp}\special{pa 3040 200}\special{pa 3040 1300}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Balanced Line}\hss}}\special{sh 0.500}\special{pa 2790 1125}\special{pa 3090 1125}\special{pa 3090 1075}\special{pa 2790 1075}\special{pa 2790 1125}\special{fp}\special{sh 0.500}\special{pa 2790 825}\special{pa 3090 825}\special{pa 3090 775}\special{pa 2790 775}\special{pa 2790 825}\special{fp}\special{sh 0.500}\special{pa 2790 525}\special{pa 3090 525}\special{pa 3090 475}\special{pa 2790 475}\special{pa 2790 525}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.600in
+    \rlap{\kern 1.970in\lower\graphtemp\hbox to 0pt{\hss {\bf Coax}\hss}}\hbox{\vrule depth2.300in width0pt height 0pt}\kern 3.440in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure73}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 8}\special{pa 0 3240}\special{pa 1500 3240}\special{pa 1500 2240}\special{pa 0 2240}\special{pa 0 3240}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.740in
+    \rlap{\kern 0.750in\lower\graphtemp\hbox to 0pt{\hss {\bf Transmitter}\hss}}\special{pa 1500 2710}\special{pa 2440 2710}\special{fp}\special{pa 2440 2770}\special{pa 1500 2770}\special{fp}\special{pa 2440 3240}\special{pa 3440 3240}\special{pa 3440 2240}\special{pa 2440 2240}\special{pa 2440 3240}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -2\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.740in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Unbalanced}\hss}}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 2.740in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Tuner}\hss}}\special{pa 2910 2240}\special{pa 2910 1800}\special{fp}\special{pa 2970 1800}\special{pa 2970 2240}\special{fp}\special{pa 2565 1800}\special{pa 3315 1800}\special{pa 3315 1300}\special{pa 2565 1300}\special{pa 2565 1800}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.550in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Balun}\hss}}\special{pa 2840 1300}\special{pa 2840 200}\special{fp}\special{pa 3040 200}\special{pa 3040 1300}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 2.940in\lower\graphtemp\hbox to 0pt{\hss {\bf Balanced Line}\hss}}\special{sh 0.500}\special{pa 2790 1125}\special{pa 3090 1125}\special{pa 3090 1075}\special{pa 2790 1075}\special{pa 2790 1125}\special{fp}\special{sh 0.500}\special{pa 2790 825}\special{pa 3090 825}\special{pa 3090 775}\special{pa 2790 775}\special{pa 2790 825}\special{fp}\special{sh 0.500}\special{pa 2790 525}\special{pa 3090 525}\special{pa 3090 475}\special{pa 2790 475}\special{pa 2790 525}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.540in
+    \rlap{\kern 1.970in\lower\graphtemp\hbox to 0pt{\hss {\bf Coax}\hss}}\graphtemp=.5ex\advance\graphtemp by 2.020in
+    \rlap{\kern 2.640in\lower\graphtemp\hbox to 0pt{\hss {\bf Coax}\hss}}\hbox{\vrule depth3.240in width0pt height 0pt}\kern 3.440in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure158}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 8}\special{pa 0 2300}\special{pa 1500 2300}\special{pa 1500 1300}\special{pa 0 1300}\special{pa 0 2300}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 0.750in\lower\graphtemp\hbox to 0pt{\hss {\bf Transmitter}\hss}}\special{pa 1500 1770}\special{pa 2040 1770}\special{fp}\special{pa 2040 1830}\special{pa 1500 1830}\special{fp}\special{pa 2040 2050}\special{pa 2640 2050}\special{pa 2640 1550}\special{pa 2040 1550}\special{pa 2040 2050}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 2.340in\lower\graphtemp\hbox to 0pt{\hss {\bf Balun}\hss}}\special{pa 2640 1770}\special{pa 3180 1770}\special{fp}\special{pa 3180 1830}\special{pa 2640 1830}\special{fp}\special{pa 3180 2300}\special{pa 4180 2300}\special{pa 4180 1300}\special{pa 3180 1300}\special{pa 3180 2300}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -2\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 3.680in\lower\graphtemp\hbox to 0pt{\hss {\bf Unbalanced}\hss}}\graphtemp=\baselineskip\multiply\graphtemp by 1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 1.800in
+    \rlap{\kern 3.680in\lower\graphtemp\hbox to 0pt{\hss {\bf Tuner}\hss}}\special{pa 3580 1300}\special{pa 3580 200}\special{fp}\special{pa 3780 200}\special{pa 3780 1300}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 3.680in\lower\graphtemp\hbox to 0pt{\hss {\bf Balanced Line}\hss}}\special{sh 0.500}\special{pa 3530 1125}\special{pa 3830 1125}\special{pa 3830 1075}\special{pa 3530 1075}\special{pa 3530 1125}\special{fp}\special{sh 0.500}\special{pa 3530 825}\special{pa 3830 825}\special{pa 3830 775}\special{pa 3530 775}\special{pa 3530 825}\special{fp}\special{sh 0.500}\special{pa 3530 525}\special{pa 3830 525}\special{pa 3830 475}\special{pa 3530 475}\special{pa 3530 525}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.650in
+    \rlap{\kern 1.770in\lower\graphtemp\hbox to 0pt{\hss {\bf Coax}\hss}}\graphtemp=.5ex\advance\graphtemp by 1.650in
+    \rlap{\kern 2.910in\lower\graphtemp\hbox to 0pt{\hss {\bf Coax}\hss}}\hbox{\vrule depth2.300in width0pt height 0pt}\kern 4.180in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure250}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 83 250 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 83 250}\special{pa 583 250}\special{fp}\special{pa 583 500}\special{pa 1583 500}\special{pa 1583 0}\special{pa 583 0}\special{pa 583 500}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.083in\lower\graphtemp\hbox to 0pt{\hss $Z_1=\frac{Z_D+Z_U}{2}$\hss}}\special{pa 1583 250}\special{pa 2083 250}\special{fp}\special{sh 1.000}\special{ar 2083 250 20 20 0 6.28319}\special{pa 2083 250}\special{pa 2583 250}\special{fp}\special{pa 2583 500}\special{pa 3583 500}\special{pa 3583 0}\special{pa 2583 0}\special{pa 2583 500}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 3.083in\lower\graphtemp\hbox to 0pt{\hss $Z_2=\frac{Z_D-Z_U}{2}$\hss}}\special{pa 3583 250}\special{pa 4082 250}\special{fp}\special{sh 1.000}\special{ar 4082 250 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 4.165in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 2083 250}\special{pa 2083 750}\special{fp}\special{pa 1383 1250}\special{pa 2783 1250}\special{pa 2783 750}\special{pa 1383 750}\special{pa 1383 1250}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.000in
+    \rlap{\kern 2.083in\lower\graphtemp\hbox to 0pt{\hss $Z_3=Z_C+\frac{Z_U^2-Z_D^2}{4 Z_D}$\hss}}\special{pa 2083 1250}\special{pa 2083 1750}\special{fp}\special{pa 2083 1750}\special{pa 2083 1875}\special{fp}\special{pa 1999 1875}\special{pa 2166 1875}\special{fp}\special{pa 2027 1896}\special{pa 2138 1896}\special{fp}\special{pa 2047 1917}\special{pa 2118 1917}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.750in
+    \rlap{\kern 2.183in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\hbox{\vrule depth1.917in width0pt height 0pt}\kern 4.165in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3380}%
+$\displaystyle\Omega$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure361}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 145 750}\special{pa 645 750}\special{fp}\special{pa 645 1000}\special{pa 1395 1000}\special{pa 1395 500}\special{pa 645 500}\special{pa 645 1000}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 1.020in\lower\graphtemp\hbox to 0pt{\hss $\frac{Z_D+Z_U}{2}$\hss}}\special{pa 1395 750}\special{pa 1895 750}\special{fp}\special{sh 1.000}\special{ar 1895 750 20 20 0 6.28319}\special{pa 1895 750}\special{pa 2395 750}\special{fp}\special{pa 2395 1000}\special{pa 3145 1000}\special{pa 3145 500}\special{pa 2395 500}\special{pa 2395 1000}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 2.770in\lower\graphtemp\hbox to 0pt{\hss $\frac{Z_D-Z_U}{2}$\hss}}\special{pa 3145 750}\special{pa 3645 750}\special{fp}\special{sh 1.000}\special{ar 3645 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 3.790in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 1895 750}\special{pa 1895 1250}\special{fp}\special{pa 1395 1750}\special{pa 2395 1750}\special{pa 2395 1250}\special{pa 1395 1250}\special{pa 1395 1750}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.500in
+    \rlap{\kern 1.895in\lower\graphtemp\hbox to 0pt{\hss $Z_C+\frac{Z_U^2-Z_D^2}{4 Z_D}$\hss}}\special{pa 1895 1750}\special{pa 1895 2250}\special{fp}\special{pa 1895 2250}\special{pa 1895 2500}\special{fp}\special{pa 1728 2500}\special{pa 2062 2500}\special{fp}\special{pa 1784 2542}\special{pa 2006 2542}\special{fp}\special{pa 1824 2583}\special{pa 1966 2583}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.250in
+    \rlap{\kern 1.795in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\special{pa 145 750}\special{pa 145 250}\special{fp}\special{pa 3645 750}\special{pa 3645 250}\special{fp}\special{pa 3645 250}\special{pa 2145 250}\special{fp}\special{ar 1895 250 250 250 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 2.020in\lower\graphtemp\hbox to 0pt{\hss $-$\hss}}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.770in\lower\graphtemp\hbox to 0pt{\hss $+$\hss}}\special{pa 1645 250}\special{pa 145 250}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 1.895in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}${\rm Generator}$\hbox{$\:$}\hss}}\special{pa 1895 2250}\special{pa 3645 2250}\special{fp}\special{pa 3645 2250}\special{pa 3645 1750}\special{fp}\special{pa 3270 1750}\special{pa 4020 1750}\special{pa 4020 1250}\special{pa 3270 1250}\special{pa 3270 1750}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.500in
+    \rlap{\kern 3.645in\lower\graphtemp\hbox to 0pt{\hss $Z_{\rm Shield}$\hss}}\special{pa 3645 1250}\special{pa 3645 750}\special{fp}\hbox{\vrule depth2.583in width0pt height 0pt}\kern 4.020in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure512}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 145 750}\special{pa 645 750}\special{fp}\special{pa 645 1000}\special{pa 1395 1000}\special{pa 1395 500}\special{pa 645 500}\special{pa 645 1000}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 1.020in\lower\graphtemp\hbox to 0pt{\hss $\frac{Z_D+Z_U}{2}$\hss}}\special{pa 1395 750}\special{pa 1895 750}\special{fp}\special{sh 1.000}\special{ar 1895 750 20 20 0 6.28319}\special{pa 1895 750}\special{pa 2395 750}\special{fp}\special{pa 2395 1000}\special{pa 3145 1000}\special{pa 3145 500}\special{pa 2395 500}\special{pa 2395 1000}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 2.770in\lower\graphtemp\hbox to 0pt{\hss $\frac{Z_D-Z_U}{2}$\hss}}\special{pa 3145 750}\special{pa 3645 750}\special{fp}\special{sh 1.000}\special{ar 3645 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 3.790in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 1895 750}\special{pa 1895 1250}\special{fp}\special{pa 1395 1750}\special{pa 2395 1750}\special{pa 2395 1250}\special{pa 1395 1250}\special{pa 1395 1750}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.500in
+    \rlap{\kern 1.895in\lower\graphtemp\hbox to 0pt{\hss $Z_C+\frac{Z_U^2-Z_D^2}{4 Z_D}$\hss}}\special{pa 1895 1750}\special{pa 1895 2250}\special{fp}\special{pa 1895 2250}\special{pa 1895 2500}\special{fp}\special{pa 1728 2500}\special{pa 2062 2500}\special{fp}\special{pa 1784 2542}\special{pa 2006 2542}\special{fp}\special{pa 1824 2583}\special{pa 1966 2583}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.250in
+    \rlap{\kern 1.795in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\special{pa 145 750}\special{pa 145 250}\special{fp}\special{pa 3645 750}\special{pa 3645 250}\special{fp}\special{pa 3645 250}\special{pa 2145 250}\special{fp}\special{ar 1895 250 250 250 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 2.020in\lower\graphtemp\hbox to 0pt{\hss $-$\hss}}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.770in\lower\graphtemp\hbox to 0pt{\hss $+$\hss}}\special{pa 1645 250}\special{pa 145 250}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 1.895in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}${\rm Generator}$\hbox{$\:$}\hss}}\special{pa 1895 2250}\special{pa 3645 2250}\special{fp}\special{pa 3645 2250}\special{pa 3645 1750}\special{fp}\special{pa 3045 1750}\special{pa 4245 1750}\special{pa 4245 1250}\special{pa 3045 1250}\special{pa 3045 1750}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.500in
+    \rlap{\kern 3.645in\lower\graphtemp\hbox to 0pt{\hss $Z_{\rm Balun}+Z_{\rm Shield}$\hss}}\special{pa 3645 1250}\special{pa 3645 750}\special{fp}\hbox{\vrule depth2.583in width0pt height 0pt}\kern 4.245in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure688}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{pa 0 149}\special{pa 1000 149}\special{fp}\special{pa 1000 349}\special{pa 0 349}\special{fp}\special{ar 1000 249 50 100 0 6.28319}\special{pa 950 249}\special{pa 1250 249}\special{fp}\special{pa 1250 478}\special{pa 1500 478}\special{fp}\special{ar 1563 478 63 63 -3.141593 -0.000000}\special{ar 1688 478 63 63 -3.141593 -0.000000}\special{ar 1813 478 63 63 -3.141593 -0.000000}\special{ar 1938 478 63 63 -3.141593 -0.000000}\special{pa 2000 478}\special{pa 2250 478}\special{fp}\special{pa 1500 312}\special{pa 2000 312}\special{fp}\special{pa 1500 187}\special{pa 2000 187}\special{fp}\special{pa 2250 20}\special{pa 2000 20}\special{fp}\special{ar 1938 20 63 63 -0.000000 3.141593}\special{ar 1813 20 63 63 -0.000000 3.141593}\special{ar 1688 20 63 63 -0.000000 3.141593}\special{ar 1563 20 63 63 -0.000000 3.141593}\special{pa 1500 20}\special{pa 1250 20}\special{fp}\special{pa 1250 249}\special{pa 1250 20}\special{fp}\special{sh 1.000}\special{ar 2250 20 20 20 0 6.28319}\special{sh 1.000}\special{ar 2250 478 20 20 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.249in
+    \rlap{\kern 3.250in\lower\graphtemp\hbox to 0pt{\hss {\bf Balanced Output}\hss}}\special{pa 1000 349}\special{pa 1000 478}\special{fp}\special{pa 1000 478}\special{pa 1500 478}\special{pa 1250 478}\special{fp}\special{pa 2250 478}\special{pa 2250 978}\special{fp}\special{pa 2250 978}\special{pa 2050 978}\special{fp}\special{pa 1300 1228}\special{pa 2050 1228}\special{pa 2050 728}\special{pa 1300 728}\special{pa 1300 1228}\special{fp}\graphtemp=.5ex\advance\graphtemp by 0.978in
+    \rlap{\kern 1.675in\lower\graphtemp\hbox to 0pt{\hss $Z_{\rm Balun}$\hss}}\special{pa 1300 978}\special{pa 1000 978}\special{fp}\special{pa 1000 978}\special{pa 1000 478}\special{pa 1000 349}\special{fp}\hbox{\vrule depth1.228in width0pt height 0pt}\kern 3.250in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlfigureA{figure826}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 145 750}\special{pa 645 750}\special{pa 687 667}\special{pa 770 833}\special{pa 853 667}\special{pa 937 833}\special{pa 1020 667}\special{pa 1103 833}\special{pa 1145 750}\special{pa 1645 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 0.895in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$900~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1645 750 20 20 0 6.28319}\special{pa 1645 750}\special{pa 2145 750}\special{pa 2187 667}\special{pa 2270 833}\special{pa 2353 667}\special{pa 2437 833}\special{pa 2520 667}\special{pa 2603 833}\special{pa 2645 750}\special{pa 3145 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 2.395in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$900~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 3.290in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 1645 750}\special{pa 1645 1250}\special{pa 1728 1292}\special{pa 1562 1375}\special{pa 1728 1458}\special{pa 1562 1542}\special{pa 1728 1625}\special{pa 1562 1708}\special{pa 1645 1750}\special{pa 1645 2250}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.500in
+    \rlap{\kern 1.728in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~-415~\Omega$\hbox{$\:$}\hss}}\special{pa 1645 2250}\special{pa 1645 2500}\special{fp}\special{pa 1478 2500}\special{pa 1812 2500}\special{fp}\special{pa 1534 2542}\special{pa 1756 2542}\special{fp}\special{pa 1574 2583}\special{pa 1716 2583}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.250in
+    \rlap{\kern 1.445in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\special{pa 3145 750}\special{pa 3145 250}\special{fp}\special{pa 3145 250}\special{pa 1895 250}\special{fp}\special{ar 1645 250 250 250 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.770in\lower\graphtemp\hbox to 0pt{\hss $-$\hss}}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.520in\lower\graphtemp\hbox to 0pt{\hss $+$\hss}}\special{pa 1395 250}\special{pa 145 250}\special{fp}\special{pa 145 250}\special{pa 145 750}\special{pa 145 750}\special{fp}\special{pa 1645 2250}\special{pa 3145 2250}\special{fp}\special{pa 3145 2250}\special{pa 3145 1750}\special{fp}\special{pa 3145 1750}\special{pa 3145 1500}\special{pa 3062 1458}\special{pa 3228 1375}\special{pa 3062 1292}\special{pa 3228 1208}\special{pa 3062 1125}\special{pa 3228 1042}\special{pa 3145 1000}\special{pa 3145 750}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.250in
+    \rlap{\kern 3.228in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$4000~\Omega$\hbox{$\:$}\hss}}\special{pa 3145 750}\special{pa 3145 750}\special{fp}\hbox{\vrule depth2.583in width0pt height 0pt}\kern 3.290in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure968}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 667 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 145 667}\special{pa 645 667}\special{fp}\special{pa 645 667}\special{pa 895 667}\special{pa 937 583}\special{pa 1020 750}\special{pa 1103 583}\special{pa 1187 750}\special{pa 1270 583}\special{pa 1353 750}\special{pa 1395 667}\special{pa 1645 667}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.583in
+    \rlap{\kern 1.145in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$900~\Omega$\hbox{$\:$}\hss}}\special{pa 1645 667}\special{pa 2145 667}\special{fp}\special{sh 1.000}\special{ar 2145 667 20 20 0 6.28319}\special{pa 2145 667}\special{pa 2645 667}\special{fp}\special{pa 2645 667}\special{pa 2895 667}\special{pa 2937 583}\special{pa 3020 750}\special{pa 3103 583}\special{pa 3187 750}\special{pa 3270 583}\special{pa 3353 750}\special{pa 3395 667}\special{pa 3645 667}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.583in
+    \rlap{\kern 3.145in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$900~\Omega$\hbox{$\:$}\hss}}\special{pa 3645 667}\special{pa 4145 667}\special{fp}\special{sh 1.000}\special{ar 4145 667 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 4.290in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 2145 667}\special{pa 2145 1167}\special{fp}\special{pa 2145 1167}\special{pa 2145 1417}\special{pa 2228 1458}\special{pa 2062 1542}\special{pa 2228 1625}\special{pa 2062 1708}\special{pa 2228 1792}\special{pa 2062 1875}\special{pa 2145 1917}\special{pa 2145 2167}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.667in
+    \rlap{\kern 2.228in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$-415~\Omega$\hbox{$\:$}\hss}}\special{pa 2145 2167}\special{pa 2145 2667}\special{fp}\special{pa 2145 2667}\special{pa 2145 2917}\special{fp}\special{pa 1978 2917}\special{pa 2312 2917}\special{fp}\special{pa 2034 2958}\special{pa 2256 2958}\special{fp}\special{pa 2074 3000}\special{pa 2216 3000}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.667in
+    \rlap{\kern 1.945in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\special{pa 145 667}\special{pa 145 167}\special{fp}\special{pa 145 167}\special{pa 2095 167}\special{fp}\special{pa 2095 333}\special{pa 2095 0}\special{fp}\special{pa 2195 333}\special{pa 2195 0}\special{fp}\special{pa 2195 167}\special{pa 4145 167}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 2.145in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$-j304~\Omega$\hbox{$\:$}\hss}}\special{pa 4145 167}\special{pa 4145 667}\special{pa 4145 667}\special{fp}\hbox{\vrule depth3.000in width0pt height 0pt}\kern 4.290in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1160}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 167 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.167in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 145 167}\special{pa 495 167}\special{fp}\special{pa 495 333}\special{pa 495 0}\special{fp}\special{pa 595 333}\special{pa 595 0}\special{fp}\special{pa 595 167}\special{pa 945 167}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 0.545in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$-j~148~\Omega$\hbox{$\:$}\hss}}\special{pa 945 167}\special{pa 1095 167}\special{pa 1137 83}\special{pa 1220 250}\special{pa 1303 83}\special{pa 1387 250}\special{pa 1470 83}\special{pa 1553 250}\special{pa 1595 167}\special{pa 1745 167}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.083in
+    \rlap{\kern 1.345in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$25~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1745 167 20 20 0 6.28319}\special{pa 1745 167}\special{pa 1895 167}\special{pa 1937 83}\special{pa 2020 250}\special{pa 2103 83}\special{pa 2187 250}\special{pa 2270 83}\special{pa 2353 250}\special{pa 2395 167}\special{pa 2545 167}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.083in
+    \rlap{\kern 2.145in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$25~\Omega$\hbox{$\:$}\hss}}\special{pa 2545 167}\special{pa 2895 167}\special{fp}\special{pa 2895 333}\special{pa 2895 0}\special{fp}\special{pa 2995 333}\special{pa 2995 0}\special{fp}\special{pa 2995 167}\special{pa 3345 167}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 2.945in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$-j~148~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3345 167 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.167in
+    \rlap{\kern 3.490in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 1745 167}\special{pa 1745 667}\special{fp}\special{pa 1745 1467}\special{pa 1745 1350}\special{fp}\special{ar 1787 1260 100 100 -2.443461 2.007129}\special{ar 1787 1131 100 100 -2.443461 2.443461}\special{ar 1787 1002 100 100 -2.443461 2.443461}\special{ar 1787 874 100 100 -2.007129 2.443461}\special{pa 1745 783}\special{pa 1745 667}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.067in
+    \rlap{\kern 1.887in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~j~74~\Omega$\hbox{$\:$}\hss}}\special{pa 1745 1467}\special{pa 1745 1617}\special{pa 1828 1658}\special{pa 1662 1742}\special{pa 1828 1825}\special{pa 1662 1908}\special{pa 1828 1992}\special{pa 1662 2075}\special{pa 1745 2117}\special{pa 1745 2267}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.867in
+    \rlap{\kern 1.828in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~22.5~\Omega$\hbox{$\:$}\hss}}\special{pa 1745 2267}\special{pa 1745 2517}\special{fp}\special{pa 1578 2517}\special{pa 1912 2517}\special{fp}\special{pa 1634 2558}\special{pa 1856 2558}\special{fp}\special{pa 1674 2600}\special{pa 1816 2600}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.267in
+    \rlap{\kern 1.545in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\hbox{\vrule depth2.600in width0pt height 0pt}\kern 3.490in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1327}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1^\prime$\hbox{$\:$}\hss}}\special{pa 145 750}\special{pa 645 750}\special{pa 687 667}\special{pa 770 833}\special{pa 853 667}\special{pa 937 833}\special{pa 1020 667}\special{pa 1103 833}\special{pa 1145 750}\special{pa 1645 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 0.895in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$25~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1645 750 20 20 0 6.28319}\special{pa 1645 750}\special{pa 2145 750}\special{pa 2187 667}\special{pa 2270 833}\special{pa 2353 667}\special{pa 2437 833}\special{pa 2520 667}\special{pa 2603 833}\special{pa 2645 750}\special{pa 3145 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 2.395in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$25~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 3.290in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2^\prime$\hbox{$\:$}\hss}}\special{pa 1645 750}\special{pa 1645 950}\special{fp}\special{pa 1645 1750}\special{pa 1645 1633}\special{fp}\special{ar 1687 1543 100 100 -2.443461 2.007129}\special{ar 1687 1414 100 100 -2.443461 2.443461}\special{ar 1687 1286 100 100 -2.443461 2.443461}\special{ar 1687 1157 100 100 -2.007129 2.443461}\special{pa 1645 1067}\special{pa 1645 950}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.350in
+    \rlap{\kern 1.787in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~j~74~\Omega$\hbox{$\:$}\hss}}\special{pa 1645 1750}\special{pa 1645 1900}\special{pa 1728 1942}\special{pa 1562 2025}\special{pa 1728 2108}\special{pa 1562 2192}\special{pa 1728 2275}\special{pa 1562 2358}\special{pa 1645 2400}\special{pa 1645 2550}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.150in
+    \rlap{\kern 1.728in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~22.5~\Omega$\hbox{$\:$}\hss}}\special{pa 1645 2550}\special{pa 1645 2800}\special{fp}\special{pa 1478 2800}\special{pa 1812 2800}\special{fp}\special{pa 1534 2842}\special{pa 1756 2842}\special{fp}\special{pa 1574 2883}\special{pa 1716 2883}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.550in
+    \rlap{\kern 1.445in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\special{pa 3145 750}\special{pa 3145 250}\special{fp}\special{pa 3145 250}\special{pa 1895 250}\special{fp}\special{ar 1645 250 250 250 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.770in\lower\graphtemp\hbox to 0pt{\hss $-$\hss}}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.520in\lower\graphtemp\hbox to 0pt{\hss $+$\hss}}\special{pa 1395 250}\special{pa 145 250}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 1.645in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}${\rm Generator}$\hbox{$\:$}\hss}}\special{pa 145 250}\special{pa 145 750}\special{pa 145 750}\special{fp}\special{pa 1645 2550}\special{pa 3145 2550}\special{fp}\special{pa 3145 2550}\special{pa 3145 2050}\special{fp}\special{pa 3145 2050}\special{pa 3145 1800}\special{pa 3062 1758}\special{pa 3228 1675}\special{pa 3062 1592}\special{pa 3228 1508}\special{pa 3062 1425}\special{pa 3228 1342}\special{pa 3145 1300}\special{pa 3145 1050}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.550in
+    \rlap{\kern 3.228in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$4000~\Omega$\hbox{$\:$}\hss}}\special{pa 3145 1050}\special{pa 3145 750}\special{fp}\hbox{\vrule depth2.883in width0pt height 0pt}\kern 3.290in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{figure1526}%
+\begin{figure}
+
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endcsname\graph\fi
+\expandafter\ifx\csname graphtemp\endcsname\relax \csname newdimen\endcsname\graphtemp\fi
+
+\setbox 
+ \graph=\vtop{\vskip 0pt\hbox{\special{pn 11}\special{sh 1.000}\special{ar 145 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 0.000in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$1$\hbox{$\:$}\hss}}\special{pa 945 750}\special{pa 828 750}\special{fp}\special{ar 738 708 100 100 2.268928 6.719518}\special{ar 609 708 100 100 2.268928 7.155850}\special{ar 481 708 100 100 2.268928 7.155850}\special{ar 352 708 100 100 2.705260 7.155850}\special{pa 262 750}\special{pa 145 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.608in
+    \rlap{\kern 0.545in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$j~148~\Omega$\hbox{$\:$}\hss}}\special{pa 945 750}\special{pa 1095 750}\special{pa 1137 667}\special{pa 1220 833}\special{pa 1303 667}\special{pa 1387 833}\special{pa 1470 667}\special{pa 1553 833}\special{pa 1595 750}\special{pa 1745 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 1.345in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$25~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 1745 750 20 20 0 6.28319}\special{pa 1745 750}\special{pa 1895 750}\special{pa 1937 667}\special{pa 2020 833}\special{pa 2103 667}\special{pa 2187 833}\special{pa 2270 667}\special{pa 2353 833}\special{pa 2395 750}\special{pa 2545 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.667in
+    \rlap{\kern 2.145in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$25~\Omega$\hbox{$\:$}\hss}}\special{pa 2545 750}\special{pa 2895 750}\special{fp}\special{pa 2895 917}\special{pa 2895 583}\special{fp}\special{pa 2995 917}\special{pa 2995 583}\special{fp}\special{pa 2995 750}\special{pa 3345 750}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.583in
+    \rlap{\kern 2.945in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$-j~148~\Omega$\hbox{$\:$}\hss}}\special{sh 1.000}\special{ar 3345 750 20 20 0 6.28319}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.750in
+    \rlap{\kern 3.490in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}$2$\hbox{$\:$}\hss}}\special{pa 1745 750}\special{pa 1745 1250}\special{fp}\special{pa 1745 2050}\special{pa 1745 1933}\special{fp}\special{ar 1787 1843 100 100 -2.443461 2.007129}\special{ar 1787 1714 100 100 -2.443461 2.443461}\special{ar 1787 1586 100 100 -2.443461 2.443461}\special{ar 1787 1457 100 100 -2.007129 2.443461}\special{pa 1745 1367}\special{pa 1745 1250}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.650in
+    \rlap{\kern 1.887in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~j~74~\Omega$\hbox{$\:$}\hss}}\special{pa 1745 2050}\special{pa 1745 2200}\special{pa 1828 2242}\special{pa 1662 2325}\special{pa 1828 2408}\special{pa 1662 2492}\special{pa 1828 2575}\special{pa 1662 2658}\special{pa 1745 2700}\special{pa 1745 2850}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.450in
+    \rlap{\kern 1.828in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$~~22.5~\Omega$\hbox{$\:$}\hss}}\special{pa 1745 2850}\special{pa 1745 3100}\special{fp}\special{pa 1578 3100}\special{pa 1912 3100}\special{fp}\special{pa 1634 3142}\special{pa 1856 3142}\special{fp}\special{pa 1674 3183}\special{pa 1816 3183}\special{fp}\graphtemp=.5ex\advance\graphtemp by 2.850in
+    \rlap{\kern 1.545in\lower\graphtemp\hbox to 0pt{\hss 3\hss}}\special{pa 3345 750}\special{pa 3345 250}\special{fp}\special{pa 3345 250}\special{pa 1995 250}\special{fp}\special{ar 1745 250 250 250 0 6.28319}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.870in\lower\graphtemp\hbox to 0pt{\hss $-$\hss}}\graphtemp=.5ex\advance\graphtemp by 0.250in
+    \rlap{\kern 1.620in\lower\graphtemp\hbox to 0pt{\hss $+$\hss}}\special{pa 1495 250}\special{pa 145 250}\special{fp}\graphtemp=\baselineskip\multiply\graphtemp by -1\divide\graphtemp by 2
+    \advance\graphtemp by .5ex\advance\graphtemp by 0.000in
+    \rlap{\kern 1.745in\lower\graphtemp\hbox to 0pt{\hss \hbox{$\:$}${\rm Generator}$\hbox{$\:$}\hss}}\special{pa 145 250}\special{pa 145 750}\special{pa 145 750}\special{fp}\special{pa 1745 2850}\special{pa 3345 2850}\special{fp}\special{pa 3345 2850}\special{pa 3345 2350}\special{fp}\special{pa 3345 2350}\special{pa 3345 2100}\special{pa 3262 2058}\special{pa 3428 1975}\special{pa 3262 1892}\special{pa 3428 1808}\special{pa 3262 1725}\special{pa 3428 1642}\special{pa 3345 1600}\special{pa 3345 1350}\special{fp}\graphtemp=.5ex\advance\graphtemp by 1.850in
+    \rlap{\kern 3.428in\lower\graphtemp\hbox to 0pt{\hbox{$\:$}$4000~\Omega$\hbox{$\:$}\hss}}\special{pa 3345 1350}\special{pa 3345 750}\special{fp}\hbox{\vrule depth3.183in width0pt height 0pt}\kern 3.490in
+  }}\centerline{\box\graph}\end{figure}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline3419}%
+$\sqrt{25^2+148^2}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+\stepcounter{section}
+\stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3435}%
+$\displaystyle{\frac{4 Z_a^2 Z_b^2 Z_C}{S}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3436}%
+$\displaystyle{\frac{4 Z_C^2 Z_a Z_b (Z_a-Z_b)}{S}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3442}%
+$\displaystyle{\frac{4 Z_a Z_C}{4 Z_C - Z_a}}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>6 Effects of Amplitude Variations and Component Tolerances
+</TITLE>
+<META NAME="description" CONTENT="6 Effects of Amplitude Variations and Component Tolerances
+">
+<META NAME="keywords" CONTENT="phase">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="phase.css">
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="phase.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html107"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html104"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html98"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html106"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html108"
+ HREF="node8.html">7 Conclusion</A>
+<B> Up:</B> <A NAME="tex2html105"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html99"
+ HREF="node6.html">5 Optimizing the Sideband</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00070000000000000000">
+6 
+Effects of Amplitude Variations and Component Tolerances
+</A>
+</H1>
+<A NAME="sec6">&#160;</A>
+So far, I have only looked at the relative phase shift of the
+two outputs. To have a high quality audio signal, the network
+must have a flat output. Usually, this is handled by constructing
+an all pass network. Since the HA5WH network is not an all pass
+form, we must examine its attenuation as a function
+of frequency. In figs. <A HREF="node7.html#f3">3</A>, <A HREF="node7.html#f4">4</A>, and <A HREF="node7.html#f5">5</A>,
+I plot the sideband suppression, and the amplitude and phase variations
+of one of the output signals,
+respectively for the optimal 4, 6, and 8 section filters designed
+for the frequency range 300 Hz to 3000 Hz with equal value
+resistors. The network sections
+are ordered from largest RC value to smallest as in the original
+HA5WH design. As shown,
+the amplitude variations are less than   <IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.gif"
+ ALT="$\pm$"> 1<I>dB</I> , the phase
+variation is smooth, and the sideband
+suppression is of the equal ripple form as expected.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f3">&#160;</A><A NAME="1497">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 3:</STRONG>
+Ratio of the magnitude of the unwanted to wanted sideband for the
+4, 6, and 8 optimal Chebychev networks for the frequency range
+300 Hz to 3000Hz.</CAPTION>
+<TR><TD><IMG WIDTH="652" HEIGHT="413"
+ SRC="img141.gif"
+ ALT="\begin{figure}
+\rotatebox {270}{\includegraphics[width=100mm]{fig3.ps}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f4">&#160;</A><A NAME="1503">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 4:</STRONG>
+Relative amplitude of one output signal
+for the 
+4, 6, and 8 optimal Chebychev networks for the frequency range
+300 Hz to 3000Hz.</CAPTION>
+<TR><TD><IMG WIDTH="652" HEIGHT="413"
+ SRC="img142.gif"
+ ALT="\begin{figure}
+\rotatebox {270}{\includegraphics[width=100mm]{fig4.ps}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f5">&#160;</A><A NAME="1509">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 5:</STRONG>
+The phase shift of one output signal 
+for the 
+4, 6, and 8 optimal Chebychev networks for the frequency range
+300 Hz to 3000Hz.</CAPTION>
+<TR><TD><IMG WIDTH="652" HEIGHT="413"
+ SRC="img143.gif"
+ ALT="\begin{figure}
+\rotatebox {270}{\includegraphics[width=100mm]{fig5.ps}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+One of the main selling points of the handbook description of this
+network is the claim that low tolerance components can be used
+to obtain a high performance network. From the analysis of section <A HREF="node6.html#sec5">5</A>,
+if cyclic symmetry is maintained, the network will perform
+perfectly at the n selected frequencies corresponding to 
+<!-- MATH: f = 1/(2 \pi R C) -->
+ <I>f</I> = 1/(2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img144.gif"
+ ALT="$\pi$"><I>RC</I>) 
+for each network section. Since matching components is generally easier
+than measuring their values accurately, I examine the effect of a change
+of these node frequencies caused by perfectly matched, but low tolerance
+components. Since both the resistors and capacitors can vary, using
+10 percent components can vary the nodal frequency values by approximately
+20 percent if both components change value in the same direction.
+A worst case condition would be for all the sections to have too high
+or too low of a frequency by 20 percent. This simply shifts the network
+center frequency by 20 percent. For the optimal 6 section filter from 300 Hz
+to 3000 Hz, this changes the sideband suppression from over 60 dB to about
+42 dB. If a 10 percent variation of network node frequencies is assumed,
+that is 5 percent components,
+and again all the frequency changes are assumed to be in the same
+direction, the suppression is nearly 50 dB. This shows that
+relatively low tolerance but <EM>well matched</EM> components can give
+excellent results. Eq. <A HREF="node5.html#eq26">31</A> can be easily used to predict the
+effect of changing the  <I>RC</I>  values of each filter section due to
+component tolerances when the components are perfectly matched in
+each section.
+<P>
+The case where unmatched  <I>R</I>  and  <I>C</I>  values in each section are used
+is of course the one with the most practical interest. Here, we
+can get an idea of what the worst case possibilities are by looking
+at the cross terms between  <IMG WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.gif"
+ ALT="$\psi_{a}^{}$">  and  <IMG WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.gif"
+ ALT="$\psi_{b}^{}$">  when the M
+matrices are no longer cyclic. Typical terms give contributions like,
+<P ALIGN="CENTER"><A NAME="eq28">&#160;</A>
+<!-- MATH: \left ( \frac{1}{R_1}+\frac{1}{R_3} \right )
+- \left ( \frac{1}{R_2}+\frac{1}{R_4} \right )  ,
+ -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="124" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.gif"
+ ALT="$\displaystyle\left ( \frac{1}{R_1}+\frac{1}{R_3} \right)-$"><IMG WIDTH="114" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.gif"
+ ALT="$\displaystyle\left ( \frac{1}{R_2}+\frac{1}{R_4} \right),$"> 
+</TD><TD ALIGN="CENTER">(29)
+</TD></TR></TABLE></P>
+or
+<P ALIGN="CENTER"><A NAME="eq29">&#160;</A>
+<!-- MATH: \omega (C_1 + C_3) - \omega (C_2+C_4) -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img149.gif"
+ ALT="$\displaystyle\omega$">(<I>C</I><SUB>1</SUB> + <I>C</I><SUB>3</SUB>) - <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.gif"
+ ALT="$\displaystyle\omega$">(<I>C</I><SUB>2</SUB> + <I>C</I><SUB>4</SUB>) 
+</TD><TD ALIGN="CENTER">(30)
+</TD></TR></TABLE></P>
+where here the subscripts 1,2,3,4 indicate the position in the
+network section as in fig. <A HREF="node4.html#f2">2</A>.
+This indicates that a single section with a tolerance t (t = 0.1 would
+be 10 percent tolerance) can reduce the overall suppression to roughly
+
+<!-- MATH: 20\log_{10}(t) -->
+ 20<IMG WIDTH="44" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.gif"
+ ALT="$\log_{10}^{}$">(<I>t</I>)  dB. That is 10 percent components could give
+suppressions as low as 20 dB, and 1 percent components as low as 40 dB
+if the components in a network section are not matched. Notice that
+to be sure to obtain 60 dB opposite sideband attenuation, components
+with short and long term tolerances of 0.1 percent would need to be used.
+<P>
+As a concrete example of this sensitivity to unmatched components,
+I calculated the 
+the suppression of the original HA5WH 6 section filter
+for the case where only the resistors in the last section have
+been changed by 10 percent.  <I>R</I><SUB>1</SUB>  and  <I>R</I><SUB>3</SUB>  have been raised by
+10 percent, and  <I>R</I><SUB>2</SUB>  and  <I>R</I><SUB>4</SUB>  have been lowered by 10 percent.
+For ideal components, the suppression is greater than 57 dB. Changing
+just the resistors in the last section reduces the suppression to
+26 dB, in rough agreement with the simple calculation above. Using
+these results to try to cook up a near worst case, I tried changing
+all the resistors in exactly the same manner in each section.
+In addition I changed all the capacitors by making raising
+the  <I>C</I><SUB>2</SUB>  and  <I>C</I><SUB>4</SUB>  values by 10 percent and lowering the  <I>C</I><SUB>1</SUB>  and
+ <I>C</I><SUB>3</SUB>  values by 10 percent. The result was to further lower the
+unwanted sideband suppression to about 17 dB. Clearly, 10 percent
+components and bad luck will produce an unacceptable sideband
+suppression.
+<P>
+One last comment on the handbook circuit is the design
+of operational amplifier circuit for the output. One section of
+this circuit is shown in fig. <A HREF="node7.html#f7">6</A>. All the resistors
+have the same value in the handbook circuit.
+This does not
+give a balanced output, and would be another source of phasing
+errors. If  I assume that the operational amplifier input impedances
+are very large, the input impedance at point 2 is clearly  2<I>R</I><SUB>2</SUB> .
+The voltage at the noninverting input is therefore  <I>V</I><SUB>2</SUB>/2 .
+The current drawn from input 1 is therefore 
+<!-- MATH: \frac{V_1 - V_2/2}{R_1} -->
+ <IMG WIDTH="63" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.gif"
+ ALT="${\frac{V_1 - V_2/2}{R_1}}$"> ,
+and since  <I>V</I><SUB>1</SUB> = - <I>V</I><SUB>2</SUB>  with perfect phasing, the impedance seen
+at input 1 is  1.5<I>R</I><SUB>1</SUB> . So  2<I>R</I><SUB>2</SUB>  should be equal to  1.5<I>R</I><SUB>1</SUB> ,
+and in addition, dc balancing of the operational amplifiers may
+be required to compensate for input bias current. For the handbook
+circuit, the unbalanced output resistance reduces the sideband
+suppression even in the ideal component case to about 35 dB.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="f7">&#160;</A><A NAME="1535">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Figure 6:</STRONG>
+The schematic diagram of one operational amplifier section.</CAPTION>
+<TR><TD><IMG WIDTH="432" HEIGHT="298"
+ SRC="img153.gif"
+ ALT="\begin{figure}
+\expandafter\ifx\csname graph\endcsname\relax \csname newbox\endc...
+ ...2.467in width0pt height 0pt}\kern 3.570in
+ }}\centerline{\box\graph}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P><EM>Note Added after original publication</EM> as mentioned in the errata,
+the above paragraph is incorrect. The original circuit will work
+fine. The circuit with the resistor ratio of 4/3 also works.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html107"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html104"
+ HREF="phase.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html98"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html106"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html108"
+ HREF="node8.html">7 Conclusion</A>
+<B> Up:</B> <A NAME="tex2html105"
+ HREF="phase.html">Originally published in August</A>
+<B> Previous:</B> <A NAME="tex2html99"
+ HREF="node6.html">5 Optimizing the Sideband</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

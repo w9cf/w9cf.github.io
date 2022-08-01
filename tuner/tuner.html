@@ -1,0 +1,78 @@
+<html>
+<head>
+<title> T-Network Tuner Simulation</title>
+</head>
+<body>
+<center>
+A T-Network Tuner Simulator, Kevin Schmidt, W9CF
+</center>
+
+<p>
+This is a simulator for the popular, series capacitor, parallel inductor
+T-network tuners. The three knobs across the bottom adjust the three
+components. They can be turned by moving your mouse to a knob,
+click and hold down the mouse button and drag the mouse around the outside
+of the knob. The knob should turn. The capacitor knobs have 10 turns
+between stops, and the coil knob has 30 turns between stops.
+</p>
+
+<applet code="Tuner.class" width=650 height=434 archive="tuner.jar">
+No java
+</applet>
+<p>
+The SWR is shown both digitally in the upper left and on the SWR meter.
+The loss in the tuner is shown as a percentage of input power and the
+equivalent loss in decibels. Clicking the autotune button will attempt
+to have your computer calculate values of the components
+that should perfectly match the load and give low loss in the network
+assuming that the capacitors
+have much higher Q than the coil.
+<p>
+The autotune algorithm tries to
+minimize the inductance used by first
+finding a starting match by setting one of the capacitors
+to its maximum value and if that fails it tries each of the components
+at its current value. If no initial match is found, it gives up
+and a "Tune Failed" will be written in the message panel.
+If a starting match is found, a binary chop is done between the starting
+inductance value and zero to find the smallest inductance consistent
+with a match. Note it is straightforward to program a search algorithm
+that finds the minimum loss, but since our tuners don't come with a loss
+meter, a rule like tune for minimum inductance is much more useful.
+In any case, the Q of real components changes as they are adjusted.
+<p>
+The Set Up button allows you to change
+the maximum values of the three components and their Q values. Initially
+the capacitors are 250 pF, Q=2000 and the coil is 30 microH, with Q=100.
+</p>
+<p>
+The three fields on the right allow you to change the load and the
+frequency in MHz.
+</p>
+<p>
+One way to use this applet is to pick a load resistance and reactance,
+and then adjust the knobs of the tuner for a match as you would do
+on a real tuner. Note the percent loss in the tuner for your adjustment
+and then click the autotune button to see if the computer adjusts
+the tuner for less loss.
+<p>
+Note, if you are looking for design software for optimal networks with well
+characterized components, please look elsewhere.
+<p>
+To run this locally, you can download the file
+<a href=tuner.jar>tuner.jar</a> and the file you are looking at
+<a href=tuner.html>tuner.html</a> into any convenient directory
+and point your browser at the tuner.html file. Old browsers may
+require you to unzip the tuner.jar file in that directory (Jar files
+are just zip files with an extra file that describes the contents).
+Alternatively, you can run this as a Java application if you have
+a java runtime environment installed.
+</p>
+<p>
+Java Source code for the applet is distributed under the GNU general
+public license. The source
+is available in <a href=tunersrc.zip>tunersrc.zip</a>.
+<p>
+Back to <a href=../index.html>W9CF home</a>
+</body>
+</html>

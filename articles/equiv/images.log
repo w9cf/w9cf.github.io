@@ -1,0 +1,243 @@
+This is TeX, Version 3.14159 (C version 6.1) (format=latex 97.10.4)  21 DEC 1998 18:37
+**./images.tex
+(images.tex
+LaTeX2e <1996/12/01>
+Babel <v3.6h> and hyphenation patterns for american, german, italian, loaded.
+
+(/usr/lib/texmf/texmf/tex/latex/base/article.cls
+Document Class: article 1996/10/31 v1.3u Standard LaTeX document class
+(/usr/lib/texmf/texmf/tex/latex/base/size12.clo
+File: size12.clo 1996/10/31 v1.3u Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/lib/texmf/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1996/10/31 v1.0c Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/lib/texmf/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1995/09/21 v1.09 key=value parser (DPC)
+) (/usr/lib/texmf/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1996/10/31 v1.0c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/lib/texmf/texmf/tex/latex/graphics/trig.sty
+Package: trig 1994/10/16 v1.08 sin cos tan (DPC)
+) (/usr/lib/texmf/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 82.
+(/usr/lib/texmf/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1996/12/12 v3.0d Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/lib/texmf/texmf/tex/latex/latex2html/html.sty
+Package: html 1996/12/22 v1.1 hypertext commands for latex2html (nd, hws, rrm)
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@lsection=\count89
+\c@lsubsection=\count90
+\c@lsubsubsection=\count91
+\c@lparagraph=\count92
+\c@lsubparagraph=\count93
+\c@lequation=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+)
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=664.50787pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00002pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=5.69054pt
+latex2htmlLength oddsidemargin=-28.45274pt
+latex2htmlLength evensidemargin=-28.45274pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 86.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 86.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 86.
+l2hSize :tex2html_wrap_indisplay393:13.28476pt::13.28476pt::97.79153pt.
+[1
+
+
+]
+l2hSize :tex2html_wrap_indisplay400:17.62836pt::17.62836pt::28.9847pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_indisplay401:16.4514pt::16.4514pt::8.27493pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_indisplay402:14.11122pt::14.11122pt::10.00002pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_indisplay403:8.55331pt::0.0pt::5.62148pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_indisplay404:17.62836pt::17.62836pt::39.86314pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_indisplay406:8.33331pt::0.0pt::5.65407pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_indisplay407:14.11122pt::14.11122pt::10.00002pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_indisplay408:8.55331pt::0.0pt::5.62148pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_indisplay409:8.55331pt::0.0pt::5.62148pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline411:7.75pt::0.0pt::7.10896pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_inline413:8.33331pt::0.0pt::5.65407pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline415:12.85004pt::12.85004pt::59.23567pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline418:8.33331pt::0.0pt::5.65407pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline419:7.75pt::0.0pt::7.10896pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_indisplay423:9.88034pt::9.88034pt::23.22525pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_indisplay424:17.62836pt::17.62836pt::69.35251pt.
+[17
+
+
+]
+File: equiv.fig2 Graphic file (type eps)
+<equiv.fig2>
+l2hSize :figure48:216.81pt::0.0pt::349.0pt.
+[18
+
+
+]
+File: equiv.fig3 Graphic file (type eps)
+<equiv.fig3>
+l2hSize :figure54:216.81pt::0.0pt::349.0pt.
+[19
+
+
+]
+File: equiv.fig4 Graphic file (type eps)
+<equiv.fig4>
+l2hSize :figure71:216.81pt::0.0pt::349.0pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_indisplay437:7.75pt::0.0pt::7.54993pt.
+[21
+
+
+]
+l2hSize :tex2html_wrap_indisplay438:15.0001pt::15.0001pt::127.51935pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_inline440:7.75pt::0.0pt::7.54993pt.
+[23
+
+
+]
+l2hSize :tex2html_wrap_inline443:7.75pt::0.0pt::7.54993pt.
+[24
+
+
+]
+l2hSize :tex2html_wrap_inline456:7.75pt::0.0pt::7.09578pt.
+[25
+
+
+]
+l2hSize :tex2html_wrap_inline459:7.75pt::0.0pt::12.00003pt.
+[26
+
+
+]
+l2hSize :tex2html_wrap_inline461:7.75pt::0.0pt::12.00003pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline463:7.75pt::0.0pt::12.00003pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_indisplay473:13.28476pt::13.28476pt::74.9029pt.
+[29
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 794 strings out of 10902
+ 8527 string characters out of 72114
+ 52294 words of memory out of 262141
+ 3693 multiletter control sequences out of 9500
+ 6376 words of font info for 23 fonts, out of 150000 for 255
+ 14 hyphenation exceptions out of 607
+ 25i,4n,21p,312b,352s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on images.dvi (29 pages, 5112 bytes).

@@ -1,0 +1,54 @@
+<!-- @(#)Sinusoids.html	1.13 10/13/97 -->
+<html>
+<head>
+<title>Sinusoids</title>
+</head>
+<body bgcolor="#faf0e6">
+<h1>Plot data generated in Java</h1>
+<hr>
+The plot below shows a collection
+of sinusoids plotted with each sample explicitly shown with a
+vertical line.
+Like the <a href="FourierSeries.html">Fourier series demo</a>,
+this one uses Java code to compute the data on the fly.
+<p>
+<applet name="Sinusoids" code="ptplot.demo.PlotDemo" width=400 height=200
+    codebase="../.."
+    archive="ptplot/ptplot.zip"
+    alt="If you had a java-enabled browser, you would see an applet here."
+>
+<param name="background" value="faf0e6">
+   <hr>If your browser recognized the applet tag,
+    you would see an applet here.<hr>
+</applet>
+<p>
+The <a href="PlotDemo.java">source code</a>
+defines a class <code>PlotDemo</code>
+derived from <code>Plot</code>.  This class contains a sequence of Java
+statements in its <code>init()</code> method that configures and constructs
+the plot.  This particular example also demonstrates a number of features.
+In particular, 
+the X and Y ranges are given explicitly in the Java code,
+but note that the Y (vertical) range
+is insufficient to contain all the points.
+The lines are clipped at the boundary of the range.
+Clicking on the "fill" button at the upper right brings all data within range.
+Note further that the Y axis is labeled with explicitly given tick marks,
+this time placed at non-integer positions, and again given string labels.
+Notice also that the "impulses" feature is turned on, causing a line to drawn
+from each plotted point down to the x axis.
+This provides an alternative way to explicitly show each sample
+being plotted (vs. marks as in the
+<A HREF="Marks.html">marks demo</A>).
+<HR>
+<A HREF="index.html">Up</A> to the Example index -
+<A HREF="Marks.html">Back</A> to a black and white plot using unique marks -
+<A HREF="BarGraph.html">Forward</A> to a bar graph
+<HR>
+Copyright &#169 1997, The Regents of the University of California.
+All rights reserved.
+<br>
+Last updated: 10/13/97,
+comments to: <author>eal@eecs.berkeley.edu</author>
+</body>
+</html>

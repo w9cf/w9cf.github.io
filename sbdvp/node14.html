@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>13 Memory management</TITLE>
+<META NAME="description" CONTENT="13 Memory management">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html194"
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html191"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html185"
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html193"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html195"
+ HREF="node15.html">14 Program internal operation</A>
+<B> Up:</B> <A NAME="tex2html192"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html186"
+ HREF="node13.html">12 Windows Operation</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION000140000000000000000">
+13 Memory management</A>
+</H1>
+<P>
+SBDVP.EXE uses an extended memory handle for every audio file.
+The number of extended memory handles can be increased
+up to a maximum of 128 by using /NUMHANDLES=128 as a parameter
+when installing HIMEM.SYS in your CONFIG.SYS file. The default
+number is 32, and some of these may be used by other
+drivers etc. that use extended memory. It costs 6 bytes of conventional
+memory per
+handle. Although TR has about 30 default file names, you will
+probably only use 
+a CQ and a few default exchanges. If the small number of available
+file handles  
+becomes a problem the code can be rewritten.
+Eventually, if I get time,
+I'll change to using a single extended memory handle.
+Internally SBDVP
+has a limit of 40 audio file names set by the parameter MAXFILES.
+This can trivially increased and the code recompiled if needed.
+<P>
+Every time you choose to record a function, the following steps are
+taken.
+<DL COMPACT>
+<DT>1.
+<DD>If audio for the function exists, its extended memory handle is freed.
+<DT>2.
+<DD>A new extended memory handle is allocated with the maximum
+amount of contiguous free extended memory. This allows the recording
+to be as large as possible.
+<DT>3.
+<DD>When the recording is stopped by hitting escape, the extended
+memory associated with the file is truncated to the length of
+the recording.
+</DL>
+<P>
+The audio data is written to your hard disk only when you unload
+SBDVP using
+<BR>
+SBDVP -u
+<BR>
+The file name will be the file name used by TR when the audio was
+recorded.
+<P>
+Neither SBDVP.EXE or the HIMEM.SYS driver does anything very clever,
+so if
+you make a lot of rerecordings, you can fragment your extended memory
+space so that a recording cannot be as large as the amount of
+free extended memory.
+As an example, assume you have 4 functions recorded each
+using 100Kbytes,
+and you have 1 Megabyte of extended memory total. If you decide
+to rerecord the second file, it will free up the block of 100Kbytes,
+and then allocate the largest block of contiguous extended memory, which will
+be the 600Kbytes at the top of extended memory. If the new recording
+takes 100Kbytes, the memory will look like 100K for file 1, 100K free,
+300K for files 3,4 and the new number 2, and finally 500K free.
+The largest contiguous free block is now 500K. Continued random rerecording
+will further fragment the extended memory. If this becomes a
+problem, a work around is to exit TR, unload SBDVP using the
+command SBDVP -U, and then rerun SBDVP using SBDVPCFG.DAT 
+with the list of files you want.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html194"
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html191"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html185"
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html193"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html195"
+ HREF="node15.html">14 Program internal operation</A>
+<B> Up:</B> <A NAME="tex2html192"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html186"
+ HREF="node13.html">12 Windows Operation</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

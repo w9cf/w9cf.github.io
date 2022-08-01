@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>7 Appendix: Measuring ZD , ZC , and ZU </TITLE>
+<META NAME="description" CONTENT="7 Appendix: Measuring ZD , ZC , and ZU ">
+<META NAME="keywords" CONTENT="balun">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="balun.css">
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="balun.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html121"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html118"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html112"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html120"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html122"
+ HREF="node9.html">References</A>
+<B> Up:</B> <A NAME="tex2html119"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html113"
+ HREF="node7.html">6 Conclusion</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00080000000000000000">
+7 Appendix: Measuring  <I>Z</I><SUB>D</SUB> ,  <I>Z</I><SUB>C</SUB> , and  <I>Z</I><SUB>U</SUB> </A>
+</H1>
+<P>
+To measure the differential  <I>Z</I><SUB>D</SUB> , common mode  <I>Z</I><SUB>C</SUB> , and
+unbalanced  <I>Z</I><SUB>U</SUB>  impedances, you need an rf impedance measuring
+instrument like an impedance bridge, noise bridge, vector voltmeter,
+or network analyzer. For high frequency work I use an old General
+Radio GR821A twin-T admittance measuring circuit. The main disadvantage
+of using an old piece of gear like this is that it is slow. The main
+advantage is that they can be found for very little money, and they measure
+impedance from 0.4 to 40 MHz.
+For these measurements, the case of the GR821A is the
+``ground.'' I normally set it on the operating desk with a strap
+to the same safety ground point that the transmitter connects to.
+The GR821A measures admittance, and requires corrections to the
+measured values as described in its manual. The GR821A easily
+measures high impedances, but low impedance values
+are often outside its range and require the use
+of a series capacitor to bring the impedance into range. The impedance
+of the capacitor can then be subtracted off. The inclusion of the
+corrections, and conversion from admittance to impedance is conveniently
+done using a programmable calculator or the shack computer.
+I have written a web based applet that does this. It is available
+at <A NAME="tex2html1"
+ HREF="http://fermi.la.asu.edu/w9cf">http://fermi.la.asu.edu/w9cf</A>
+, and will run within any Java activated
+web browser.
+Many hams have noise bridges, and these can be used if they are
+fairly accurate. To measure high impedances, they will generally require
+the addition of a shunt capacitor to bring the impedance into the range
+of the bridge. Again a programmable calculator or computer is
+handy to do the needed calculations to get the correct impedance.
+<P>
+I measure  <I>Z</I><SUB>C</SUB>  by connecting both leads
+of the twinlead together and measuring the impedance to ground.
+Next I connect wire 2 to ground and measure the impedance between
+wire 1 and ground and call this  <I>Z</I><SUB>a</SUB> .  Reversing the connections,
+by grounding wire 1 and measuring between wire 2 and ground gives
+ <I>Z</I><SUB>b</SUB> .
+<P>
+A straightforward application of circuit theory gives the equations:
+<BR>
+
+<!-- MATH: Z_D &=& \frac{4 Z_a^2 Z_b^2 Z_C}{S}\nonumber\\Z_U &=& \frac{4 Z_C^2 Z_a Z_b (Z_a-Z_b)}{S} -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>Z</I><SUB>D</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="88" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\displaystyle{\frac{4 Z_a^2 Z_b^2 Z_C}{S}}$"> 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>Z</I><SUB>U</SUB> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<IMG WIDTH="165" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\displaystyle{\frac{4 Z_C^2 Z_a Z_b (Z_a-Z_b)}{S}}$"> 
+</TD><TD ALIGN="RIGHT">(1)</TD></TR>
+</TABLE></DIV>
+where  <I>S</I>  stands for the expression
+<BR>
+
+<!-- MATH: S &=&
+Z_a Z_C (2 Z_b^2 - Z_a Z_C)
++Z_a Z_b (2 Z_C^2 - Z_a Z_b) \nonumber\\&+&Z_b Z_C (2 Z_a^2 - Z_b Z_C).
+ -->
+
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+<I>S</I> 
+</TD><TD ALIGN="CENTER" NOWRAP>
+ = 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<I>Z</I><SUB>a</SUB><I>Z</I><SUB>C</SUB>(2<I>Z</I><SUB>b</SUB><SUP>2</SUP> - <I>Z</I><SUB>a</SUB><I>Z</I><SUB>C</SUB>) + <I>Z</I><SUB>a</SUB><I>Z</I><SUB>b</SUB>(2<I>Z</I><SUB>C</SUB><SUP>2</SUP> - <I>Z</I><SUB>a</SUB><I>Z</I><SUB>b</SUB>) 
+</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+&nbsp;
+</TD><TD ALIGN="CENTER" NOWRAP>
+ + 
+</TD><TD ALIGN="LEFT" NOWRAP>
+<I>Z</I><SUB>b</SUB><I>Z</I><SUB>C</SUB>(2<I>Z</I><SUB>a</SUB><SUP>2</SUP> - <I>Z</I><SUB>b</SUB><I>Z</I><SUB>C</SUB>). 
+</TD><TD ALIGN="RIGHT">(2)</TD></TR>
+</TABLE></DIV>
+<P>
+If  <I>Z</I><SUB>a</SUB> = <I>Z</I><SUB>b</SUB> , the system is balanced and  <I>Z</I><SUB>U</SUB>  is zero.
+In that case, the expression for the differential mode impedance
+also simplifies to
+<P ALIGN="CENTER">
+<!-- MATH: Z_D = \frac{4 Z_a Z_C}{4 Z_C - Z_a}~~~{\rm only\ when}~~~Z_a=Z_b -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
+<I>Z</I><SUB>D</SUB> = <IMG WIDTH="88" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\displaystyle{\frac{4 Z_a Z_C}{4 Z_C - Z_a}}$">&nbsp;&nbsp;&nbsp;<I>only</I> <I>when</I> &nbsp;&nbsp;&nbsp;<I>Z</I><SUB>a</SUB> = <I>Z</I><SUB>b</SUB> 
+</TD><TD ALIGN="CENTER">(3)
+</TD></TR></TABLE></P>
+<P>
+Obviously, the calculations above are tedious unless a programmable calculator
+or a computer program are used.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html121"
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html118"
+ HREF="balun.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html112"
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html120"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html122"
+ HREF="node9.html">References</A>
+<B> Up:</B> <A NAME="tex2html119"
+ HREF="balun.html">Putting a Balun and</A>
+<B> Previous:</B> <A NAME="tex2html113"
+ HREF="node7.html">6 Conclusion</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>

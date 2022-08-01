@@ -1,0 +1,2687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>An ultimatic adapter for iambic keyers</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html --> 
+<meta name="src" content="ultimatic.tex"> 
+<meta name="date" content="2008-12-12 20:49:00"> 
+<link rel="stylesheet" type="text/css" href="ultimatic.css"> 
+</head><body 
+>
+  <div class="maketitle">
+
+
+
+<h2 class="titleHead">An ultimatic adapter for iambic keyers</h2>
+<div class="author" ><span 
+class="cmr-12x-x-120">Kevin E. Schmidt, W9CF</span>
+<br />   <span 
+class="cmr-12x-x-120">6510 S. Roosevelt St.</span>
+<br />     <span 
+class="cmr-12x-x-120">Tempe, AZ 85283</span>
+<br />       <span 
+class="cmr-12x-x-120">w9cf@arrl.net</span>
+<br />               </div>
+<br />
+<div class="date" ></div>
+  </div>
+  <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 24--><p class="noindent" >A few years ago, my daughter Rebecca, KE7TEK, and I put together an Elecraft K2 kit.
+A great resource for any rig is the users&#8217; email list; I subscribed to the Elecraft email
+reflector<span class="footnote-mark"><a 
+href="ultimatic2.html#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-1001f1"></a> in
+case we needed help or advice during construction.
+<!--l. 30--><p class="indent" >  Recently several people on the email list commented that the built-in cw keyers in commercial rigs are
+iambic keyers &#8211; sometimes like the Elecraft rigs they give you the choice of Curtis mode A or Curtis mode
+B,<span class="footnote-mark"><a 
+href="ultimatic3.html#fn2x0"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-1002f2"></a> but
+generally not the older ultimatic mode. Since the new Elecraft K3, like other software defined radios, has
+downloadable firmware, the obvious, and cleanest, solution to this problem is to include a selectable
+
+ultimatic mode in the keyer firmware. This will probably be included in the future, but what if you want
+ultimatic mode now or want to use ultimatic mode with a rig which won&#8217;t be upgraded? You have two
+choices: either you can use an external keyer that includes the ultimatic mode, for example the K1EL
+keyers,<span class="footnote-mark"><a 
+href="ultimatic4.html#fn3x0"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-1003f3"></a>
+or you can try to put together an adapter that will make the internal keyer act like an ultimatic keyer. The
+advantage of the adapter is that you can use the rig&#8217;s front panel controls &#8211; the speed control and all of the
+rig&#8217;s keyer memories are available. Rigs like the Elecraft K3 can transmit RTTY using the
+paddle input (but not the external key line) so that this feature becomes available to ultimatic
+users.
+  <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Ultimatic mode</h3>
+<!--l. 57--><p class="noindent" >John Kaye&#8217;s, W6SRY, first ultimatic keyer design was published in QST in
+1953.<span class="footnote-mark"><a 
+href="ultimatic5.html#fn4x0"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x1-2001f4"></a>
+He used a single lever paddle in his original design. His next version
+<span class="footnote-mark"><a 
+href="ultimatic6.html#fn5x0"><sup class="textsuperscript">5</sup></a></span><a 
+ id="x1-2002f5"></a> used a
+dual paddle and it is this keyer&#8217;s action that gives the ultimatic mode its name.
+<!--l. 72--><p class="indent" >  While the ultimatic keyer used a dual paddle, unlike iambic keyers closing both the left and
+right paddles gave the same result as closing only the last one. For example, to send an x with
+the ultimatic mode you could hold closed the dash paddle for the first dash, then add the dot
+paddle for the middle two dots, releasing just the dot paddle then gives the last dash. With
+the ultimatic mode all letters except C can be made with one closure of the dot and/or dash
+paddles. Iambic keyers can make a C with a single squeeze, but need more than one closure for X
+and P. An ultimatic keyer can make a question mark, comma, and double dash, <span class="overline"><span 
+class="cmmi-12">BT</span></span>, with one
+closure, while an iambic keyer can make periods, semicolons and <span class="overline"><span 
+class="cmmi-12">AR</span></span>, <span class="overline"><span 
+class="cmmi-12">SK</span></span> and <span class="overline"><span 
+class="cmmi-12">AA</span></span> with one
+closure.
+<!--l. 87--><p class="indent" >  After learning about the ultimatic mode, I thought it would be fun to try to come up with a circuit that
+would allow a standard iambic keyer to function like the ultimatic. Since you can build a whole keyer from a
+microcontroller, you can obviously use a microcontroller to do the job. However, this has the disadvantage
+that builders need to have a programmer for the microcontroller. The big advantage is that one
+
+small low power chip is all you need. An alternative is to use standard logic gates since the
+logic needed is rather simple. I was able to come up with a circuit that uses 6 NOR gates and
+an inverter, so two quad NOR gate chips will also work. In this article I will describe both
+routes.
+<!--l. 100--><p class="indent" >  A pair of quad NOR gates costs less than a dollar, so the adapter is inexpensive to build. Any
+microcontroller has more than enough power for this job, and the simplest ones also cost a dollar or less
+while the one I used in the end is around two dollars. Unless the adapter is built into the rig, connectors
+and the enclosure will cost more than the electronic parts.
+<!--l. 107--><p class="indent" >  Part of the fun of the design is working out the necessary logic. Here the design is practically a text-book
+example. If you just want to try out the circuit, then you can skip the logic design and just look at section <a 
+href="#x1-50005">5<!--tex4ht:ref: sec.nor --></a>
+or section <a 
+href="#x1-60006">6<!--tex4ht:ref: sec.micro --></a> for the prototype circuits. Just remember that you must have a PIC programmer to use the
+PIC microprocessor circuit.
+  <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Logic Design</h3>
+<!--l. 115--><p class="noindent" >Since closing the paddle grounds the input, I represent an open paddle as a 1 and a closed paddle as a 0 so
+that ground potential is a 0. I want to drive the keyer through isolating transistors which will invert the
+outputs. It makes sense to take the case where the output is on (i.e. the key line closed) as a 1 and the
+output off as a 0.
+<!--l. 123--><p class="indent" >  Since I use my left hand to operate paddles (I operate a bug right handed) but I have the paddles wired
+for right-handed use, it gets too confusing to talk about dot and dash inputs and outputs. Instead I will
+simply call them left and right inputs and outputs.
+<!--l. 128--><p class="indent" >  I write the left and right paddle inputs as <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> and <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub>, and the corresponding adapter outputs as <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub>
+and <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub>. There are five possible states of the ultimatic:
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-3002x1"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 1, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 1 gives output <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> = 0.
+      </li>
+      <li 
+  class="enumerate" id="x1-3004x2"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 1, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 0 gives output <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> = 1.
+      </li>
+      <li 
+  class="enumerate" id="x1-3006x3"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 1 gives output <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 1, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> = 0.
+      </li>
+      <li 
+  class="enumerate" id="x1-3008x4"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 0 after <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 1, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 0 gives output <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 1, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> = 0.
+      </li>
+      <li 
+  class="enumerate" id="x1-3010x5"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 0 after <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 1 gives output <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> = 1.</li></ol>
+<!--l. 145--><p class="noindent" >State 1 has both paddles open and neither key line keyed. States 2 and 3 have either just the left or just the
+right paddle closed and the corresponding key line is keyed. Finally States 4 and 5 have both paddles closed.
+They key the line corresponding to the last paddle closed.
+
+<!--l. 150--><p class="indent" >  The next step is to write what is called the transition state table. This is just a fancy name for
+writing the logic above in a tabular form for easier analysis. The adapter is in one of its 5 states
+when the input changes. The transition state table then gives the new state and outputs as
+shown in table <a 
+href="#x1-80031">1<!--tex4ht:ref: t1 --></a>. Each row corresponds to a current state given by the first entry. The other
+entries in the row correspond to the 4 possible inputs, and give the resulting state and the
+outputs. For example if we are in state 3, that is, the left paddle is closed and the right is open,
+and we close the right paddle. The input is now 0,0, and we will change to state 5 and the
+outputs are (<span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 0, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub>=1), so the entry corresponding to state 3 and inputs 0,0 is 5 (0,1).
+Notice that there is a &#8220;<span 
+class="cmsy-10x-x-120">-</span>&#8221; for state 1 with the input 1,1. That is because this corresponds to
+both paddles closing simultaneously and should never occur, so we don&#8217;t care what the adapter
+does.
+<!--l. 167--><p class="indent" >  We could produce a circuit to make our transition state table, but it would be more complicated than
+necessary. In fact, one reason to write the transition state table is to be able to see unnecessary
+redundancies. In table <a 
+href="#x1-80031">1<!--tex4ht:ref: t1 --></a> rows 2 and 4 are identical and rows 3 and 5 are identical. Because the transitions
+from states 2 and 4 are identical, we don&#8217;t need to consider these as different states and can combine them
+into a single state. Similarly we can combine states 3 and 5 to make a single state. Row 1 has a dash in the
+last column and is identical to the other states everywhere else. It can be combined with either of the other
+two. (This in fact says that if we did somehow manage to close the paddles simultaneously, our
+choice here says it is like closing one before the other and our choice specifies which one we
+take to have closed first.) I choose to combine it with 2 and 4, the old states 1,2, and 4 then
+become new state 0, and the old states 3 and 5 become new state 1. Rewriting the transition
+state table using these new states gives table <a 
+href="#x1-80042">2<!--tex4ht:ref: t2 --></a>. This table is simpler and will give a simpler
+circuit.
+<!--l. 188--><p class="indent" >  Calling the state <span 
+class="cmmi-12">S</span>, the truth table for the transition state table is shown in table <a 
+href="#x1-80053">3<!--tex4ht:ref: t3 --></a>. The truth table is
+constructed by writing for each current state value <span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">now</span></sub>, and input values <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub>, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub>, the corresponding new
+state <span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">next</span></sub> and the output values <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub>, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub>. For example from our reduced transition state table we see
+that if both paddles are closed <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 0, and the state <span 
+class="cmmi-12">S </span>= 0, we keep <span 
+class="cmmi-12">S </span>= 0 and and the outputs are
+<span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> = 1, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> = 0.
+<!--l. 199--><p class="indent" >  We now want to describe the truth table by a set of logic equations. Let&#8217;s try to figure out a logic
+equation for <span 
+class="cmmi-12">S</span>. If we look at the rows where the <span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">next</span></sub> values are 1 (i.e. true), they all have <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> = 0. In
+addition, they have either <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> = 1 or <span 
+class="cmmi-12">S </span>= 1 or both. The logic is <span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">next</span></sub> is (NOT <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub>) AND either <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> OR
+<span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">now</span></sub>. Standard notation uses a bar over <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub> to indicate the NOT, AND is represented by the
+dot <span 
+class="cmsy-10x-x-120">&#x22C5;</span>, and OR by the plus sign +. The logic equation becomes <span 
+class="cmmi-12">S </span>= <img 
+src="ultimatic0x.png" alt="¯L"  class="bar" ><sub><span 
+class="cmmi-8">in</span></sub> <span 
+class="cmsy-10x-x-120">&#x22C5; </span>[<span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub> + <span 
+class="cmmi-12">S</span>]. Repeating
+the analysis for <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> and <span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub> the logic equations representing the truth table can be written
+<div class="eqnarray">
+  <center class="math-display" >
+<img 
+src="ultimatic1x.png" alt="   S  =   ¯Lin &#x22C5; [Rin + S ]
+          ¯    [¯      ]
+Lout  =   Lin &#x22C5; S + Rin
+Rout  =   ¯Rin &#x22C5; [S + Lin] .                                (1 )
+" class="math-display" ><a 
+ id="x1-3011r1"></a></center>
+</div>
+<!--l. 221--><p class="noindent" >
+  <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-40004"></a>Hardware design</h3>
+<!--l. 223--><p class="noindent" >Figures <a 
+href="#x1-80061">1<!--tex4ht:ref: f1 --></a> and <a 
+href="#x1-80072">2<!--tex4ht:ref: f2 --></a> show hardware implementations and some transforms using De Morgan&#8217;s rules for the first two
+equations.<span class="footnote-mark"><a 
+href="ultimatic7.html#fn6x0"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x1-4001f6"></a>
+Using these transforms, the equations can be implemented using two NOR gates each. The third equation
+uses the same hardware as the second equation with the labels <span 
+class="cmmi-12">R </span>and <span 
+class="cmmi-12">L </span>interchanged and <img 
+src="ultimatic2x.png" alt="¯
+S"  class="bar" > changed to <span 
+class="cmmi-12">S</span>.
+The final simplified circuits using just NOR gates are given in Figures <a 
+href="#x1-80061">1<!--tex4ht:ref: f1 --></a>c, and <a 
+href="#x1-80072">2<!--tex4ht:ref: f2 --></a>c. An additional inverter is
+needed to get the inverted <span 
+class="cmmi-12">S </span>input.
+  <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-50005"></a>NOR gate circuit</h3>
+<!--l. 242--><p class="noindent" >Combining the logic gates for the three equations together gives the complete hardware implementation
+shown in figure <a 
+href="#x1-80083">3<!--tex4ht:ref: f3 --></a>.
+<!--l. 245--><p class="indent" >  Since I was just seeing if this would work and not trying to build a permanent adapter, I put the
+circuit together on a prototyping board. I had some CD4001 integrated circuits in my junk box,
+so I used those. My rather messy result is shown in figures <a 
+href="#x1-80094">4<!--tex4ht:ref: f4 --></a> and <a 
+href="#x1-80105">5<!--tex4ht:ref: f5 --></a>. Ugly style construction
+could be used for something more permanent, or a circuit board laid out, but I have not done
+that.
+<!--l. 254--><p class="noindent" >
+  <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-60006"></a>Microcontroller implementation</h3>
+
+<!--l. 257--><p class="noindent" >I have a Microchip PICkit 2 programmer.<span class="footnote-mark"><a 
+href="ultimatic8.html#fn7x0"><sup class="textsuperscript">7</sup></a></span><a 
+ id="x1-6001f7"></a>
+Since my shack computer runs linux, instead of Microchip&#8217;s software I use the open source
+gputils<span class="footnote-mark"><a 
+href="ultimatic9.html#fn8x0"><sup class="textsuperscript">8</sup></a></span><a 
+ id="x1-6002f8"></a>
+for an assembler and linker. Microchip provides compilable source code that will operate the PICkit 2 on
+Linux and Macintosh, and fully supported software for Windows. If you use Windows, you can simply use
+Microchip&#8217;s software. Both Microchip&#8217;s tools and the open source tools use compatible source code and
+produce the same hex output files used to program the microprocessors.
+<!--l. 277--><p class="indent" >  Just about any of the PIC microprocessors can be used. I initially tried a PIC10F200, one of the most
+basic PICs available. While it worked, I wanted the processor to sleep when it wasn&#8217;t busy. According to its
+data sheet the PIC10F200 can take many milliseconds to wake up from sleep, and a wake up from sleep
+is like a reset and starts the program at its beginning with the processor reset to its default
+configuration. More powerful PICS can be programmed to wake up and continue processing the
+instructions after the sleep instruction. To simplify the programming and make the adapter more
+robust, I switched to one of these more powerful PIC microprocessors. The one I had in my
+junk box was a PIC16F690. It has much more power, more peripherals and more memory.
+These are all unused and wasted for this simple application; many pins of the PIC16F690 are
+unused. The circuit diagram is shown in figure <a 
+href="#x1-80116">6<!--tex4ht:ref: f6 --></a>, and the source code files are given in the
+appendix.
+<!--l. 296--><p class="indent" >  The PIC16F690-I/P costs a couple of dollars directly from Microchip, with similar prices from Mouser,
+Digikey and other vendors. For this application you could use one of the 12F series 8-pin chips
+which would be a little cheaper and significantly smaller. You would need to modify the source
+code for the different chip or write your own from scratch &#8211; the program is very short and
+simple.
+<!--l. 304--><p class="indent" >  The main advantages of the PIC solution is having only one integrated circuit and on chip pull up
+resistors for the paddle inputs. This can help if space at a premium, for example when building the adapter
+inside a rig. A disadvantage is that the PIC has a clock oscillator, and this could produce rf interference,
+especially if mounted inside the rig near the receiving circuitry. I built my circuits so that they would drive
+transistors that would interface to the keyer input. My prototypes did not include rf bypass capacitors on
+the input and output lines. Adding these would be a good idea. I would try bypassing with 0.001 <span 
+class="cmmi-12">&#x03BC;</span>F
+monolithic capacitors, and of course the power supply line should be bypassed to keep from adding
+noise.
+<!--l. 317--><p class="indent" >  Since I had already done the logic design, I programmed the PICs to implement the truth table, table <a 
+href="#x1-80053">3<!--tex4ht:ref: t3 --></a>.
+The program has a variable for the state <span 
+class="cmmi-12">S </span>which is initially set to zero and stored. The microprocessor then
+
+loops continuously reading its inputs and forming an index running from 0 to 7 corresponding to the binary
+number of the first three columns of table <a 
+href="#x1-80053">3<!--tex4ht:ref: t3 --></a>. The table entry corresponding to the binary number from the
+last three columns of table <a 
+href="#x1-80053">3<!--tex4ht:ref: t3 --></a> is returned and used to set the outputs and the new state. The process
+repeats.
+<!--l. 327--><p class="indent" >  The PIC16F690 internal oscillator starts rapidly, so when the paddles inputs have not changed, the
+microprocessor can be put to sleep, and set to awaken when the paddle inputs change. Since the
+microprocessor clock does not run when it is sleeping, power consumption and rf interference should not be
+a major problem.
+<!--l. 334--><p class="indent" >  The PIC only needs to have isolating transistors on its output lines. The input lines are
+programmed to have internal pull-up resistors. Again, I used a couple of 2N3904 transistors with base
+current limiting resistors that I had on hand. The resistors could be eliminated and current
+consumption reduced by changing these to 2N7000 FETs. If you know that the keyer input voltages
+and currents are within specifications, it would be easy to modify the source code to use the
+PIC&#8217;s tri-state I/O pins to change so a high impedance gives the keyer input line open case,
+and then pull the keyer input lines low for the closed case. This would eliminate the interface
+transistors.
+<!--l. 346--><p class="indent" >  Two photos of the prototyped circuit are shown in figures <a 
+href="#x1-80127">7<!--tex4ht:ref: f7 --></a> and <a 
+href="#x1-80138">8<!--tex4ht:ref: f8 --></a>. The microprocessor is being
+powered by the PICkit 2 programmer through the computers USB port. Either a 3 to 5.5 Volt
+source could be used or 5 Volts obtained from a 12 Volt supply using a 78L05 three-terminal
+regulator.
+  <h3 class="sectionHead"><span class="titlemark">7   </span> <a 
+ id="x1-70007"></a>Tests and conclusion</h3>
+<!--l. 354--><p class="noindent" >I  have  three  iambic  keyers  available.  An
+Accukeyer,<span class="footnote-mark"><a 
+href="ultimatic10.html#fn9x0"><sup class="textsuperscript">9</sup></a></span><a 
+ id="x1-7001f9"></a> a CMOS
+super keyer III,<span class="footnote-mark"><a 
+href="ultimatic11.html#fn10x0"><sup class="textsuperscript">10</sup></a></span><a 
+ id="x1-7002f10"></a>
+and the internal Keyer in the Elecraft K2. Both breadboarded circuits worked as expected on all three
+keyers &#8211; turning them into ultimatic mode keyers.
+<!--l. 363--><p class="indent" >  Both the NOR gate and PIC microprocessor solutions work well. If your present keyer only does iambic
+modes, you want to try the ultimatic mode with your dual paddle, and don&#8217;t want to buy a new keyer, you
+can breadboard either of these circuits in less than an hour. If you want to get started with
+microprocessor programming, putting together and programming the PIC16F690 is an easy first
+project.
+
+  <h3 class="sectionHead"><span class="titlemark">8   </span> <a 
+ id="x1-80008"></a>Addendum</h3>
+<!--l. 373--><p class="noindent" >Shortly after I posted this article, John Crabtree, KC0G, sent me an email with several very useful
+comments. He pointed out that the discrete ultimatic adapter can be realized with 6 nor gates rather than 7
+by including an additional state in the analysis.
+<!--l. 380--><p class="indent" >  His analysis exploits the left-right symmetry of the adapter. He keeps two of the equations I derived in
+Eq. <a 
+href="#x1-3011r1">1<!--tex4ht:ref: eq.1 --></a> <div class="eqnarray">
+  <center class="math-display" >
+<img 
+src="ultimatic3x.png" alt="   S  =   ¯Lin &#x22C5; [Rin + S ]
+R     =   ¯R  &#x22C5; [S +  L  ]                                  (2 )
+  out       in        in
+" class="math-display" ></center>
+</div>and realizing the left-right symmetry, adds a state <span 
+class="cmmi-12">T </span>to give <div class="eqnarray">
+  <center class="math-display" >
+<img 
+src="ultimatic4x.png" alt="  T   =   ¯R  &#x22C5; [L  + T ]
+           in    in
+Lout  =   ¯Lin &#x22C5; [T + Rin ]                                (3 )
+" class="math-display" ></center>
+</div>The neat thing here is that the hardware implementation of <span 
+class="cmmi-12">S </span>also gives <span 
+class="cmmi-12">T</span>; it is the output of <span 
+class="cmmi-12">U</span><sub><span 
+class="cmr-8">1</span><span 
+class="cmmi-8">b</span></sub> in figure
+<a 
+href="#x1-80083">3<!--tex4ht:ref: f3 --></a>. His simplified circuit is shown in figure <a 
+href="#x1-80149">9<!--tex4ht:ref: f9 --></a>. As John said,
+      <div class="quote">
+      <!--l. 398--><p class="noindent" >It is ironic that the introduction of an extra state leads to a simpler hardware design.</div>
+<!--l. 401--><p class="noindent" >While John&#8217;s improved circuit still requires two CD4001 or equivalent, it is esthetically much more pleasing
+since the circuit is now completely symmetric between the left and right paddle inputs and
+outputs.
+
+<!--l. 406--><p class="indent" >  John also points out that the unused inputs on the CD4001 chips should be grounded, and I have added
+this statement to the caption of figure <a 
+href="#x1-80083">3<!--tex4ht:ref: f3 --></a>.
+
+<!--l. 411--><p class="indent" >
+
+<!--l. 412--><p class="indent" >  <span 
+class="cmbx-12x-x-144">Tables </span><div class="table">
+
+<!--l. 413--><p class="indent" >  <a 
+ id="x1-80031"></a><hr class="float"><div class="float" 
+><table class="float"><tr class="float"><td class="float" 
+>
+
+ <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Table&#x00A0;1: </td><td  
+class="content">The transition state table. In the entries, the first number is the new state, and the numbers
+in parentheses are outputs, (<span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub><span 
+class="cmmi-12">,R</span><sub><span 
+class="cmmi-8">out</span></sub>). The dash indicates a state that should not occur so we do
+not care what the result is. The inputs are the values of <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub><span 
+class="cmmi-12">,R</span><sub><span 
+class="cmmi-8">in</span></sub> </td></tr></table><!--tex4ht:label?: x1-80031 -->
+<div class="center" 
+>
+<!--l. 421--><p class="noindent" >
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2"></colgroup><colgroup id="TBL-2-3g"><col 
+id="TBL-2-3"></colgroup><colgroup id="TBL-2-4g"><col 
+id="TBL-2-4"></colgroup><colgroup id="TBL-2-5g"><col 
+id="TBL-2-5"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11">Current State <span 
+class="cmsy-10x-x-120">\ </span>inputs</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-2"  
+class="td11">  1,1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-3"  
+class="td11">  1,0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-4"  
+class="td11">  0,1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-5"  
+class="td11">  0,0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11">         1               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
+class="td11">1 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-3"  
+class="td11">2 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-4"  
+class="td11">3 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-5"  
+class="td11">  -    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11">         2               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
+class="td11">1 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-3"  
+class="td11">2 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-4"  
+class="td11">3 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-5"  
+class="td11">4 (1,0)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11">         3               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
+class="td11">1 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-3"  
+class="td11">2 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-4"  
+class="td11">3 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-5"  
+class="td11">5 (0,1)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td11">         4               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
+class="td11">1 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-3"  
+class="td11">2 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-4"  
+class="td11">3 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-5"  
+class="td11">4 (1,0)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-1"  
+class="td11">         5               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-2"  
+class="td11">1 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-3"  
+class="td11">2 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-4"  
+class="td11">3 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-5"  
+class="td11">5 (0,1)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-1"  
+class="td11">                    </td>
+</tr></table></div></div>
+
+  </td></tr></table></div><hr class="endfloat" />
+  </div>
+  <div class="table">
+
+<!--l. 440--><p class="indent" >  <a 
+ id="x1-80042"></a><hr class="float"><div class="float" 
+><table class="float"><tr class="float"><td class="float" 
+>
+
+ <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Table&#x00A0;2: </td><td  
+class="content"> The reduced transition state table after combining equivalent states in table <a 
+href="#x1-80031">1<!--tex4ht:ref: t1 --></a>.</td></tr></table><!--tex4ht:label?: x1-80042 -->
+<div class="center" 
+>
+<!--l. 443--><p class="noindent" >
+<div class="tabular"> <table id="TBL-3" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1"></colgroup><colgroup id="TBL-3-2g"><col 
+id="TBL-3-2"></colgroup><colgroup id="TBL-3-3g"><col 
+id="TBL-3-3"></colgroup><colgroup id="TBL-3-4g"><col 
+id="TBL-3-4"></colgroup><colgroup id="TBL-3-5g"><col 
+id="TBL-3-5"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-1"  
+class="td11">Current State <span 
+class="cmsy-10x-x-120">\ </span>inputs</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-2"  
+class="td11">  1,1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-3"  
+class="td11">  1,0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-4"  
+class="td11">  0,1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-5"  
+class="td11">  0,0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-1"  
+class="td11">         0               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-2"  
+class="td11">0 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-3"  
+class="td11">0 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-4"  
+class="td11">1 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-5"  
+class="td11">0 (1,0)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-1"  
+class="td11">         1               </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-2"  
+class="td11">0 (0,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-3"  
+class="td11">0 (0,1)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-4"  
+class="td11">1 (1,0)</td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-5"  
+class="td11">1 (0,1)</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-4-1"  
+class="td11">                    </td>
+</tr></table></div></div>
+
+  </td></tr></table></div><hr class="endfloat" />
+  </div>
+  <div class="table">
+
+<!--l. 456--><p class="indent" >  <a 
+ id="x1-80053"></a><hr class="float"><div class="float" 
+><table class="float"><tr class="float"><td class="float" 
+>
+
+ <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Table&#x00A0;3: </td><td  
+class="content">The truth table for the reduced transition state table.</td></tr></table><!--tex4ht:label?: x1-80053 -->
+<div class="center" 
+>
+<!--l. 459--><p class="noindent" >
+<div class="tabular"> <table id="TBL-4" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-4-1g"><col 
+id="TBL-4-1"><col 
+id="TBL-4-2"><col 
+id="TBL-4-3"></colgroup><colgroup id="TBL-4-4g"><col 
+id="TBL-4-4"><col 
+id="TBL-4-5"><col 
+id="TBL-4-6"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-1-1"  
+class="td11"><span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">now</span></sub></td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-1-2"  
+class="td11"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub></td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-1-3"  
+class="td11"><span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">in</span></sub></td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-1-4"  
+class="td11"><span 
+class="cmmi-12">S</span><sub><span 
+class="cmmi-8">next</span></sub></td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-1-5"  
+class="td11"><span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub></td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-1-6"  
+class="td11"><span 
+class="cmmi-12">R</span><sub><span 
+class="cmmi-8">out</span></sub></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-2-1"  
+class="td11">  0   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-2-2"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-2-3"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-2-4"  
+class="td11">  0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-2-5"  
+class="td11"> 1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-2-6"  
+class="td11"> 0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-3-1"  
+class="td11">  0   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-3-2"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-3-3"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-3-4"  
+class="td11">  1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-3-5"  
+class="td11"> 1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-3-6"  
+class="td11"> 0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-4-1"  
+class="td11">  0   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-4-2"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-4-3"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-4-4"  
+class="td11">  0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-4-5"  
+class="td11"> 0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-4-6"  
+class="td11"> 1  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-5-1"  
+class="td11">  0   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-5-2"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-5-3"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-5-4"  
+class="td11">  0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-5-5"  
+class="td11"> 0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-5-6"  
+class="td11"> 0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-6-1"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-6-2"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-6-3"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-6-4"  
+class="td11">  1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-6-5"  
+class="td11"> 0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-6-6"  
+class="td11"> 1  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-7-1"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-7-2"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-7-3"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-7-4"  
+class="td11">  1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-7-5"  
+class="td11"> 1  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-7-6"  
+class="td11"> 0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-8-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-8-1"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-8-2"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-8-3"  
+class="td11"> 0 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-8-4"  
+class="td11">  0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-8-5"  
+class="td11"> 0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-8-6"  
+class="td11"> 1  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-9-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-9-1"  
+class="td11">  1   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-9-2"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-9-3"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-9-4"  
+class="td11">  0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-9-5"  
+class="td11"> 0  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-4-9-6"  
+class="td11"> 0  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-10-"><td  style="white-space:nowrap; text-align:center;" id="TBL-4-10-1"  
+class="td11">     </td>
+</tr></table></div></div>
+
+  </td></tr></table></div><hr class="endfloat" />
+  </div>
+
+<!--l. 486--><p class="indent" >
+
+<!--l. 487--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80061"></a>
+
+<!--l. 488--><p class="noindent" >a. <img 
+src="ultimatic5x.png" alt="PIC" class="graphics" width="369.88582pt" height="160.39505pt" ><!--tex4ht:graphics  
+name="ultimatic5x.png" src="fig1a.eps"  
+-->
+<!--l. 490--><p class="noindent" >b. <img 
+src="ultimatic6x.png" alt="PIC" class="graphics" width="369.88582pt" height="156.68587pt" ><!--tex4ht:graphics  
+name="ultimatic6x.png" src="fig1b.eps"  
+-->
+<!--l. 492--><p class="noindent" >c. <img 
+src="ultimatic7x.png" alt="PIC" class="graphics" width="369.88582pt" height="157.37076pt" ><!--tex4ht:graphics  
+name="ultimatic7x.png" src="fig1c.eps"  
+-->
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;1: </td><td  
+class="content">S equation realization. At a. the expression for <span 
+class="cmmi-12">S </span>in Eq. <a 
+href="#x1-3011r1">1<!--tex4ht:ref: eq.1 --></a> is used directly. At b. a negation
+at the input of the AND gate allows us to use <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">in</span></sub>, while negating the output of the OR gate and
+the other input of the AND gate does not change the logic. At c. the negated input AND gate is
+changed to the equivalent NOR gate.</td></tr></table><!--tex4ht:label?: x1-80061 -->
+
+<!--l. 502--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 504--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80072"></a>
+
+<!--l. 505--><p class="noindent" >a. <img 
+src="ultimatic8x.png" alt="PIC" class="graphics" width="369.88582pt" height="152.31683pt" ><!--tex4ht:graphics  
+name="ultimatic8x.png" src="fig2a.eps"  
+-->
+<!--l. 507--><p class="noindent" >b. <img 
+src="ultimatic9x.png" alt="PIC" class="graphics" width="369.88582pt" height="148.89214pt" ><!--tex4ht:graphics  
+name="ultimatic9x.png" src="fig2b.eps"  
+-->
+<!--l. 509--><p class="noindent" >c. <img 
+src="ultimatic10x.png" alt="PIC" class="graphics" width="369.88582pt" height="149.51016pt" ><!--tex4ht:graphics  
+name="ultimatic10x.png" src="fig2c.eps"  
+-->
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;2: </td><td  
+class="content">The <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> equation realization. At a. the expression for <span 
+class="cmmi-12">L</span><sub><span 
+class="cmmi-8">out</span></sub> in Eq. <a 
+href="#x1-3011r1">1<!--tex4ht:ref: eq.1 --></a> is used directly. At b.
+and c. the same manipulations are used as in figure <a 
+href="#x1-80061">1<!--tex4ht:ref: f1 --></a>. </td></tr></table><!--tex4ht:label?: x1-80072 -->
+
+<!--l. 517--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 519--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80083"></a>
+
+<!--l. 520--><p class="noindent" ><img 
+src="ultimatic11x.png" alt="PIC" class="graphics" width="455.24408pt" height="273.16121pt" ><!--tex4ht:graphics  
+name="ultimatic11x.png" src="fig3.eps"  
+-->
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;3: </td><td  
+class="content">The complete NOR gate circuit. Values are what I had available.</td></tr></table><!--tex4ht:label?: x1-80083 -->
+<div class="tabular"> <table id="TBL-5" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-5-1g"><col 
+id="TBL-5-1"><col 
+id="TBL-5-2"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-5-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-5-1-1"  
+class="td11"><span 
+class="cmmi-12">Q</span><sub><span 
+class="cmr-8">1</span></sub>, <span 
+class="cmmi-12">Q</span><sub><span 
+class="cmr-8">2</span></sub></td><td  style="white-space:nowrap; text-align:left;" id="TBL-5-1-2"  
+class="td11">2N3904 general purpose NPN transistors               </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-5-2-1"  
+class="td11"><span 
+class="cmmi-12">R</span><sub><span 
+class="cmr-8">1</span></sub>, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmr-8">2</span></sub>  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-5-2-2"  
+class="td11">2.2K Ohm 1/4 watt                                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-5-3-1"  
+class="td11"><span 
+class="cmmi-12">R</span><sub><span 
+class="cmr-8">3</span></sub>, <span 
+class="cmmi-12">R</span><sub><span 
+class="cmr-8">4</span></sub>  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-5-3-2"  
+class="td11">2.0K Ohm 1/4 watt                                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-5-4-1"  
+class="td11"><span 
+class="cmmi-12">U</span><sub><span 
+class="cmr-8">1</span></sub>, <span 
+class="cmmi-12">U</span><sub><span 
+class="cmr-8">2</span></sub> </td><td  style="white-space:nowrap; text-align:left;" id="TBL-5-4-2"  
+class="td11">CD4001, quad NOR gates. (Mouser 595-CD4001BE)</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-5-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-5-5-1"  
+class="td11">      </td>
+</tr></table></div>
+<!--l. 530--><p class="noindent" >I used 2N3904 transistors with base current limiting resistors. The base resistors can be any value that
+sufficiently limits the current and saturates the transistors; use larger values than I did if you have them
+available. As mentioned in the text, the resistors could be eliminated if 2N7000 field effect
+transistors were used. I used a pair of CD4001 integrated circuits, but 74LS02 quad two-input
+NOR gates (or any other integrated circuit family) could also be used. The CD4001 can use a
+wide range of supply voltage; I powered this circuit from an adjustable power supply usually
+set at <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">dd</span></sub> = 9 Volts. The input pull-up resistors can be any reasonably convenient value that
+holds the input gates high. Using FET output transistors and larger valued pull-up resistors
+would reduce the current consumption. Rf bypass capacitors should be included on all the
+external connections in a permanent installation. The unused inputs on the CD4001 should be
+grounded.
+
+<!--l. 551--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 553--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80094"></a>
+
+<div class="center" 
+>
+<!--l. 554--><p class="noindent" >
+<!--l. 555--><p class="noindent" ><img 
+src="ultimatic12x.png" alt="PIC" class="graphics" width="455.24408pt" height="341.43965pt" ><!--tex4ht:graphics  
+name="ultimatic12x.png" src="fig4.eps"  
+--></div>
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;4: </td><td  
+class="content">A quick prototype of the NOR gate circuit using parts on hand. The prototype board is
+sitting on a homebrew adjustable power supply. The circuit is connected between the Bencher BY-1
+paddle and the Elecraft K2&#8217;s keyer input. </td></tr></table><!--tex4ht:label?: x1-80094 -->
+
+<!--l. 564--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 566--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80105"></a>
+
+<div class="center" 
+>
+<!--l. 567--><p class="noindent" >
+<!--l. 568--><p class="noindent" ><img 
+src="ultimatic13x.png" alt="PIC" class="graphics" width="455.24408pt" height="341.43965pt" ><!--tex4ht:graphics  
+name="ultimatic13x.png" src="fig5.eps"  
+--></div>
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;5: </td><td  
+class="content">A close up photograph of the NOR gate prototype. </td></tr></table><!--tex4ht:label?: x1-80105 -->
+
+<!--l. 574--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 576--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80116"></a>
+
+<!--l. 577--><p class="noindent" ><img 
+src="ultimatic14x.png" alt="PIC" class="graphics" width="455.24408pt" height="408.68015pt" ><!--tex4ht:graphics  
+name="ultimatic14x.png" src="fig6.eps"  
+-->
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;6: </td><td  
+class="content">The PIC16F690-I/P circuit. Most of the pins are not connected.</td></tr></table><!--tex4ht:label?: x1-80116 -->
+<div class="tabular"> <table id="TBL-6" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-6-1g"><col 
+id="TBL-6-1"><col 
+id="TBL-6-2"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-6-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-1"  
+class="td11"><span 
+class="cmmi-12">Q</span><sub><span 
+class="cmr-8">1</span></sub>, <span 
+class="cmmi-12">Q</span><sub><span 
+class="cmr-8">2</span></sub></td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-1-2"  
+class="td11">2N3904 general purpose NPN transistors                     </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-1"  
+class="td11"><span 
+class="cmmi-12">R</span><sub><span 
+class="cmr-8">1</span></sub>,<span 
+class="cmmi-12">R</span><sub><span 
+class="cmr-8">2</span></sub>   </td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-2-2"  
+class="td11">2.0K Ohm                                                             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-6-3-1"  
+class="td11"><span 
+class="cmmi-12">U</span><sub><span 
+class="cmr-8">1</span></sub>         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-6-3-2"  
+class="td11">Microchip PIC16F690-I/P (Mouser 579-PIC16F690-I/P)</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-6-4-1"  
+class="td11">      </td>
+</tr></table></div>
+<!--l. 589--><p class="noindent" >The same discussion as in figure <a 
+href="#x1-80083">3<!--tex4ht:ref: f3 --></a> about changing the output transistors and the pull-up resistors applies
+here. The five labeled lines <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">pp</span></sub>, <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">dd</span></sub>, <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">ss</span></sub> ICSPDAT and ICSPCLK going to the microprocessor pins can
+be connected to a standard header connector for use with the PICkit 2 for in circuit serial
+programming (ICSP). <span 
+class="cmmi-12">V</span> <sub><span 
+class="cmmi-8">dd</span></sub> should be connected to a supply voltage of 3.0 to 5.5 volts for operation.
+
+<!--l. 601--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 603--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80127"></a>
+
+<div class="center" 
+>
+<!--l. 604--><p class="noindent" >
+<!--l. 605--><p class="noindent" ><img 
+src="ultimatic15x.png" alt="PIC" class="graphics" width="455.24408pt" height="341.43965pt" ><!--tex4ht:graphics  
+name="ultimatic15x.png" src="fig7.eps"  
+--></div>
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;7: </td><td  
+class="content">The prototyped PIC16F690-I/P circuit connected between the paddles and the K2. The
+CMOS Superkeyer III is the aluminum box with 6 pushbuttons to the right. The microprocessor is
+being powered by the PICkit 2 programmer shown connected to the in-circuit serial programming
+header. </td></tr></table><!--tex4ht:label?: x1-80127 -->
+
+<!--l. 614--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 616--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80138"></a>
+
+<div class="center" 
+>
+<!--l. 617--><p class="noindent" >
+<!--l. 618--><p class="noindent" ><img 
+src="ultimatic16x.png" alt="PIC" class="graphics" width="455.24408pt" height="341.43965pt" ><!--tex4ht:graphics  
+name="ultimatic16x.png" src="fig8.eps"  
+--></div>
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;8: </td><td  
+class="content">A close-up photograph of the PIC16F690-I/P circuit. The 16F690 is the larger chip
+on the bottom half of the prototype board. The parts on the upper half are for the prototyped
+PIC10F200-I/P circuit that was abandoned. </td></tr></table><!--tex4ht:label?: x1-80138 -->
+
+<!--l. 627--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 629--><p class="indent" >  <hr class="figure"><div class="figure" 
+><table class="figure"><tr class="figure"><td class="figure" 
+>
+
+<a 
+ id="x1-80149"></a>
+
+<!--l. 630--><p class="noindent" ><img 
+src="ultimatic17x.png" alt="PIC" class="graphics" width="455.24408pt" height="315.18298pt" ><!--tex4ht:graphics  
+name="ultimatic17x.png" src="fig9.eps"  
+-->
+<br /> <table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;9: </td><td  
+class="content">The improved nor gate circuit suggested by John Crabtree, KC0G. See caption to figure
+<a 
+href="#x1-80083">3<!--tex4ht:ref: f3 --></a> for component details.</td></tr></table><!--tex4ht:label?: x1-80149 -->
+
+<!--l. 636--><p class="indent" >  </td></tr></table></div><hr class="endfigure">
+<!--l. 640--><p class="indent" >
+
+
+  <h3 class="likesectionHead"><a 
+ id="x1-90008"></a>Appendix</h3>
+<!--l. 644--><p class="noindent" >The assembler code and linker script for the 16F690 are given here.
+<!--l. 646--><p class="indent" >  Main code listing is: <div class="verbatiminput">
+<span 
+class="cmtt-12">;</span><span 
+class="cmtt-12">&#x00A0;$Id:</span><span 
+class="cmtt-12">&#x00A0;ultimatic.asm,v</span><span 
+class="cmtt-12">&#x00A0;1.4</span><span 
+class="cmtt-12">&#x00A0;2008/10/05</span><span 
+class="cmtt-12">&#x00A0;18:57:44</span><span 
+class="cmtt-12">&#x00A0;schmidt</span><span 
+class="cmtt-12">&#x00A0;Exp</span><span 
+class="cmtt-12">&#x00A0;$</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">#include</span><span 
+class="cmtt-12">&#x00A0;"processor.h"</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">#define</span><span 
+class="cmtt-12">&#x00A0;CF1</span><span 
+class="cmtt-12">&#x00A0;_FCMEN_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_IESO_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_BOR_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_CPD_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_CP_OFF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">#define</span><span 
+class="cmtt-12">&#x00A0;CF2</span><span 
+class="cmtt-12">&#x00A0;_MCLRE_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_PWRTE_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_WDT_OFF</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;_INTRC_OSC_NOCLKOUT</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;__config</span><span 
+class="cmtt-12">&#x00A0;(CF1</span><span 
+class="cmtt-12">&#x00A0;&amp;</span><span 
+class="cmtt-12">&#x00A0;CF2)</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">;turn</span><span 
+class="cmtt-12">&#x00A0;off</span><span 
+class="cmtt-12">&#x00A0;crossing</span><span 
+class="cmtt-12">&#x00A0;page</span><span 
+class="cmtt-12">&#x00A0;boundary</span><span 
+class="cmtt-12">&#x00A0;message</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ERRORLEVEL</span><span 
+class="cmtt-12">&#x00A0;-306,-302</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;udata</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">state</span><span 
+class="cmtt-12">&#x00A0;res</span><span 
+class="cmtt-12">&#x00A0;1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;state</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">index</span><span 
+class="cmtt-12">&#x00A0;res</span><span 
+class="cmtt-12">&#x00A0;1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;index</span><span 
+class="cmtt-12">&#x00A0;into</span><span 
+class="cmtt-12">&#x00A0;table</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">TABLES</span><span 
+class="cmtt-12">&#x00A0;code</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;truthtable</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">newstate:</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;data</span><span 
+class="cmtt-12">&#x00A0;0x02,0x06,0x01,0x00,0x05,0x06,0x01,0x00</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">STARTUP</span><span 
+class="cmtt-12">&#x00A0;code</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;goto</span><span 
+class="cmtt-12">&#x00A0;main</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">PROG0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;code</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">main:</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;call</span><span 
+class="cmtt-12">&#x00A0;setup</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;up</span><span 
+class="cmtt-12">&#x00A0;ports</span><span 
+class="cmtt-12">&#x00A0;etc.</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">loop:</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movf</span><span 
+class="cmtt-12">&#x00A0;PORTA,w</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;read</span><span 
+class="cmtt-12">&#x00A0;paddles</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bcf</span><span 
+class="cmtt-12">&#x00A0;INTCON,RABIF</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;clear</span><span 
+class="cmtt-12">&#x00A0;change</span><span 
+class="cmtt-12">&#x00A0;interrupt</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movf</span><span 
+class="cmtt-12">&#x00A0;PORTA,w</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;and</span><span 
+class="cmtt-12">&#x00A0;read</span><span 
+class="cmtt-12">&#x00A0;again</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;be</span><span 
+class="cmtt-12">&#x00A0;current</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;andlw</span><span 
+class="cmtt-12">&#x00A0;0x03</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;mask</span><span 
+class="cmtt-12">&#x00A0;off</span><span 
+class="cmtt-12">&#x00A0;inputs</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;iorwf</span><span 
+class="cmtt-12">&#x00A0;state,w</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;or</span><span 
+class="cmtt-12">&#x00A0;in</span><span 
+class="cmtt-12">&#x00A0;state</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;index</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;index</span><span 
+class="cmtt-12">&#x00A0;into</span><span 
+class="cmtt-12">&#x00A0;truthtable</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;EEADRH</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;begin</span><span 
+class="cmtt-12">&#x00A0;standard</span><span 
+class="cmtt-12">&#x00A0;code</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;read</span><span 
+class="cmtt-12">&#x00A0;program</span><span 
+class="cmtt-12">&#x00A0;memory</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movlw</span><span 
+class="cmtt-12">&#x00A0;low(newstate)</span><span 
+class="cmtt-12">&#x00A0;;get</span><span 
+class="cmtt-12">&#x00A0;low</span><span 
+class="cmtt-12">&#x00A0;byte</span><span 
+class="cmtt-12">&#x00A0;of</span><span 
+class="cmtt-12">&#x00A0;address</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;index</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;add</span><span 
+class="cmtt-12">&#x00A0;in</span><span 
+class="cmtt-12">&#x00A0;index</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;addwf</span><span 
+class="cmtt-12">&#x00A0;index,w</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;EEADR</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;move</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;EEADR</span>
+
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;EEADR</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movlw</span><span 
+class="cmtt-12">&#x00A0;high(newstate);get</span><span 
+class="cmtt-12">&#x00A0;high</span><span 
+class="cmtt-12">&#x00A0;byte</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;EEADRH</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;btfsc</span><span 
+class="cmtt-12">&#x00A0;STATUS,C</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;increment</span><span 
+class="cmtt-12">&#x00A0;if</span><span 
+class="cmtt-12">&#x00A0;there</span><span 
+class="cmtt-12">&#x00A0;was</span><span 
+class="cmtt-12">&#x00A0;a</span><span 
+class="cmtt-12">&#x00A0;carry</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;incf</span><span 
+class="cmtt-12">&#x00A0;EEADRH,f</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;should</span><span 
+class="cmtt-12">&#x00A0;not</span><span 
+class="cmtt-12">&#x00A0;happen</span><span 
+class="cmtt-12">&#x00A0;here</span><span 
+class="cmtt-12">&#x00A0;since</span><span 
+class="cmtt-12">&#x00A0;table</span><span 
+class="cmtt-12">&#x00A0;is</span><span 
+class="cmtt-12">&#x00A0;small</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;EECON1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;do</span><span 
+class="cmtt-12">&#x00A0;read</span><span 
+class="cmtt-12">&#x00A0;reads</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;EECON1,EEPGD</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;EECON1,RD</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;nop</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;and</span><span 
+class="cmtt-12">&#x00A0;wait</span><span 
+class="cmtt-12">&#x00A0;for</span><span 
+class="cmtt-12">&#x00A0;result</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;nop</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;EEDATA</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movf</span><span 
+class="cmtt-12">&#x00A0;EEDATA,w</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;move</span><span 
+class="cmtt-12">&#x00A0;result</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;w</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;state</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;result</span><span 
+class="cmtt-12">&#x00A0;stored</span><span 
+class="cmtt-12">&#x00A0;in</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;and</span><span 
+class="cmtt-12">&#x00A0;w</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;andlw</span><span 
+class="cmtt-12">&#x00A0;0x03</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;mask</span><span 
+class="cmtt-12">&#x00A0;off</span><span 
+class="cmtt-12">&#x00A0;output</span><span 
+class="cmtt-12">&#x00A0;port</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;PORTC</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;output</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movlw</span><span 
+class="cmtt-12">&#x00A0;0x04</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;form</span><span 
+class="cmtt-12">&#x00A0;mask</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;andwf</span><span 
+class="cmtt-12">&#x00A0;state,f</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;mask</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;bit</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;sleep</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;sleep</span><span 
+class="cmtt-12">&#x00A0;until</span><span 
+class="cmtt-12">&#x00A0;next</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;change</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;nop</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;goto</span><span 
+class="cmtt-12">&#x00A0;loop</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">setup:</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;bank</span><span 
+class="cmtt-12">&#x00A0;0</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;initialize</span><span 
+class="cmtt-12">&#x00A0;state</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;0</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;PORTA</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;bank</span><span 
+class="cmtt-12">&#x00A0;0</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;PORTA</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;clear</span><span 
+class="cmtt-12">&#x00A0;ports</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;PORTB</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;PORTC</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;OSCCON</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;bank</span><span 
+class="cmtt-12">&#x00A0;1</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;OSCCON,IRCF2</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;8MHz</span><span 
+class="cmtt-12">&#x00A0;internal</span><span 
+class="cmtt-12">&#x00A0;oscillator</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;OSCCON,IRCF1</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;OSCCON,IRCF0</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;OSCCON,SCS</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;TRISB</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;PORTB</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;outputs</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;TRISC</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;PORTC</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;outputs</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movlw</span><span 
+class="cmtt-12">&#x00A0;0x03</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;TRISA</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;PORTA</span><span 
+class="cmtt-12">&#x00A0;ra0</span><span 
+class="cmtt-12">&#x00A0;and</span><span 
+class="cmtt-12">&#x00A0;ra1</span><span 
+class="cmtt-12">&#x00A0;to</span><span 
+class="cmtt-12">&#x00A0;inputs</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bcf</span><span 
+class="cmtt-12">&#x00A0;OPTION_REG,NOT_RABPU</span><span 
+class="cmtt-12">&#x00A0;;allow</span><span 
+class="cmtt-12">&#x00A0;weak</span><span 
+class="cmtt-12">&#x00A0;pull-ups</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movlw</span><span 
+class="cmtt-12">&#x00A0;0x03</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movwf</span><span 
+class="cmtt-12">&#x00A0;WPUA</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;weak</span><span 
+class="cmtt-12">&#x00A0;pull-ups</span><span 
+class="cmtt-12">&#x00A0;on</span><span 
+class="cmtt-12">&#x00A0;ra0</span><span 
+class="cmtt-12">&#x00A0;and</span><span 
+class="cmtt-12">&#x00A0;ra1</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;ANSEL</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;bank</span><span 
+class="cmtt-12">&#x00A0;2</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;ANSEL</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;make</span><span 
+class="cmtt-12">&#x00A0;PORTS</span><span 
+class="cmtt-12">&#x00A0;digital</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;ANSELH</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;make</span><span 
+class="cmtt-12">&#x00A0;PORTS</span><span 
+class="cmtt-12">&#x00A0;digital</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;IOCA</span>
+
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;IOCA</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;clear</span><span 
+class="cmtt-12">&#x00A0;interrupt</span><span 
+class="cmtt-12">&#x00A0;on</span><span 
+class="cmtt-12">&#x00A0;change</span><span 
+class="cmtt-12">&#x00A0;for</span><span 
+class="cmtt-12">&#x00A0;porta</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;this</span><span 
+class="cmtt-12">&#x00A0;should</span><span 
+class="cmtt-12">&#x00A0;cause</span><span 
+class="cmtt-12">&#x00A0;a</span><span 
+class="cmtt-12">&#x00A0;wake</span><span 
+class="cmtt-12">&#x00A0;up</span><span 
+class="cmtt-12">&#x00A0;from</span><span 
+class="cmtt-12">&#x00A0;sleep,</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;but</span><span 
+class="cmtt-12">&#x00A0;not</span><span 
+class="cmtt-12">&#x00A0;call</span><span 
+class="cmtt-12">&#x00A0;the</span><span 
+class="cmtt-12">&#x00A0;interrupt</span><span 
+class="cmtt-12">&#x00A0;routine</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;IOCA,IOCA0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;interrupt</span><span 
+class="cmtt-12">&#x00A0;on</span><span 
+class="cmtt-12">&#x00A0;change</span><span 
+class="cmtt-12">&#x00A0;for</span><span 
+class="cmtt-12">&#x00A0;ra0</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;IOCA,IOCA1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;set</span><span 
+class="cmtt-12">&#x00A0;interrupt</span><span 
+class="cmtt-12">&#x00A0;on</span><span 
+class="cmtt-12">&#x00A0;change</span><span 
+class="cmtt-12">&#x00A0;for</span><span 
+class="cmtt-12">&#x00A0;ra1</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;banksel</span><span 
+class="cmtt-12">&#x00A0;PORTA</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;bank</span><span 
+class="cmtt-12">&#x00A0;1</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;clrf</span><span 
+class="cmtt-12">&#x00A0;INTCON</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;disable</span><span 
+class="cmtt-12">&#x00A0;all</span><span 
+class="cmtt-12">&#x00A0;interrupts</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bsf</span><span 
+class="cmtt-12">&#x00A0;INTCON,RABIE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;enable</span><span 
+class="cmtt-12">&#x00A0;PORTA/B</span><span 
+class="cmtt-12">&#x00A0;change</span><span 
+class="cmtt-12">&#x00A0;interrupt</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;movf</span><span 
+class="cmtt-12">&#x00A0;PORTA,w</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;bcf</span><span 
+class="cmtt-12">&#x00A0;INTCON,RABIF</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;;clear</span><span 
+class="cmtt-12">&#x00A0;PORT</span><span 
+class="cmtt-12">&#x00A0;change</span><span 
+class="cmtt-12">&#x00A0;interrupt</span><span 
+class="cmtt-12">&#x00A0;flag</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;return</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;end</span>
+  </div>
+<!--l. 649--><p class="indent" >  The include file processor.h is: <div class="verbatiminput">
+<span 
+class="cmtt-12">;$Id:</span><span 
+class="cmtt-12">&#x00A0;processor.h,v</span><span 
+class="cmtt-12">&#x00A0;1.1</span><span 
+class="cmtt-12">&#x00A0;2008/10/03</span><span 
+class="cmtt-12">&#x00A0;03:20:45</span><span 
+class="cmtt-12">&#x00A0;schmidt</span><span 
+class="cmtt-12">&#x00A0;Exp</span><span 
+class="cmtt-12">&#x00A0;$</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">list</span><span 
+class="cmtt-12">&#x00A0;p=16f690</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">#include</span><span 
+class="cmtt-12">&#x00A0;&#x003C;p16f690.inc&#x003E;</span>
+  </div>
+<!--l. 652--><p class="indent" >  The linker script is: <div class="verbatiminput">
+<span 
+class="cmtt-12">//Linker</span><span 
+class="cmtt-12">&#x00A0;file</span><span 
+class="cmtt-12">&#x00A0;for</span><span 
+class="cmtt-12">&#x00A0;16f690</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">LIBPATH</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;.</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=vectors</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x4</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=page0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x5</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x6FF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=tablecode</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x700</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x7FF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=page1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x800</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0xFFF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=.idlocs</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x2000</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x2003</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=icd_inst</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x2004</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x2004</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=mfg_code</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x2005</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x2005</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=.device_id</span><span 
+class="cmtt-12">&#x00A0;START=0x2006</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x2006</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=.config</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x2007</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x2007</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=.calib</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x2008</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x2008</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">CODEPAGE</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=eedata</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x2100</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x21FF</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=sfr0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x1F</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=sfr1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x80</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x9F</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=sfr2</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x100</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x11F</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=sfr3</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x180</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x19F</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;PROTECTED</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gpr0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x20</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x6F</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gpr1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0xA0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0xEF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">DATABANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gpr2</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;START=0x120</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x16F</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SHAREBANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gprnobnk</span><span 
+class="cmtt-12">&#x00A0;START=0x70</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x7F</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SHAREBANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gprnobnk</span><span 
+class="cmtt-12">&#x00A0;START=0xF0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0xFF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SHAREBANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gprnobnk</span><span 
+class="cmtt-12">&#x00A0;START=0x170</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x17F</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SHAREBANK</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=gprnobnk</span><span 
+class="cmtt-12">&#x00A0;START=0x1F0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;END=0x1FF</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br />
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=TABLES</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=tablecode</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;tables</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=STARTUP</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=vectors</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;Reset</span><span 
+class="cmtt-12">&#x00A0;and</span><span 
+class="cmtt-12">&#x00A0;interrupt</span><span 
+class="cmtt-12">&#x00A0;vectors</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=PROG0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=page0</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;ROM</span><span 
+class="cmtt-12">&#x00A0;code</span><span 
+class="cmtt-12">&#x00A0;space</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=PROG1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=page1</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;ROM</span><span 
+class="cmtt-12">&#x00A0;code</span><span 
+class="cmtt-12">&#x00A0;space</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=IDLOCS</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=.idlocs</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;ID</span><span 
+class="cmtt-12">&#x00A0;locations</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=ICD_INST</span><span 
+class="cmtt-12">&#x00A0;ROM=icd_inst</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;ICD</span><span 
+class="cmtt-12">&#x00A0;instruction</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=MFG_CODE</span><span 
+class="cmtt-12">&#x00A0;ROM=mfg_code</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;Manufacturing</span><span 
+class="cmtt-12">&#x00A0;code</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=DEVICEID</span><span 
+class="cmtt-12">&#x00A0;ROM=.device_id</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;Device</span><span 
+class="cmtt-12">&#x00A0;ID</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=CONFIG</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=.config</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;Configuration</span><span 
+class="cmtt-12">&#x00A0;bits</span><span 
+class="cmtt-12">&#x00A0;location</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=CALIBR</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=.calib</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;Calibration</span><span 
+class="cmtt-12">&#x00A0;bits</span><span 
+class="cmtt-12">&#x00A0;location</span>
+<span 
+class="cmtt-12">&#x00A0;</span><br /><span 
+class="cmtt-12">SECTION</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;NAME=DEEPROM</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;ROM=eedata</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;</span><span 
+class="cmtt-12">&#x00A0;//</span><span 
+class="cmtt-12">&#x00A0;Data</span><span 
+class="cmtt-12">&#x00A0;EEPROM</span>
+  </div>  
+</body></html> 
+
+
+

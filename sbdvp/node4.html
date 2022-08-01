@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>3 Program Operation</TITLE>
+<META NAME="description" CONTENT="3 Program Operation">
+<META NAME="keywords" CONTENT="dvp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
+<LINK REL="STYLESHEET" HREF="dvp.css">
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="dvp.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html84"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html81"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html75"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html83"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html85"
+ HREF="node5.html">4 Sampling rate selection</A>
+<B> Up:</B> <A NAME="tex2html82"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html76"
+ HREF="node3.html">2 System Requirements</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<H1><A NAME="SECTION00040000000000000000">
+3 Program Operation</A>
+</H1>
+<P>
+Most of this manual will assume that you are using a 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> card.
+If you are using a Windows Sound System compatible sound card,
+the slight changes you need to make are described in section <A HREF="node11.html#wss">10</A>.
+Make sure that your sound card is set up for microphone input.
+SBDVP doesn't manipulate those settings. Use one of the utilities
+that came with the sound card to change any input, output, and
+volume settings.
+<P>
+My CONFIG.SYS file contains the line
+<BR>
+STACKS=9,256
+<BR>
+which defines 9, 256 byte, hardware interrupt stacks. Nearly all
+of my testing has been done with this statement in CONFIG.SYS, but
+I have tested it with
+STACKS=0,0
+<BR>
+which defines no hardware stacks and it seemed to work.
+<P>
+If you will be using vox,
+start the code by typing
+<BR>
+SBDVP
+<BR>
+If you want to use push to talk, you need an interface
+exactly like the CW ones described in the TR manual. If you already
+use push to talk on CW, you are all set. The interface
+can be on a parallel or serial port. If it is on parallel
+port 2, start the code by typing
+<BR>
+SBDVP -p2
+<BR>
+replace the 2 by the correct parallel port if it is not port 2.
+Alternatively if you want to use a serial port for push to talk,
+then for serial port 2 type,
+<BR>
+SBDVP -s2
+<BR>
+where again you should replace 2 with the number of the serial
+port you are using if it is not 2.
+The code will look for a standard BLASTER environment variable. This
+is normally set up in AUTOEXEC.BAT when your sound card is installed.
+It should be a line like
+<BR>
+SET BLASTER= A220 I5 D1 T4
+<BR>
+It may have additional entries, but only these are looked at
+by SBDVP. If this is already set, then you can just try
+running SBDVP. If not then you need to set this up first.
+The Axxx needs xxx set to the hexadecimal address of
+the sound card. Dx needs x set to the 8 bit DMA channel of the
+sound card. It must be 0, 1 or 3 for SBDVP to work. Ix needs x
+set to the hardware interrupt of the sound card.
+Finally, Tx gives the type
+of sound card you have. This is only used by SBDVP to detect
+
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 1.X cards. In that case autoinitiate transfers are turned
+off.
+In the future,
+I plan to turn on the FIFO memory on the 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 16 for better
+audio quality when I get access to one to test it. Tx with
+x = 1 is the 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 1, 2 is the 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> Pro, 3 is the
+
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 2, 4 is the  
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> Pro 2, 5 is
+the 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 
+ProMCV, and 6 is the 
+<!-- MATH: {\rm SoundBlaster^{TM}} -->
+ <I>SoundBlaster</I><SUP> TM</SUP> 16.
+<P>
+SBDVP will also attempt to open the file SBDVPCFG.DAT in the current
+directory and if this
+file exists SBDVP will read a list of file names
+(just file names, not full path names) each on a single
+line. These should match the file names that TR uses and be
+audio files that were produced previously. The file SBDVPCFG.DAT
+should not be used the first time you fire up SBDVP.
+<P>
+The program if successful will terminate but stay resident. If you type
+<BR>
+MEM/P/C
+<BR>
+at the DOS prompt, you will get a list of programs in memory. You
+should see SBDVP listed along with the amount of memory that it
+is using (about 25Kbytes). You can unload the program by typing
+<BR>
+SBDVP -u
+<BR>
+at the DOS prompt.
+If you have available high memory (use MEM to find out),
+you can load SBDVP into high memory leaving extra conventional
+memory for
+TR, by typing
+<BR>
+LOADHIGH SBDVP
+<BR>
+The program can be unloaded using
+<BR>
+SBDVP -u
+<BR>
+as in the usual case.
+To use LOADHIGH, you need to have EMM386.EXE or equivalent
+loaded after
+HIMEM.SYS in your CONFIG.SYS file and you need to tell DOS to manage
+the upper memory blocks by including DOS=UMB,HIGH in CONFIG.SYS.
+See your DOS manual if you need more details. Typically running
+MEMMAKER will add EMM386 and the DOS commands automatically.
+<P>
+To try out the DVP, make sure a microphone and speaker(s) are
+connected to
+the sound card.
+Fire up TR as usual, and use the Control-J menu to choose
+<BR>
+ENABLE DVP = TRUE.
+<BR>
+In SSB mode, you should now see DVP ON, and you should be able
+to toggle between DVP on and off using Alt-K.
+Function keys are programmed as described in the TR manual.
+Press Control-F1 to start recording CQF1.DVP and say a CQ
+into the microphone. When you finish press ESCAPE to terminate
+the recording. Pressing F1 will send your CQ out the speaker.
+Hit ESCAPE just like
+in CW to terminate the output before it finishes.
+<P>
+You can program all the function keys using the Alt-P command
+as described in the TR manual.
+If you subsequently unload SBDVP using the SBDVP -u command,
+a file with the name shown while recording it will be produced
+or overwritten in the current directory.
+If you add these file names
+as single lines in SBDVPCFG.DAT,
+SBDVP will load them when it is started in that directory.
+The BACKCOPY functions have not been implemented. <EM>Do not</EM>
+enable BACKCOPY - unpredictable things may happen.
+<P><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html84"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif.gif"></A> 
+<A NAME="tex2html81"
+ HREF="dvp.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
+<A NAME="tex2html75"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif.gif"></A> 
+<A NAME="tex2html83"
+ HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html85"
+ HREF="node5.html">4 Sampling rate selection</A>
+<B> Up:</B> <A NAME="tex2html82"
+ HREF="dvp.html">A TR Compatible Sound</A>
+<B> Previous:</B> <A NAME="tex2html76"
+ HREF="node3.html">2 System Requirements</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+ 
+</ADDRESS>
+</BODY>
+</HTML>
