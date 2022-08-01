@@ -4,50 +4,58 @@
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
   Jens Lippman, Marek Rouchal, Martin Wilck and others -->
-<HTML>
-<HEAD>
-<TITLE>Analytic expressions for the
+<html>
+<head><script src="https://archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app221.us.archive.org';v.server_ms=249;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="../../../../../../_static/js/bundle-playback.js%3Fv=KTqwAcYd" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../../_static/js/wombat.js%3Fv=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://fermi.la.asu.edu/w9cf/articles/conform/index.html","20200808141224","https://web.archive.org/","web","/_static/",
+	      "1596895944");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/banner-styles.css%3Fv=fantwOh2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/iconochive.css%3Fv=qtvMKcIJ.css" />
+<!-- End Wayback Rewrite JS Include -->
+
+<title>Analytic expressions for the
 equivalent diameters of
 rectangular cross section conductors
-</TITLE>
-<META NAME="description" CONTENT="Analytic expressions for the
+</title>
+<meta name="description" content="Analytic expressions for the
 equivalent diameters of
 rectangular cross section conductors
 ">
-<META NAME="keywords" CONTENT="conf">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
-<LINK REL="STYLESHEET" HREF="conf.css">
-</HEAD>
-<BODY >
+<meta name="keywords" content="conf">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso_8859_1">
+<link rel="STYLESHEET" href="https://web.archive.org/web/20200808141224cs_/http://fermi.la.asu.edu/w9cf/articles/conform/conf.css">
+</head>
+<body>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html2"
- HREF="http://fermi.la.asu.edu/w9cf">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html3"
- HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
-<BR>
-<BR>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/next_motif_gr.gif"> 
+<a name="tex2html2" href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html3" href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf">w9cf Home</a>
+<br>
+<br>
 <!--End of Navigation Panel-->
-<P><H1 ALIGN="CENTER">Analytic expressions for the
+<p><h1 align="CENTER">Analytic expressions for the
 equivalent diameters of
 rectangular cross section conductors
-</H1>
-<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
- HREF="
+</h1>
+<p align="CENTER"><strong><a name="tex2html1" href="https://web.archive.org/web/20200808141224/
 mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF
-<BR></A>
-</STRONG></P>
-<P ALIGN="CENTER"><STRONG></STRONG></P>
-<P ALIGN="LEFT"></P>
-<P>
+<br></a>
+</strong></p>
+<p align="CENTER"><strong></strong></p>
+<p align="LEFT"></p>
+<p>
 Previously I had written up some
-<A NAME="tex2html1"
- HREF="../equiv/index.html">notes</A>
+<a name="tex2html1" href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf/articles/equiv/index.html">notes</a>
 where I calculated the equivalent
 resistance of a rectangular cross section conductor by dividing the surface
 up into segments, using a piecewise constant charge distribution
@@ -62,7 +70,7 @@ diameter is the one used in replacing the rectangular cross
 section element with a circular cross section one for perfectly
 conducting approximation in antenna codes, while
 the resistive diameter can be used to evaluate the resistive loss terms.
-<P>
+<p>
 Y.T. Lo, ``A note on the cylindrical antenna of noncircular
 cross section,'' J. App. Phys. 24, 1338 (1953),
 solved for the self impedance 
@@ -70,112 +78,58 @@ equivalent diameter of regular polygon cross section conductors.
 Here I extend his analysis to rectangular cross section conductors.
 I calculate both the equivalent self impedance diameter and the
 equivalent r.f. resistance diameter.
-<P>
+<p>
 Lo used the conformal mapping from the u to z planes given by
-<P ALIGN="CENTER"><A NAME="eq1">&#160;</A>
+<p align="CENTER"><a name="eq1">&#160;</a>
 <!-- MATH: dz = \prod_{i=1}^n (u-a_i)^{\alpha_i} u^{-2} du, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>dz</I> = <IMG WIDTH="26" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
- SRC="img1.gif"
- ALT="$\displaystyle\prod_{i=1}^{n}$">(<I>u</I> - <I>a</I><SUB>i</SUB>)<SUP><IMG WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img2.gif"
- ALT="$\scriptstyle\alpha_{i}$"></SUP><I>u</I><SUP> - 2</SUP><I>du</I>, 
-</TD><TD ALIGN="CENTER">(1)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>dz</i> = <img width="26" height="64" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img1.gif" alt="$\displaystyle\prod_{i=1}^{n}$">(<i>u</i> - <i>a</i><sub>i</sub>)<sup><img width="18" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img2.gif" alt="$\scriptstyle\alpha_{i}$"></sup><i>u</i><sup> - 2</sup><i>du</i>, 
+</td><td align="CENTER">(1)
+</td></tr></table></p>
 and showed how it can map the exterior of a circle to the
-exterior of an n-sided regular polygon if the  <I>a</I><SUB>i</SUB>  are the n nth roots
-of 1, and  <IMG WIDTH="21" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img3.gif"
- ALT="$\alpha_{i}^{}$">  are  2/<I>n</I> . For rectangles, we keep
+exterior of an n-sided regular polygon if the  <i>a</i><sub>i</sub>  are the n nth roots
+of 1, and  <img width="21" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img3.gif" alt="$\alpha_{i}^{}$">  are  2/<i>n</i> . For rectangles, we keep
 
 <!-- MATH: \alpha_i = 2/n -->
- <IMG WIDTH="21" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img4.gif"
- ALT="$\alpha_{i}^{}$"> = 2/<I>n</I>  and keep the
-the  <I>a</I><SUB>i</SUB>  on the unit circle, but not evenly spaced. Specifically,
-we take angles  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\theta$"> ,  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img6.gif"
- ALT="$\pi$"> ,  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img7.gif"
- ALT="$\pi$"> + <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img8.gif"
- ALT="$\theta$"> ,  2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img9.gif"
- ALT="$\pi$"> ,
-to make a rectangle. The value of  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img10.gif"
- ALT="$\theta$">  determines the two sides of
+ <img width="21" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img4.gif" alt="$\alpha_{i}^{}$"> = 2/<i>n</i>  and keep the
+the  <i>a</i><sub>i</sub>  on the unit circle, but not evenly spaced. Specifically,
+we take angles  <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img5.gif" alt="$\theta$"> ,  <img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img6.gif" alt="$\pi$"> ,  <img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img7.gif" alt="$\pi$"> + <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img8.gif" alt="$\theta$"> ,  2<img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img9.gif" alt="$\pi$"> ,
+to make a rectangle. The value of  <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img10.gif" alt="$\theta$">  determines the two sides of
 the rectangle. 
 <!-- MATH: \theta = \pi/2 -->
- <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img11.gif"
- ALT="$\theta$"> = <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.gif"
- ALT="$\pi$">/2  gives a square and reduces to Lo's
+ <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img11.gif" alt="$\theta$"> = <img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img12.gif" alt="$\pi$">/2  gives a square and reduces to Lo's
 solution for n=4.
-The function Eq. <A HREF="conf.html#eq1">1</A> can now be written as
-<P ALIGN="CENTER">
+The function Eq. <a href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf/articles/conform/conf.html#eq1">1</a> can now be written as
+<p align="CENTER">
 <!-- MATH: dz = [u^2e^{-i\theta}+u^{-2}e^{i\theta}-2 \cos(\theta)]^{\frac{1}{2}} u^{-1} du -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>dz</I> = [<I>u</I><SUP> 2</SUP><I>e</I><SUP> - i<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img13.gif"
- ALT="$\scriptstyle\theta$"></SUP> + <I>u</I><SUP> - 2</SUP><I>e</I><SUP> i<IMG WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img14.gif"
- ALT="$\scriptstyle\theta$"></SUP> - 2cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img15.gif"
- ALT="$\displaystyle\theta$">)]<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img16.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>u</I><SUP> - 1</SUP><I>du</I> 
-</TD><TD ALIGN="CENTER">(2)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>dz</i> = [<i>u</i><sup> 2</sup><i>e</i><sup> - i<img width="10" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img13.gif" alt="$\scriptstyle\theta$"></sup> + <i>u</i><sup> - 2</sup><i>e</i><sup> i<img width="10" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img14.gif" alt="$\scriptstyle\theta$"></sup> - 2cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img15.gif" alt="$\displaystyle\theta$">)]<sup><img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img16.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup><i>u</i><sup> - 1</sup><i>du</i> 
+</td><td align="CENTER">(2)
+</td></tr></table></p>
 where we drop an unimportant constant phase factor of 
 <!-- MATH: \exp(-i\theta/2) -->
- exp(- <I>i</I><IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img17.gif"
- ALT="$\theta$">/2) .
+ exp(- <i>i</i><img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img17.gif" alt="$\theta$">/2) .
 The length of the two sides of the rectangle corresponding to
-the original unit circle are given by integrating  <I>u</I>  around the
+the original unit circle are given by integrating  <i>u</i>  around the
 unit circle, That is with 
 <!-- MATH: u = \rho e^{i \phi} -->
- <I>u</I> = <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img18.gif"
- ALT="$\rho$"><I>e</I><SUP> i<IMG WIDTH="12" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img19.gif"
- ALT="$\scriptstyle\phi$"></SUP>, with  <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img20.gif"
- ALT="$\rho$"> = 1 ,
-<P ALIGN="CENTER">
+ <i>u</i> = <img width="13" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img18.gif" alt="$\rho$"><i>e</i><sup> i<img width="12" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img19.gif" alt="$\scriptstyle\phi$"></sup>, with  <img width="13" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img20.gif" alt="$\rho$"> = 1 ,
+<p align="CENTER">
 <!-- MATH: dz = [2 \cos(2 \phi-\theta)-2 \cos(\theta)]^{\frac{1}{2}} d\phi -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>dz</I> = [2cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img21.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img22.gif"
- ALT="$\displaystyle\theta$">) - 2cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img23.gif"
- ALT="$\displaystyle\theta$">)]<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img24.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img25.gif"
- ALT="$\displaystyle\phi$"> 
-</TD><TD ALIGN="CENTER">(3)
-</TD></TR></TABLE></P>
-<P>
-Choosing  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\theta$">  less than or equal to  <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img27.gif"
- ALT="$\pi$">/2 , the lengths of the
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>dz</i> = [2cos(2<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img21.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img22.gif" alt="$\displaystyle\theta$">) - 2cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img23.gif" alt="$\displaystyle\theta$">)]<sup><img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img24.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup><i>d</i><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img25.gif" alt="$\displaystyle\phi$"> 
+</td><td align="CENTER">(3)
+</td></tr></table></p>
+<p>
+Choosing  <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img26.gif" alt="$\theta$">  less than or equal to  <img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img27.gif" alt="$\pi$">/2 , the lengths of the
 two sides of the rectangle corresponding to the unit circle are
-<BR>
+<br>
 
 <!-- MATH: s_1 &=& \int_0^\theta \left | \frac{dz}{d\phi} \right | d\phi
 \nonumber\\  &=& \sqrt{2} ~ \int_0^\theta
@@ -184,219 +138,141 @@ two sides of the rectangle corresponding to the unit circle are
 \nonumber\\  &=& \sqrt{2} ~ \int_\theta^\pi
 |\cos(2 \phi-\theta)-\cos(\theta)|^{\frac{1}{2}} d\phi -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>s</I><SUB>1</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>s</i><sub>1</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="28" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
- SRC="img28.gif"
- ALT="$\displaystyle\int_{0}^{\theta}$"><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
- SRC="img29.gif"
- ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img30.gif"
- ALT="$\displaystyle\phi$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+</td><td align="LEFT" nowrap>
+<img width="28" height="60" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img28.gif" alt="$\displaystyle\int_{0}^{\theta}$"><img width="54" height="65" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img29.gif" alt="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img30.gif" alt="$\displaystyle\phi$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
 &nbsp;
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="30" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
- SRC="img31.gif"
- ALT="$\displaystyle\sqrt{2}$">&nbsp;<IMG WIDTH="28" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
- SRC="img32.gif"
- ALT="$\displaystyle\int_{0}^{\theta}$">|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img33.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img34.gif"
- ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img35.gif"
- ALT="$\displaystyle\theta$">)|<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img36.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img37.gif"
- ALT="$\displaystyle\phi$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>s</I><SUB>2</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="LEFT" nowrap>
+<img width="30" height="44" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img31.gif" alt="$\displaystyle\sqrt{2}$">&nbsp;<img width="28" height="60" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img32.gif" alt="$\displaystyle\int_{0}^{\theta}$">|cos(2<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img33.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img34.gif" alt="$\displaystyle\theta$">) - cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img35.gif" alt="$\displaystyle\theta$">)|<sup><img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img36.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup><i>d</i><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img37.gif" alt="$\displaystyle\phi$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>s</i><sub>2</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="29" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.gif"
- ALT="$\displaystyle\int_{\theta}^{\pi}$"><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
- SRC="img39.gif"
- ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img40.gif"
- ALT="$\displaystyle\phi$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+</td><td align="LEFT" nowrap>
+<img width="29" height="53" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img38.gif" alt="$\displaystyle\int_{\theta}^{\pi}$"><img width="54" height="65" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img39.gif" alt="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img40.gif" alt="$\displaystyle\phi$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
 &nbsp;
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="30" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
- SRC="img41.gif"
- ALT="$\displaystyle\sqrt{2}$">&nbsp;<IMG WIDTH="29" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
- SRC="img42.gif"
- ALT="$\displaystyle\int_{\theta}^{\pi}$">|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img43.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img44.gif"
- ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img45.gif"
- ALT="$\displaystyle\theta$">)|<SUP><IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img46.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img47.gif"
- ALT="$\displaystyle\phi$"> 
-</TD><TD ALIGN="RIGHT">(4)</TD></TR>
-</TABLE></DIV>
-with  <I>s</I><SUB>2</SUB>  the longer side. The form of these integrals is very similar
+</td><td align="LEFT" nowrap>
+<img width="30" height="44" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img41.gif" alt="$\displaystyle\sqrt{2}$">&nbsp;<img width="29" height="53" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img42.gif" alt="$\displaystyle\int_{\theta}^{\pi}$">|cos(2<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img43.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img44.gif" alt="$\displaystyle\theta$">) - cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img45.gif" alt="$\displaystyle\theta$">)|<sup><img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img46.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup><i>d</i><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img47.gif" alt="$\displaystyle\phi$"> 
+</td><td align="RIGHT">(4)</td></tr>
+</table></div>
+with  <i>s</i><sub>2</sub>  the longer side. The form of these integrals is very similar
 to
 the form we get when we solve for the exact dynamics of a simple pendulum.
 The integrals can be written in terms
 of complete elliptic integrals with the standard substitution
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: \sin(\phi-\theta/2) = \sin(\theta/2)\sin(\gamma) -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-sin(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img49.gif"
- ALT="$\displaystyle\theta$">/2) = sin(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img50.gif"
- ALT="$\displaystyle\theta$">/2)sin(<IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img51.gif"
- ALT="$\displaystyle\gamma$">) 
-</TD><TD ALIGN="CENTER">(5)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+sin(<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img48.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img49.gif" alt="$\displaystyle\theta$">/2) = sin(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img50.gif" alt="$\displaystyle\theta$">/2)sin(<img width="15" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img51.gif" alt="$\displaystyle\gamma$">) 
+</td><td align="CENTER">(5)
+</td></tr></table></p>
 to be
-<BR>
+<br>
 
 <!-- MATH: s_1 &=& 4 [E(k)-k'^2~K(k)]
 \nonumber\\s_2 &=& 4 [E(k')-k^2~K(k')] -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>s</I><SUB>1</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>s</i><sub>1</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-4[<I>E</I>(<I>k</I>) - <I>k</I>'<SUP>2</SUP>&nbsp;<I>K</I>(<I>k</I>)] 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>s</I><SUB>2</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="LEFT" nowrap>
+4[<i>E</i>(<i>k</i>) - <i>k</i>'<sup>2</sup>&nbsp;<i>K</i>(<i>k</i>)] 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>s</i><sub>2</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-4[<I>E</I>(<I>k</I>') - <I>k</I><SUP> 2</SUP>&nbsp;<I>K</I>(<I>k</I>')] 
-</TD><TD ALIGN="RIGHT">(6)</TD></TR>
-</TABLE></DIV>
+</td><td align="LEFT" nowrap>
+4[<i>E</i>(<i>k</i>') - <i>k</i><sup> 2</sup>&nbsp;<i>K</i>(<i>k</i>')] 
+</td><td align="RIGHT">(6)</td></tr>
+</table></div>
 where 
 <!-- MATH: k = \sin(\theta/2) -->
- <I>k</I> = sin(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img52.gif"
- ALT="$\theta$">/2) , and 
+ <i>k</i> = sin(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img52.gif" alt="$\theta$">/2) , and 
 <!-- MATH: k' = \sqrt{1-k^2} -->
- <I>k</I>' = <IMG WIDTH="73" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
- SRC="img53.gif"
- ALT="$\sqrt{1-k^2}$">  is the complementary
-modulus.  <I>K</I>(<I>k</I>)  and  <I>E</I>(<I>k</I>)  are the complete elliptic integrals of
+ <i>k</i>' = <img width="73" height="41" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img53.gif" alt="$\sqrt{1-k^2}$">  is the complementary
+modulus.  <i>K</i>(<i>k</i>)  and  <i>E</i>(<i>k</i>)  are the complete elliptic integrals of
 the first and second kinds defined as usual as
-<BR>
+<br>
 
 <!-- MATH: K(k)&=&\int_0^{\pi/2} \frac{1}{\sqrt{1-k^2 \sin^2(\gamma)}} d\gamma
 \nonumber\\E(k)&=&\int_0^{\pi/2} \sqrt{1-k^2 \sin^2(\gamma)} d\gamma -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>K</I>(<I>k</I>) 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>K</i>(<i>k</i>) 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="43" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img54.gif"
- ALT="$\displaystyle\int_{0}^{\pi/2}$"><IMG WIDTH="102" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
- SRC="img55.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{\sqrt{1-k^2 \sin^2(\gamma)}}}$"><I>d</I><IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img56.gif"
- ALT="$\displaystyle\gamma$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>E</I>(<I>k</I>) 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="LEFT" nowrap>
+<img width="43" height="62" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img54.gif" alt="$\displaystyle\int_{0}^{\pi/2}$"><img width="102" height="39" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img55.gif" alt="$\displaystyle{\textstyle\frac{1}{\sqrt{1-k^2 \sin^2(\gamma)}}}$"><i>d</i><img width="15" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img56.gif" alt="$\displaystyle\gamma$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>E</i>(<i>k</i>) 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="43" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img57.gif"
- ALT="$\displaystyle\int_{0}^{\pi/2}$"><IMG WIDTH="134" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
- SRC="img58.gif"
- ALT="$\displaystyle\sqrt{1-k^2 \sin^2(\gamma)}$"><I>d</I><IMG WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img59.gif"
- ALT="$\displaystyle\gamma$"> 
-</TD><TD ALIGN="RIGHT">(7)</TD></TR>
-</TABLE></DIV>
-<P>
+</td><td align="LEFT" nowrap>
+<img width="43" height="62" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img57.gif" alt="$\displaystyle\int_{0}^{\pi/2}$"><img width="134" height="52" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img58.gif" alt="$\displaystyle\sqrt{1-k^2 \sin^2(\gamma)}$"><i>d</i><img width="15" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img59.gif" alt="$\displaystyle\gamma$"> 
+</td><td align="RIGHT">(7)</td></tr>
+</table></div>
+<p>
 The effective self impedance diameter for
 this size rectangle is two. The effective self impedance diameter
 of a rectangular
-cross section conductor of width  <I>w</I>  and thickness  <I>t</I>  is given
+cross section conductor of width  <i>w</i>  and thickness  <i>t</i>  is given
 by
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: d_{self} = \frac{2 w}{s_2} = w ~ \frac{1}{
 2 [E(k')-k^2~K(k')]} -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>d</I><SUB>self</SUB> = <IMG WIDTH="32" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img60.gif"
- ALT="$\displaystyle{\frac{2 w}{s_2}}$"> = <I>w</I>&nbsp;<IMG WIDTH="125" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img61.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>d</i><sub>self</sub> = <img width="32" height="58" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img60.gif" alt="$\displaystyle{\frac{2 w}{s_2}}$"> = <i>w</i>&nbsp;<img width="125" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img61.gif" alt="$\displaystyle{\textstyle\frac{1}{
 2 [E(k')-k^2~K(k')]}}$"> 
-</TD><TD ALIGN="CENTER">(8)
-</TD></TR></TABLE></P>
-where  <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img62.gif"
- ALT="$\theta$">  is chosen so that  <I>s</I><SUB>2</SUB>/<I>s</I><SUB>1</SUB>  equals  <I>w</I>/<I>t</I> , that is
-<P ALIGN="CENTER">
+</td><td align="CENTER">(8)
+</td></tr></table></p>
+where  <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img62.gif" alt="$\theta$">  is chosen so that  <i>s</i><sub>2</sub>/<i>s</i><sub>1</sub>  equals  <i>w</i>/<i>t</i> , that is
+<p align="CENTER">
 <!-- MATH: \frac{w}{t} =
 \frac{E(k')-k^2~K(k')}{E(k)-k'^2~K(k)}
  -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="22" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img63.gif"
- ALT="$\displaystyle{\frac{w}{t}}$"> = <IMG WIDTH="152" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
- SRC="img64.gif"
- ALT="$\displaystyle{\frac{E(k')-k^2~K(k')}{E(k)-k'^2~K(k)}}$"> 
-</TD><TD ALIGN="CENTER">(9)
-</TD></TR></TABLE></P>
-<P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="22" height="50" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img63.gif" alt="$\displaystyle{\frac{w}{t}}$"> = <img width="152" height="64" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img64.gif" alt="$\displaystyle{\frac{E(k')-k^2~K(k')}{E(k)-k'^2~K(k)}}$"> 
+</td><td align="CENTER">(9)
+</td></tr></table></p>
+<p>
 The charge density can be obtained similarly. The charge density is
 proportional to the perpendicular electric field. The equipotentials
-for the  <I>u</I>  system are circles, so we can calculate other equipotentials
-by choosing  <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img65.gif"
- ALT="$\rho$"> &gt; 1 . We can take the normal derivative of the
+for the  <i>u</i>  system are circles, so we can calculate other equipotentials
+by choosing  <img width="13" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img65.gif" alt="$\rho$"> &gt; 1 . We can take the normal derivative of the
 potential to get the perpendicular electric field. You can think of
-this as evaluating the distance  <I>h</I>  that a nearby equipotential is
+this as evaluating the distance  <i>h</i>  that a nearby equipotential is
 from the rectangle. The derivative of the potential is then just
 the difference in the potentials divided by this distance. Taking
-the derivative with respect to  <IMG WIDTH="13" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img66.gif"
- ALT="$\rho$">  and calculating this distance
+the derivative with respect to  <img width="13" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img66.gif" alt="$\rho$">  and calculating this distance
 gives
-<BR>
+<br>
 
 <!-- MATH: E(\phi) &=& \left [ 2^{\frac{3}{2}} \int_0^\phi \frac{\sin(2 \phi'-\theta)}
 {|\cos(2 \phi'-\theta)-\cos(\theta)|^{\frac{1}{2}}} d\phi'
@@ -404,276 +280,227 @@ gives
 \nonumber\\&=& 2^{-\frac{3}{2}}
 |\cos(2 \phi-\theta)-\cos(\theta)|^{-\frac{1}{2}} -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>E</I>(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img67.gif"
- ALT="$\displaystyle\phi$">) 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>E</i>(<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img67.gif" alt="$\displaystyle\phi$">) 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="309" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
- SRC="img68.gif"
- ALT="$\displaystyle\left [ 2^{\frac{3}{2}} \int_0^\phi \frac{\sin(2 \phi'-\theta)}
+</td><td align="LEFT" nowrap>
+<img width="309" height="65" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img68.gif" alt="$\displaystyle\left [ 2^{\frac{3}{2}} \int_0^\phi \frac{\sin(2 \phi'-\theta)}
 {\vert\cos(2 \phi'-\theta)-\cos(\theta)\vert^{\frac{1}{2}}} d\phi'
 \right]^$">-1 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
 &nbsp;
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-2<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img69.gif"
- ALT="$\scriptstyle{\textstyle\frac{3}{2}}$"></SUP>|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img70.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img71.gif"
- ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img72.gif"
- ALT="$\displaystyle\theta$">)|<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img73.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP>
-</TD><TD ALIGN="RIGHT">(10)</TD></TR>
-</TABLE></DIV>
-<P>
+</td><td align="LEFT" nowrap>
+2<sup>- <img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img69.gif" alt="$\scriptstyle{\textstyle\frac{3}{2}}$"></sup>|cos(2<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img70.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img71.gif" alt="$\displaystyle\theta$">) - cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img72.gif" alt="$\displaystyle\theta$">)|<sup>- <img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img73.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup>
+</td><td align="RIGHT">(10)</td></tr>
+</table></div>
+<p>
 Normalizing this to 1, we get the normalized charge density to be
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: \sigma(\phi) = \frac{2^{-\frac{1}{2}} }{2 \pi}
 |\cos(\theta) - \cos(2 \phi-\theta)|^{-\frac{1}{2}} -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img74.gif"
- ALT="$\displaystyle\sigma$">(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img75.gif"
- ALT="$\displaystyle\phi$">) = <IMG WIDTH="39" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
- SRC="img76.gif"
- ALT="$\displaystyle{\frac{2^{-\frac{1}{2}} }{2 \pi}}$">|cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img77.gif"
- ALT="$\displaystyle\theta$">) - cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img78.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img79.gif"
- ALT="$\displaystyle\theta$">)|<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img80.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP>
-</TD><TD ALIGN="CENTER">(11)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img74.gif" alt="$\displaystyle\sigma$">(<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img75.gif" alt="$\displaystyle\phi$">) = <img width="39" height="71" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img76.gif" alt="$\displaystyle{\frac{2^{-\frac{1}{2}} }{2 \pi}}$">|cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img77.gif" alt="$\displaystyle\theta$">) - cos(2<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img78.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img79.gif" alt="$\displaystyle\theta$">)|<sup>- <img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img80.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup>
+</td><td align="CENTER">(11)
+</td></tr></table></p>
 The integral of the charge density squared around the square is then
-<BR>
+<br>
 
 <!-- MATH: \int_0^{2\pi} \sigma(\phi)^2
 \left | \frac{dz}{d\phi} \right | d\phi
 = \frac{1}{\sqrt{32} \pi^2}
 \int_0^\pi |\cos(2 \phi-\theta)-\cos(\theta)|^{-\frac{1}{2}} d\phi . -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<IMG WIDTH="36" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
- SRC="img81.gif"
- ALT="$\displaystyle\int_{0}^{2\pi}$"><IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img82.gif"
- ALT="$\displaystyle\sigma$">(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img83.gif"
- ALT="$\displaystyle\phi$">)<SUP>2</SUP><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
- SRC="img84.gif"
- ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img85.gif"
- ALT="$\displaystyle\phi$"> = <IMG WIDTH="49" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img86.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{\sqrt{32} \pi^2}}$"><IMG WIDTH="29" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
- SRC="img87.gif"
- ALT="$\displaystyle\int_{0}^{\pi}$">|cos(2<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img88.gif"
- ALT="$\displaystyle\phi$"> - <IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img89.gif"
- ALT="$\displaystyle\theta$">) - cos(<IMG WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img90.gif"
- ALT="$\displaystyle\theta$">)|<SUP>- <IMG WIDTH="14" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img91.gif"
- ALT="$\scriptstyle{\textstyle\frac{1}{2}}$"></SUP><I>d</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img92.gif"
- ALT="$\displaystyle\phi$">. 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<img width="36" height="59" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img81.gif" alt="$\displaystyle\int_{0}^{2\pi}$"><img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img82.gif" alt="$\displaystyle\sigma$">(<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img83.gif" alt="$\displaystyle\phi$">)<sup>2</sup><img width="54" height="65" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img84.gif" alt="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img85.gif" alt="$\displaystyle\phi$"> = <img width="49" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img86.gif" alt="$\displaystyle{\textstyle\frac{1}{\sqrt{32} \pi^2}}$"><img width="29" height="53" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img87.gif" alt="$\displaystyle\int_{0}^{\pi}$">|cos(2<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img88.gif" alt="$\displaystyle\phi$"> - <img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img89.gif" alt="$\displaystyle\theta$">) - cos(<img width="13" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img90.gif" alt="$\displaystyle\theta$">)|<sup>- <img width="14" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img91.gif" alt="$\scriptstyle{\textstyle\frac{1}{2}}$"></sup><i>d</i><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img92.gif" alt="$\displaystyle\phi$">. 
+</td><td align="CENTER" nowrap>
 &nbsp;&nbsp;
-</TD><TD ALIGN="LEFT" NOWRAP>
+</td><td align="LEFT" nowrap>
 &nbsp;
-</TD><TD ALIGN="RIGHT">(12)</TD></TR>
-</TABLE></DIV>
+</td><td align="RIGHT">(12)</td></tr>
+</table></div>
 These integrals can also be done in terms of elliptic integrals
 giving
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: \int_0^{2\pi} \sigma(\phi)^2
 \left | \frac{dz}{d\phi} \right | d\phi
 =\frac{1}{4 \pi^2} [K(k)+K(k')] -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="36" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
- SRC="img93.gif"
- ALT="$\displaystyle\int_{0}^{2\pi}$"><IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img94.gif"
- ALT="$\displaystyle\sigma$">(<IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img95.gif"
- ALT="$\displaystyle\phi$">)<SUP>2</SUP><IMG WIDTH="54" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
- SRC="img96.gif"
- ALT="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img97.gif"
- ALT="$\displaystyle\phi$"> = <IMG WIDTH="30" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img98.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{4 \pi^2}}$">[<I>K</I>(<I>k</I>) + <I>K</I>(<I>k</I>')] 
-</TD><TD ALIGN="CENTER">(13)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="36" height="59" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img93.gif" alt="$\displaystyle\int_{0}^{2\pi}$"><img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img94.gif" alt="$\displaystyle\sigma$">(<img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img95.gif" alt="$\displaystyle\phi$">)<sup>2</sup><img width="54" height="65" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img96.gif" alt="$\displaystyle\left \vert \frac{dz}{d\phi} \right\vert d$"><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img97.gif" alt="$\displaystyle\phi$"> = <img width="30" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img98.gif" alt="$\displaystyle{\textstyle\frac{1}{4 \pi^2}}$">[<i>K</i>(<i>k</i>) + <i>K</i>(<i>k</i>')] 
+</td><td align="CENTER">(13)
+</td></tr></table></p>
 and the effective resistance diameter is
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: d_{resistance} = w
 ~ \frac{\pi}{2 [K(k)+K(k')] [E(k')-k^2~K(k')]} -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>d</I><SUB>resistance</SUB> = <I>w</I>&nbsp;<IMG WIDTH="300" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img99.gif"
- ALT="$\displaystyle{\frac{\pi}{2 [K(k)+K(k')] [E(k')-k^2~K(k')]}}$"> 
-</TD><TD ALIGN="CENTER">(14)
-</TD></TR></TABLE></P>
-<P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>d</i><sub>resistance</sub> = <i>w</i>&nbsp;<img width="300" height="50" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img99.gif" alt="$\displaystyle{\frac{\pi}{2 [K(k)+K(k')] [E(k')-k^2~K(k')]}}$"> 
+</td><td align="CENTER">(14)
+</td></tr></table></p>
+<p>
 Previously, I fit my brute force numerical calculations to the expressions
-<P ALIGN="CENTER"><A NAME="eq15">&#160;</A>
+<p align="CENTER"><a name="eq15">&#160;</a>
 <!-- MATH: d_{self} = w [ 0.5 + 0.9 t/w -0.22 (t/w)^2 ] -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>d</I><SUB>self</SUB> = <I>w</I>[0.5 + 0.9<I>t</I>/<I>w</I> - 0.22(<I>t</I>/<I>w</I>)<SUP>2</SUP>] 
-</TD><TD ALIGN="CENTER">(15)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>d</i><sub>self</sub> = <i>w</i>[0.5 + 0.9<i>t</i>/<i>w</i> - 0.22(<i>t</i>/<i>w</i>)<sup>2</sup>] 
+</td><td align="CENTER">(15)
+</td></tr></table></p>
 and
-<P ALIGN="CENTER"><A NAME="eq16">&#160;</A>
+<p align="CENTER"><a name="eq16">&#160;</a>
 <!-- MATH: d_{resistance} = w\frac{1}{1+1.13 \log_{10}(w/t)} -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>d</I><SUB>resistance</SUB> = <I>w</I><IMG WIDTH="118" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img100.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{1+1.13 \log_{10}(w/t)}}$"> 
-</TD><TD ALIGN="CENTER">(16)
-</TD></TR></TABLE></P>
-<P>
-<BR>
-<DIV ALIGN="CENTER">
-<P><A NAME="119">&#160;</A>
-<TABLE CELLPADDING=3 BORDER="1">
-<CAPTION><STRONG>Table 1:</STRONG>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>d</i><sub>resistance</sub> = <i>w</i><img width="118" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/img100.gif" alt="$\displaystyle{\textstyle\frac{1}{1+1.13 \log_{10}(w/t)}}$"> 
+</td><td align="CENTER">(16)
+</td></tr></table></p>
+<p>
+<br>
+<div align="CENTER">
+<p><a name="119">&#160;</a>
+<table cellpadding="3" border="1">
+<caption><strong>Table 1:</strong>
 The calculated values of the self impedance effective diamter
 and the resistance effective diameter as a function of
 the cross section width divided by thickness compared
-to the fits. The value of  <I>k</I>  is the calculated value to
-get the correct  <I>w</I>/<I>t</I>  ratio.
-</CAPTION>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>w/t</TD>
-<TD ALIGN="CENTER" NOWRAP>k</TD>
-<TD ALIGN="CENTER" NOWRAP> <I>d</I><SUB>self</SUB> </TD>
-<TD ALIGN="CENTER" NOWRAP>Eq. <A HREF="conf.html#eq15">15</A></TD>
-<TD ALIGN="CENTER" NOWRAP>
+to the fits. The value of  <i>k</i>  is the calculated value to
+get the correct  <i>w</i>/<i>t</i>  ratio.
+</caption>
+<tr valign="TOP"><td align="CENTER" nowrap>w/t</td>
+<td align="CENTER" nowrap>k</td>
+<td align="CENTER" nowrap> <i>d</i><sub>self</sub> </td>
+<td align="CENTER" nowrap>Eq. <a href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf/articles/conform/conf.html#eq15">15</a></td>
+<td align="CENTER" nowrap>
 <!-- MATH: d_{resistance} -->
- <I>d</I><SUB>resistance</SUB> </TD>
-<TD ALIGN="CENTER" NOWRAP>Eq. <A HREF="conf.html#eq16">16</A></TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1</TD>
-<TD ALIGN="CENTER" NOWRAP>0.70711</TD>
-<TD ALIGN="CENTER" NOWRAP>1.18034 w</TD>
-<TD ALIGN="CENTER" NOWRAP>1.18 w</TD>
-<TD ALIGN="CENTER" NOWRAP>1.00000 w</TD>
-<TD ALIGN="CENTER" NOWRAP>1.00 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2</TD>
-<TD ALIGN="CENTER" NOWRAP>0.58862</TD>
-<TD ALIGN="CENTER" NOWRAP>0.87476 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.90 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.73203 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.75 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>5</TD>
-<TD ALIGN="CENTER" NOWRAP>0.43001</TD>
-<TD ALIGN="CENTER" NOWRAP>0.67185 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.67 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.53502 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.56 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>10</TD>
-<TD ALIGN="CENTER" NOWRAP>0.32480</TD>
-<TD ALIGN="CENTER" NOWRAP>0.59529 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.59 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.44872 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.47 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>20</TD>
-<TD ALIGN="CENTER" NOWRAP>0.23912</TD>
-<TD ALIGN="CENTER" NOWRAP>0.55265 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.54 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.39123 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.40 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>50</TD>
-<TD ALIGN="CENTER" NOWRAP>0.15567</TD>
-<TD ALIGN="CENTER" NOWRAP>0.52383 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.52 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.33997 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.34 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>100</TD>
-<TD ALIGN="CENTER" NOWRAP>0.11131</TD>
-<TD ALIGN="CENTER" NOWRAP>0.51299 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.51 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.31200 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.31 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>200</TD>
-<TD ALIGN="CENTER" NOWRAP>0.07920</TD>
-<TD ALIGN="CENTER" NOWRAP>0.50704 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.50 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.28962 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.28 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>500</TD>
-<TD ALIGN="CENTER" NOWRAP>0.05030</TD>
-<TD ALIGN="CENTER" NOWRAP>0.50310 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.50 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.26564 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.25 w</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1000</TD>
-<TD ALIGN="CENTER" NOWRAP>0.03562</TD>
-<TD ALIGN="CENTER" NOWRAP>0.50166 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.50 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.25042 w</TD>
-<TD ALIGN="CENTER" NOWRAP>0.23 w</TD>
-</TR>
-</TABLE>
-</DIV>
-<BR>
-<P>
+ <i>d</i><sub>resistance</sub> </td>
+<td align="CENTER" nowrap>Eq. <a href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf/articles/conform/conf.html#eq16">16</a></td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1</td>
+<td align="CENTER" nowrap>0.70711</td>
+<td align="CENTER" nowrap>1.18034 w</td>
+<td align="CENTER" nowrap>1.18 w</td>
+<td align="CENTER" nowrap>1.00000 w</td>
+<td align="CENTER" nowrap>1.00 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2</td>
+<td align="CENTER" nowrap>0.58862</td>
+<td align="CENTER" nowrap>0.87476 w</td>
+<td align="CENTER" nowrap>0.90 w</td>
+<td align="CENTER" nowrap>0.73203 w</td>
+<td align="CENTER" nowrap>0.75 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>5</td>
+<td align="CENTER" nowrap>0.43001</td>
+<td align="CENTER" nowrap>0.67185 w</td>
+<td align="CENTER" nowrap>0.67 w</td>
+<td align="CENTER" nowrap>0.53502 w</td>
+<td align="CENTER" nowrap>0.56 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>10</td>
+<td align="CENTER" nowrap>0.32480</td>
+<td align="CENTER" nowrap>0.59529 w</td>
+<td align="CENTER" nowrap>0.59 w</td>
+<td align="CENTER" nowrap>0.44872 w</td>
+<td align="CENTER" nowrap>0.47 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>20</td>
+<td align="CENTER" nowrap>0.23912</td>
+<td align="CENTER" nowrap>0.55265 w</td>
+<td align="CENTER" nowrap>0.54 w</td>
+<td align="CENTER" nowrap>0.39123 w</td>
+<td align="CENTER" nowrap>0.40 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>50</td>
+<td align="CENTER" nowrap>0.15567</td>
+<td align="CENTER" nowrap>0.52383 w</td>
+<td align="CENTER" nowrap>0.52 w</td>
+<td align="CENTER" nowrap>0.33997 w</td>
+<td align="CENTER" nowrap>0.34 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>100</td>
+<td align="CENTER" nowrap>0.11131</td>
+<td align="CENTER" nowrap>0.51299 w</td>
+<td align="CENTER" nowrap>0.51 w</td>
+<td align="CENTER" nowrap>0.31200 w</td>
+<td align="CENTER" nowrap>0.31 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>200</td>
+<td align="CENTER" nowrap>0.07920</td>
+<td align="CENTER" nowrap>0.50704 w</td>
+<td align="CENTER" nowrap>0.50 w</td>
+<td align="CENTER" nowrap>0.28962 w</td>
+<td align="CENTER" nowrap>0.28 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>500</td>
+<td align="CENTER" nowrap>0.05030</td>
+<td align="CENTER" nowrap>0.50310 w</td>
+<td align="CENTER" nowrap>0.50 w</td>
+<td align="CENTER" nowrap>0.26564 w</td>
+<td align="CENTER" nowrap>0.25 w</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1000</td>
+<td align="CENTER" nowrap>0.03562</td>
+<td align="CENTER" nowrap>0.50166 w</td>
+<td align="CENTER" nowrap>0.50 w</td>
+<td align="CENTER" nowrap>0.25042 w</td>
+<td align="CENTER" nowrap>0.23 w</td>
+</tr>
+</table>
+</div>
+<br>
+<p>
 It seems likely to me that this calculation would have been done
 long ago and is probably buried somewhere in the literature, however,
 I have not found it anywhere. All the integrals can be evaluated
 in terms of elliptic integrals, and tables of these have
 been available for a very long time.
-<P><HR>
+<p><hr>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html2"
- HREF="http://fermi.la.asu.edu/w9cf">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html3"
- HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/next_motif_gr.gif"> 
+<a name="tex2html2" href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808141224im_/http://fermi.la.asu.edu/w9cf/articles/conform/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html3" href="https://web.archive.org/web/20200808141224/http://fermi.la.asu.edu/w9cf">w9cf Home</a>
 <!--End of Navigation Panel-->
-<ADDRESS>
+<address>
  
-</ADDRESS>
-</BODY>
-</HTML>
+</address>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 14:12:24 Aug 08, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:23:56 Aug 01, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 99.372
+  exclusion.robots: 0.1
+  exclusion.robots.policy: 0.092
+  RedisCDXSource: 0.624
+  esindex: 0.01
+  LoadShardBlock: 75.171 (3)
+  PetaboxLoader3.datanode: 109.95 (4)
+  CDXLines.iter: 20.109 (3)
+  load_resource: 125.559
+  PetaboxLoader3.resolve: 72.364
+-->

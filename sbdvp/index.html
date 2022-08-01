@@ -4,204 +4,200 @@
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
   Jens Lippman, Marek Rouchal, Martin Wilck and others -->
-<HTML>
-<HEAD>
-<TITLE>A TR Compatible Sound Card Voice Keyer </TITLE>
-<META NAME="description" CONTENT="A TR Compatible Sound Card Voice Keyer ">
-<META NAME="keywords" CONTENT="dvp">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
-<LINK REL="STYLESHEET" HREF="dvp.css">
-</HEAD>
-<BODY >
+<html>
+<head><script src="https://archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app209.us.archive.org';v.server_ms=386;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="../../../../../_static/js/bundle-playback.js%3Fv=KTqwAcYd" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../_static/js/wombat.js%3Fv=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://fermi.la.asu.edu/w9cf/sbdvp/index.html","20200808151731","https://web.archive.org/","web","/_static/",
+	      "1596899851");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../_static/css/banner-styles.css%3Fv=fantwOh2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../_static/css/iconochive.css%3Fv=qtvMKcIJ.css" />
+<!-- End Wayback Rewrite JS Include -->
+
+<title>A TR Compatible Sound Card Voice Keyer </title>
+<meta name="description" content="A TR Compatible Sound Card Voice Keyer ">
+<meta name="keywords" content="dvp">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso_8859_1">
+<link rel="STYLESHEET" href="https://web.archive.org/web/20200808151731cs_/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.css">
+</head>
+<body>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html1"
- HREF="../index.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html2"
- HREF="../index.html">w9cf links</A>
-<BR>
-<BR>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200808151731im_/http://fermi.la.asu.edu/w9cf/sbdvp/next_motif_gr.gif"> 
+<a name="tex2html1" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/index.html">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808151731im_/http://fermi.la.asu.edu/w9cf/sbdvp/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808151731im_/http://fermi.la.asu.edu/w9cf/sbdvp/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html2" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/index.html">w9cf links</a>
+<br>
+<br>
 <!--End of Navigation Panel-->
-<P><H1 ALIGN="CENTER">A TR Compatible Sound Card Voice Keyer
-</H1>
-<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
- HREF="
-mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF</A>
-<BR>
-</STRONG></P>
-<P ALIGN="LEFT"></P>
-<P>
-<BR>
-<H2><A NAME="SECTION00010000000000000000">
-Contents</A>
-</H2>
+<p><h1 align="CENTER">A TR Compatible Sound Card Voice Keyer
+</h1>
+<p align="CENTER"><strong><a name="tex2html1" href="https://web.archive.org/web/20200808151731/
+mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF</a>
+<br>
+</strong></p>
+<p align="LEFT"></p>
+<p>
+<br>
+<h2><a name="SECTION00010000000000000000">
+Contents</a>
+</h2>
 <!--Table of Contents-->
-<UL>
-<LI><A NAME="tex2html21"
- HREF="dvp.html#SECTION00010000000000000000">
-Contents</A>
-<LI><A NAME="tex2html22"
- HREF="dvp.html#SECTION00020000000000000000">
-1 Introduction</A>
-<LI><A NAME="tex2html23"
- HREF="dvp.html#SECTION00030000000000000000">
-2 System Requirements</A>
-<LI><A NAME="tex2html24"
- HREF="dvp.html#SECTION00040000000000000000">
-3 Program Operation</A>
-<LI><A NAME="tex2html25"
- HREF="dvp.html#SECTION00050000000000000000">
-4 Sampling rate selection</A>
-<LI><A NAME="tex2html26"
- HREF="dvp.html#SECTION00060000000000000000">
-5 Push to Talk</A>
-<LI><A NAME="tex2html27"
- HREF="dvp.html#SECTION00070000000000000000">
-6 Switching the rig microphone</A>
-<LI><A NAME="tex2html28"
- HREF="dvp.html#SECTION00080000000000000000">
-7 Audio connections</A>
-<LI><A NAME="tex2html29"
- HREF="dvp.html#SECTION00090000000000000000">
-8 Switching off the rig microphone</A>
-<LI><A NAME="tex2html30"
- HREF="dvp.html#SECTION000100000000000000000">
+<ul>
+<li><a name="tex2html21" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00010000000000000000">
+Contents</a>
+<li><a name="tex2html22" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00020000000000000000">
+1 Introduction</a>
+<li><a name="tex2html23" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00030000000000000000">
+2 System Requirements</a>
+<li><a name="tex2html24" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00040000000000000000">
+3 Program Operation</a>
+<li><a name="tex2html25" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00050000000000000000">
+4 Sampling rate selection</a>
+<li><a name="tex2html26" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00060000000000000000">
+5 Push to Talk</a>
+<li><a name="tex2html27" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00070000000000000000">
+6 Switching the rig microphone</a>
+<li><a name="tex2html28" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00080000000000000000">
+7 Audio connections</a>
+<li><a name="tex2html29" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION00090000000000000000">
+8 Switching off the rig microphone</a>
+<li><a name="tex2html30" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000100000000000000000">
 Using the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1.X</A>
-<LI><A NAME="tex2html31"
- HREF="dvp.html#SECTION000110000000000000000">
-10 Windows Sound System Compatible Sound Cards</A>
-<LI><A NAME="tex2html32"
- HREF="dvp.html#SECTION000120000000000000000">
-11 Mixer Settings</A>
-<LI><A NAME="tex2html33"
- HREF="dvp.html#SECTION000130000000000000000">
-12 Windows Operation</A>
-<LI><A NAME="tex2html34"
- HREF="dvp.html#SECTION000140000000000000000">
-13 Memory management</A>
-<LI><A NAME="tex2html35"
- HREF="dvp.html#SECTION000150000000000000000">
-14 Program internal operation</A>
-<LI><A NAME="tex2html36"
- HREF="dvp.html#SECTION000160000000000000000">
-15 Sound Quality</A>
-<LI><A NAME="tex2html37"
- HREF="dvp.html#SECTION000170000000000000000">
-16 TR DEBUG testing</A>
-<LI><A NAME="tex2html38"
- HREF="dvp.html#SECTION000180000000000000000">
-17 Acknowledgements</A>
-</UL>
+ <i>SoundBlaster</i> <sup>TM</sup> 1.X</a>
+<li><a name="tex2html31" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000110000000000000000">
+10 Windows Sound System Compatible Sound Cards</a>
+<li><a name="tex2html32" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000120000000000000000">
+11 Mixer Settings</a>
+<li><a name="tex2html33" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000130000000000000000">
+12 Windows Operation</a>
+<li><a name="tex2html34" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000140000000000000000">
+13 Memory management</a>
+<li><a name="tex2html35" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000150000000000000000">
+14 Program internal operation</a>
+<li><a name="tex2html36" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000160000000000000000">
+15 Sound Quality</a>
+<li><a name="tex2html37" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000170000000000000000">
+16 TR DEBUG testing</a>
+<li><a name="tex2html38" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#SECTION000180000000000000000">
+17 Acknowledgements</a>
+</ul>
 <!--End of Table of Contents-->
-<P><H1><A NAME="SECTION00020000000000000000">
-1 Introduction</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00020000000000000000">
+1 Introduction</a>
+</h1>
+<p>
 This describes the code SBDVP.EXE. It uses TR's existing
 interface to the K1EA digital voice processor card.
 I have not implemented the backcopy features of the K1EA card,
 so don't attempt to use them.
-<P><H1><A NAME="SECTION00030000000000000000">
-2 System Requirements</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00030000000000000000">
+2 System Requirements</a>
+</h1>
+<p>
 To use SBDVP.EXE, you need:
-<UL>
-<LI>a 80386 or better processor,
-<LI>Some free extended memory installed. You also need a driver
+<ul>
+<li>
+a 80386 or better processor,
+<li>
+Some free extended memory installed. You also need a driver
 like HIMEM.SYS in your CONFIG.SYS file. At the default sampling
 rate, you need 12Kbytes of extended memory for each
 second of stored audio. One megabyte of extended memory
 will therefore store over 80 seconds of audio. You can see how
 much free extended memory you have by typing MEM at the DOS
 prompt.
-<LI>A 
+<li>
+A 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 2.0, Pro, or 16 or compatible or a Windows Sound System
+ <i>SoundBlaster</i> <sup>TM</sup> 2.0, Pro, or 16 or compatible or a Windows Sound System
 compatible soundcard.
 I have tested it using my 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> pro
+ <i>SoundBlaster</i> <sup>TM</sup> pro
 compatible card. The commands I use are also available on the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 
+ <i>SoundBlaster</i> <sup>TM</sup> 
 2.0  and 16 so they should also work. I have modified the code
 to work on the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1.X cards. These cards do not support autoinitiate
+ <i>SoundBlaster</i> <sup>TM</sup> 1.X cards. These cards do not support autoinitiate
 DMA modes, and the recordings in particular are much lower quality.
 See the section using 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1.X cards below.
-<LI>You need 
+ <i>SoundBlaster</i> <sup>TM</sup> 1.X cards below.
+<li>
+You need 
 a separate microphone connected to your sound card or a method of switching
 the rig microphone to the sound card, and a connection from the sound card
 output to your rig transmit audio input. This may need an attenuator
 and/or impedance matching to work with your rig. SBDVP can toggle
 a data line on a parallel port when recording to help with interfacing
 your rig microphone.
-<LI>You either need to have one of the serial or parallel ports
+<li>
+You either need to have one of the serial or parallel ports
 wired for push to talk as in the TR manual, or use VOX control
 for your rig.
-<P></UL><H1><A NAME="SECTION00040000000000000000">
-3 Program Operation</A>
-</H1>
-<P>
+<p></ul><h1><a name="SECTION00040000000000000000">
+3 Program Operation</a>
+</h1>
+<p>
 Most of this manual will assume that you are using a 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> card.
+ <i>SoundBlaster</i> <sup>TM</sup> card.
 If you are using a Windows Sound System compatible sound card,
-the slight changes you need to make are described in section <A HREF="dvp.html#wss">10</A>.
+the slight changes you need to make are described in section <a href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/sbdvp/dvp.html#wss">10</a>.
 Make sure that your sound card is set up for microphone input.
 SBDVP doesn't manipulate those settings. Use one of the utilities
 that came with the sound card to change any input, output, and
 volume settings.
-<P>
+<p>
 My CONFIG.SYS file contains the line
-<BR>
+<br>
 STACKS=9,256
-<BR>
+<br>
 which defines 9, 256 byte, hardware interrupt stacks. Nearly all
 of my testing has been done with this statement in CONFIG.SYS, but
 I have tested it with
 STACKS=0,0
-<BR>
+<br>
 which defines no hardware stacks and it seemed to work.
-<P>
+<p>
 If you will be using vox,
 start the code by typing
-<BR>
+<br>
 SBDVP
-<BR>
+<br>
 If you want to use push to talk, you need an interface
 exactly like the CW ones described in the TR manual. If you already
 use push to talk on CW, you are all set. The interface
 can be on a parallel or serial port. If it is on parallel
 port 2, start the code by typing
-<BR>
+<br>
 SBDVP -p2
-<BR>
+<br>
 replace the 2 by the correct parallel port if it is not port 2.
 Alternatively if you want to use a serial port for push to talk,
 then for serial port 2 type,
-<BR>
+<br>
 SBDVP -s2
-<BR>
+<br>
 where again you should replace 2 with the number of the serial
 port you are using if it is not 2.
 The code will look for a standard BLASTER environment variable. This
 is normally set up in AUTOEXEC.BAT when your sound card is installed.
 It should be a line like
-<BR>
+<br>
 SET BLASTER= A220 I5 D1 T4
-<BR>
+<br>
 It may have additional entries, but only these are looked at
 by SBDVP. If this is already set, then you can just try
 running SBDVP. If not then you need to set this up first.
@@ -213,30 +209,30 @@ Finally, Tx gives the type
 of sound card you have. This is only used by SBDVP to detect
 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1.X cards. In that case autoinitiate transfers are turned
+ <i>SoundBlaster</i> <sup>TM</sup> 1.X cards. In that case autoinitiate transfers are turned
 off.
 In the future,
 I plan to turn on the FIFO memory on the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 16 for better
+ <i>SoundBlaster</i> <sup>TM</sup> 16 for better
 audio quality when I get access to one to test it. Tx with
 x = 1 is the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1, 2 is the 
+ <i>SoundBlaster</i> <sup>TM</sup> 1, 2 is the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> Pro, 3 is the
+ <i>SoundBlaster</i> <sup>TM</sup> Pro, 3 is the
 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 2, 4 is the  
+ <i>SoundBlaster</i> <sup>TM</sup> 2, 4 is the  
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> Pro 2, 5 is
+ <i>SoundBlaster</i> <sup>TM</sup> Pro 2, 5 is
 the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 
+ <i>SoundBlaster</i> <sup>TM</sup> 
 ProMCV, and 6 is the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 16.
-<P>
+ <i>SoundBlaster</i> <sup>TM</sup> 16.
+<p>
 SBDVP will also attempt to open the file SBDVPCFG.DAT in the current
 directory and if this
 file exists SBDVP will read a list of file names
@@ -244,29 +240,29 @@ file exists SBDVP will read a list of file names
 line. These should match the file names that TR uses and be
 audio files that were produced previously. The file SBDVPCFG.DAT
 should not be used the first time you fire up SBDVP.
-<P>
+<p>
 The program if successful will terminate but stay resident. If you type
-<BR>
+<br>
 MEM/P/C
-<BR>
+<br>
 at the DOS prompt, you will get a list of programs in memory. You
 should see SBDVP listed along with the amount of memory that it
 is using (about 25Kbytes). You can unload the program by typing
-<BR>
+<br>
 SBDVP -u
-<BR>
+<br>
 at the DOS prompt.
 If you have available high memory (use MEM to find out),
 you can load SBDVP into high memory leaving extra conventional
 memory for
 TR, by typing
-<BR>
+<br>
 LOADHIGH SBDVP
-<BR>
+<br>
 The program can be unloaded using
-<BR>
+<br>
 SBDVP -u
-<BR>
+<br>
 as in the usual case.
 To use LOADHIGH, you need to have EMM386.EXE or equivalent
 loaded after
@@ -274,14 +270,14 @@ HIMEM.SYS in your CONFIG.SYS file and you need to tell DOS to manage
 the upper memory blocks by including DOS=UMB,HIGH in CONFIG.SYS.
 See your DOS manual if you need more details. Typically running
 MEMMAKER will add EMM386 and the DOS commands automatically.
-<P>
+<p>
 To try out the DVP, make sure a microphone and speaker(s) are
 connected to
 the sound card.
 Fire up TR as usual, and use the Control-J menu to choose
-<BR>
+<br>
 ENABLE DVP = TRUE.
-<BR>
+<br>
 In SSB mode, you should now see DVP ON, and you should be able
 to toggle between DVP on and off using Alt-K.
 Function keys are programmed as described in the TR manual.
@@ -290,7 +286,7 @@ into the microphone. When you finish press ESCAPE to terminate
 the recording. Pressing F1 will send your CQ out the speaker.
 Hit ESCAPE just like
 in CW to terminate the output before it finishes.
-<P>
+<p>
 You can program all the function keys using the Alt-P command
 as described in the TR manual.
 If you subsequently unload SBDVP using the SBDVP -u command,
@@ -299,12 +295,12 @@ or overwritten in the current directory.
 If you add these file names
 as single lines in SBDVPCFG.DAT,
 SBDVP will load them when it is started in that directory.
-The BACKCOPY functions have not been implemented. <EM>Do not</EM>
+The BACKCOPY functions have not been implemented. <em>Do not</em>
 enable BACKCOPY - unpredictable things may happen.
-<P><H1><A NAME="SECTION00050000000000000000">
-4 Sampling rate selection</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00050000000000000000">
+4 Sampling rate selection</a>
+</h1>
+<p>
 The default sampling rate of 12048 Hz is a compromise between
 sampling quality and speed. Higher rates with only 
 8 bit samples don't increase the quality substantially since the signal
@@ -312,22 +308,22 @@ to noise ratio is not very high. Lower rates will give lower
 quality audio, but the recordings will take up less memory. 
 If you want to change the sampling rate, start SBDVP with the  
 command
-<BR>
+<br>
 SBDVP -rnnnn
-<BR>
+<br>
 where nnnn is the sampling integer rate in Hertz. For example,
-<BR>
+<br>
 SBDVP -r8000
-<BR>
+<br>
 will set the sampling rate to 8000 Hz. If you record at one
 setting and play back at another you get the usual frequency 
 and speed shift. This will be most useful to annoy your friends 
 during multiops. The -r option can be used with the -p or -s options
 for push to talk operation.
-<P><H1><A NAME="SECTION00060000000000000000">
-5 Push to Talk</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00060000000000000000">
+5 Push to Talk</a>
+</h1>
+<p>
 As mentioned above,
 if you use push to talk, you need to have a push to talk interface
 attached to a serial or parallel port as described in the TR manual.
@@ -345,10 +341,10 @@ TR to operate the push to talk in SSB mode and keep track of which
 radio is transmitting. If neither a -pn or -sn option is included
 on the command line of SBDVP.EXE push to talk output from SBDVP
 will be disabled, and you need to use vox.
-<P><H1><A NAME="SECTION00070000000000000000">
-6 Switching the rig microphone</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00070000000000000000">
+6 Switching the rig microphone</a>
+</h1>
+<p>
 The simplest method is to use separate microphones for the
 soundcard and your rig. To help with interfacing the rig microphone
 to the soundcard, SBDVP can make one of the parallel port data
@@ -360,13 +356,13 @@ pin 2 parallel port 1. You can set the pin number from 2 to 9
 and the parallel port number can be 1 to 3. For example,
 to use both push to talk and toggle pin 5 of parallel port
 1 when recording you would start SBDVP with
-<BR>
+<br>
 SBDVP -m5p1 -p1
-<BR>
-<P><H1><A NAME="SECTION00080000000000000000">
-7 Audio connections</A>
-</H1>
-<P>
+<br>
+<p><h1><a name="SECTION00080000000000000000">
+7 Audio connections</a>
+</h1>
+<p>
 I use a separate microphone connected to the sound card. The output
 jack of my sound card is an 1/8 inch stereo phone jack. I use
 a Radio Shack ``Dual Stereo Headphone Adapter'' part number
@@ -382,11 +378,11 @@ Kenwood owners might want to check out technical correspondence
 page 71, June 1996, QST, where KN3C describes hooking the
 audio output of a 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 2.0 to the data input of a TS-850.
-<P><H1><A NAME="SECTION00090000000000000000">
-8 Switching off the rig microphone</A>
-</H1>
-<P>
+ <i>SoundBlaster</i> <sup>TM</sup> 2.0 to the data input of a TS-850.
+<p><h1><a name="SECTION00090000000000000000">
+8 Switching off the rig microphone</a>
+</h1>
+<p>
 When I use the soundcard, the rig microphone will also modulate the
 transmitter. If you want to carry on a conversation while the
 soundcard is playing, you need to switch off the rig microphone
@@ -397,15 +393,15 @@ is transmitting. The syntax is exactly the same as the microphone
 switching line above except it starts with -o instead of -m.
 You need to build an external interface to use this line
 to control the switching of your rig input.
-<P><H1><A NAME="SECTION000100000000000000000">
+<p><h1><a name="SECTION000100000000000000000">
 Using the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1.X</A>
-</H1>
-<P>
+ <i>SoundBlaster</i> <sup>TM</sup> 1.X</a>
+</h1>
+<p>
 The older 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 1.0 and 1.5 cards do not support autoinitiate DMA
+ <i>SoundBlaster</i> <sup>TM</sup> 1.0 and 1.5 cards do not support autoinitiate DMA
 transfers. This means that the CPU has to intervene to reprogram
 the sound card at the end of every buffer transfer, leading to
 gaps that make the sound quality poorer. I have found that 
@@ -416,9 +412,9 @@ If for some reason your card doesn't support
 autoinitiate transfers and doesn't have T1 set in the blaster environment
 variable, you can force autoinitiate DMA transfers off by including
 -a on the command line, i.e.,
-<BR>
+<br>
 SBDVP -a
-<BR>
+<br>
 To make the record quality better, the sound buffer can be made larger
 so the gaps occur less frequently. I have included a version of the
 executable SBDVPB.EXE that is identical to SBDVP.EXE except that it
@@ -431,25 +427,25 @@ SBDVPB before the contest to record your files, and then use SBDVP
 during the contest, but don't make any recordings with it. Another
 ``solution'' is to record on a friends computer that has a newer
 card, and use these files during the contest.
-<P>
+<p>
 If you have a 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 2.0, Pro, or 16, none of this concerns you and you should
-always use SBDVP <EM>without</EM> -a.
-<P><H1><A NAME="SECTION000110000000000000000">
-10 Windows Sound System Compatible Sound Cards</A>
-</H1>
-<P><A NAME="wss">&#160;</A>
+ <i>SoundBlaster</i> <sup>TM</sup> 2.0, Pro, or 16, none of this concerns you and you should
+always use SBDVP <em>without</em> -a.
+<p><h1><a name="SECTION000110000000000000000">
+10 Windows Sound System Compatible Sound Cards</a>
+</h1>
+<p><a name="wss">&#160;</a>
 I have included experimental support for Windows Sound System compatible
 chips. To use these you need to include the command line flag -w8 or -w16,
 i.e. use
-<BR>
+<br>
 SBDVP -w8
-<BR>
+<br>
 or
-<BR>
+<br>
 SBDVP -w16
-<BR>
+<br>
 which will play/record 8 bit samples at a 11KHz rate or 16 bit samples
 at at 16 KHz sampling rate.  In addition you must set the environment
 variable WSS for example,
@@ -457,7 +453,7 @@ set WSS=A530 I5 D1
 where 530 should be replaced by the I/O address of the WSS card,
 5 with the hardware interrupt, and 1 with the playback DMA of the
 WSS card (this is normally the first DMA listed when 2 are given).
-<P>
+<p>
 The Windows Sound System (WSS) or Microsoft Sound System was a sound
 card produced by Microsoft that is no longer made; I don't think
 Microsoft makes any sound hardware now.  It used an Analog Devices
@@ -472,7 +468,7 @@ and the second uses a Crystal CS4236 chip. Data sheets for both of
 these chips are available at the Opti and Cirrus Logic Web sites
 respectively. The data sheets for the CS4236 and AD1845 give enough
 details to learn how to program the WSS.
-<P>
+<p>
 The documentation for my soundcards gives the usual default
 Windows Sound System ``I/O Address'' as hex 530.
 Other standard
@@ -487,19 +483,19 @@ My Crystal CS4236 based sound system is the sound system on the
 Intel PRO 440FX motherboard. It automatically detects whether it
 is being used in 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> or WSS mode. I have both the BLASTER and WSS
+ <i>SoundBlaster</i> <sup>TM</sup> or WSS mode. I have both the BLASTER and WSS
 environment variables defined, and by firing up SBDVP with or
 without the -w8 option I can use it in either WSS or 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> mode.
-<P>
+ <i>SoundBlaster</i> <sup>TM</sup> mode.
+<p>
 Nearly all of the newer WSS compatible chips allow the use
 of 2 DMA channels and can be set up for simultaneous 16 bit
 playback and record. While this would be useful to properly emulate the
 back copy function of the K1EA DVP, I haven't bothered with this.
 If yours is setup with separate DMA channels just list the playback
 channel as the DMA in the WSS statement.
-<P>
+<p>
 The advantages to using the WSS driver are that it can use 16 bit
 samples for higher quality, and some WSS chips have a FIFO to reduce
 or eliminate pops due to other computer activity. The Soundblaster
@@ -507,17 +503,17 @@ or eliminate pops due to other computer activity. The Soundblaster
 to test out code, so I do not support these Soundblaster 16 features.
 If you are having trouble in Sound Blaster mode and your card is
 WSS compatible, consider trying it in WSS mode.
-<P><H1><A NAME="SECTION000120000000000000000">
-11 Mixer Settings</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000120000000000000000">
+11 Mixer Settings</a>
+</h1>
+<p>
 I have set the mixer settings for the Sound Blaster Pro to what
 I think are reasonable ones. If these don't work on your system,
 you can disable all mixer changes by using the -v option on SBDVP.
-<P><H1><A NAME="SECTION000130000000000000000">
-12 Windows Operation</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000130000000000000000">
+12 Windows Operation</a>
+</h1>
+<p>
 I have successfully fired up Windows 3.1, and then in a DOS window
 used SBDVP and then TR. I could play the files that I loaded
 in with SBDVPCFG.DAT. To record, I have to first record
@@ -529,10 +525,10 @@ processes. However, the windows sound quality seems worse than the
 same recordings under DOS, and the likelihood of having problems
 is much higher since I don't really know what windows is doing
 and how SBDVP and TR interact with Windows.
-<P><H1><A NAME="SECTION000140000000000000000">
-13 Memory management</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000140000000000000000">
+13 Memory management</a>
+</h1>
+<p>
 SBDVP.EXE uses an extended memory handle for every audio file.
 The number of extended memory handles can be increased
 up to a maximum of 128 by using /NUMHANDLES=128 as a parameter
@@ -550,30 +546,30 @@ I'll change to using a single extended memory handle.
 Internally SBDVP
 has a limit of 40 audio file names set by the parameter MAXFILES.
 This can trivially increased and the code recompiled if needed.
-<P>
+<p>
 Every time you choose to record a function, the following steps are
 taken.
-<DL COMPACT>
-<DT>1.
-<DD>If audio for the function exists, its extended memory handle is freed.
-<DT>2.
-<DD>A new extended memory handle is allocated with the maximum
+<dl compact>
+<dt>1.
+<dd>If audio for the function exists, its extended memory handle is freed.
+<dt>2.
+<dd>A new extended memory handle is allocated with the maximum
 amount of contiguous free extended memory. This allows the recording
 to be as large as possible.
-<DT>3.
-<DD>When the recording is stopped by hitting escape, the extended
+<dt>3.
+<dd>When the recording is stopped by hitting escape, the extended
 memory associated with the file is truncated to the length of
 the recording.
-</DL>
-<P>
+</dl>
+<p>
 The audio data is written to your hard disk only when you unload
 SBDVP using
-<BR>
+<br>
 SBDVP -u
-<BR>
+<br>
 The file name will be the file name used by TR when the audio was
 recorded.
-<P>
+<p>
 Neither SBDVP.EXE or the HIMEM.SYS driver does anything very clever,
 so if
 you make a lot of rerecordings, you can fragment your extended memory
@@ -592,10 +588,10 @@ will further fragment the extended memory. If this becomes a
 problem, a work around is to exit TR, unload SBDVP using the
 command SBDVP -U, and then rerun SBDVP using SBDVPCFG.DAT 
 with the list of files you want.
-<P><H1><A NAME="SECTION000150000000000000000">
-14 Program internal operation</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000150000000000000000">
+14 Program internal operation</a>
+</h1>
+<p>
 When the DVP is enabled in TR, it looks to see if DVPTSR is loaded
 by examining the 0x60 interrupt address to see if the label
 DVPTSR00 is in the eight bytes before the interrupt driver. SBDVP
@@ -607,20 +603,20 @@ with the DVP, TR puts filenames and commands in the shared memory
 area and generates interrupt 0x60. SBDVP installs an interrupt
 routine that is called when TR generates interrupt 0x60. This
 routine parses the commands from TR to see what to do.
-<P>
+<p>
 SBDVP when first installed not only takes over interrupt 0x60,
 but it also installs an interrupt routine that copies data
 between extended memory and a buffer that is used by the
 direct memory access chips that connect to the sound card.
-<P>
+<p>
 If TR tells SBDVP to transmit CQF1.DVP, the following steps
 are taken
-<DL COMPACT>
-<DT>1.
-<DD>TR executes interrupt(s) 0x60 with filename CQF1.DVP, and the
+<dl compact>
+<dt>1.
+<dd>TR executes interrupt(s) 0x60 with filename CQF1.DVP, and the
 commands to transmit the audio
-<DT>2.
-<DD>The SBDVP interrupt 0x60 routine parses the commands and then
+<dt>2.
+<dd>The SBDVP interrupt 0x60 routine parses the commands and then
 locates the extended memory area that contains the audio to be
 sent. It communicates with the DMA controller and the sound card
 to tell them to work together to transmit the audio in autoinitiate
@@ -630,15 +626,15 @@ the first data from  extended memory to a conventional memory buffer,
 tells the DMA to start transmitting the buffer to the sound card,
 and tells the sound card to output the audio
 and to interrupt after half the buffer is sent.
-<DT>3.
-<DD>When the sound card sends the interrupt, the half of the buffer
+<dt>3.
+<dd>When the sound card sends the interrupt, the half of the buffer
 that has been sent is overwritten with new data that is
 copied from extended memory, and the interrupt
 controller is reset.
-<DT>4.
-<DD>When the audio is all sent the sound card is reset
-</DL>
-<P>
+<dt>4.
+<dd>When the audio is all sent the sound card is reset
+</dl>
+<p>
 Recording is done similarly except that all the data directions
 are reversed. Additionally, a note is made of any newly recorded
 audio. When SBDVP is unloaded, using SBDVP -u,
@@ -647,27 +643,27 @@ reloaded if desired. If the computer is shut off or crashes before
 SBDVP is unloaded, any newly recorded data will be lost. If you want
 to make sure that a recording is saved you must unload SBDVP and
 then restart it with the appropriate SBDVPCFG.DAT file.
-<P><H1><A NAME="SECTION000160000000000000000">
-15 Sound Quality</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000160000000000000000">
+15 Sound Quality</a>
+</h1>
+<p>
 The 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> Pro does not have any memory on the digital sound
+ <i>SoundBlaster</i> <sup>TM</sup> Pro does not have any memory on the digital sound
 processor. Therefore if any other process or interrupt is using
 the data bus when a DMA data transfer is required, a click can
 occur in the sound input or output. Some clicks will therefore
 occur in normal operation. The 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> 16 does have a first in
+ <i>SoundBlaster</i> <sup>TM</sup> 16 does have a first in
 first out memory that can be turned on. I haven't turned it on
 in this code since I don't have an SB16 to play with. However, that
 should improve the audio quality. The SB16 can also support 16 bit
 audio which would also improve the sound quality.
-<P><H1><A NAME="SECTION000170000000000000000">
-16 TR DEBUG testing</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000170000000000000000">
+16 TR DEBUG testing</a>
+</h1>
+<p>
 You can set up TR in debug mode to help test out your configuration.
 Record messages for CQF1.DVP, CQECXHNG.DVP (sic), and QSL.DVP,
 and include these names in your SBDVPCFG.DAT startup file.
@@ -682,10 +678,10 @@ The program sends CW and the voice memories at the same time.
 This exercises the program a lot.
 I have let it run over night and it has successfully ``worked''
 over 10,000 Qs on my system.
-<P><H1><A NAME="SECTION000180000000000000000">
-17 Acknowledgements</A>
-</H1>
-<P>
+<p><h1><a name="SECTION000180000000000000000">
+17 Acknowledgements</a>
+</h1>
+<p>
 I would like to thank Tree, N6TR, for providing me with some information
 on the TR interface to the DVP and for writing a great logging program.
 I also thank Linda, N7LR and Natalie, KC7FWM for initial testing of
@@ -695,25 +691,44 @@ written by Sherif El-Kassas,
 EB dept Eindhoven, U of Tec, Netherlands. Some of the sound card code is
 adapted from public domain code distributed by the 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> freedom
+ <i>SoundBlaster</i> <sup>TM</sup> freedom
 project. 
 <!-- MATH: {\rm SoundBlaster}^{ TM} -->
- <I>SoundBlaster</I> <SUP>TM</SUP> is a trademark of Creative Technology Ltd. and the
+ <i>SoundBlaster</i> <sup>TM</sup> is a trademark of Creative Technology Ltd. and the
 name is
 used here solely to help identify hardware that might work with this software.
-<P><HR>
+<p><hr>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html1"
- HREF="../index.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html2"
- HREF="../index.html">w9cf links</A>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200808151731im_/http://fermi.la.asu.edu/w9cf/sbdvp/next_motif_gr.gif"> 
+<a name="tex2html1" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/index.html">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808151731im_/http://fermi.la.asu.edu/w9cf/sbdvp/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808151731im_/http://fermi.la.asu.edu/w9cf/sbdvp/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html2" href="https://web.archive.org/web/20200808151731/http://fermi.la.asu.edu/w9cf/index.html">w9cf links</a>
 <!--End of Navigation Panel-->
-<ADDRESS>
+<address>
  
-</ADDRESS>
-</BODY>
-</HTML>
+</address>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 15:17:31 Aug 08, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:23:04 Aug 01, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 291.938
+  exclusion.robots: 0.164
+  exclusion.robots.policy: 0.151
+  cdx.remote: 0.1
+  esindex: 0.013
+  LoadShardBlock: 246.599 (3)
+  PetaboxLoader3.datanode: 81.763 (4)
+  CDXLines.iter: 27.421 (3)
+  PetaboxLoader3.resolve: 214.518 (2)
+  load_resource: 87.161
+-->

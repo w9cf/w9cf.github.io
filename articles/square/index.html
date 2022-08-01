@@ -4,42 +4,51 @@
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
   Jens Lippman, Marek Rouchal, Martin Wilck and others -->
-<HTML>
-<HEAD>
-<TITLE>Notes on the characteristic impedance of coax with a square
-outer conductor</TITLE>
-<META NAME="description" CONTENT="Notes on the characteristic impedance of coax with a square
+<html>
+<head><script src="https://archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app215.us.archive.org';v.server_ms=310;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="../../../../../../_static/js/bundle-playback.js%3Fv=KTqwAcYd" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../../_static/js/wombat.js%3Fv=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://fermi.la.asu.edu/w9cf/articles/square/index.html","20200808144100","https://web.archive.org/","web","/_static/",
+	      "1596897660");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/banner-styles.css%3Fv=fantwOh2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/iconochive.css%3Fv=qtvMKcIJ.css" />
+<!-- End Wayback Rewrite JS Include -->
+
+<title>Notes on the characteristic impedance of coax with a square
+outer conductor</title>
+<meta name="description" content="Notes on the characteristic impedance of coax with a square
 outer conductor">
-<META NAME="keywords" CONTENT="square">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
-<LINK REL="STYLESHEET" HREF="square.css">
-</HEAD>
-<BODY >
+<meta name="keywords" content="square">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso_8859_1">
+<link rel="STYLESHEET" href="https://web.archive.org/web/20200808144100cs_/http://fermi.la.asu.edu/w9cf/articles/square/square.css">
+</head>
+<body>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html1"
- HREF="http://fermi.la.asu.edu/w9cf">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html2"
- HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
-<BR>
-<BR>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/next_motif_gr.gif"> 
+<a name="tex2html1" href="https://web.archive.org/web/20200808144100/http://fermi.la.asu.edu/w9cf">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html2" href="https://web.archive.org/web/20200808144100/http://fermi.la.asu.edu/w9cf">w9cf Home</a>
+<br>
+<br>
 <!--End of Navigation Panel-->
-<P><H1 ALIGN="CENTER">Notes on the characteristic impedance of coax with a square
-outer conductor</H1>
-<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
- HREF="
+<p><h1 align="CENTER">Notes on the characteristic impedance of coax with a square
+outer conductor</h1>
+<p align="CENTER"><strong><a name="tex2html1" href="https://web.archive.org/web/20200808144100/
 mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF
-<BR></A>
-</STRONG></P>
-<P ALIGN="CENTER"><STRONG></STRONG></P>
-<P ALIGN="LEFT"></P>
-<P><H3 CLASS="ABSTRACT">Abstract:</H3>
-<P CLASS="ABSTRACT">
+<br></a>
+</strong></p>
+<p align="CENTER"><strong></strong></p>
+<p align="LEFT"></p>
+<p><h3 class="ABSTRACT">Abstract:</h3>
+<p class="ABSTRACT">
 These are some notes on calculating the characteristic impedance
 of a coaxial line with a square cross section outer conductor
 and a circular inner conductor. They were written in response to
@@ -49,895 +58,822 @@ handbooks had a ``theoretically determined'' formula for the characteristic
 impedance of coaxial cable with a square outer conductor that did
 not agree with the empirically determined result 
 <!-- MATH: 138 log_{10}(1.08D/a) -->
- 138<I>log</I><SUB>10</SUB>(1.08<I>D</I>/<I>a</I>) 
-where  <I>D</I>  is the side of the square, and  <I>a</I>  is the diameter of the inner
+ 138<i>log</i><sub>10</sub>(1.08<i>D</i>/<i>a</i>) 
+where  <i>D</i>  is the side of the square, and  <i>a</i>  is the diameter of the inner
 conductor. These are some notes that I sent Zack in September 1996
 showing that transmission line theory predicts the 1.08 factor.
 Apparently,
 some handbooks suffered from a propagation of misprints.
-</P>
-<P>
-<P>
+</p>
+<p>
+<p>
 The TEM mode characteristic impedance of coaxial lines is given by
-<P ALIGN="CENTER"><A NAME="eq1">&#160;</A>
+<p align="CENTER"><a name="eq1">&#160;</a>
 <!-- MATH: Z_0 = \sqrt{L/C}, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>Z</I><SUB>0</SUB> = <IMG WIDTH="58" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
- SRC="img1.gif"
- ALT="$\displaystyle\sqrt{L/C}$">, 
-</TD><TD ALIGN="CENTER">(1)
-</TD></TR></TABLE></P>
-where  <I>L</I>  and  <I>C</I>  are the inductance and capacitance per unit length.
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>Z</i><sub>0</sub> = <img width="58" height="50" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img1.gif" alt="$\displaystyle\sqrt{L/C}$">, 
+</td><td align="CENTER">(1)
+</td></tr></table></p>
+where  <i>L</i>  and  <i>C</i>  are the inductance and capacitance per unit length.
 For an air dielectric and perfect cylindrical conductors, the waves travel
-at the speed of light so that  <I>L</I>  and  <I>C</I>  are related by
-<P ALIGN="CENTER"><A NAME="eq2">&#160;</A>
+at the speed of light so that  <i>L</i>  and  <i>C</i>  are related by
+<p align="CENTER"><a name="eq2">&#160;</a>
 <!-- MATH: c = \frac{1}{\sqrt{LC}}, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>c</I> = <IMG WIDTH="40" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img2.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{\sqrt{LC}}}$">, 
-</TD><TD ALIGN="CENTER">(2)
-</TD></TR></TABLE></P>
-which when combined with Eq. <A HREF="square.html#eq1">1</A> shows that only the
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>c</i> = <img width="40" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img2.gif" alt="$\displaystyle{\textstyle\frac{1}{\sqrt{LC}}}$">, 
+</td><td align="CENTER">(2)
+</td></tr></table></p>
+which when combined with Eq. <a href="https://web.archive.org/web/20200808144100/http://fermi.la.asu.edu/w9cf/articles/square/square.html#eq1">1</a> shows that only the
 capacitance per unit length is needed to calculate the characteristic
 impedance,
-<P ALIGN="CENTER"><A NAME="eq3">&#160;</A>
+<p align="CENTER"><a name="eq3">&#160;</a>
 <!-- MATH: Z_0 = \frac{1}{cC} . -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>Z</I><SUB>0</SUB> = <IMG WIDTH="24" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img3.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{cC}}$">. 
-</TD><TD ALIGN="CENTER">(3)
-</TD></TR></TABLE></P>
-<P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>Z</i><sub>0</sub> = <img width="24" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img3.gif" alt="$\displaystyle{\textstyle\frac{1}{cC}}$">. 
+</td><td align="CENTER">(3)
+</td></tr></table></p>
+<p>
 One way to calculate
 the capacitance per unit length of a cylindrical structure is
 to realize that since there is no charge between the inner
 and outer conductors, the potential must be a solution of
 Laplace's equation
-<P ALIGN="CENTER"><A NAME="eq4">&#160;</A>
+<p align="CENTER"><a name="eq4">&#160;</a>
 <!-- MATH: \nabla^2 \Phi = 0 . -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
- SRC="img4.gif"
- ALT="$\displaystyle\nabla^{2}_{}$"><IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\displaystyle\Phi$"> = 0. 
-</TD><TD ALIGN="CENTER">(4)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="28" height="39" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img4.gif" alt="$\displaystyle\nabla^{2}_{}$"><img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img5.gif" alt="$\displaystyle\Phi$"> = 0. 
+</td><td align="CENTER">(4)
+</td></tr></table></p>
 The capacitance can be calculated by solving Laplaces equation
 with the boundary condition that the potential is one volt on the
 outer conductor and zero volts on the inner conductor. The charge
 per unit length
 on either conductor is the capacitance per unit length.
-<P>
+<p>
 For the coaxial case, the DC field does not change along the
 length of the coax.
 Laplaces equation therefore reduces to the two-dimensional
 equation,
-<P ALIGN="CENTER"><A NAME="eq5">&#160;</A>
+<p align="CENTER"><a name="eq5">&#160;</a>
 <!-- MATH: \frac{ \partial^2 \Phi}{\partial x^2}
 +\frac{ \partial^2 \Phi}{\partial y^2} = 0, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="41" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
- SRC="img6.gif"
- ALT="$\displaystyle{\frac{ \partial^2 \Phi}{\partial x^2}}$"> + <IMG WIDTH="41" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
- SRC="img7.gif"
- ALT="$\displaystyle{\frac{ \partial^2 \Phi}{\partial y^2}}$"> = 0, 
-</TD><TD ALIGN="CENTER">(5)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="41" height="64" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img6.gif" alt="$\displaystyle{\frac{ \partial^2 \Phi}{\partial x^2}}$"> + <img width="41" height="64" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img7.gif" alt="$\displaystyle{\frac{ \partial^2 \Phi}{\partial y^2}}$"> = 0, 
+</td><td align="CENTER">(5)
+</td></tr></table></p>
 where x and y are cartesian coordinates of the cross sectional area.
 For a square cross section outer conductor, the potential must
 have the symmetry of the square. A general solution to Laplaces
 equation with that symmetry is,
-<P ALIGN="CENTER"><A NAME="eq6">&#160;</A>
+<p align="CENTER"><a name="eq6">&#160;</a>
 <!-- MATH: \Phi = b_1 \ln(r)
 + \sum_{m=1} (b_{m+1} r^{4m} +a_{m+1} r^{-4m}) \cos( 4 m \phi), -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\displaystyle\Phi$"> = <I>b</I><SUB>1</SUB>ln(<I>r</I>) + <IMG WIDTH="34" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
- SRC="img8.gif"
- ALT="$\displaystyle\sum_{m=1}^{}$">(<I>b</I><SUB>m + 1</SUB><I>r</I><SUP> 4m</SUP> + <I>a</I><SUB>m + 1</SUB><I>r</I><SUP> - 4m</SUP>)cos(4<I>m</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img9.gif"
- ALT="$\displaystyle\phi$">), 
-</TD><TD ALIGN="CENTER">(6)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img5.gif" alt="$\displaystyle\Phi$"> = <i>b</i><sub>1</sub>ln(<i>r</i>) + <img width="34" height="52" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img8.gif" alt="$\displaystyle\sum_{m=1}^{}$">(<i>b</i><sub>m + 1</sub><i>r</i><sup> 4m</sup> + <i>a</i><sub>m + 1</sub><i>r</i><sup> - 4m</sup>)cos(4<i>m</i><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img9.gif" alt="$\displaystyle\phi$">), 
+</td><td align="CENTER">(6)
+</td></tr></table></p>
 where 
 <!-- MATH: \phi = \tan^{-1}(y/x) -->
- <IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img10.gif"
- ALT="$\phi$"> = <IMG WIDTH="50" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img11.gif"
- ALT="$\tan^{-1}_{}$">(<I>y</I>/<I>x</I>) , and 
+ <img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img10.gif" alt="$\phi$"> = <img width="50" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img11.gif" alt="$\tan^{-1}_{}$">(<i>y</i>/<i>x</i>) , and 
 <!-- MATH: r^2 = x^2 + y^2 -->
- <I>r</I><SUP> 2</SUP> = <I>x</I><SUP> 2</SUP> + <I>y</I><SUP> 2</SUP>.
-<P>
+ <i>r</i><sup> 2</sup> = <i>x</i><sup> 2</sup> + <i>y</i><sup> 2</sup>.
+<p>
 I take the case where the radius of the inner conductor is 1, and
-half the side length of the outer conductor is  <I>D</I> . Enforcing
+half the side length of the outer conductor is  <i>D</i> . Enforcing
 the boundary condition of zero volts on the inner conductor
-makes  <IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.gif"
- ALT="$\Phi$"> = 0  at  <I>r</I> = 1 , which means  <I>a</I><SUB>i</SUB> = - <I>b</I><SUB>i</SUB> . The
-solution for  <IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.gif"
- ALT="$\Phi$">  is then
-<P ALIGN="CENTER"><A NAME="eq7">&#160;</A>
+makes  <img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img12.gif" alt="$\Phi$"> = 0  at  <i>r</i> = 1 , which means  <i>a</i><sub>i</sub> = - <i>b</i><sub>i</sub> . The
+solution for  <img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img12.gif" alt="$\Phi$">  is then
+<p align="CENTER"><a name="eq7">&#160;</a>
 <!-- MATH: \Phi = b_1 \ln(r) + \sum_{m=1} b_{m+1} \cos( 4 m \phi)
 (r^{4m} - r^{-4m}). -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\displaystyle\Phi$"> = <I>b</I><SUB>1</SUB>ln(<I>r</I>) + <IMG WIDTH="34" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
- SRC="img8.gif"
- ALT="$\displaystyle\sum_{m=1}^{}$"><I>b</I><SUB>m + 1</SUB>cos(4<I>m</I><IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img9.gif"
- ALT="$\displaystyle\phi$">)(<I>r</I><SUP> 4m</SUP> - <I>r</I><SUP> - 4m</SUP>). 
-</TD><TD ALIGN="CENTER">(7)
-</TD></TR></TABLE></P>
-I must now enforce the condition that  <IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.gif"
- ALT="$\Phi$"> = 1  on the outer conductor.
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img5.gif" alt="$\displaystyle\Phi$"> = <i>b</i><sub>1</sub>ln(<i>r</i>) + <img width="34" height="52" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img8.gif" alt="$\displaystyle\sum_{m=1}^{}$"><i>b</i><sub>m + 1</sub>cos(4<i>m</i><img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img9.gif" alt="$\displaystyle\phi$">)(<i>r</i><sup> 4m</sup> - <i>r</i><sup> - 4m</sup>). 
+</td><td align="CENTER">(7)
+</td></tr></table></p>
+I must now enforce the condition that  <img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img12.gif" alt="$\Phi$"> = 1  on the outer conductor.
 I do this by point matching. I simply take points evenly spaced in
-the angle  <IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img10.gif"
- ALT="$\phi$">  and require that  <IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img12.gif"
- ALT="$\Phi$">  be one on the outer
+the angle  <img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img10.gif" alt="$\phi$">  and require that  <img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img12.gif" alt="$\Phi$">  be one on the outer
 conductor at these angles. This gives a set of linear equations
-for the coefficients  <I>b</I><SUB>i</SUB>  that can be solved. Specifically for  <I>N</I> 
+for the coefficients  <i>b</i><sub>i</sub>  that can be solved. Specifically for  <i>N</i> 
 coefficents, I require that
-<P ALIGN="CENTER"><A NAME="eq8">&#160;</A>
+<p align="CENTER"><a name="eq8">&#160;</a>
 <!-- MATH: b_1 \ln(r_i) + \sum_{m=1}^{N-1} b_{m+1} \cos (4 m \phi_i )
 (r_i^{4m} - r_i^{-4m}) = 1, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>b</I><SUB>1</SUB>ln(<I>r</I><SUB>i</SUB>) + <IMG WIDTH="34" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
- SRC="img13.gif"
- ALT="$\displaystyle\sum_{m=1}^{N-1}$"><I>b</I><SUB>m + 1</SUB>cos(4<I>m</I><IMG WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img14.gif"
- ALT="$\displaystyle\phi_{i}^{}$">)(<I>r</I><SUB>i</SUB><SUP>4m</SUP> - <I>r</I><SUB>i</SUB><SUP>- 4m</SUP>) = 1, 
-</TD><TD ALIGN="CENTER">(8)
-</TD></TR></TABLE></P>
-for all i values  1  to  <I>N</I> , and
-<BR><A NAME="eq9">&#160;</A>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>b</i><sub>1</sub>ln(<i>r</i><sub>i</sub>) + <img width="34" height="70" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img13.gif" alt="$\displaystyle\sum_{m=1}^{N-1}$"><i>b</i><sub>m + 1</sub>cos(4<i>m</i><img width="21" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img14.gif" alt="$\displaystyle\phi_{i}^{}$">)(<i>r</i><sub>i</sub><sup>4m</sup> - <i>r</i><sub>i</sub><sup>- 4m</sup>) = 1, 
+</td><td align="CENTER">(8)
+</td></tr></table></p>
+for all i values  1  to  <i>N</i> , and
+<br><a name="eq9">&#160;</a>
 
 <!-- MATH: \phi_i = \frac{(2 i-1) \pi}{8N},\nonumber\\r_i = \frac{D}{\cos(\phi_i)}. -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<IMG WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img14.gif"
- ALT="$\displaystyle\phi_{i}^{}$"> = <IMG WIDTH="85" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img15.gif"
- ALT="$\displaystyle{\frac{(2 i-1) \pi}{8N}}$">, 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<img width="21" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img14.gif" alt="$\displaystyle\phi_{i}^{}$"> = <img width="85" height="62" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img15.gif" alt="$\displaystyle{\frac{(2 i-1) \pi}{8N}}$">, 
+</td><td align="CENTER" nowrap>
 &nbsp;&nbsp;
-</TD><TD ALIGN="LEFT" NOWRAP>
+</td><td align="LEFT" nowrap>
 &nbsp;
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>r</I><SUB>i</SUB> = <IMG WIDTH="66" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
- SRC="img16.gif"
- ALT="$\displaystyle{\frac{D}{\cos(\phi_i)}}$">. 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>r</i><sub>i</sub> = <img width="66" height="60" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img16.gif" alt="$\displaystyle{\frac{D}{\cos(\phi_i)}}$">. 
+</td><td align="CENTER" nowrap>
 &nbsp;&nbsp;
-</TD><TD ALIGN="LEFT" NOWRAP>
+</td><td align="LEFT" nowrap>
 &nbsp;
-</TD><TD ALIGN="RIGHT">(9)</TD></TR>
-</TABLE></DIV>
-<P>
-Once the  <I>b</I><SUB>i</SUB>  values are solved, I need to calculate the charge
+</td><td align="RIGHT">(9)</td></tr>
+</table></div>
+<p>
+Once the  <i>b</i><sub>i</sub>  values are solved, I need to calculate the charge
 per unit length. The charge density on a conductor
 is the normal electric field times the dielectric constant.
-In our case this is  <IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img17.gif"
- ALT="$\epsilon_{0}^{}$"> . The normal electric field
+In our case this is  <img width="19" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img17.gif" alt="$\epsilon_{0}^{}$"> . The normal electric field
 is most easily calculated for the inner conductor. Integrating
 around the circular inner conductor immediately gives zero
-contribution for all but the  <I>b</I><SUB>1</SUB>  term. The  <I>b</I><SUB>1</SUB>  term
+contribution for all but the  <i>b</i><sub>1</sub>  term. The  <i>b</i><sub>1</sub>  term
 give a charge per unit length of 
-<P ALIGN="CENTER"><A NAME="eq10">&#160;</A>
+<p align="CENTER"><a name="eq10">&#160;</a>
 <!-- MATH: q = 2 \pi \epsilon_0 b_1, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>q</I> = 2<IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img18.gif"
- ALT="$\displaystyle\pi$"><IMG WIDTH="19" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img19.gif"
- ALT="$\displaystyle\epsilon_{0}^{}$"><I>b</I><SUB>1</SUB>, 
-</TD><TD ALIGN="CENTER">(10)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>q</i> = 2<img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img18.gif" alt="$\displaystyle\pi$"><img width="19" height="31" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img19.gif" alt="$\displaystyle\epsilon_{0}^{}$"><i>b</i><sub>1</sub>, 
+</td><td align="CENTER">(10)
+</td></tr></table></p>
 and the characteristic impedance is
-<P ALIGN="CENTER"><A NAME="eq11">&#160;</A>
+<p align="CENTER"><a name="eq11">&#160;</a>
 <!-- MATH: Z_0 = \frac{1}{ 2 \pi \epsilon_0 c b_1} = \frac{60}{b_1}. -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>Z</I><SUB>0</SUB> = <IMG WIDTH="55" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img20.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{ 2 \pi \epsilon_0 c b_1}}$"> = <IMG WIDTH="21" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img21.gif"
- ALT="$\displaystyle{\textstyle\frac{60}{b_1}}$">. 
-</TD><TD ALIGN="CENTER">(11)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>Z</i><sub>0</sub> = <img width="55" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img20.gif" alt="$\displaystyle{\textstyle\frac{1}{ 2 \pi \epsilon_0 c b_1}}$"> = <img width="21" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img21.gif" alt="$\displaystyle{\textstyle\frac{60}{b_1}}$">. 
+</td><td align="CENTER">(11)
+</td></tr></table></p>
 Before looking at the numerical results for larger N, I can solve
-analytically for the case of  <I>N</I> = 1 . In that case I have a purely
+analytically for the case of  <i>N</i> = 1 . In that case I have a purely
 logarithmic
 potential and match the potential to 1 at the point
-given by  <IMG WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
- SRC="img10.gif"
- ALT="$\phi$"> = <IMG WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img22.gif"
- ALT="$\pi$">/8 .
-Eq. <A HREF="square.html#eq8">8</A> becomes,
-<P ALIGN="CENTER">
+given by  <img width="15" height="33" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img10.gif" alt="$\phi$"> = <img width="15" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img22.gif" alt="$\pi$">/8 .
+Eq. <a href="https://web.archive.org/web/20200808144100/http://fermi.la.asu.edu/w9cf/articles/square/square.html#eq8">8</a> becomes,
+<p align="CENTER">
 <!-- MATH: b_1 \ln\left (\frac{D}{\cos(\pi/8)}\right) = 1, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>b</I><SUB>1</SUB>ln <IMG WIDTH="127" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
- SRC="img23.gif"
- ALT="$\displaystyle\left (\frac{D}{\cos(\pi/8)}\right)=$">1, 
-</TD><TD ALIGN="CENTER">(12)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>b</i><sub>1</sub>ln <img width="127" height="65" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img23.gif" alt="$\displaystyle\left (\frac{D}{\cos(\pi/8)}\right)=$">1, 
+</td><td align="CENTER">(12)
+</td></tr></table></p>
 and evaluating 
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: \frac{1}{\cos(\pi/8)} = 1.08, -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<IMG WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
- SRC="img24.gif"
- ALT="$\displaystyle{\textstyle\frac{1}{\cos(\pi/8)}}$"> = 1.08, 
-</TD><TD ALIGN="CENTER">(13)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<img width="60" height="38" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img24.gif" alt="$\displaystyle{\textstyle\frac{1}{\cos(\pi/8)}}$"> = 1.08, 
+</td><td align="CENTER">(13)
+</td></tr></table></p>
 the characteristic impedance is approximately
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: Z_0 = 60 \ln(1.08~D), -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>Z</I><SUB>0</SUB> = 60ln (1.08&nbsp;<I>D</I>), 
-</TD><TD ALIGN="CENTER">(14)
-</TD></TR></TABLE></P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>Z</i><sub>0</sub> = 60ln (1.08&nbsp;<i>D</i>), 
+</td><td align="CENTER">(14)
+</td></tr></table></p>
 in agreement with the empirical value.
-The results for larger values of  <I>N</I>  are easily calculated on the
+The results for larger values of  <i>N</i>  are easily calculated on the
 computer. One way to write the results is as
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: Z_0 = 60 \ln(\alpha(D)~D). -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>Z</I><SUB>0</SUB> = 60ln(<IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img25.gif"
- ALT="$\displaystyle\alpha$">(<I>D</I>)&nbsp;<I>D</I>). 
-</TD><TD ALIGN="CENTER">(15)
-</TD></TR></TABLE></P>
-<P> <I>Z</I><SUB>0</SUB>  can only depend on the ratio of  <I>D</I>/<I>a</I>  where  <I>D</I>  is the
-outer conductor halfside and  <I>a</I>  is the inner conductor radius.
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>Z</i><sub>0</sub> = 60ln(<img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img25.gif" alt="$\displaystyle\alpha$">(<i>D</i>)&nbsp;<i>D</i>). 
+</td><td align="CENTER">(15)
+</td></tr></table></p>
+<p> <i>Z</i><sub>0</sub>  can only depend on the ratio of  <i>D</i>/<i>a</i>  where  <i>D</i>  is the
+outer conductor halfside and  <i>a</i>  is the inner conductor radius.
 This ratio is the same as the outer conductor side divided by
 the inner conductor diameter, so that can be substituted as well.
-Substituting  <I>D</I>/<I>a</I>  for D gives the final result.
-<P>
-The table shows the calculated  <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$">  and  <I>Z</I><SUB>0</SUB>  with N=10,
-for  <I>D</I>/<I>a</I>  from 1.1 to 6.0. The value starts at 1.06 at  <I>D</I>/<I>a</I> = 1.1 
-where  <I>Z</I><SUB>0</SUB> = 9  Ohms.  <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$">  becomes 1.08 for  <I>D</I>/<I>a</I> = 1.275 
-where  <I>Z</I><SUB>0</SUB> = 19  Ohms. It remains at 1.08 thereafter. The asymptotic
-value of  <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$">  is actually 1.0787. I have repeated the
+Substituting  <i>D</i>/<i>a</i>  for D gives the final result.
+<p>
+The table shows the calculated  <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$">  and  <i>Z</i><sub>0</sub>  with N=10,
+for  <i>D</i>/<i>a</i>  from 1.1 to 6.0. The value starts at 1.06 at  <i>D</i>/<i>a</i> = 1.1 
+where  <i>Z</i><sub>0</sub> = 9  Ohms.  <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$">  becomes 1.08 for  <i>D</i>/<i>a</i> = 1.275 
+where  <i>Z</i><sub>0</sub> = 19  Ohms. It remains at 1.08 thereafter. The asymptotic
+value of  <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$">  is actually 1.0787. I have repeated the
 calculation with N=20, with no change in the results indicating
 good convergence.
-<P>
+<p>
 The empirical value of 1.08 should work fine.
-<P>
+<p>
 A final note for the compulsive nitpickers. The value 60 is really
 two times the numerical value of the speed of light times the
 appropriate power of ten. That is it is really 
 <!-- MATH: 2 \times 29.9792458 -->
- 2 <TT>x</TT> 29.9792458 
+ 2 <tt>x</tt> 29.9792458 
 or 59.9584916.
-<P>
-The calculated characteristic impedance  <I>Z</I><SUB>0</SUB> , for a coaxial
-air line with a square cross section outer conductor of side  <I>D</I>  and a
+<p>
+The calculated characteristic impedance  <i>Z</i><sub>0</sub> , for a coaxial
+air line with a square cross section outer conductor of side  <i>D</i>  and a
 circular cross section inner conductor of diameter a, as a function
-of D/a. The value of  <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$">  where 
+of D/a. The value of  <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$">  where 
 <!-- MATH: Z_0 = 60 \ln(\alpha D/a) -->
- <I>Z</I><SUB>0</SUB> = 60ln(<IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$"><I>D</I>/<I>a</I>) 
+ <i>Z</i><sub>0</sub> = 60ln(<img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$"><i>D</i>/<i>a</i>) 
 is also shown.
-<BR>
-<TABLE CELLPADDING=3 BORDER="1">
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="19" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
- SRC="img27.gif"
- ALT="${\frac{D}{a}}$"> </TD>
-<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$"> </TD>
-<TD ALIGN="CENTER" NOWRAP> <I>Z</I><SUB>0</SUB> </TD>
-<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="19" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
- SRC="img27.gif"
- ALT="${\frac{D}{a}}$"> </TD>
-<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$"> </TD>
-<TD ALIGN="CENTER" NOWRAP> <I>Z</I><SUB>0</SUB> </TD>
-<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="19" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
- SRC="img27.gif"
- ALT="${\frac{D}{a}}$"> </TD>
-<TD ALIGN="CENTER" NOWRAP> <IMG WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
- SRC="img26.gif"
- ALT="$\alpha$"> </TD>
-<TD ALIGN="CENTER" NOWRAP> <I>Z</I><SUB>0</SUB> </TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.10000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.06422</TD>
-<TD ALIGN="CENTER" NOWRAP>9.45326</TD>
-<TD ALIGN="CENTER" NOWRAP>2.40000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07868</TD>
-<TD ALIGN="CENTER" NOWRAP>57.07262</TD>
-<TD ALIGN="CENTER" NOWRAP>3.70000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>83.04562</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.12500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.06724</TD>
-<TD ALIGN="CENTER" NOWRAP>10.97142</TD>
-<TD ALIGN="CENTER" NOWRAP>2.42500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>57.69448</TD>
-<TD ALIGN="CENTER" NOWRAP>3.72500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>83.44966</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.15000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.06947</TD>
-<TD ALIGN="CENTER" NOWRAP>12.41565</TD>
-<TD ALIGN="CENTER" NOWRAP>2.45000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>58.30996</TD>
-<TD ALIGN="CENTER" NOWRAP>3.75000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>83.85100</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.17500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07118</TD>
-<TD ALIGN="CENTER" NOWRAP>13.80151</TD>
-<TD ALIGN="CENTER" NOWRAP>2.47500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>58.91918</TD>
-<TD ALIGN="CENTER" NOWRAP>3.77500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>84.24968</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.20000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07250</TD>
-<TD ALIGN="CENTER" NOWRAP>15.13895</TD>
-<TD ALIGN="CENTER" NOWRAP>2.50000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>59.52227</TD>
-<TD ALIGN="CENTER" NOWRAP>3.80000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>84.64572</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.22500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07355</TD>
-<TD ALIGN="CENTER" NOWRAP>16.43478</TD>
-<TD ALIGN="CENTER" NOWRAP>2.52500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>60.11936</TD>
-<TD ALIGN="CENTER" NOWRAP>3.82500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>85.03917</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.25000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07439</TD>
-<TD ALIGN="CENTER" NOWRAP>17.69392</TD>
-<TD ALIGN="CENTER" NOWRAP>2.55000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>60.71056</TD>
-<TD ALIGN="CENTER" NOWRAP>3.85000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>85.43005</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.27500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07507</TD>
-<TD ALIGN="CENTER" NOWRAP>18.92012</TD>
-<TD ALIGN="CENTER" NOWRAP>2.57500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>61.29598</TD>
-<TD ALIGN="CENTER" NOWRAP>3.87500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>85.81840</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.30000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07563</TD>
-<TD ALIGN="CENTER" NOWRAP>20.11629</TD>
-<TD ALIGN="CENTER" NOWRAP>2.60000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>61.87575</TD>
-<TD ALIGN="CENTER" NOWRAP>3.90000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>86.20425</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.32500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07609</TD>
-<TD ALIGN="CENTER" NOWRAP>21.28477</TD>
-<TD ALIGN="CENTER" NOWRAP>2.62500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07869</TD>
-<TD ALIGN="CENTER" NOWRAP>62.44996</TD>
-<TD ALIGN="CENTER" NOWRAP>3.92500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>86.58764</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.35000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07647</TD>
-<TD ALIGN="CENTER" NOWRAP>22.42752</TD>
-<TD ALIGN="CENTER" NOWRAP>2.65000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>63.01873</TD>
-<TD ALIGN="CENTER" NOWRAP>3.95000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>86.96860</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.37500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07679</TD>
-<TD ALIGN="CENTER" NOWRAP>23.54617</TD>
-<TD ALIGN="CENTER" NOWRAP>2.67500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>63.58215</TD>
-<TD ALIGN="CENTER" NOWRAP>3.97500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>87.34715</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.40000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07705</TD>
-<TD ALIGN="CENTER" NOWRAP>24.64213</TD>
-<TD ALIGN="CENTER" NOWRAP>2.70000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>64.14033</TD>
-<TD ALIGN="CENTER" NOWRAP>4.00000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>87.72333</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.42500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07728</TD>
-<TD ALIGN="CENTER" NOWRAP>25.71661</TD>
-<TD ALIGN="CENTER" NOWRAP>2.72500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>64.69336</TD>
-<TD ALIGN="CENTER" NOWRAP>4.02500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>88.09716</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.45000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07747</TD>
-<TD ALIGN="CENTER" NOWRAP>26.77070</TD>
-<TD ALIGN="CENTER" NOWRAP>2.75000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>65.24134</TD>
-<TD ALIGN="CENTER" NOWRAP>4.05000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>88.46868</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.47500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07763</TD>
-<TD ALIGN="CENTER" NOWRAP>27.80537</TD>
-<TD ALIGN="CENTER" NOWRAP>2.77500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>65.78436</TD>
-<TD ALIGN="CENTER" NOWRAP>4.07500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>88.83791</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.50000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07777</TD>
-<TD ALIGN="CENTER" NOWRAP>28.82147</TD>
-<TD ALIGN="CENTER" NOWRAP>2.80000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>66.32250</TD>
-<TD ALIGN="CENTER" NOWRAP>4.10000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>89.20489</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.52500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07789</TD>
-<TD ALIGN="CENTER" NOWRAP>29.81980</TD>
-<TD ALIGN="CENTER" NOWRAP>2.82500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>66.85587</TD>
-<TD ALIGN="CENTER" NOWRAP>4.12500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>89.56963</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.55000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07799</TD>
-<TD ALIGN="CENTER" NOWRAP>30.80108</TD>
-<TD ALIGN="CENTER" NOWRAP>2.85000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>67.38452</TD>
-<TD ALIGN="CENTER" NOWRAP>4.15000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>89.93217</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.57500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07808</TD>
-<TD ALIGN="CENTER" NOWRAP>31.76596</TD>
-<TD ALIGN="CENTER" NOWRAP>2.87500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>67.90857</TD>
-<TD ALIGN="CENTER" NOWRAP>4.17500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>90.29253</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.60000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07815</TD>
-<TD ALIGN="CENTER" NOWRAP>32.71506</TD>
-<TD ALIGN="CENTER" NOWRAP>2.90000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>68.42807</TD>
-<TD ALIGN="CENTER" NOWRAP>4.20000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>90.65074</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.62500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07822</TD>
-<TD ALIGN="CENTER" NOWRAP>33.64894</TD>
-<TD ALIGN="CENTER" NOWRAP>2.92500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>68.94311</TD>
-<TD ALIGN="CENTER" NOWRAP>4.22500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>91.00683</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.65000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07827</TD>
-<TD ALIGN="CENTER" NOWRAP>34.56815</TD>
-<TD ALIGN="CENTER" NOWRAP>2.95000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>69.45377</TD>
-<TD ALIGN="CENTER" NOWRAP>4.25000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>91.36081</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.67500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07832</TD>
-<TD ALIGN="CENTER" NOWRAP>35.47317</TD>
-<TD ALIGN="CENTER" NOWRAP>2.97500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>69.96012</TD>
-<TD ALIGN="CENTER" NOWRAP>4.27500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>91.71272</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.70000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07837</TD>
-<TD ALIGN="CENTER" NOWRAP>36.36448</TD>
-<TD ALIGN="CENTER" NOWRAP>3.00000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>70.46222</TD>
-<TD ALIGN="CENTER" NOWRAP>4.30000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>92.06258</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.72500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07840</TD>
-<TD ALIGN="CENTER" NOWRAP>37.24250</TD>
-<TD ALIGN="CENTER" NOWRAP>3.02500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>70.96016</TD>
-<TD ALIGN="CENTER" NOWRAP>4.32500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>92.41040</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.75000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07844</TD>
-<TD ALIGN="CENTER" NOWRAP>38.10766</TD>
-<TD ALIGN="CENTER" NOWRAP>3.05000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>71.45401</TD>
-<TD ALIGN="CENTER" NOWRAP>4.35000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>92.75623</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.77500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07847</TD>
-<TD ALIGN="CENTER" NOWRAP>38.96036</TD>
-<TD ALIGN="CENTER" NOWRAP>3.07500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>71.94382</TD>
-<TD ALIGN="CENTER" NOWRAP>4.37500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>93.10007</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.80000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07849</TD>
-<TD ALIGN="CENTER" NOWRAP>39.80095</TD>
-<TD ALIGN="CENTER" NOWRAP>3.10000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>72.42966</TD>
-<TD ALIGN="CENTER" NOWRAP>4.40000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>93.44195</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.82500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07851</TD>
-<TD ALIGN="CENTER" NOWRAP>40.62980</TD>
-<TD ALIGN="CENTER" NOWRAP>3.12500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>72.91160</TD>
-<TD ALIGN="CENTER" NOWRAP>4.42500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>93.78189</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.85000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07853</TD>
-<TD ALIGN="CENTER" NOWRAP>41.44725</TD>
-<TD ALIGN="CENTER" NOWRAP>3.15000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>73.38970</TD>
-<TD ALIGN="CENTER" NOWRAP>4.45000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>94.11992</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.87500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07855</TD>
-<TD ALIGN="CENTER" NOWRAP>42.25361</TD>
-<TD ALIGN="CENTER" NOWRAP>3.17500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>73.86402</TD>
-<TD ALIGN="CENTER" NOWRAP>4.47500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>94.45606</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.90000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07857</TD>
-<TD ALIGN="CENTER" NOWRAP>43.04919</TD>
-<TD ALIGN="CENTER" NOWRAP>3.20000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>74.33462</TD>
-<TD ALIGN="CENTER" NOWRAP>4.50000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>94.79032</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.92500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07858</TD>
-<TD ALIGN="CENTER" NOWRAP>43.83428</TD>
-<TD ALIGN="CENTER" NOWRAP>3.22500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>74.80155</TD>
-<TD ALIGN="CENTER" NOWRAP>4.52500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>95.12273</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.95000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07859</TD>
-<TD ALIGN="CENTER" NOWRAP>44.60917</TD>
-<TD ALIGN="CENTER" NOWRAP>3.25000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>75.26488</TD>
-<TD ALIGN="CENTER" NOWRAP>4.55000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>95.45331</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>1.97500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07860</TD>
-<TD ALIGN="CENTER" NOWRAP>45.37412</TD>
-<TD ALIGN="CENTER" NOWRAP>3.27500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>75.72466</TD>
-<TD ALIGN="CENTER" NOWRAP>4.57500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>95.78208</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.00000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07861</TD>
-<TD ALIGN="CENTER" NOWRAP>46.12939</TD>
-<TD ALIGN="CENTER" NOWRAP>3.30000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>76.18094</TD>
-<TD ALIGN="CENTER" NOWRAP>4.60000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>96.10906</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.02500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07862</TD>
-<TD ALIGN="CENTER" NOWRAP>46.87523</TD>
-<TD ALIGN="CENTER" NOWRAP>3.32500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>76.63378</TD>
-<TD ALIGN="CENTER" NOWRAP>4.62500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>96.43426</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.05000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07863</TD>
-<TD ALIGN="CENTER" NOWRAP>47.61187</TD>
-<TD ALIGN="CENTER" NOWRAP>3.35000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>77.08322</TD>
-<TD ALIGN="CENTER" NOWRAP>4.65000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>96.75771</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.07500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07864</TD>
-<TD ALIGN="CENTER" NOWRAP>48.33954</TD>
-<TD ALIGN="CENTER" NOWRAP>3.37500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>77.52933</TD>
-<TD ALIGN="CENTER" NOWRAP>4.67500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>97.07943</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.10000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07864</TD>
-<TD ALIGN="CENTER" NOWRAP>49.05846</TD>
-<TD ALIGN="CENTER" NOWRAP>3.40000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>77.97214</TD>
-<TD ALIGN="CENTER" NOWRAP>4.70000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>97.39943</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.12500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07865</TD>
-<TD ALIGN="CENTER" NOWRAP>49.76884</TD>
-<TD ALIGN="CENTER" NOWRAP>3.42500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>78.41171</TD>
-<TD ALIGN="CENTER" NOWRAP>4.72500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>97.71773</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.15000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07865</TD>
-<TD ALIGN="CENTER" NOWRAP>50.47089</TD>
-<TD ALIGN="CENTER" NOWRAP>3.45000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>78.84807</TD>
-<TD ALIGN="CENTER" NOWRAP>4.75000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>98.03436</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.17500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07866</TD>
-<TD ALIGN="CENTER" NOWRAP>51.16479</TD>
-<TD ALIGN="CENTER" NOWRAP>3.47500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>79.28129</TD>
-<TD ALIGN="CENTER" NOWRAP>4.77500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>98.34932</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.20000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07866</TD>
-<TD ALIGN="CENTER" NOWRAP>51.85074</TD>
-<TD ALIGN="CENTER" NOWRAP>3.50000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>79.71141</TD>
-<TD ALIGN="CENTER" NOWRAP>4.80000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>98.66264</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.22500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07867</TD>
-<TD ALIGN="CENTER" NOWRAP>52.52892</TD>
-<TD ALIGN="CENTER" NOWRAP>3.52500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>80.13846</TD>
-<TD ALIGN="CENTER" NOWRAP>4.82500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>98.97433</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.25000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07867</TD>
-<TD ALIGN="CENTER" NOWRAP>53.19950</TD>
-<TD ALIGN="CENTER" NOWRAP>3.55000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>80.56249</TD>
-<TD ALIGN="CENTER" NOWRAP>4.85000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>99.28440</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.27500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07867</TD>
-<TD ALIGN="CENTER" NOWRAP>53.86266</TD>
-<TD ALIGN="CENTER" NOWRAP>3.57500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>80.98355</TD>
-<TD ALIGN="CENTER" NOWRAP>4.87500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>99.59289</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.30000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07868</TD>
-<TD ALIGN="CENTER" NOWRAP>54.51856</TD>
-<TD ALIGN="CENTER" NOWRAP>3.60000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>81.40167</TD>
-<TD ALIGN="CENTER" NOWRAP>4.90000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>99.89979</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.32500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07868</TD>
-<TD ALIGN="CENTER" NOWRAP>55.16735</TD>
-<TD ALIGN="CENTER" NOWRAP>3.62500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>81.81690</TD>
-<TD ALIGN="CENTER" NOWRAP>4.92500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>100.20514</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.35000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07868</TD>
-<TD ALIGN="CENTER" NOWRAP>55.80920</TD>
-<TD ALIGN="CENTER" NOWRAP>3.65000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>82.22927</TD>
-<TD ALIGN="CENTER" NOWRAP>4.95000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>100.50894</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>2.37500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07868</TD>
-<TD ALIGN="CENTER" NOWRAP>56.44424</TD>
-<TD ALIGN="CENTER" NOWRAP>3.67500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07870</TD>
-<TD ALIGN="CENTER" NOWRAP>82.63883</TD>
-<TD ALIGN="CENTER" NOWRAP>4.97500</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>100.81120</TD>
-</TR>
-<TR VALIGN="TOP"><TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
-<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
-<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
-<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
-<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
-<TD ALIGN="CENTER" NOWRAP>&nbsp;</TD>
-<TD ALIGN="CENTER" NOWRAP>5.00000</TD>
-<TD ALIGN="CENTER" NOWRAP>1.07871</TD>
-<TD ALIGN="CENTER" NOWRAP>101.11196</TD>
-</TR>
-</TABLE><HR>
+<br>
+<table cellpadding="3" border="1">
+<tr valign="TOP"><td align="CENTER" nowrap> <img width="19" height="39" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img27.gif" alt="${\frac{D}{a}}$"> </td>
+<td align="CENTER" nowrap> <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$"> </td>
+<td align="CENTER" nowrap> <i>Z</i><sub>0</sub> </td>
+<td align="CENTER" nowrap> <img width="19" height="39" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img27.gif" alt="${\frac{D}{a}}$"> </td>
+<td align="CENTER" nowrap> <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$"> </td>
+<td align="CENTER" nowrap> <i>Z</i><sub>0</sub> </td>
+<td align="CENTER" nowrap> <img width="19" height="39" align="MIDDLE" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img27.gif" alt="${\frac{D}{a}}$"> </td>
+<td align="CENTER" nowrap> <img width="16" height="16" align="BOTTOM" border="0" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/img26.gif" alt="$\alpha$"> </td>
+<td align="CENTER" nowrap> <i>Z</i><sub>0</sub> </td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.10000</td>
+<td align="CENTER" nowrap>1.06422</td>
+<td align="CENTER" nowrap>9.45326</td>
+<td align="CENTER" nowrap>2.40000</td>
+<td align="CENTER" nowrap>1.07868</td>
+<td align="CENTER" nowrap>57.07262</td>
+<td align="CENTER" nowrap>3.70000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>83.04562</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.12500</td>
+<td align="CENTER" nowrap>1.06724</td>
+<td align="CENTER" nowrap>10.97142</td>
+<td align="CENTER" nowrap>2.42500</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>57.69448</td>
+<td align="CENTER" nowrap>3.72500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>83.44966</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.15000</td>
+<td align="CENTER" nowrap>1.06947</td>
+<td align="CENTER" nowrap>12.41565</td>
+<td align="CENTER" nowrap>2.45000</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>58.30996</td>
+<td align="CENTER" nowrap>3.75000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>83.85100</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.17500</td>
+<td align="CENTER" nowrap>1.07118</td>
+<td align="CENTER" nowrap>13.80151</td>
+<td align="CENTER" nowrap>2.47500</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>58.91918</td>
+<td align="CENTER" nowrap>3.77500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>84.24968</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.20000</td>
+<td align="CENTER" nowrap>1.07250</td>
+<td align="CENTER" nowrap>15.13895</td>
+<td align="CENTER" nowrap>2.50000</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>59.52227</td>
+<td align="CENTER" nowrap>3.80000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>84.64572</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.22500</td>
+<td align="CENTER" nowrap>1.07355</td>
+<td align="CENTER" nowrap>16.43478</td>
+<td align="CENTER" nowrap>2.52500</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>60.11936</td>
+<td align="CENTER" nowrap>3.82500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>85.03917</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.25000</td>
+<td align="CENTER" nowrap>1.07439</td>
+<td align="CENTER" nowrap>17.69392</td>
+<td align="CENTER" nowrap>2.55000</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>60.71056</td>
+<td align="CENTER" nowrap>3.85000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>85.43005</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.27500</td>
+<td align="CENTER" nowrap>1.07507</td>
+<td align="CENTER" nowrap>18.92012</td>
+<td align="CENTER" nowrap>2.57500</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>61.29598</td>
+<td align="CENTER" nowrap>3.87500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>85.81840</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.30000</td>
+<td align="CENTER" nowrap>1.07563</td>
+<td align="CENTER" nowrap>20.11629</td>
+<td align="CENTER" nowrap>2.60000</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>61.87575</td>
+<td align="CENTER" nowrap>3.90000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>86.20425</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.32500</td>
+<td align="CENTER" nowrap>1.07609</td>
+<td align="CENTER" nowrap>21.28477</td>
+<td align="CENTER" nowrap>2.62500</td>
+<td align="CENTER" nowrap>1.07869</td>
+<td align="CENTER" nowrap>62.44996</td>
+<td align="CENTER" nowrap>3.92500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>86.58764</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.35000</td>
+<td align="CENTER" nowrap>1.07647</td>
+<td align="CENTER" nowrap>22.42752</td>
+<td align="CENTER" nowrap>2.65000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>63.01873</td>
+<td align="CENTER" nowrap>3.95000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>86.96860</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.37500</td>
+<td align="CENTER" nowrap>1.07679</td>
+<td align="CENTER" nowrap>23.54617</td>
+<td align="CENTER" nowrap>2.67500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>63.58215</td>
+<td align="CENTER" nowrap>3.97500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>87.34715</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.40000</td>
+<td align="CENTER" nowrap>1.07705</td>
+<td align="CENTER" nowrap>24.64213</td>
+<td align="CENTER" nowrap>2.70000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>64.14033</td>
+<td align="CENTER" nowrap>4.00000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>87.72333</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.42500</td>
+<td align="CENTER" nowrap>1.07728</td>
+<td align="CENTER" nowrap>25.71661</td>
+<td align="CENTER" nowrap>2.72500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>64.69336</td>
+<td align="CENTER" nowrap>4.02500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>88.09716</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.45000</td>
+<td align="CENTER" nowrap>1.07747</td>
+<td align="CENTER" nowrap>26.77070</td>
+<td align="CENTER" nowrap>2.75000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>65.24134</td>
+<td align="CENTER" nowrap>4.05000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>88.46868</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.47500</td>
+<td align="CENTER" nowrap>1.07763</td>
+<td align="CENTER" nowrap>27.80537</td>
+<td align="CENTER" nowrap>2.77500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>65.78436</td>
+<td align="CENTER" nowrap>4.07500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>88.83791</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.50000</td>
+<td align="CENTER" nowrap>1.07777</td>
+<td align="CENTER" nowrap>28.82147</td>
+<td align="CENTER" nowrap>2.80000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>66.32250</td>
+<td align="CENTER" nowrap>4.10000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>89.20489</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.52500</td>
+<td align="CENTER" nowrap>1.07789</td>
+<td align="CENTER" nowrap>29.81980</td>
+<td align="CENTER" nowrap>2.82500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>66.85587</td>
+<td align="CENTER" nowrap>4.12500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>89.56963</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.55000</td>
+<td align="CENTER" nowrap>1.07799</td>
+<td align="CENTER" nowrap>30.80108</td>
+<td align="CENTER" nowrap>2.85000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>67.38452</td>
+<td align="CENTER" nowrap>4.15000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>89.93217</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.57500</td>
+<td align="CENTER" nowrap>1.07808</td>
+<td align="CENTER" nowrap>31.76596</td>
+<td align="CENTER" nowrap>2.87500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>67.90857</td>
+<td align="CENTER" nowrap>4.17500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>90.29253</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.60000</td>
+<td align="CENTER" nowrap>1.07815</td>
+<td align="CENTER" nowrap>32.71506</td>
+<td align="CENTER" nowrap>2.90000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>68.42807</td>
+<td align="CENTER" nowrap>4.20000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>90.65074</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.62500</td>
+<td align="CENTER" nowrap>1.07822</td>
+<td align="CENTER" nowrap>33.64894</td>
+<td align="CENTER" nowrap>2.92500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>68.94311</td>
+<td align="CENTER" nowrap>4.22500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>91.00683</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.65000</td>
+<td align="CENTER" nowrap>1.07827</td>
+<td align="CENTER" nowrap>34.56815</td>
+<td align="CENTER" nowrap>2.95000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>69.45377</td>
+<td align="CENTER" nowrap>4.25000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>91.36081</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.67500</td>
+<td align="CENTER" nowrap>1.07832</td>
+<td align="CENTER" nowrap>35.47317</td>
+<td align="CENTER" nowrap>2.97500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>69.96012</td>
+<td align="CENTER" nowrap>4.27500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>91.71272</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.70000</td>
+<td align="CENTER" nowrap>1.07837</td>
+<td align="CENTER" nowrap>36.36448</td>
+<td align="CENTER" nowrap>3.00000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>70.46222</td>
+<td align="CENTER" nowrap>4.30000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>92.06258</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.72500</td>
+<td align="CENTER" nowrap>1.07840</td>
+<td align="CENTER" nowrap>37.24250</td>
+<td align="CENTER" nowrap>3.02500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>70.96016</td>
+<td align="CENTER" nowrap>4.32500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>92.41040</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.75000</td>
+<td align="CENTER" nowrap>1.07844</td>
+<td align="CENTER" nowrap>38.10766</td>
+<td align="CENTER" nowrap>3.05000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>71.45401</td>
+<td align="CENTER" nowrap>4.35000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>92.75623</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.77500</td>
+<td align="CENTER" nowrap>1.07847</td>
+<td align="CENTER" nowrap>38.96036</td>
+<td align="CENTER" nowrap>3.07500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>71.94382</td>
+<td align="CENTER" nowrap>4.37500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>93.10007</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.80000</td>
+<td align="CENTER" nowrap>1.07849</td>
+<td align="CENTER" nowrap>39.80095</td>
+<td align="CENTER" nowrap>3.10000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>72.42966</td>
+<td align="CENTER" nowrap>4.40000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>93.44195</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.82500</td>
+<td align="CENTER" nowrap>1.07851</td>
+<td align="CENTER" nowrap>40.62980</td>
+<td align="CENTER" nowrap>3.12500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>72.91160</td>
+<td align="CENTER" nowrap>4.42500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>93.78189</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.85000</td>
+<td align="CENTER" nowrap>1.07853</td>
+<td align="CENTER" nowrap>41.44725</td>
+<td align="CENTER" nowrap>3.15000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>73.38970</td>
+<td align="CENTER" nowrap>4.45000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>94.11992</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.87500</td>
+<td align="CENTER" nowrap>1.07855</td>
+<td align="CENTER" nowrap>42.25361</td>
+<td align="CENTER" nowrap>3.17500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>73.86402</td>
+<td align="CENTER" nowrap>4.47500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>94.45606</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.90000</td>
+<td align="CENTER" nowrap>1.07857</td>
+<td align="CENTER" nowrap>43.04919</td>
+<td align="CENTER" nowrap>3.20000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>74.33462</td>
+<td align="CENTER" nowrap>4.50000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>94.79032</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.92500</td>
+<td align="CENTER" nowrap>1.07858</td>
+<td align="CENTER" nowrap>43.83428</td>
+<td align="CENTER" nowrap>3.22500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>74.80155</td>
+<td align="CENTER" nowrap>4.52500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>95.12273</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.95000</td>
+<td align="CENTER" nowrap>1.07859</td>
+<td align="CENTER" nowrap>44.60917</td>
+<td align="CENTER" nowrap>3.25000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>75.26488</td>
+<td align="CENTER" nowrap>4.55000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>95.45331</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>1.97500</td>
+<td align="CENTER" nowrap>1.07860</td>
+<td align="CENTER" nowrap>45.37412</td>
+<td align="CENTER" nowrap>3.27500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>75.72466</td>
+<td align="CENTER" nowrap>4.57500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>95.78208</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.00000</td>
+<td align="CENTER" nowrap>1.07861</td>
+<td align="CENTER" nowrap>46.12939</td>
+<td align="CENTER" nowrap>3.30000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>76.18094</td>
+<td align="CENTER" nowrap>4.60000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>96.10906</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.02500</td>
+<td align="CENTER" nowrap>1.07862</td>
+<td align="CENTER" nowrap>46.87523</td>
+<td align="CENTER" nowrap>3.32500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>76.63378</td>
+<td align="CENTER" nowrap>4.62500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>96.43426</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.05000</td>
+<td align="CENTER" nowrap>1.07863</td>
+<td align="CENTER" nowrap>47.61187</td>
+<td align="CENTER" nowrap>3.35000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>77.08322</td>
+<td align="CENTER" nowrap>4.65000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>96.75771</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.07500</td>
+<td align="CENTER" nowrap>1.07864</td>
+<td align="CENTER" nowrap>48.33954</td>
+<td align="CENTER" nowrap>3.37500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>77.52933</td>
+<td align="CENTER" nowrap>4.67500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>97.07943</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.10000</td>
+<td align="CENTER" nowrap>1.07864</td>
+<td align="CENTER" nowrap>49.05846</td>
+<td align="CENTER" nowrap>3.40000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>77.97214</td>
+<td align="CENTER" nowrap>4.70000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>97.39943</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.12500</td>
+<td align="CENTER" nowrap>1.07865</td>
+<td align="CENTER" nowrap>49.76884</td>
+<td align="CENTER" nowrap>3.42500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>78.41171</td>
+<td align="CENTER" nowrap>4.72500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>97.71773</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.15000</td>
+<td align="CENTER" nowrap>1.07865</td>
+<td align="CENTER" nowrap>50.47089</td>
+<td align="CENTER" nowrap>3.45000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>78.84807</td>
+<td align="CENTER" nowrap>4.75000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>98.03436</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.17500</td>
+<td align="CENTER" nowrap>1.07866</td>
+<td align="CENTER" nowrap>51.16479</td>
+<td align="CENTER" nowrap>3.47500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>79.28129</td>
+<td align="CENTER" nowrap>4.77500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>98.34932</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.20000</td>
+<td align="CENTER" nowrap>1.07866</td>
+<td align="CENTER" nowrap>51.85074</td>
+<td align="CENTER" nowrap>3.50000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>79.71141</td>
+<td align="CENTER" nowrap>4.80000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>98.66264</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.22500</td>
+<td align="CENTER" nowrap>1.07867</td>
+<td align="CENTER" nowrap>52.52892</td>
+<td align="CENTER" nowrap>3.52500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>80.13846</td>
+<td align="CENTER" nowrap>4.82500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>98.97433</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.25000</td>
+<td align="CENTER" nowrap>1.07867</td>
+<td align="CENTER" nowrap>53.19950</td>
+<td align="CENTER" nowrap>3.55000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>80.56249</td>
+<td align="CENTER" nowrap>4.85000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>99.28440</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.27500</td>
+<td align="CENTER" nowrap>1.07867</td>
+<td align="CENTER" nowrap>53.86266</td>
+<td align="CENTER" nowrap>3.57500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>80.98355</td>
+<td align="CENTER" nowrap>4.87500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>99.59289</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.30000</td>
+<td align="CENTER" nowrap>1.07868</td>
+<td align="CENTER" nowrap>54.51856</td>
+<td align="CENTER" nowrap>3.60000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>81.40167</td>
+<td align="CENTER" nowrap>4.90000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>99.89979</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.32500</td>
+<td align="CENTER" nowrap>1.07868</td>
+<td align="CENTER" nowrap>55.16735</td>
+<td align="CENTER" nowrap>3.62500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>81.81690</td>
+<td align="CENTER" nowrap>4.92500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>100.20514</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.35000</td>
+<td align="CENTER" nowrap>1.07868</td>
+<td align="CENTER" nowrap>55.80920</td>
+<td align="CENTER" nowrap>3.65000</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>82.22927</td>
+<td align="CENTER" nowrap>4.95000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>100.50894</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>2.37500</td>
+<td align="CENTER" nowrap>1.07868</td>
+<td align="CENTER" nowrap>56.44424</td>
+<td align="CENTER" nowrap>3.67500</td>
+<td align="CENTER" nowrap>1.07870</td>
+<td align="CENTER" nowrap>82.63883</td>
+<td align="CENTER" nowrap>4.97500</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>100.81120</td>
+</tr>
+<tr valign="TOP"><td align="CENTER" nowrap>&nbsp;</td>
+<td align="CENTER" nowrap>&nbsp;</td>
+<td align="CENTER" nowrap>&nbsp;</td>
+<td align="CENTER" nowrap>&nbsp;</td>
+<td align="CENTER" nowrap>&nbsp;</td>
+<td align="CENTER" nowrap>&nbsp;</td>
+<td align="CENTER" nowrap>5.00000</td>
+<td align="CENTER" nowrap>1.07871</td>
+<td align="CENTER" nowrap>101.11196</td>
+</tr>
+</table><hr>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html1"
- HREF="http://fermi.la.asu.edu/w9cf">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html2"
- HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/next_motif_gr.gif"> 
+<a name="tex2html1" href="https://web.archive.org/web/20200808144100/http://fermi.la.asu.edu/w9cf">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808144100im_/http://fermi.la.asu.edu/w9cf/articles/square/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html2" href="https://web.archive.org/web/20200808144100/http://fermi.la.asu.edu/w9cf">w9cf Home</a>
 <!--End of Navigation Panel-->
-<ADDRESS>
+<address>
  
-</ADDRESS>
-</BODY>
-</HTML>
+</address>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 14:41:00 Aug 08, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:23:36 Aug 01, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 98.255
+  exclusion.robots: 0.119
+  exclusion.robots.policy: 0.111
+  cdx.remote: 0.067
+  esindex: 0.007
+  LoadShardBlock: 50.174 (3)
+  PetaboxLoader3.datanode: 100.118 (4)
+  CDXLines.iter: 17.224 (3)
+  load_resource: 192.459
+  PetaboxLoader3.resolve: 137.202
+-->

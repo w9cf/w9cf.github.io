@@ -4,77 +4,77 @@
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
   Jens Lippman, Marek Rouchal, Martin Wilck and others -->
-<HTML>
-<HEAD>
-<TITLE>Putting a Balun and a Tuner Together
-</TITLE>
-<META NAME="description" CONTENT="Putting a Balun and a Tuner Together
+<html>
+<head><script src="https://archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app221.us.archive.org';v.server_ms=255;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="../../../../../../_static/js/bundle-playback.js%3Fv=KTqwAcYd" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../../_static/js/wombat.js%3Fv=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://fermi.la.asu.edu:80/w9cf/articles/balun/index.html","20200220143613","https://web.archive.org/","web","/_static/",
+	      "1582209373");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/banner-styles.css%3Fv=fantwOh2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/iconochive.css%3Fv=qtvMKcIJ.css" />
+<!-- End Wayback Rewrite JS Include -->
+
+<title>Putting a Balun and a Tuner Together
+</title>
+<meta name="description" content="Putting a Balun and a Tuner Together
 ">
-<META NAME="keywords" CONTENT="balun">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso_8859_1">
-<LINK REL="STYLESHEET" HREF="balun.css">
-</HEAD>
-<BODY >
+<meta name="keywords" content="balun">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta http-equiv="Content-Type" content="text/html; charset=iso_8859_1">
+<link rel="STYLESHEET" href="https://web.archive.org/web/20200220143613cs_/http://fermi.la.asu.edu/w9cf/articles/balun/balun.css">
+</head>
+<body>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html13"
- HREF="http://fermi.la.asu.edu/w9cf">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html14"
- HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
-<BR><BR>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/next_motif_gr.gif"> 
+<a name="tex2html13" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html14" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf">w9cf Home</a>
+<br><br>
 <!--End of Navigation Panel-->
-<P><H1 ALIGN="CENTER">Putting a Balun and a Tuner Together
-</H1>
-<P ALIGN="CENTER"><STRONG><A NAME="tex2html1"
- HREF="
-mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF<BR></A>
-6510 S. Roosevelt St.<BR>
-Tempe, Arizona 85283<BR>
-</STRONG></P>
-<P ALIGN="LEFT"></P>
-<P><BR>
-<H2><A NAME="SECTION00010000000000000000">
-Contents</A>
-</H2>
+<p><h1 align="CENTER">Putting a Balun and a Tuner Together
+</h1>
+<p align="CENTER"><strong><a name="tex2html1" href="https://web.archive.org/web/20200220143613/
+mailto:w9cf@ptolemy.la.asu.edu">Kevin Schmidt, W9CF<br></a>
+6510 S. Roosevelt St.<br>
+Tempe, Arizona 85283<br>
+</strong></p>
+<p align="LEFT"></p>
+<p><br>
+<h2><a name="SECTION00010000000000000000">
+Contents</a>
+</h2>
 <!--Table of Contents-->
-<UL>
-<LI><A NAME="tex2html24"
- HREF="balun.html#SECTION00010000000000000000">
-Contents</A>
-<LI><A NAME="tex2html25"
- HREF="balun.html#SECTION00020000000000000000">
-1 Introduction</A>
-<LI><A NAME="tex2html26"
- HREF="balun.html#SECTION00030000000000000000">
-2 A two wire transmission line as a three terminal Device</A>
-<LI><A NAME="tex2html27"
- HREF="balun.html#SECTION00040000000000000000">
-3 The W2DU and W7EL models of a choke balun</A>
-<LI><A NAME="tex2html28"
- HREF="balun.html#SECTION00050000000000000000">
-4 Baluns on the input and output of unbalanced tuners</A>
-<LI><A NAME="tex2html29"
- HREF="balun.html#SECTION00060000000000000000">
-5 The effectiveness of a balun</A>
-<LI><A NAME="tex2html30"
- HREF="balun.html#SECTION00070000000000000000">
-6 Conclusion</A>
-<LI><A NAME="tex2html31"
- HREF="balun.html#SECTION00080000000000000000">
-7 Appendix: Measuring  <I>Z</I><SUB>D</SUB> ,  <I>Z</I><SUB>C</SUB> , and  <I>Z</I><SUB>U</SUB> </A>
-<LI><A NAME="tex2html32"
- HREF="balun.html#SECTION00090000000000000000">
-References</A>
-</UL>
+<ul>
+<li><a name="tex2html24" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00010000000000000000">
+Contents</a>
+<li><a name="tex2html25" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00020000000000000000">
+1 Introduction</a>
+<li><a name="tex2html26" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00030000000000000000">
+2 A two wire transmission line as a three terminal Device</a>
+<li><a name="tex2html27" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00040000000000000000">
+3 The W2DU and W7EL models of a choke balun</a>
+<li><a name="tex2html28" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00050000000000000000">
+4 Baluns on the input and output of unbalanced tuners</a>
+<li><a name="tex2html29" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00060000000000000000">
+5 The effectiveness of a balun</a>
+<li><a name="tex2html30" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00070000000000000000">
+6 Conclusion</a>
+<li><a name="tex2html31" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00080000000000000000">
+7 Appendix: Measuring  <i>Z</i><sub>D</sub> ,  <i>Z</i><sub>C</sub> , and  <i>Z</i><sub>U</sub> </a>
+<li><a name="tex2html32" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00090000000000000000">
+References</a>
+</ul>
 <!--End of Table of Contents-->
-<H1><A NAME="SECTION00020000000000000000">
-1 Introduction</A>
-</H1>
+<h1><a name="SECTION00020000000000000000">
+1 Introduction</a>
+</h1>
 Commercial antenna tuners use unbalanced circuits such a Pi-, T-, or
 L-network to match unbalanced loads to 50 ohms for our transmitters.
 A simple way to include the capability to handle
@@ -85,7 +85,7 @@ can sometimes be found at hamfests, have a balanced output
 circuit and a link coupled input to make the transformation
 from the unbalanced input to a balanced output. Some
 hams still build tuners this way too.
-<P>
+<p>
 Since a simple multiband antenna is a center fed wire fed
 with twinlead or windowline to an antenna tuner,
 a beginning ham (and even
@@ -93,46 +93,43 @@ some old timers) can wonder what is the best or at least a
 good way of handling the two jobs of impedance matching and
 changing from twinlead or windowline from the antenna
 to coax at the transmitter.
-<P>
+<p>
 Typical solutions are summarized as:
-<UL>
-<LI>
+<ul>
+<li>
 Use a balun to connect from the twinlead to an unbalanced tuner.
 That is use a balun on the output of an unbalanced tuner as shown
-in figure <A HREF="balun.html#f1">1</A>.
-<LI>
+in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f1">1</a>.
+<li>
 Connect a balun to the input of an unbalanced tuner and ``float''
 the tuner. The output of the tuner is connected to the twinlead; one
 side of the twinlead goes to the center conductor of the unbalanced
 output connector and the other to the case of the tuner.
 That is, use a balun at the input of an unbalanced tuner as shown
-in figure <A HREF="balun.html#f2">2</A>.
-<LI>
+in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f2">2</a>.
+<li>
 Use a balanced tuner configuration to convert the twinlead impedance
 to 50 ohms balanced and then use a 1:1 balun to convert to 50
 ohms unbalanced. That is, use a balun on the input of a balanced
-tuner as shown in figure <A HREF="balun.html#f3">3</A>.
-</UL>
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f1">&#160;</A><A NAME="15">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 1:</STRONG>
+tuner as shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f3">3</a>.
+</ul>
+<br>
+<div align="CENTER"><a name="f1">&#160;</a><a name="15">&#160;</a>
+<table>
+<caption><strong>Figure 1:</strong>
 A transmitter connected to an unbalanced tuner with a balun on its
-output connecting to a balanced feedline.</CAPTION>
-<TR><TD><IMG WIDTH="419" HEIGHT="287"
- SRC="img1.gif"
- ALT="\begin{figure}
+output connecting to a balanced feedline.</caption>
+<tr><td><img width="419" height="287" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img1.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.300in width0pt height 0pt}\kern 3.440in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<p>
 In all of the following, I will assume that the balun is a 1:1
 choke or current type. Examples are the ferrite bead balun
-described by Walter Maxwell, W2DU[<A
- HREF="balun.html#maxwell83">1</A>], coiled up coax,
+described by Walter Maxwell, W2DU[<a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#maxwell83">1</a>], coiled up coax,
 and coax or a bifilar winding through a toroidal core.
 A nonradiating balanced transmission line requires that the current
 in the two conductors be the same. If, for example,
@@ -142,39 +139,35 @@ Even so, to minimize transmission line radiation near the
 transmitter (and operator) the currents in the two wires should still be
 equalized at the transmitter. Again, this tells us that the best choice
 will be a choke or current balun.
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f2">&#160;</A><A NAME="74">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 2:</STRONG>
+<br>
+<div align="CENTER"><a name="f2">&#160;</a><a name="74">&#160;</a>
+<table>
+<caption><strong>Figure 2:</strong>
 A transmitter connected
-to a balun to an unbalanced tuner to a balanced feedline.</CAPTION>
-<TR><TD><IMG WIDTH="419" HEIGHT="400"
- SRC="img2.gif"
- ALT="\begin{figure}
+to a balun to an unbalanced tuner to a balanced feedline.</caption>
+<tr><td><img width="419" height="400" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img2.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...3.240in width0pt height 0pt}\kern 3.440in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f3">&#160;</A><A NAME="159">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 3:</STRONG>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<br>
+<div align="CENTER"><a name="f3">&#160;</a><a name="159">&#160;</a>
+<table>
+<caption><strong>Figure 3:</strong>
 A transmitter connected to a balun to a balanced tuner to a balanced
-feedline.</CAPTION>
-<TR><TD><IMG WIDTH="508" HEIGHT="287"
- SRC="img3.gif"
- ALT="\begin{figure}
+feedline.</caption>
+<tr><td><img width="508" height="287" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img3.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.300in width0pt height 0pt}\kern 4.180in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR><H1><A NAME="SECTION00030000000000000000">
-2 A two wire transmission line as a three terminal Device</A>
-</H1>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br><h1><a name="SECTION00030000000000000000">
+2 A two wire transmission line as a three terminal Device</a>
+</h1>
+<p>
 Commercial transmitters have unbalanced outputs. That is
 the output is taken between the output connectors center conductor
 and the transmitter case. I will call the transmitter case ground.
@@ -182,7 +175,7 @@ That is, whenever an impedance is measured between a point in
 the circuit and ground, it means that the point is close to the
 transmitter case, and the impedance is measured between that point
 and the transmitter case.
-<P>
+<p>
 The two wires
 of our balanced transmission line are two connections with some
 impedance across them from the antenna. In addition, the lines
@@ -195,91 +188,83 @@ unbalanced to some extent. That means that the impedance measured
 between one of the lines and ground is not the same as between
 the other line and ground. A general two-wire transmission line
 ending up near our transmitter can be represented as a T equivalent
-circuit as shown in figure <A HREF="balun.html#f4">4</A>. If I put a current into
+circuit as shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f4">4</a>. If I put a current into
 one wire of the transmission line and remove it from the other,
 this is the differential mode of the line. The resulting impedance
-I will call  <I>Z</I><SUB>D</SUB>  or the differential mode impedance. If I connect
+I will call  <i>Z</i><sub>D</sub>  or the differential mode impedance. If I connect
 both wires together, and drive them against ground, I call
-the resulting impedance the common mode impedance  <I>Z</I><SUB>C</SUB> . Finally, if the
+the resulting impedance the common mode impedance  <i>Z</i><sub>C</sub> . Finally, if the
 impedance from each wire to ground is not the same, this is unbalance
-which I'll represent as  <I>Z</I><SUB>U</SUB> . The labeling in figure <A HREF="balun.html#f4">4</A> shows
+which I'll represent as  <i>Z</i><sub>U</sub> . The labeling in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f4">4</a> shows
 how these impedances relate to the three impedances of the T equivalent
-circuit. Notice if the twinlead is well balanced that  <I>Z</I><SUB>U</SUB> = 0 ,
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f4">&#160;</A><A NAME="251">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 4:</STRONG>
+circuit. Notice if the twinlead is well balanced that  <i>Z</i><sub>U</sub> = 0 ,
+<br>
+<div align="CENTER"><a name="f4">&#160;</a><a name="251">&#160;</a>
+<table>
+<caption><strong>Figure 4:</strong>
 The two wires of a balanced transmission line are labeled
 connections 1 and 2, and the case of the transmitter is labeled
 as connection 3. The impedances between these three points when
 they are close together can be
 represented in a T-equivalent circuit by three impedances:
-a differential mode impedance  <I>Z</I><SUB>D</SUB> , a common mode impedance  <I>Z</I><SUB>C</SUB> 
-and an unbalancing impedance  <I>Z</I><SUB>U</SUB> .</CAPTION>
-<TR><TD><IMG WIDTH="506" HEIGHT="231"
- SRC="img4.gif"
- ALT="\begin{figure}
+a differential mode impedance  <i>Z</i><sub>D</sub> , a common mode impedance  <i>Z</i><sub>C</sub> 
+and an unbalancing impedance  <i>Z</i><sub>U</sub> .</caption>
+<tr><td><img width="506" height="231" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img4.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...1.917in width0pt height 0pt}\kern 4.165in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<p>
 These impedances can be measured with inexpensive equipment.
 One of my antennas is a ``dipole'' about 60 feet on a leg running
 around the outside of my 1 story house. It is fed by about 30 feet
 of 300 ohm TV twinlead. The legs of the ``dipole''
 are not straight, and it isn't symmetric about the feedpoint since
 the shack is at a corner of the house. I have measured
- <I>Z</I><SUB>D</SUB> ,  <I>Z</I><SUB>U</SUB> , and  <I>Z</I><SUB>C</SUB> , at 3.52 MHz to be:
-<BR>
+ <i>Z</i><sub>D</sub> ,  <i>Z</i><sub>U</sub> , and  <i>Z</i><sub>C</sub> , at 3.52 MHz to be:
+<br>
 
 <!-- MATH: Z_D &=& 158~+~j~533~\Omega\nonumber\\Z_U &=& 224~+~j~182~\Omega\nonumber\\Z_C &=& 887~+~j~622~\Omega\nonumber. -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>Z</I><SUB>D</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>Z</i><sub>D</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-158&nbsp; + &nbsp;<I>j</I>&nbsp;533&nbsp;<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\displaystyle\Omega$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>Z</I><SUB>U</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="LEFT" nowrap>
+158&nbsp; + &nbsp;<i>j</i>&nbsp;533&nbsp;<img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img5.gif" alt="$\displaystyle\Omega$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>Z</i><sub>U</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-224&nbsp; + &nbsp;<I>j</I>&nbsp;182&nbsp;<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\displaystyle\Omega$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>Z</I><SUB>C</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="LEFT" nowrap>
+224&nbsp; + &nbsp;<i>j</i>&nbsp;182&nbsp;<img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img5.gif" alt="$\displaystyle\Omega$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>Z</i><sub>C</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-887&nbsp; + &nbsp;<I>j</I>&nbsp;622&nbsp;<IMG WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img5.gif"
- ALT="$\displaystyle\Omega$">. 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-</TABLE></DIV>
+</td><td align="LEFT" nowrap>
+887&nbsp; + &nbsp;<i>j</i>&nbsp;622&nbsp;<img width="17" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img5.gif" alt="$\displaystyle\Omega$">. 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+</table></div>
 As you can see the system is not well balanced at all
 The method of measuring these impedances is described in the
 appendix. I highly recommend making some measurements
 to better determine the best solution to match the feedline impedance.
-<P><H1><A NAME="SECTION00040000000000000000">
-3 The W2DU and W7EL models of a choke balun</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00040000000000000000">
+3 The W2DU and W7EL models of a choke balun</a>
+</h1>
+<p>
 I now have a circuit equivalent of our antenna and transmission line.
 Since the circuit for tuners is well known, this leaves only the
 equivalent circuit for a choke balun to allow us to analyze
 our tuner-balun-antenna sytem using standard circuit theory.
-<P>
+<p>
 Two useful and equivalent models of a choke balun are those
 described by Walter Maxwell, W2DU and Roy Lewallen, W7EL. 
 In Maxwell's model, of a choke balun, he uses the fact that
@@ -296,71 +281,67 @@ conductor and the shield of the coax attach. At this point,
 the internal fields escape, and can cause
 currents to flow on the outside of the outer conductor of the
 coax.
-<P>
-The equivalent setup is is shown in figure <A HREF="balun.html#f5">5</A>. The transmitter
+<p>
+The equivalent setup is is shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f5">5</a>. The transmitter
 applies a voltage between the inner and outer conductors
 of the coax, and the outside of the outer conductor of the coax
 is then another part of the system.  If I use no balun, and simply
 connect our coax to the twinlead, center conductor to terminal 1 and
 shield to terminal 2, the transmitter applies a voltage
-across terminals 1 and 2 in figure <A HREF="balun.html#f4">4</A>. The outside of the outer
+across terminals 1 and 2 in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f4">4</a>. The outside of the outer
 conductor presents an impedance 
 <!-- MATH: Z_{\rm Shield} -->
- <I>Z</I><SUB>Shield</SUB> 
+ <i>Z</i><sub>Shield</sub> 
 back to the case of the transmitter
 which I have taken to be terminal 3. That means that this impedance is
-placed from terminal 2 to 3 as shown in figure <A HREF="balun.html#f5">5</A>.
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f5">&#160;</A><A NAME="362">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 5:</STRONG>
-The W2DU model of coaxial cable connected directly to a balanced line.</CAPTION>
-<TR><TD><IMG WIDTH="485" HEIGHT="331"
- SRC="img6.gif"
- ALT="\begin{figure}
+placed from terminal 2 to 3 as shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f5">5</a>.
+<br>
+<div align="CENTER"><a name="f5">&#160;</a><a name="362">&#160;</a>
+<table>
+<caption><strong>Figure 5:</strong>
+The W2DU model of coaxial cable connected directly to a balanced line.</caption>
+<tr><td><img width="485" height="331" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img6.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.583in width0pt height 0pt}\kern 4.020in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<p>
 A choke balun made by coiling up coax would change the impedance
 of the outside of the coax shield to the inductive reactance of the
 coil. A choke balun made from ferrite beads slipped over the outside
 of the coax will also increase this impedance. In his July 1983 QST
 article 
-Maxwell gave measurements of about  15.6 + <I>j</I>13.1  ohms per bead at 4 MHz
+Maxwell gave measurements of about  15.6 + <i>j</i>13.1  ohms per bead at 4 MHz
 for #73 beads.
 (However, I recently bought a bead balun kit at a hamfest which claimed to be
-50 #73 beads. My balun measured  660 + <I>j</I>438  ohms or  13 + <I>j</I>9  ohms
+50 #73 beads. My balun measured  660 + <i>j</i>438  ohms or  13 + <i>j</i>9  ohms
 per bead 4 MHz. Apparently, all beads are not created equal, and
 it is prudent to make a few measurements to see how many beads
 are needed to make a good balun with your materials.)
 Adding this impedance in series with 
 <!-- MATH: Z_{\rm Shield} -->
- <I>Z</I><SUB>Shield</SUB>  gives
-the balun common mode impedance  <I>Z</I><SUB>Balun</SUB>  and 
-the circuit shown in figure <A HREF="balun.html#f6">6</A>. Since there is only a single
+ <i>Z</i><sub>Shield</sub>  gives
+the balun common mode impedance  <i>Z</i><sub>Balun</sub>  and 
+the circuit shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f6">6</a>. Since there is only a single
 connection to ground, I have dropped this connection to simplify the
-circuit diagram. Notice that  <I>Z</I><SUB>Balun</SUB>  is
-connected in series with  <I>Z</I><SUB>C</SUB>  so it effectively just increases  <I>Z</I><SUB>C</SUB> .
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f6">&#160;</A><A NAME="513">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 6:</STRONG>
+circuit diagram. Notice that  <i>Z</i><sub>Balun</sub>  is
+connected in series with  <i>Z</i><sub>C</sub>  so it effectively just increases  <i>Z</i><sub>C</sub> .
+<br>
+<div align="CENTER"><a name="f6">&#160;</a><a name="513">&#160;</a>
+<table>
+<caption><strong>Figure 6:</strong>
 The W2DU model of a coaxial cable choke balun driving a balanced
-transmission line.</CAPTION>
-<TR><TD><IMG WIDTH="512" HEIGHT="331"
- SRC="img7.gif"
- ALT="\begin{figure}
+transmission line.</caption>
+<tr><td><img width="512" height="331" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img7.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.583in width0pt height 0pt}\kern 4.245in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<p>
 Maxwell's analysis gives a simple rule for understanding a choke
 balun connected to the three terminal network given by our twinlead
 fed antenna. Simply connect the balun common mode impedance from
@@ -368,52 +349,49 @@ the terminal 2 to 3, and drive the antenna across terminals 1 and
 2. If the current through terminal 3 is made small enough by
 the balun impedance, then the drive current is balanced between
 terminals 1 and 2.
-<P>
+<p>
 Roy Lewallen, W7EL, has given model of a choke balun by using
-an ideal transformer as shown in figure <A HREF="balun.html#f7">7</A>.
+an ideal transformer as shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f7">7</a>.
 The connection shown is schematically the same
 as that normally drawn for a bifilar wound choke balun.
 A real balun is not an ideal
-transformer (nothing is), so the impedance  <I>Z</I><SUB>Balun</SUB>  is added.
+transformer (nothing is), so the impedance  <i>Z</i><sub>Balun</sub>  is added.
 The ideal transformer performs exactly the same task as the
 independent generator in the W2DU model.
 The W7EL model is equivalent to W2DU's
 model. The advantage is that you can write down a complete equivalent
 circuit for the tuner, balun, and antenna immediately without
 applying Maxwell's rules.
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f7">&#160;</A><A NAME="689">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 7:</STRONG>
+<br>
+<div align="CENTER"><a name="f7">&#160;</a><a name="689">&#160;</a>
+<table>
+<caption><strong>Figure 7:</strong>
 The W7EL model of a current balun as an ideal transformer
-and an extra impedance</CAPTION>
-<TR><TD><IMG WIDTH="472" HEIGHT="149"
- SRC="img8.gif"
- ALT="\begin{figure}
+and an extra impedance</caption>
+<tr><td><img width="472" height="149" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img8.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...1.228in width0pt height 0pt}\kern 3.250in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR><H1><A NAME="SECTION00050000000000000000">
-4 Baluns on the input and output of unbalanced tuners</A>
-</H1>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br><h1><a name="SECTION00050000000000000000">
+4 Baluns on the input and output of unbalanced tuners</a>
+</h1>
+<p>
 Roy, W7EL,  worked out the math for moving a current balun from output
 to input of an unbalanced tuner using his model of a choke
 balun and found that essentially nothing
-changed.[<A
- HREF="balun.html#lewallen">2</A>] I'll look at a particular case later, but it
+changed.[<a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#lewallen">2</a>] I'll look at a particular case later, but it
 is easy to see this result using the W2DU model of
 a choke balun.
-<P>
+<p>
 Assume a transmitter
 is connected with a short length of coax to a well shielded unbalanced
 tuner which is connected to another short piece of coax to our
 twinlead. 
 Also assume that while the transmitter may be grounded, that the
 rest of this does not have additional connections.
-<P>
+<p>
 Since the shield is continuous from the transmitter around
 the tuner to the end of the output coax, I can apply the same
 analysis as Walter Maxwell did and what happens inside the tuner
@@ -422,20 +400,20 @@ tuner adjustment will change the impedance the transmitter sees,
 but it does nothing
 else. In any case, assume that the tuner is always adjusted so
 the transmitter sees a 50 ohm load.
-<P>
+<p>
 Now replace the output coax jumper with a 1:1 current balun
 at the output of the tuner. W2DU's model tells us to replace
 the inner conductor with a generator across the balun output,
 and an additional impedance from the choke in series with the shield
 impedance back to the transmitter.
-<P>
+<p>
 Move the balun to the coax at the input to the tuner, and analyze the
 system. In this case, because the tuner is also shielded, the generator
 that W2DU tells us should be at the tuner input can be moved (with a different
 source impedance) to
 the tuner output. In that case all that has changed is the position
 of the choke.
-<P>
+<p>
 The only difference between these situations is
 that we have moved the choke balun to a slightly different point on a
 feedline. If you built a tuner so that it was a cylinder a foot long
@@ -459,16 +437,16 @@ give 15 pF, or about 3000 ohms at 80 meters - probably not low enough to
 worry too much about, but the most sensible place to put a balun
 is on an unbalanced tuner's output, like it is on nearly all commercial
 tuners, and not on its input.
-<P>
+<p>
 Notice that the above says
 nothing about the effectiveness or lack of effectiveness of the balun.
 It simply says it is essentially
 equally effective or ineffective on the input and
 output sides of an unbalanced tuner.
-<P><H1><A NAME="SECTION00060000000000000000">
-5 The effectiveness of a balun</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00060000000000000000">
+5 The effectiveness of a balun</a>
+</h1>
+<p>
 Let me analyze a simple case of a perfect quarter wave balanced line
 with a 300 ohm characteristic impedance terminated in a 50 ohm
 resistor. The line goes vertically straight up and the ground is
@@ -476,19 +454,19 @@ assumed perfectly conducting.  The reason for all of these assumptions
 is so I can make simple estimates of what the impedances are. The situation
 I am modeling is the case where the input to the feedline has
 a small common mode impedance, and a large differential mode impedance.
-<P>
+<p>
 <!-- MATH: Z_D =  300^2/50 -->
- <I>Z</I><SUB>D</SUB> = 300<SUP>2</SUP>/50  or 1800 ohms resistive.  <I>Z</I><SUB>C</SUB>  will be the impedance of
+ <i>Z</i><sub>D</sub> = 300<sup>2</sup>/50  or 1800 ohms resistive.  <i>Z</i><sub>C</sub>  will be the impedance of
 a quarter wave vertical driven against ground or about 35 ohms resistive.
- <I>Z</I><SUB>1</SUB>  =  <I>Z</I><SUB>2</SUB>  = 900 ohms,  <I>Z</I><SUB>3</SUB>  = -415 ohms, where the labeling is
-given in figure <A HREF="balun.html#f4">4</A>.
-<P>
+ <i>Z</i><sub>1</sub>  =  <i>Z</i><sub>2</sub>  = 900 ohms,  <i>Z</i><sub>3</sub>  = -415 ohms, where the labeling is
+given in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f4">4</a>.
+<p>
 Now lets hook up our ferrite bead balun by connecting the
 shield of the coax to terminal 2 and the center conductor to 1.
 A large ferrite bead balun will introduce an impedance of around
 
 <!-- MATH: |Z_{Bal}| = 6000 -->
- |<I>Z</I><SUB>Bal</SUB>| = 6000  ohms from point 2 to ground.  (Walter Maxwell's March
+ |<i>Z</i><sub>Bal</sub>| = 6000  ohms from point 2 to ground.  (Walter Maxwell's March
 1983 QST article gives these values,
 he measured about 6000 ohms with both R and X
 around 4000 at 4MHz for a bead balun made from 300 #73 beads).  Again,
@@ -496,126 +474,118 @@ to simplify things I'll just assume the balun is resistive and has a
 resistance of 4000 ohms.  The circuit looks like a driving voltage
 across 
 <!-- MATH: Z_1 +(Z_2 ~~ ||~~ (Z_{Balun}+Z_3)) -->
- <I>Z</I><SUB>1</SUB> + (<I>Z</I><SUB>2</SUB>&nbsp;&nbsp;||&nbsp;&nbsp;(<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>3</SUB>)) , where  ||  means take the
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f8">&#160;</A><A NAME="826">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 8:</STRONG>
+ <i>Z</i><sub>1</sub> + (<i>Z</i><sub>2</sub>&nbsp;&nbsp;||&nbsp;&nbsp;(<i>Z</i><sub>Balun</sub> + <i>Z</i><sub>3</sub>)) , where  ||  means take the
+<br>
+<div align="CENTER"><a name="f8">&#160;</a><a name="826">&#160;</a>
+<table>
+<caption><strong>Figure 8:</strong>
 The W2DU model of a unbalanced line and current balun driving
 a balanced line with differential mode resistance of 1800 ohms and
-common mode resistance of 35 ohms.</CAPTION>
-<TR><TD><IMG WIDTH="452" HEIGHT="311"
- SRC="img9.gif"
- ALT="\begin{figure}
+common mode resistance of 35 ohms.</caption>
+<tr><td><img width="452" height="311" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img9.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.583in width0pt height 0pt}\kern 3.290in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-parallel combination. This is shown in figure <A HREF="balun.html#f8">8</A>.
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+parallel combination. This is shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f8">8</a>.
+<p>
 The impedance is 
 <!-- MATH: Z_D/2+(Z_{Balun}+Z_C-Z_D/4)Z_D/(2 (Z_{Balun}+Z_C+Z_D/4)) -->
- <I>Z</I><SUB>D</SUB>/2 + (<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> - <I>Z</I><SUB>D</SUB>/4)<I>Z</I><SUB>D</SUB>/(2(<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> + <I>Z</I><SUB>D</SUB>/4)) . For the
-balun to work well the second term should also contribute  <I>Z</I><SUB>D</SUB>/2 , so
+ <i>Z</i><sub>D</sub>/2 + (<i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub> - <i>Z</i><sub>D</sub>/4)<i>Z</i><sub>D</sub>/(2(<i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub> + <i>Z</i><sub>D</sub>/4)) . For the
+balun to work well the second term should also contribute  <i>Z</i><sub>D</sub>/2 , so
 I want 
 <!-- MATH: (Z_{Balun}+Z_C-Z_D/4)/(Z_{Balun}+Z_C+Z_D/4) -->
- (<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> - <I>Z</I><SUB>D</SUB>/4)/(<I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB> + <I>Z</I><SUB>D</SUB>/4)  to be close to one.
+ (<i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub> - <i>Z</i><sub>D</sub>/4)/(<i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub> + <i>Z</i><sub>D</sub>/4)  to be close to one.
 That is I want
 
 <!-- MATH: Z_{Balun}+Z_C -->
- <I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB>  to be much larger than  <I>Z</I><SUB>D</SUB>/2 . Checking this case,
+ <i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub>  to be much larger than  <i>Z</i><sub>D</sub>/2 . Checking this case,
 
 <!-- MATH: Z_{Balun}+Z_C -->
- <I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB>  is about
-4000 ohms, and  <I>Z</I><SUB>D</SUB>/2  is 900 ohms, so the second term is about 80 percent
+ <i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub>  is about
+4000 ohms, and  <i>Z</i><sub>D</sub>/2  is 900 ohms, so the second term is about 80 percent
 of the first. That means for 1 volt across the terminals, there will be
 approximately 1/2 volt across the ferrite.  The relative dissipation in
 the balun is therefore 
 <!-- MATH: 1800/(4\times 4000) -->
- 1800/(4 <TT>x</TT> 4000)  or 11 percent. At 1500 watts
+ 1800/(4 <tt>x</tt> 4000)  or 11 percent. At 1500 watts
 output that's about 170 watts dissipated in the balun which may be more
 than it can take.  A smaller balun with only a 1000 ohm impedance will
 be worse.
-<P>
+<p>
 Another example is to simply take an 1800 ohm 1/2 watt resistor and
 hook it to your balun. Since the resistor has a very large common mode
-impedance, you would have  <I>Z</I><SUB>1</SUB> = <I>Z</I><SUB>2</SUB> = 900 and  <I>Z</I><SUB>3</SUB>  a very large value.  The
-balun is now in series with  <I>Z</I><SUB>3</SUB> , and since  <I>Z</I><SUB>3</SUB>  is very large, even
+impedance, you would have  <i>Z</i><sub>1</sub> = <i>Z</i><sub>2</sub> = 900 and  <i>Z</i><sub>3</sub>  a very large value.  The
+balun is now in series with  <i>Z</i><sub>3</sub> , and since  <i>Z</i><sub>3</sub>  is very large, even
 though the differential mode impedance is identical, there is no
 problem, in fact in this case, you don't even need a balun since
 shorting 2 to ground still doesn't allow any substantial common
 mode current flow.
-<P>
+<p>
 Now let's see what happens if a balanced tuner is added to the first
 case. Picking a balanced L network to transform to 50 ohms I can use a
 parallel capacitor of 304 ohms across terminals 1 and 2 as
-in figure <A HREF="balun.html#f9">9</A> which has the equivalent circuit shown in
-figure <A HREF="balun.html#f10">10</A>. 
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f9">&#160;</A><A NAME="978">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 9:</STRONG>
-The equivalent circuit of the balanced feedline of figure <A HREF="balun.html#f8">8</A> with 
-a 304 ohm capacitor across the feedline terminals.</CAPTION>
-<TR><TD><IMG WIDTH="520" HEIGHT="381"
- SRC="img10.gif"
- ALT="\begin{figure}
+in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f9">9</a> which has the equivalent circuit shown in
+figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f10">10</a>. 
+<br>
+<div align="CENTER"><a name="f9">&#160;</a><a name="978">&#160;</a>
+<table>
+<caption><strong>Figure 9:</strong>
+The equivalent circuit of the balanced feedline of figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f8">8</a> with 
+a 304 ohm capacitor across the feedline terminals.</caption>
+<tr><td><img width="520" height="381" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img10.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...3.000in width0pt height 0pt}\kern 4.290in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f10">&#160;</A><A NAME="1168">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 10:</STRONG>
-The equivalent circuit of figure <A HREF="balun.html#f9">9</A>.</CAPTION>
-<TR><TD><IMG WIDTH="424" HEIGHT="333"
- SRC="img11.gif"
- ALT="\begin{figure}
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<br>
+<div align="CENTER"><a name="f10">&#160;</a><a name="1168">&#160;</a>
+<table>
+<caption><strong>Figure 10:</strong>
+The equivalent circuit of figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f9">9</a>.</caption>
+<tr><td><img width="424" height="333" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img11.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.600in width0pt height 0pt}\kern 3.490in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
 A pair of
 series inductors of 148 ohms from terminal 1 to a new terminal 1' and
 from 2 to a new terminal 2' will cancel the differential mode
 capacitive reactance and when the W2DU balun is attached
-the equivalent circuit is shown in figure <A HREF="balun.html#f11">11</A>.
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f11">&#160;</A><A NAME="1337">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 11:</STRONG>
-The complete equivalent circuit of the example of figure <A HREF="balun.html#f8">8</A> with
+the equivalent circuit is shown in figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f11">11</a>.
+<br>
+<div align="CENTER"><a name="f11">&#160;</a><a name="1337">&#160;</a>
+<table>
+<caption><strong>Figure 11:</strong>
+The complete equivalent circuit of the example of figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f8">8</a> with
 a balanced L-network transforming the differential mode impedance to
-50 ohms.</CAPTION>
-<TR><TD><IMG WIDTH="454" HEIGHT="367"
- SRC="img12.gif"
- ALT="\begin{figure}
+50 ohms.</caption>
+<tr><td><img width="454" height="367" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img12.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...2.883in width0pt height 0pt}\kern 3.290in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
-<P>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
+<p>
 The new differential mode impedance is 50
 ohms. The new common mode impedance is the old value plus the impedance
 of the two parallel inductors = 35 +j 74 ohms.
-<P>
+<p>
 Clearly the balun will work exceptionally well now. For a voltage V across
 1' and 2', the power into the load will be approximately
- |<I>V</I>|<SUP>2</SUP>/50 . The power into
+ |<i>V</i>|<sup>2</sup>/50 . The power into
 our balun will be roughly 
 <!-- MATH: |V|^2/(4 Z_{Balun}) -->
- |<I>V</I>|<SUP>2</SUP>/(4<I>Z</I><SUB>Balun</SUB>) . The ratio is 
+ |<i>V</i>|<sup>2</sup>/(4<i>Z</i><sub>Balun</sub>) . The ratio is 
 <!-- MATH: 12.5/Z_{Balun} -->
- 12.5/<I>Z</I><SUB>Balun</SUB> 
+ 12.5/<i>Z</i><sub>Balun</sub> 
 or about 1 percent of the
 of the power for a 1000 ohm balun and 4 times less for the 4000 ohm
 balun.  1500 watts input gives 5 to 20 watts dissipated which I think a bead
@@ -625,8 +595,8 @@ on the input can really help. An advantage a substantially resistive
 balun like a ferrite balun is that there is no danger of cancellation in
 the 
 <!-- MATH: Z_{Balun}+Z_C -->
- <I>Z</I><SUB>Balun</SUB> + <I>Z</I><SUB>C</SUB>  term since the resistive parts of both must be positive.
-<P>
+ <i>Z</i><sub>Balun</sub> + <i>Z</i><sub>C</sub>  term since the resistive parts of both must be positive.
+<p>
 The idea that an unbalanced tuner will transform the differential
 mode impedance to 50 ohms is correct. Why is it that it doesn't help
 in reducing the common mode currents? I have already shown that moving
@@ -634,107 +604,100 @@ the balun to the input can't help matters. Let's see what happens
 to the equivalent circuit when an unbalanced tuner is added. An unbalanced
 L network would include a single series inductor rather than the
 two that I used above. Adding this single series inductor to
-the circuit of figure <A HREF="balun.html#f11">11</A> gives the circuit shown in
-figure <A HREF="balun.html#f12">12</A>.
-<BR>
-<DIV ALIGN="CENTER"><A NAME="f12">&#160;</A><A NAME="1527">&#160;</A>
-<TABLE>
-<CAPTION><STRONG>Figure 12:</STRONG>
-The equivalent circuit of the balun on the input of an unbalance tuner.</CAPTION>
-<TR><TD><IMG WIDTH="476" HEIGHT="403"
- SRC="img13.gif"
- ALT="\begin{figure}
+the circuit of figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f11">11</a> gives the circuit shown in
+figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f12">12</a>.
+<br>
+<div align="CENTER"><a name="f12">&#160;</a><a name="1527">&#160;</a>
+<table>
+<caption><strong>Figure 12:</strong>
+The equivalent circuit of the balun on the input of an unbalance tuner.</caption>
+<tr><td><img width="476" height="403" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img13.gif" alt="\begin{figure}
 
 \expandafter\ifx\csname graph\endcsname\relax \csname newbox\end...
  ...3.183in width0pt height 0pt}\kern 3.490in
- }}\centerline{\box\graph}\end{figure}"></TD></TR>
-</TABLE>
-</DIV><BR>
+ }}\centerline{\box\graph}\end{figure}"></td></tr>
+</table>
+</div><br>
 Notice that for the differential mode impedance is 50 ohms, but there
 is now a 148 ohm reactance that must be included in the unbalancing
-impedance  <I>Z</I><SUB>U</SUB>  of figure <A HREF="balun.html#f4">4</A>. The balun impedance must also
+impedance  <i>Z</i><sub>U</sub>  of figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f4">4</a>. The balun impedance must also
 be much larger than this impedance to be effective. An unbalanced tuner
 trades the large differential mode impedance for a large unbalanced
 impedance making the balun's job unchanged. I can calculate the approximate
-dissipation in our balun of figure <A HREF="balun.html#f12">12</A>. If I (correctly)
+dissipation in our balun of figure <a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#f12">12</a>. If I (correctly)
 assume that the balun current is low compared to the current through
 the 25 ohm load resistors, the power dissipated in the resistors
-will be  |<I>I</I>|<SUP>2</SUP>50  where  <I>I</I>  is the current through the resistors.
+will be  |<i>I</i>|<sup>2</sup>50  where  <i>I</i>  is the current through the resistors.
 Since the balun impedance is large, I can ignore the 74 ohm inductive
 reactance and the 22.5 ohm resistance. The magnitude of the
 voltage
 across the balun in then approximately 
 <!-- MATH: |I|\sqrt{25^2+148^2} -->
- |<I>I</I>|<IMG WIDTH="108" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
- SRC="img14.gif"
- ALT="$\sqrt{25^2+148^2}$"> , and
+ |<i>I</i>|<img width="108" height="42" align="MIDDLE" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img14.gif" alt="$\sqrt{25^2+148^2}$"> , and
 the power dissipated in the balun divided by the power dissipated in the
 load is 
 <!-- MATH: (25^2+148^2)/(50 \times 4000) -->
- (25<SUP>2</SUP> + 148<SUP>2</SUP>)/(50 <TT>x</TT> 4000)  or 11 percent just as before
+ (25<sup>2</sup> + 148<sup>2</sup>)/(50 <tt>x</tt> 4000)  or 11 percent just as before
 I added the tuner. Notice that 
 <!-- MATH: 4(25^2+148^2)/50 = 1800 -->
- 4(25<SUP>2</SUP> + 148<SUP>2</SUP>)/50 = 1800 ; this
+ 4(25<sup>2</sup> + 148<sup>2</sup>)/50 = 1800 ; this
 is simply the design equation used to calculate the L-network that
 transforms an 1800 ohm resistance to 50 ohms.
-<P><H1><A NAME="SECTION00070000000000000000">
-6 Conclusion</A>
-</H1>
-<P>
+<p><h1><a name="SECTION00070000000000000000">
+6 Conclusion</a>
+</h1>
+<p>
 The results described here are simple.
-<UL>
-<LI>
-As noted by Roy Lewallen, W7EL,[<A
- HREF="balun.html#lewallen">2</A>]
+<ul>
+<li>
+As noted by Roy Lewallen, W7EL,[<a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#lewallen">2</a>]
 putting a choke balun on the input of an unbalanced tuner to drive
 a balanced line is useless. It introduces a ``hot'' tuner case
 which must be isolated with no benefit over putting the balun
 on the output.
-<LI>
+<li>
 Well balanced loads with a high differential mode impedance and
 a low common mode impedance can stress a balun connected to
 the output of an unbalanced tuner.
-<LI>
+<li>
 Methods that lower the differential mode impedance without upsetting
 the balance of the load make the balun's job easier.
-</UL>
-<P>
+</ul>
+<p>
 Richard Measures, AG6K, described a balanced tuner with a balun on its
-input in February 1990 QST[<A
- HREF="balun.html#measures">3</A>].
+input in February 1990 QST[<a href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#measures">3</a>].
 Since the balanced tuner transforms the diffential
 mode impedance to 50 ohms, the tuner and balun combination will work well.
 The extra cost of the balanced tuner is the main disadvantage.
-<P>
+<p>
 For cases where a balun on the output of an unbalanced tuner is stressed,
 a brute force solution would be to use a bigger balun.
 In some cases this may be the most convenient
 and least expensive solution. Doubling the size of a bead balun should double
 its impedance which will cut the dissipation in half and doubling
 the physical size of the balun makes it better able to dissipate heat.
-<P>
+<p>
 Another possibility is to change the balanced
 feedline length. Cecil Moore, W6RCA,
 has advocated the use of this technique, and has developed methods to
 switch in extra feedline to tune balanced loads. His methods are
 described in detail on his Web page
-<A NAME="tex2html1"
- HREF="http://people.delphi.com/CecilMoore/index.html">http://people.delphi.com/CecilMoore/index.html</A>
+<a name="tex2html1" href="https://web.archive.org/web/20200220143613/http://people.delphi.com/CecilMoore/index.html">http://people.delphi.com/CecilMoore/index.html</a>
 .
 One method is to add feedline so that a current maximum
 is located at the balun connection. The differential mode feedpoint
 impedance is resistive there and has a value of 
 <!-- MATH: Z_0/{\rm SWR} -->
- <I>Z</I><SUB>0</SUB>/<I>SWR</I>  where  <I>Z</I><SUB>0</SUB> 
+ <i>Z</i><sub>0</sub>/<i>SWR</i>  where  <i>Z</i><sub>0</sub> 
 is the characteristic impedance of the line, for example 300 ohms, and
 SWR is the standing wave ratio on the line. Since this cannot be
-greater than  <I>Z</I><SUB>0</SUB> , the balun will perform well.
-<H1><A NAME="SECTION00080000000000000000">
-7 Appendix: Measuring  <I>Z</I><SUB>D</SUB> ,  <I>Z</I><SUB>C</SUB> , and  <I>Z</I><SUB>U</SUB> </A>
-</H1>
-<P>
-To measure the differential  <I>Z</I><SUB>D</SUB> , common mode  <I>Z</I><SUB>C</SUB> , and
-unbalanced  <I>Z</I><SUB>U</SUB>  impedances, you need an rf impedance measuring
+greater than  <i>Z</i><sub>0</sub> , the balun will perform well.
+<h1><a name="SECTION00080000000000000000">
+7 Appendix: Measuring  <i>Z</i><sub>D</sub> ,  <i>Z</i><sub>C</sub> , and  <i>Z</i><sub>U</sub> </a>
+</h1>
+<p>
+To measure the differential  <i>Z</i><sub>D</sub> , common mode  <i>Z</i><sub>C</sub> , and
+unbalanced  <i>Z</i><sub>U</sub>  impedances, you need an rf impedance measuring
 instrument like an impedance bridge, noise bridge, vector voltmeter,
 or network analyzer. For high frequency work I use an old General
 Radio GR821A twin-T admittance measuring circuit. The main disadvantage
@@ -753,8 +716,7 @@ of the capacitor can then be subtracted off. The inclusion of the
 corrections, and conversion from admittance to impedance is conveniently
 done using a programmable calculator or the shack computer.
 I have written a web based applet that does this. It is available
-at <A NAME="tex2html1"
- HREF="http://fermi.la.asu.edu/w9cf">http://fermi.la.asu.edu/w9cf</A>
+at <a name="tex2html1" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf">http://fermi.la.asu.edu/w9cf</a>
 , and will run within any Java activated
 web browser.
 Many hams have noise bridges, and these can be used if they are
@@ -762,142 +724,146 @@ fairly accurate. To measure high impedances, they will generally require
 the addition of a shunt capacitor to bring the impedance into the range
 of the bridge. Again a programmable calculator or computer is
 handy to do the needed calculations to get the correct impedance.
-<P>
-I measure  <I>Z</I><SUB>C</SUB>  by connecting both leads
+<p>
+I measure  <i>Z</i><sub>C</sub>  by connecting both leads
 of the twinlead together and measuring the impedance to ground.
 Next I connect wire 2 to ground and measure the impedance between
-wire 1 and ground and call this  <I>Z</I><SUB>a</SUB> .  Reversing the connections,
+wire 1 and ground and call this  <i>Z</i><sub>a</sub> .  Reversing the connections,
 by grounding wire 1 and measuring between wire 2 and ground gives
- <I>Z</I><SUB>b</SUB> .
-<P>
+ <i>Z</i><sub>b</sub> .
+<p>
 A straightforward application of circuit theory gives the equations:
-<BR>
+<br>
 
 <!-- MATH: Z_D &=& \frac{4 Z_a^2 Z_b^2 Z_C}{S}\nonumber\\Z_U &=& \frac{4 Z_C^2 Z_a Z_b (Z_a-Z_b)}{S} -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>Z</I><SUB>D</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>Z</i><sub>D</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="88" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
- SRC="img15.gif"
- ALT="$\displaystyle{\frac{4 Z_a^2 Z_b^2 Z_C}{S}}$"> 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>Z</I><SUB>U</SUB> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="LEFT" nowrap>
+<img width="88" height="64" align="MIDDLE" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img15.gif" alt="$\displaystyle{\frac{4 Z_a^2 Z_b^2 Z_C}{S}}$"> 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>Z</i><sub>U</sub> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<IMG WIDTH="165" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
- SRC="img16.gif"
- ALT="$\displaystyle{\frac{4 Z_C^2 Z_a Z_b (Z_a-Z_b)}{S}}$"> 
-</TD><TD ALIGN="RIGHT">(1)</TD></TR>
-</TABLE></DIV>
-where  <I>S</I>  stands for the expression
-<BR>
+</td><td align="LEFT" nowrap>
+<img width="165" height="64" align="MIDDLE" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img16.gif" alt="$\displaystyle{\frac{4 Z_C^2 Z_a Z_b (Z_a-Z_b)}{S}}$"> 
+</td><td align="RIGHT">(1)</td></tr>
+</table></div>
+where  <i>S</i>  stands for the expression
+<br>
 
 <!-- MATH: S &=&
 Z_a Z_C (2 Z_b^2 - Z_a Z_C)
 +Z_a Z_b (2 Z_C^2 - Z_a Z_b) \nonumber\\&+&Z_b Z_C (2 Z_a^2 - Z_b Z_C).
  -->
 
-<DIV ALIGN="CENTER">
-<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
-<I>S</I> 
-</TD><TD ALIGN="CENTER" NOWRAP>
+<div align="CENTER">
+<table cellpadding="0" align="CENTER" width="100%">
+<tr valign="BASELINE"><td nowrap align="RIGHT">
+<i>S</i> 
+</td><td align="CENTER" nowrap>
  = 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<I>Z</I><SUB>a</SUB><I>Z</I><SUB>C</SUB>(2<I>Z</I><SUB>b</SUB><SUP>2</SUP> - <I>Z</I><SUB>a</SUB><I>Z</I><SUB>C</SUB>) + <I>Z</I><SUB>a</SUB><I>Z</I><SUB>b</SUB>(2<I>Z</I><SUB>C</SUB><SUP>2</SUP> - <I>Z</I><SUB>a</SUB><I>Z</I><SUB>b</SUB>) 
-</TD><TD ALIGN="RIGHT">&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="BASELINE"><TD NOWRAP ALIGN="RIGHT">
+</td><td align="LEFT" nowrap>
+<i>Z</i><sub>a</sub><i>Z</i><sub>C</sub>(2<i>Z</i><sub>b</sub><sup>2</sup> - <i>Z</i><sub>a</sub><i>Z</i><sub>C</sub>) + <i>Z</i><sub>a</sub><i>Z</i><sub>b</sub>(2<i>Z</i><sub>C</sub><sup>2</sup> - <i>Z</i><sub>a</sub><i>Z</i><sub>b</sub>) 
+</td><td align="RIGHT">&nbsp;&nbsp;</td></tr>
+<tr valign="BASELINE"><td nowrap align="RIGHT">
 &nbsp;
-</TD><TD ALIGN="CENTER" NOWRAP>
+</td><td align="CENTER" nowrap>
  + 
-</TD><TD ALIGN="LEFT" NOWRAP>
-<I>Z</I><SUB>b</SUB><I>Z</I><SUB>C</SUB>(2<I>Z</I><SUB>a</SUB><SUP>2</SUP> - <I>Z</I><SUB>b</SUB><I>Z</I><SUB>C</SUB>). 
-</TD><TD ALIGN="RIGHT">(2)</TD></TR>
-</TABLE></DIV>
-<P>
-If  <I>Z</I><SUB>a</SUB> = <I>Z</I><SUB>b</SUB> , the system is balanced and  <I>Z</I><SUB>U</SUB>  is zero.
+</td><td align="LEFT" nowrap>
+<i>Z</i><sub>b</sub><i>Z</i><sub>C</sub>(2<i>Z</i><sub>a</sub><sup>2</sup> - <i>Z</i><sub>b</sub><i>Z</i><sub>C</sub>). 
+</td><td align="RIGHT">(2)</td></tr>
+</table></div>
+<p>
+If  <i>Z</i><sub>a</sub> = <i>Z</i><sub>b</sub> , the system is balanced and  <i>Z</i><sub>U</sub>  is zero.
 In that case, the expression for the differential mode impedance
 also simplifies to
-<P ALIGN="CENTER">
+<p align="CENTER">
 <!-- MATH: Z_D = \frac{4 Z_a Z_C}{4 Z_C - Z_a}~~~{\rm only\ when}~~~Z_a=Z_b -->
 
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="BASELINE"><TD></TD><TD ALIGN="CENTER" NOWRAP>
-<I>Z</I><SUB>D</SUB> = <IMG WIDTH="88" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
- SRC="img17.gif"
- ALT="$\displaystyle{\frac{4 Z_a Z_C}{4 Z_C - Z_a}}$">&nbsp;&nbsp;&nbsp;<I>only</I> <I>when</I> &nbsp;&nbsp;&nbsp;<I>Z</I><SUB>a</SUB> = <I>Z</I><SUB>b</SUB> 
-</TD><TD ALIGN="CENTER">(3)
-</TD></TR></TABLE></P>
-<P>
+<table width="100%" align="CENTER">
+<tr valign="BASELINE"><td></td><td align="CENTER" nowrap>
+<i>Z</i><sub>D</sub> = <img width="88" height="60" align="MIDDLE" border="0" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/img17.gif" alt="$\displaystyle{\frac{4 Z_a Z_C}{4 Z_C - Z_a}}$">&nbsp;&nbsp;&nbsp;<i>only</i> <i>when</i> &nbsp;&nbsp;&nbsp;<i>Z</i><sub>a</sub> = <i>Z</i><sub>b</sub> 
+</td><td align="CENTER">(3)
+</td></tr></table></p>
+<p>
 Obviously, the calculations above are tedious unless a programmable calculator
 or a computer program are used.
-<P> <H2><A NAME="SECTIONREF">References</A>
-</H2>
-<DL COMPACT><P></P><DT><A NAME="maxwell83"><STRONG>1</STRONG></A>
-<DD>
+<p> <h2><a name="SECTIONREF">References</a>
+</h2>
+<dl compact><p></p><dt><a name="maxwell83"><strong>1</strong></a>
+<dd>
 Walter Maxwell, W2DU, ``Some Aspects of the Balun Problem,'' QST, March 1983,
 p. 38.
-<P></P><DT><A NAME="lewallen"><STRONG>2</STRONG></A>
-<DD>
+<p></p><dt><a name="lewallen"><strong>2</strong></a>
+<dd>
 Roy Lewallen, W7EL, ``The 1:1 Current Balun,'' 1995. Available via
 the internet in the file ftp://www.teleport.com/~w7el/ibalun.txt.
-<P></P><DT><A NAME="measures"><STRONG>3</STRONG></A>
-<DD>
+<p></p><dt><a name="measures"><strong>3</strong></a>
+<dd>
 Richard Measures, AG6K, ``A Balanced Balanced Antenna Tuner,'' QST, February
 1990.
-</DL><BR><HR>
+</dl><br><hr>
 <!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><strong>Subsections</strong></A>
-<UL>
-<LI><A NAME="tex2html15"
- HREF="balun.html#SECTION00010000000000000000">
-Contents</A>
-<LI><A NAME="tex2html16"
- HREF="balun.html#SECTION00020000000000000000">
-1 Introduction</A>
-<LI><A NAME="tex2html17"
- HREF="balun.html#SECTION00030000000000000000">
-2 A two wire transmission line as a three terminal Device</A>
-<LI><A NAME="tex2html18"
- HREF="balun.html#SECTION00040000000000000000">
-3 The W2DU and W7EL models of a choke balun</A>
-<LI><A NAME="tex2html19"
- HREF="balun.html#SECTION00050000000000000000">
-4 Baluns on the input and output of unbalanced tuners</A>
-<LI><A NAME="tex2html20"
- HREF="balun.html#SECTION00060000000000000000">
-5 The effectiveness of a balun</A>
-<LI><A NAME="tex2html21"
- HREF="balun.html#SECTION00070000000000000000">
-6 Conclusion</A>
-<LI><A NAME="tex2html22"
- HREF="balun.html#SECTION00080000000000000000">
-7 Appendix: Measuring  <I>Z</I><SUB>D</SUB> ,  <I>Z</I><SUB>C</SUB> , and  <I>Z</I><SUB>U</SUB> </A>
-<LI><A NAME="tex2html23"
- HREF="balun.html#SECTION00090000000000000000">
-References</A>
-</UL>
+<a name="CHILD_LINKS"><strong>Subsections</strong></a>
+<ul>
+<li><a name="tex2html15" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00010000000000000000">
+Contents</a>
+<li><a name="tex2html16" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00020000000000000000">
+1 Introduction</a>
+<li><a name="tex2html17" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00030000000000000000">
+2 A two wire transmission line as a three terminal Device</a>
+<li><a name="tex2html18" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00040000000000000000">
+3 The W2DU and W7EL models of a choke balun</a>
+<li><a name="tex2html19" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00050000000000000000">
+4 Baluns on the input and output of unbalanced tuners</a>
+<li><a name="tex2html20" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00060000000000000000">
+5 The effectiveness of a balun</a>
+<li><a name="tex2html21" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00070000000000000000">
+6 Conclusion</a>
+<li><a name="tex2html22" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00080000000000000000">
+7 Appendix: Measuring  <i>Z</i><sub>D</sub> ,  <i>Z</i><sub>C</sub> , and  <i>Z</i><sub>U</sub> </a>
+<li><a name="tex2html23" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf/articles/balun/balun.html#SECTION00090000000000000000">
+References</a>
+</ul>
 <!--End of Table of Child-Links-->
-<HR>
+<hr>
 <!--Navigation Panel-->
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next_motif_gr.gif"> 
-<A NAME="tex2html13"
- HREF="http://fermi.la.asu.edu/w9cf">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_motif.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="previous_motif_gr.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html14"
- HREF="http://fermi.la.asu.edu/w9cf">w9cf Home</A>
+<img width="37" height="24" align="BOTTOM" border="0" alt="next" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/next_motif_gr.gif"> 
+<a name="tex2html13" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/up_motif.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200220143613im_/http://fermi.la.asu.edu/w9cf/articles/balun/previous_motif_gr.gif">   
+<br>
+<b> Up:</b> <a name="tex2html14" href="https://web.archive.org/web/20200220143613/http://fermi.la.asu.edu/w9cf">w9cf Home</a>
 <!--End of Navigation Panel-->
-<ADDRESS>
+<address>
  
-</ADDRESS>
-</BODY>
-</HTML>
+</address>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 14:36:13 Feb 20, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:23:40 Aug 01, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 128.847
+  exclusion.robots: 0.092
+  exclusion.robots.policy: 0.085
+  RedisCDXSource: 1.908
+  esindex: 0.008
+  LoadShardBlock: 107.596 (3)
+  PetaboxLoader3.datanode: 158.611 (4)
+  CDXLines.iter: 15.348 (3)
+  load_resource: 115.946
+  PetaboxLoader3.resolve: 42.134
+-->

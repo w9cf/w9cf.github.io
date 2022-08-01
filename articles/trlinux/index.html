@@ -5,112 +5,120 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
-<HTML>
-<HEAD>
-<TITLE>Notes on running TRlog under Linux</TITLE>
-<META NAME="description" CONTENT="Notes on running TRlog under Linux">
-<META NAME="keywords" CONTENT="trlinux">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
+<html>
+<head><script src="https://archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app226.us.archive.org';v.server_ms=423;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="../../../../../../_static/js/bundle-playback.js%3Fv=KTqwAcYd" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../../_static/js/wombat.js%3Fv=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://fermi.la.asu.edu/w9cf/articles/trlinux/index.html","20200808150131","https://web.archive.org/","web","/_static/",
+	      "1596898891");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/banner-styles.css%3Fv=fantwOh2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/iconochive.css%3Fv=qtvMKcIJ.css" />
+<!-- End Wayback Rewrite JS Include -->
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<title>Notes on running TRlog under Linux</title>
+<meta name="description" content="Notes on running TRlog under Linux">
+<meta name="keywords" content="trlinux">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
 
-<LINK REL="STYLESHEET" HREF="trlinux.css">
+<meta name="Generator" content="LaTeX2HTML v2002-2">
+<meta http-equiv="Content-Style-Type" content="text/css">
 
-</HEAD>
+<link rel="STYLESHEET" href="https://web.archive.org/web/20200808150131cs_/http://fermi.la.asu.edu/w9cf/articles/trlinux/trlinux.css">
 
-<BODY >
+</head>
+
+<body>
 <!--Navigation Panel-->
-<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive" SRC="nx_grp_g.gif"> 
-<A NAME="tex2html5"
-  HREF="../../index.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html6"
-  HREF="../../index.html">W9CF Home</A>
-<BR>
-<BR>
+<img width="81" height="24" align="BOTTOM" border="0" alt="next_inactive" src="https://web.archive.org/web/20200808150131im_/http://fermi.la.asu.edu/w9cf/articles/trlinux/nx_grp_g.gif"> 
+<a name="tex2html5" href="https://web.archive.org/web/20200808150131/http://fermi.la.asu.edu/w9cf/index.html">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808150131im_/http://fermi.la.asu.edu/w9cf/articles/trlinux/up.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808150131im_/http://fermi.la.asu.edu/w9cf/articles/trlinux/prev_g.gif">   
+<br>
+<b> Up:</b> <a name="tex2html6" href="https://web.archive.org/web/20200808150131/http://fermi.la.asu.edu/w9cf/index.html">W9CF Home</a>
+<br>
+<br>
 <!--End of Navigation Panel-->
 
-<H1 ALIGN="CENTER">Notes on running TRlog under Linux</H1>
-<DIV>
+<h1 align="CENTER">Notes on running TRlog under Linux</h1>
+<div>
 
-<P ALIGN="CENTER"><STRONG>Kevin Schmidt, W9CF, 6510 S. Roosevelt St., Tempe, Arizona 85283
-</STRONG></P>
-</DIV>
+<p align="CENTER"><strong>Kevin Schmidt, W9CF, 6510 S. Roosevelt St., Tempe, Arizona 85283
+</strong></p>
+</div>
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00010000000000000000">
-1 Introduction</A>
-</H1>
+<h1><a name="SECTION00010000000000000000">
+1 Introduction</a>
+</h1>
 These notes describe how I run TRlog using DOSEMU under linux. I have
 borrowed freely from various people who have
 posted suggestsions on the
-<A NAME="tex2html1"
-  HREF="http://lists.contesting.com/mailman/listinfo/trlog">TRlog mailing list</A>.
+<a name="tex2html1" href="https://web.archive.org/web/20200808150131/http://lists.contesting.com/mailman/listinfo/trlog">TRlog mailing list</a>.
 In  particular posts by Tor, N4OGW, have been very helpful. All mistakes
 are, of course, my own.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00020000000000000000">
-2 Disclaimer</A>
-</H1>
+<h1><a name="SECTION00020000000000000000">
+2 Disclaimer</a>
+</h1>
 I have done only limited testing, and I don't
 understand how DOSEMU or TRLog really work. If your
 computer crashes, your hair falls out, or anything else bad happens to
 you after following these directions, don't blame me! If, however, you
 win the lottery, I am willing to share.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00030000000000000000">
-3 DOSEMU and Freedos</A>
-</H1>
+<h1><a name="SECTION00030000000000000000">
+3 DOSEMU and Freedos</a>
+</h1>
 You need to have DOSEMU with Freedos installed. These are available from
-<A NAME="tex2html2"
-  HREF="http://dosemu.org">http://dosemu.org</A>.
+<a name="tex2html2" href="https://web.archive.org/web/20200808150131/http://dosemu.org/">http://dosemu.org</a>.
 
-<P>
+<p>
 
-<H2><A NAME="SECTION00031000000000000000">
-3.1 Installing</A>
-</H2>
+<h2><a name="SECTION00031000000000000000">
+3.1 Installing</a>
+</h2>
 Download the stable release
 and install it. I use the binary version of Freedos (currently beta 0.9 rc5)
 and compile the source for DOSEMU (currently dosemu-1.2.2.tgz).
 Follow the directions in the file INSTALL.
 
-<P>
+<p>
 If you want to use your sound card as a voice keyer, please see
-section <A HREF="#section.sbdvp">6.2</A> below on SBDVP where I describe how to
+section <a href="index.html#section.sbdvp">6.2</a> below on SBDVP where I describe how to
 set up a version of DOSEMU available from cvs
 which works better.  I recommend that, in any case, you first get the
 stable version running before dealing with a
 development version.
 
-<P>
+<p>
 
-<H2><A NAME="SECTION00032000000000000000">
-3.2 Configuration</A>
-</H2>
+<h2><a name="SECTION00032000000000000000">
+3.2 Configuration</a>
+</h2>
 
-<P>
+<p>
 After installation edit the global configuration file
 (/etc/dosemu/dosemu.conf by default). I added the following lines:
 
-<P>
-<PRE>
+<p>
+<pre>
 $_rdtsc = (on)
 $_com3 = "/dev/ptyq1"
 $_com4 = "/dev/ptyq2"
 $_ports = " device /dev/lp0 fast range 0x378 0x37f"
 $_ports = $_ports, " device /dev/null fast range 0x3f8 0x3ff"
 $_ports = $_ports, " device /dev/null fast range 0x2f8 0x2ff"
-</PRE>
+</pre>
 The first line uses the pentium timer. I don't know if this is necessary,
 but Tor, N4OGW, recommended it, and
 I never turned it off. The second two lines tell DOSEMU to
@@ -135,7 +143,7 @@ support to be able to connect TRlog to other applications. If you just
 want to use the hardware serial and parallel ports as in DOS you do not
 need to use the pseudottys.
 
-<P>
+<p>
 The last three lines gives DOSEMU permission to use
 the port range range needed for direct hardware
 serial and parallel port access so TRlog
@@ -144,61 +152,61 @@ parallel
 port with the linux device /dev/lp0, so if something else in linux
 is using /dev/lp0, these ports will not be available.
 
-<P>
+<p>
 My shack computer has two serial and one parallel port. I can tell
 TRlog to use serial 1 or 2 or parallel 1 for keying, etc. Packet and
 networking between computers running TR is done using the fake serial
 ports 3 or 4.
 
-<P>
+<p>
 I have not found it necessary, but adding the line
-<PRE>
+<pre>
 $_hogthreshold = (0)
-</PRE>
+</pre>
 will give DOSEMU more cpu power if there are timing issues.
 
-<P>
+<p>
 
-<H2><A NAME="SECTION00033000000000000000">
-3.3 Running as root</A>
-</H2>
+<h2><a name="SECTION00033000000000000000">
+3.3 Running as root</a>
+</h2>
 For TRlog to have permission to have direct access to the parallel or
 serial ports, unfortunately, DOSEMU must be run as root. 
 I do this with sudo. First use visudo to edit the sudo configuration file.
 My shack computer is called boltzmann, so to allow user w1aw to run
 DOSEMU on boltzmann as root without typing a password, I add the lines
-<PRE>
+<pre>
 w1aw boltzmann=(root) NOPASSWD: /usr/local/bin/dosemu.bin
 w1aw boltzmann=(root) NOPASSWD: /usr/local/bin/xdosemu
-</PRE>
+</pre>
 be sure to change w1aw, boltzmann, and the location of dosemu.bin and
 xdosemu to the appropriate values for your set up.
 
-<P>
+<p>
 I start DOSEMU under X windows with the command
-<PRE>
+<pre>
 sudo xdosemu
-</PRE>
+</pre>
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00040000000000000000">
-4 Packet with telnet</A>
-</H1>
+<h1><a name="SECTION00040000000000000000">
+4 Packet with telnet</a>
+</h1>
 With the configuration I use, com3 under dos is connected to pseudotty
 q1. With the shack computer connected to the internet (I have a dsl
 line at home with a wireless network, so the shack computer is connected
 whenever it is on.) After starting TRlog in the xdosemu window, with
 TRlog's logcfg.dat having the lines:
-<PRE>
+<pre>
 PACKET PORT = SERIAL 3
 EIGHT BIT PACKET PORT = TRUE
-</PRE>
+</pre>
 I open a shell and type:
-<PRE>
+<pre>
 stty icrnl erase '^h'  &lt; /dev/ttyq1
 telnet n7us.net &lt; /dev/ttyq1 &gt; /dev/ttyq1
-</PRE>
+</pre>
 The first line tells the pseudotty to use control-h as the backspace
 key and to add carriage-returns to the newlines.
 The second line
@@ -207,20 +215,20 @@ You should use a cluster close to you.
 At this point I can use ctrl-b in TRlog to log in to the packet
 cluster and receive spots.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00050000000000000000">
-5 Connecting TRlog using linux networking</A>
-</H1>
+<h1><a name="SECTION00050000000000000000">
+5 Connecting TRlog using linux networking</a>
+</h1>
 With the configuration I use, com4 under dos is connected to pseudotty
 q2. Turning on the networking in TRlog with
-<PRE>
+<pre>
 MULTI PORT = SERIAL 4
-</PRE>
+</pre>
 I then open a shell on each computer and type
-<PRE>
+<pre>
 ssh receivecomputer "cat &lt; /dev/ttyq2" &gt; /dev/ttyq2
-</PRE>
+</pre>
 where receivecomputer is the name of the computer I want to send my data to
 around the networking loop. 
 Do the same on the other computers to complete the loop. I have assumed
@@ -230,28 +238,27 @@ this uses whatever hardware you have set up for networking under linux.
 It will work with ethernet, wireless, parallel or serial port ip, ppp,
 ieee1394, or whatever else you have. My set up uses ethernet and wireless.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00060000000000000000">
-6 Voice Keyers</A>
-</H1>
+<h1><a name="SECTION00060000000000000000">
+6 Voice Keyers</a>
+</h1>
 External voice keyers should work as under DOS if the corresponding
 ports are set up correctly.
 
-<P>
+<p>
 SBDVP, which is available at
-<A NAME="tex2html3"
-  HREF="http://fermi.la.asu.edu/w9cf">http://fermi.la.asu.edu/w9cf</A>,
+<a name="tex2html3" href="https://web.archive.org/web/20200808150131/http://fermi.la.asu.edu/w9cf">http://fermi.la.asu.edu/w9cf</a>,
 can integrate a sound card with TRlog. However, it only partially works
 under DOSEMU 1.2.2 without changes.
 DOSEMU emulates to some extent a soundblaster. Run SBDVP
 as under DOS.
 
-<H2><A NAME="SECTION00061000000000000000">
-6.1 SBDVP problems</A>
-</H2>
+<h2><a name="SECTION00061000000000000000">
+6.1 SBDVP problems</a>
+</h2>
 There are two main problems with DOSEMU 1.2.2.
-First, SBDVP will <EM>not</EM>
+First, SBDVP will <em>not</em>
 record under DOSEMU 1.2.2.
 You can work around this by recording your files under linux before
 loading them with SBDVP. Second, under DOSEMU 1.2.2, the last half second or
@@ -259,28 +266,28 @@ so of audio is not played. You can work around this by adding
 a little dead air at the end of the messages.
 In addition, occasionally, small amount of audio is skipped.
 
-<P>
+<p>
 Most linux distribution come with the sox package
 which contains frontends rec and play. For example, to record cqf2.dvp
 in an SBDVP compatible format, use
-<PRE>
+<pre>
 rec -r12048 -c1 -fu -b -t raw cqf2.dvp
-</PRE>
+</pre>
 You can play the file under linux as
-<PRE>
+<pre>
 play -r12048 -c1 -fu -b -t raw cqf2.dvp
-</PRE>
+</pre>
 to see how it sounds.
 The flags on these commands say to use a rate of 12048 Hz, one channel, i.e.
 not stereo, use unsigned, data is in bytes, write raw data to file cqf2.dvp.
 
-<P>
+<p>
 
-<H2><A NAME="SECTION00062000000000000000"></A>
-<A NAME="section.sbdvp"></A>
-<BR>
+<h2><a name="SECTION00062000000000000000"></a>
+<a name="section.sbdvp"></a>
+<br>
 6.2 SBDVP solutions
-</H2>
+</h2>
 If working around the problems described above is too annoying,
 you can make SBDVP work properly by getting the source for the
 developer version of
@@ -288,45 +295,44 @@ DOSEMU from CVS. Since the current CVS version is the bleeding edge,
 and changes often,
 it sometimes has bugs. A version that works well for me is from
 December 1, 2004 19:00 GMT. You can obtain this by typing
-<PRE>
+<pre>
 cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/dosemu login
 cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/dosemu \
 checkout -D "December 1, 2004 19:00 GMT" dosemu
-</PRE>
+</pre>
 just hit return when prompted for the login password. You can leave
 out the backslash at the end of the line if you type the second cvs
 command as one long line. Follow the CVS Tree
 link at
-<A NAME="tex2html4"
-  HREF="http://dosemu.org">http://dosemu.org</A>.
+<a name="tex2html4" href="https://web.archive.org/web/20200808150131/http://dosemu.org/">http://dosemu.org</a>.
 for more information. This CVS version can record within TR at 8000Hz
 and does not have the play back problem.
 Compile and install as before.
 
-<P>
+<p>
 With this version of DOSEMU, SBDVP will record and will play.
 However since recording currently only works at 8000Hz, SBDVP should be
 started with its rate set to 8000Hz,
-<PRE>
+<pre>
 sbdvp -r8000
-</PRE>
+</pre>
 If you test with the file cqf10.dvp distributed with SBDVP, Hal's voice
 will be rather low pitched and slow since it was recorded at the 12048
 rate. Files recorded within SBDVP will use the 8000 Hz rate.
 
-<P>
-<EM>Note: In my limited testing, occasionally a bit of audio is still
-skipped.</EM>
+<p>
+<em>Note: In my limited testing, occasionally a bit of audio is still
+skipped.</em>
 
-<P>
+<p>
 If you want to prepare or listen to files under linux,
 use 8000 instead of 12048 in the play and record commands shown above.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00070000000000000000">
-7 Window Managers</A>
-</H1>
+<h1><a name="SECTION00070000000000000000">
+7 Window Managers</a>
+</h1>
 Many window managers use various control and alt function key combinations
 for ``hot keys'' to move, resize etc. windows. If you run under X as I 
 do, these may not allow those combinations to get to TRlog. The simplest
@@ -334,20 +340,39 @@ solution is to turn off these hot keys when using DOSEMU and TRlog.
 All window managers have some method of customizing these hot keys.
 Check your window manager documentation.
 
-<P>
-<HR>
+<p>
+<hr>
 <!--Navigation Panel-->
-<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive" SRC="nx_grp_g.gif"> 
-<A NAME="tex2html5"
-  HREF="../../index.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.gif"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.gif">   
-<BR>
-<B> Up:</B> <A NAME="tex2html6"
-  HREF="../../index.html">W9CF Home</A>
+<img width="81" height="24" align="BOTTOM" border="0" alt="next_inactive" src="https://web.archive.org/web/20200808150131im_/http://fermi.la.asu.edu/w9cf/articles/trlinux/nx_grp_g.gif"> 
+<a name="tex2html5" href="https://web.archive.org/web/20200808150131/http://fermi.la.asu.edu/w9cf/index.html">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200808150131im_/http://fermi.la.asu.edu/w9cf/articles/trlinux/up.gif"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200808150131im_/http://fermi.la.asu.edu/w9cf/articles/trlinux/prev_g.gif">   
+<br>
+<b> Up:</b> <a name="tex2html6" href="https://web.archive.org/web/20200808150131/http://fermi.la.asu.edu/w9cf/index.html">W9CF Home</a>
 <!--End of Navigation Panel-->
-<ADDRESS>
+<address>
  
-</ADDRESS>
-</BODY>
-</HTML>
+</address>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 15:01:31 Aug 08, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:23:25 Aug 01, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 339.184
+  exclusion.robots: 0.078
+  exclusion.robots.policy: 0.071
+  RedisCDXSource: 129.072
+  esindex: 0.007
+  LoadShardBlock: 191.355 (3)
+  PetaboxLoader3.datanode: 110.896 (4)
+  CDXLines.iter: 15.699 (3)
+  PetaboxLoader3.resolve: 140.381 (3)
+  load_resource: 77.052
+-->

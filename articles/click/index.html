@@ -5,58 +5,68 @@ original version by:  Nikos Drakos, CBLU, University of Leeds
 * revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
 * with significant contributions from:
   Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
-<HTML>
-<HEAD>
-<TITLE>Spectral Analysis of a CW keying pulse</TITLE>
-<META NAME="description" CONTENT="Spectral Analysis of a CW keying pulse">
-<META NAME="keywords" CONTENT="click">
-<META NAME="resource-type" CONTENT="document">
-<META NAME="distribution" CONTENT="global">
+<html>
+<head><script src="https://archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app214.us.archive.org';v.server_ms=1452;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="../../../../../../_static/js/bundle-playback.js%3Fv=KTqwAcYd" charset="utf-8"></script>
+<script type="text/javascript" src="../../../../../../_static/js/wombat.js%3Fv=UHAOicsW" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://fermi.la.asu.edu/w9cf/articles/click/index.html","20200514070321","https://web.archive.org/","web","/_static/",
+	      "1589439801");
+</script>
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/banner-styles.css%3Fv=fantwOh2.css" />
+<link rel="stylesheet" type="text/css" href="../../../../../../_static/css/iconochive.css%3Fv=qtvMKcIJ.css" />
+<!-- End Wayback Rewrite JS Include -->
 
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
-<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<title>Spectral Analysis of a CW keying pulse</title>
+<meta name="description" content="Spectral Analysis of a CW keying pulse">
+<meta name="keywords" content="click">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
 
-<LINK REL="STYLESHEET" HREF="click.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Generator" content="LaTeX2HTML v2K.1beta">
+<meta http-equiv="Content-Style-Type" content="text/css">
 
-</HEAD>
+<link rel="STYLESHEET" href="https://web.archive.org/web/20200514070321cs_/http://fermi.la.asu.edu/w9cf/articles/click/click.css">
 
-<BODY >
+</head>
+
+<body>
 <!--Navigation Panel-->
-<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive" SRC="nx_grp_g.png"> 
-<A NAME="tex2html10"
-  HREF="../index.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.png">   
-<BR>
-<B> Up:</B> <A NAME="tex2html11"
-  HREF="../index.html">W9CF Links</A>
-<BR><BR>
+<img width="81" height="24" align="BOTTOM" border="0" alt="next_inactive" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/nx_grp_g.png"> 
+<a name="tex2html10" href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/index.html">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/up.png"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/prev_g.png">   
+<br>
+<b> Up:</b> <a name="tex2html11" href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/index.html">W9CF Links</a>
+<br><br>
 <!--End of Navigation Panel-->
 
-<P>
+<p>
 
-<body background="../bk10.gif" text=#000000 bgcolor=#ffffff>
+<body background="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/bk10.gif" text="#000000" bgcolor="#ffffff">
 
-<H1 ALIGN="CENTER">Spectral Analysis of a CW keying pulse</H1>
-<P ALIGN="CENTER"><STRONG>Kevin Schmidt, W9CF
-<BR>6510 S. Roosevelt St.
-<BR>Tempe, AZ 85283
-<BR></STRONG></P>
-<P ALIGN="CENTER"><STRONG>October 6, 2001</STRONG></P>
+<h1 align="CENTER">Spectral Analysis of a CW keying pulse</h1>
+<p align="CENTER"><strong>Kevin Schmidt, W9CF
+<br>6510 S. Roosevelt St.
+<br>Tempe, AZ 85283
+<br></strong></p>
+<p align="CENTER"><strong>October 6, 2001</strong></p>
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00010000000000000000">
-1 Introduction</A>
-</H1>
+<h1><a name="SECTION00010000000000000000">
+1 Introduction</a>
+</h1>
 This problem was brought to my attention by Tom Rauch, W8JI,
 who, in his note to me, had described his experience and correctly
 pointed out all the main features that govern
 the bandwith. These notes are an expanded version of my reply giving
 the mathematical explanation.
 
-<P>
+<p>
 To fit the most CW signals into the available spectrum, we need to limit
 the bandwidth taken up by the signals. It is therefore useful to see
 how the energy in a dot or dash pulse is distributed around the carrier
@@ -65,14 +75,14 @@ The main result is that the spectrum for many keying shapes
 is given by the product of the spectrum of a square pulse times the
 spectrum of the slope of the rise and fall behavior of the pulse.
 
-<P>
+<p>
 It seems from my experience reading morse, that the rise time should
 be the main factor in producing code that can be read by ear comfortably.
 Since the rise time dominates the bandwidth for the usual CW signal,
 the analysis shows that to get a nearly optimal bandwidth to rise time,
 the keying pulse shape should have a gaussian slope.
 
-<P>
+<p>
 In the next section I review basic Fourier analysis of amplitude modulation.
 I then calculate the spectrum of a pulse with an
 exponentially shaped rise and fall as would be produced by simple RC networks.
@@ -80,47 +90,41 @@ The results suggest the more general analysis in the following section,
 with the conclusion that a pulse with gaussian slope, i.e. error function
 rise and fall shapes, will have an optimal bandwidth and rise time.
 
-<P>
+<p>
 It seems likely that all of this would have been worked out by radio
 engineers in the early 1900s when CW signals were first employed.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00020000000000000000">
-2 Fourier analysis for amplitude modulation</A>
-</H1>
+<h1><a name="SECTION00020000000000000000">
+2 Fourier analysis for amplitude modulation</a>
+</h1>
 
-<P>
+<p>
 To analyze the spectrum generated by keying a transmitter let's look
 at a single ``dot.'' If we imagine we have a carrier with angular
-frequency <IMG
- WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img5.gif"
- ALT="$\omega_0$">, and we amplitude modulate it with an
+frequency <img width="24" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img5.gif" alt="$\omega_0$">, and we amplitude modulate it with an
 envelop A(t), we get the
 amplitude of the signal from the transmitter is
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 f(t) = A(t) \cos(\omega_0 t)
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="159" HEIGHT="33" BORDER="0"
- SRC="img6.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="159" height="33" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img6.gif" alt="\begin{displaymath}
 f(t) = A(t) \cos(\omega_0 t)
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(1)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(1)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 To calculate the energy spectrum we Fourier transform this to get
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -131,144 +135,105 @@ A(t) \cos(\omega_0 t) e^{i \omega t}
 +\tilde A(\omega+\omega_0) \right ]
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="490" HEIGHT="47" BORDER="0"
- SRC="img7.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="490" height="47" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img7.gif" alt="\begin{displaymath}
 \tilde f(\omega) = \int_{-\infty}^\infty dt
 A(t) \cos(\omega...
 ...
 \tilde A(\omega-\omega_0)
 +\tilde A(\omega+\omega_0) \right ]
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(2)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(2)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 where
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 \tilde A(\omega) = \int_{-\infty}^\infty dt A(t) e^{i \omega t} \,.
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="190" HEIGHT="43" BORDER="0"
- SRC="img8.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="190" height="43" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img8.gif" alt="\begin{displaymath}
 \tilde A(\omega) = \int_{-\infty}^\infty dt A(t) e^{i \omega t}  .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(3)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(3)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 
-<P>
-In the usual case, the modulation <IMG
- WIDTH="40" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img9.gif"
- ALT="$A(t)$"> contains frequency components
+<p>
+In the usual case, the modulation <img width="40" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img9.gif" alt="$A(t)$"> contains frequency components
 much smaller than the carrier frequency. Therefore the
 <!-- MATH
  $\tilde A(\omega+\omega_0)$
  -->
-<IMG
- WIDTH="88" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
- SRC="img10.gif"
- ALT="$\tilde A(\omega+\omega_0)$"> is negligible and can be ignored.
+<img width="88" height="43" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img10.gif" alt="$\tilde A(\omega+\omega_0)$"> is negligible and can be ignored.
 The energy spectrum of the amplitude modulated signal is therefore
 given by
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 P_0(\omega) = \frac{1}{4\pi} |\tilde A(\omega-\omega_0)|^2
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="196" HEIGHT="45" BORDER="0"
- SRC="img11.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="196" height="45" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img11.gif" alt="\begin{displaymath}
 P_0(\omega) = \frac{1}{4\pi} \vert\tilde A(\omega-\omega_0)\vert^2
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(4)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-and since <IMG
- WIDTH="40" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img9.gif"
- ALT="$A(t)$"> is real, <!-- MATH
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(4)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+and since <img width="40" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img9.gif" alt="$A(t)$"> is real, <!-- MATH
  $\tilde A(\omega) = \tilde A^*(-\omega)$
  -->
-<IMG
- WIDTH="134" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
- SRC="img12.gif"
- ALT="$\tilde A(\omega) = \tilde A^*(-\omega)$">,
+<img width="134" height="43" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img12.gif" alt="$\tilde A(\omega) = \tilde A^*(-\omega)$">,
 and the sidebands are symmetric around the carrier frequency.
 
-<P>
+<p>
 It is convenient to write
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 P(\omega) = P_0(\omega+\omega_0)
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="154" HEIGHT="33" BORDER="0"
- SRC="img13.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="154" height="33" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img13.gif" alt="\begin{displaymath}
 P(\omega) = P_0(\omega+\omega_0)
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(5)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-so that <IMG
- WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img14.gif"
- ALT="$\omega$"> here is the frequency difference from the carrier, so
-that <IMG
- WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img15.gif"
- ALT="$P(\omega)$"> gives the energy distribution for an angular frequency
-of <IMG
- WIDTH="17" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img14.gif"
- ALT="$\omega$"> from the carrier angular frequency. I will call <IMG
- WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img15.gif"
- ALT="$P(\omega)$">
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(5)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+so that <img width="17" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img14.gif" alt="$\omega$"> here is the frequency difference from the carrier, so
+that <img width="46" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img15.gif" alt="$P(\omega)$"> gives the energy distribution for an angular frequency
+of <img width="17" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img14.gif" alt="$\omega$"> from the carrier angular frequency. I will call <img width="46" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img15.gif" alt="$P(\omega)$">
 the sideband energy density.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00030000000000000000">
-3 Application to Keying Bandwidth </A>
-</H1>
+<h1><a name="SECTION00030000000000000000">
+3 Application to Keying Bandwidth </a>
+</h1>
 
-<P>
+<p>
 To get an explicit result, I'll assume an explicit form for a keying
 waveform.
 A simple form where the Fourier transforms can be calculated analytically
-is the case where the wave builds up exponentially (as in the usual <IMG
- WIDTH="34" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img16.gif"
- ALT="$RC$">
+is the case where the wave builds up exponentially (as in the usual <img width="34" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img16.gif" alt="$RC$">
 circuit) to the carrier value when the key is pressed,
 and then decays exponetially to zero when the key is released. That is
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -281,67 +246,43 @@ A(t) = \left \{
 \right .
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="339" HEIGHT="77" BORDER="0"
- SRC="img17.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="339" height="77" border="0" src="/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img17.gif" alt="\begin{displaymath}
 A(t) = \left \{
 \begin{array}{ll}
-0 &amp; t &lt; 0\\
+0 &amp; t < 0\\
 1-e^{-t/\tau}...
-...- e^{-T/\tau}) e^{-(t-T)/\tau} &amp; t &gt; T \\
+...- e^{-T/\tau}) e^{-(t-T)/\tau} &amp; t > T \\
 \end{array}\right .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(6)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-where <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> is the keying pulse width and <IMG
- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.gif"
- ALT="$\tau $"> is its time constant.
-A plot of this waveform is shown in figure <A HREF="click.html#f1">1</A> for the cases where
-<IMG
- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.gif"
- ALT="$\tau $"> is 4 milliseconds, and <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> is 20 and 50 milliseconds.
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(6)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+where <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> is the keying pulse width and <img width="15" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img1.gif" alt="$\tau $"> is its time constant.
+A plot of this waveform is shown in figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f1">1</a> for the cases where
+<img width="15" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img1.gif" alt="$\tau $"> is 4 milliseconds, and <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> is 20 and 50 milliseconds.
 
-<P>
+<p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f1"></A><A NAME="42"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f1"></a><a name="42"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 1:</strong>
 The exponential
-keying waveforms for a time constant <IMG
- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.gif"
- ALT="$\tau $"> of 4 milliseconds
+keying waveforms for a time constant <img width="15" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img1.gif" alt="$\tau $"> of 4 milliseconds
 and durations of 20 and 50 milliseconds. The 50 millisecond pulse
-begins at <IMG
- WIDTH="65" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img2.gif"
- ALT="$t=100$"> milliseconds to separate it from the 20 millisecond
-pulse.</CAPTION>
-<TR><TD><IMG
- WIDTH="519" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img18.gif"
- ALT="\includegraphics[width=12cm]{click1.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+begins at <img width="65" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img2.gif" alt="$t=100$"> milliseconds to separate it from the 20 millisecond
+pulse.</caption>
+<tr><td><img width="519" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img18.gif" alt="\includegraphics[width=12cm]{click1.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P>
+<p>
 The fourier transform integral of the amplitude is straightforward and
 gives
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -349,21 +290,18 @@ gives
 \frac{1}{i \omega (i \omega \tau -1)}
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="265" HEIGHT="50" BORDER="0"
- SRC="img19.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="265" height="50" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img19.gif" alt="\begin{displaymath}
 \tilde A(\omega) = -\left [ e^{i \omega T}-1 \right ]
 \frac{1}{i \omega (i \omega \tau -1)}
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(7)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(7)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 so that the sideband energy density) becomes
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -374,181 +312,121 @@ P(\omega) =
 \,.
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="256" HEIGHT="60" BORDER="0"
- SRC="img20.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="256" height="60" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img20.gif" alt="\begin{displaymath}
 P(\omega) =
 \frac{1}{\pi}
 \frac{\sin^2 \left ( \frac{\omega T}{2} \right )}{\omega^2}
 \frac{1}{(1+\omega^2\tau^2)}
  .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(8)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(8)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 So the sideband energy density
 has two factors. If we measure it in
 dB relative to some fixed value, we add the logarithms of the
-factors. The only dependence on <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> comes from the first
-factor. The <IMG
- WIDTH="35" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
- SRC="img21.gif"
- ALT="$\sin^2$"> function is always less than or equal to 1, so
-this will subtract from the other factor which only depends on <IMG
- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.gif"
- ALT="$\tau $">
+factors. The only dependence on <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> comes from the first
+factor. The <img width="35" height="20" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img21.gif" alt="$\sin^2$"> function is always less than or equal to 1, so
+this will subtract from the other factor which only depends on <img width="15" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img1.gif" alt="$\tau $">
 the time constant which determines the rise time.
 
-<P>
+<p>
 The main features of the sidebands
 will therefore be given by the rise time, while the length of the pulse
 will modify those features somewhat.
 
-<P>
-Figures <A HREF="click.html#f2">2</A> and <A HREF="click.html#f3">3</A> show the
+<p>
+Figures <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f2">2</a> and <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f3">3</a> show the
 energy density
-in dB referenced to the carrier energy density for <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> of 20
-milliseconds. The curves are plotted together in figure <A HREF="click.html#f4">4</A>.
+in dB referenced to the carrier energy density for <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> of 20
+milliseconds. The curves are plotted together in figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f4">4</a>.
 Each curve is plotted versus frequency <!-- MATH
  $f = \omega/2\pi$
  -->
-<IMG
- WIDTH="84" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img22.gif"
- ALT="$f = \omega/2\pi$">.
+<img width="84" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img22.gif" alt="$f = \omega/2\pi$">.
 
-<P>
+<p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f2"></A><A NAME="64"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f2"></a><a name="64"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 2:</strong>
 The sideband energy density for an exponential keying
-wave form with <IMG
- WIDTH="50" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img3.gif"
- ALT="$\tau =4$"> milliseconds and <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> of 20
+wave form with <img width="50" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img3.gif" alt="$\tau =4$"> milliseconds and <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> of 20
 milliseconds. The carrier energy density is set to 0 dB.
-</CAPTION>
-<TR><TD><IMG
- WIDTH="509" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img23.gif"
- ALT="\includegraphics[width=12cm]{click2.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+</caption>
+<tr><td><img width="509" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img23.gif" alt="\includegraphics[width=12cm]{click2.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f3"></A><A NAME="192"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f3"></a><a name="192"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 3:</strong>
 The sideband energy density for an exponential keying
-wave form with <IMG
- WIDTH="50" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img3.gif"
- ALT="$\tau =4$"> milliseconds and <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> of 50
-milliseconds. The scale is the same as figure <A HREF="click.html#f2">2</A>.
-</CAPTION>
-<TR><TD><IMG
- WIDTH="509" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img24.gif"
- ALT="\includegraphics[width=12cm]{click3.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+wave form with <img width="50" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img3.gif" alt="$\tau =4$"> milliseconds and <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> of 50
+milliseconds. The scale is the same as figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f2">2</a>.
+</caption>
+<tr><td><img width="509" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img24.gif" alt="\includegraphics[width=12cm]{click3.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f4"></A><A NAME="193"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
-The plots of figures <A HREF="click.html#f2">2</A> and <A HREF="click.html#f3">3</A> combined.
-</CAPTION>
-<TR><TD><IMG
- WIDTH="509" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img25.gif"
- ALT="\includegraphics[width=12cm]{click4.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+<p></p>
+<div align="CENTER"><a name="f4"></a><a name="193"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 4:</strong>
+The plots of figures <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f2">2</a> and <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f3">3</a> combined.
+</caption>
+<tr><td><img width="509" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img25.gif" alt="\includegraphics[width=12cm]{click4.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P>
+<p>
 Notice that the differences between the 20 millisecond and 50 millisecond
 pulses are first the energy near the carrier frequency is larger for
 the longer pulse as needed since it has about 2.5 times as much energy,
 and second the ``ringing'' has more oscillations for the longer
 pulse as expected. The sidebands fall off
-12 dB per octave once we are at frequencies beyond about <IMG
- WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img26.gif"
- ALT="$1/\tau$">.
+12 dB per octave once we are at frequencies beyond about <img width="34" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img26.gif" alt="$1/\tau$">.
 
-<P>
+<p>
 The effect of the keying speed on the bandwidth as long as the
 rise time is small compared to pulse length is the change in
 shape of the central peak. It does get narrower for slower keying
 and wider for faster keying, however, the keying speed does not effect
 the overall bandwidth.
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00040000000000000000">
-4 General Pulse Shape</A>
-</H1>
+<h1><a name="SECTION00040000000000000000">
+4 General Pulse Shape</a>
+</h1>
 I can write a general pulse shape as
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 A(t) = E_r(t+T/2)-E_f(t-T/2)
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="278" HEIGHT="34" BORDER="0"
- SRC="img27.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="278" height="34" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img27.gif" alt="\begin{displaymath}
 A(t) = E_r(t+T/2)-E_f(t-T/2)
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(9)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-where <IMG
- WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img28.gif"
- ALT="$E_r$"> and <IMG
- WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img29.gif"
- ALT="$E_f$"> describe the rising and falling edges of a pulse
-and are positive functions that go to zero at large negative <IMG
- WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img30.gif"
- ALT="$t$"> and to 1
-at large positive <IMG
- WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img30.gif"
- ALT="$t$">.
-The Fourier transform of <IMG
- WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img31.gif"
- ALT="$A$"> is the sum of the transforms of the two terms.
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(9)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+where <img width="26" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img28.gif" alt="$E_r$"> and <img width="27" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img29.gif" alt="$E_f$"> describe the rising and falling edges of a pulse
+and are positive functions that go to zero at large negative <img width="12" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img30.gif" alt="$t$"> and to 1
+at large positive <img width="12" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img30.gif" alt="$t$">.
+The Fourier transform of <img width="19" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img31.gif" alt="$A$"> is the sum of the transforms of the two terms.
 If the rising and falling edges have the same form, we can write
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -556,21 +434,18 @@ A(t) = E(t+T/2)-E(t-T/2) = \int_{-\infty}^\infty dt' [\delta(t+T/2-t') -
 \delta(t-T/2-t') ] E(t')
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="594" HEIGHT="43" BORDER="0"
- SRC="img32.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="594" height="43" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img32.gif" alt="\begin{displaymath}
 A(t) = E(t+T/2)-E(t-T/2) = \int_{-\infty}^\infty dt' [\delta(t+T/2-t') -
 \delta(t-T/2-t') ] E(t')
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(10)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(10)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 and integrating by parts gives the result
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -578,27 +453,18 @@ A(t) = -\int_{-\infty}^\infty dt' S(t-t') \frac{dE(t')}{dt'}
 \equiv -\int_{-\infty}^\infty dt' S(t-t') E'(t')
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="472" HEIGHT="49" BORDER="0"
- SRC="img33.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="472" height="49" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img33.gif" alt="\begin{displaymath}
 A(t) = -\int_{-\infty}^\infty dt' S(t-t') \frac{dE(t')}{dt'}
 \equiv -\int_{-\infty}^\infty dt' S(t-t') E'(t')
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(11)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-where <IMG
- WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img34.gif"
- ALT="$S(t)$"> is a square pulse of width <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$">,
-<BR>
-<DIV ALIGN="RIGHT">
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(11)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+where <img width="39" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img34.gif" alt="$S(t)$"> is a square pulse of width <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$">,
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -610,67 +476,49 @@ S(t) = \left \{
 \right .
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="159" HEIGHT="55" BORDER="0"
- SRC="img35.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="159" height="55" border="0" src="/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img35.gif" alt="\begin{displaymath}
 S(t) = \left \{
 \begin{array}{ll}
-1 &amp; \vert t\vert &lt; \frac{T}{2} \\
-0 &amp; \vert t\vert &gt; \frac{T}{2} \\
+1 &amp; \vert t\vert < \frac{T}{2} \\
+0 &amp; \vert t\vert > \frac{T}{2} \\
 \end{array}\right .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(12)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-and I have defined <IMG
- WIDTH="24" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img36.gif"
- ALT="$E'$"> to be the derivative of <IMG
- WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img37.gif"
- ALT="$E$">.
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(12)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+and I have defined <img width="24" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img36.gif" alt="$E'$"> to be the derivative of <img width="20" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img37.gif" alt="$E$">.
 
-<P>
-Since <IMG
- WIDTH="40" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img9.gif"
- ALT="$A(t)$"> is written as a convolution, its Fourier transform is now
+<p>
+Since <img width="40" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img9.gif" alt="$A(t)$"> is written as a convolution, its Fourier transform is now
 the product
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 \tilde A(\omega) = \tilde S(\omega) \tilde E'(\omega) \,.
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="159" HEIGHT="33" BORDER="0"
- SRC="img38.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="159" height="33" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img38.gif" alt="\begin{displaymath}
 \tilde A(\omega) = \tilde S(\omega) \tilde E'(\omega)  .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(13)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(13)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 For keying wave forms this has the nice interpretation that the spectrum
-is given by the spectrum of a square pulse of length <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> multiplied by
+is given by the spectrum of a square pulse of length <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> multiplied by
 a factor that is the Fourier transform of the slope of the rise and
 fall wave form.
 
-<P>
+<p>
 Except for an unimportant change of the zero of time,
 the exponential case calculated above can be written as
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -682,26 +530,23 @@ E(t) = \left \{
 \right .
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="211" HEIGHT="55" BORDER="0"
- SRC="img39.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="211" height="55" border="0" src="/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img39.gif" alt="\begin{displaymath}
 E(t) = \left \{
 \begin{array}{ll}
-0 &amp; t &lt; 0\\
-1-e^{-t/\tau} &amp; t &gt; 0\\
+0 &amp; t < 0\\
+1-e^{-t/\tau} &amp; t > 0\\
 \end{array}\right .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(14)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(14)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 
-<P>
+<p>
 The Fourier transforms of these are
-<BR>
-<DIV ALIGN="CENTER">
+<br>
+<div align="CENTER">
 
 <!-- MATH
  \begin{eqnarray}
@@ -710,57 +555,30 @@ The Fourier transforms of these are
 \tilde E'(\omega) &=& -\frac{i}{1+i \omega \tau}
 \end{eqnarray}
  -->
-<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
-<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
- WIDTH="44" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
- SRC="img40.gif"
- ALT="$\displaystyle \tilde S(\omega)$"></TD>
-<TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img41.gif"
- ALT="$\textstyle =$"></TD>
-<TD ALIGN="LEFT" NOWRAP><IMG
- WIDTH="89" HEIGHT="79" ALIGN="MIDDLE" BORDER="0"
- SRC="img42.gif"
- ALT="$\displaystyle \frac{2 \sin\left ( \frac{\omega T}{2} \right )}{ \omega}$"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
- WIDTH="51" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
- SRC="img43.gif"
- ALT="$\displaystyle \tilde E'(\omega)$"></TD>
-<TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img41.gif"
- ALT="$\textstyle =$"></TD>
-<TD ALIGN="LEFT" NOWRAP><IMG
- WIDTH="85" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
- SRC="img44.gif"
- ALT="$\displaystyle -\frac{i}{1+i \omega \tau}$"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(15)</TD></TR>
-</TABLE></DIV><BR CLEAR="ALL"><P></P>
+<table align="CENTER" cellpadding="0" width="100%">
+<tr valign="MIDDLE"><td nowrap align="RIGHT"><img width="44" height="43" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img40.gif" alt="$\displaystyle \tilde S(\omega)$"></td>
+<td align="CENTER" nowrap><img width="19" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img41.gif" alt="$\textstyle =$"></td>
+<td align="LEFT" nowrap><img width="89" height="79" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img42.gif" alt="$\displaystyle \frac{2 \sin\left ( \frac{\omega T}{2} \right )}{ \omega}$"></td>
+<td width="10" align="RIGHT">
+&nbsp;</td></tr>
+<tr valign="MIDDLE"><td nowrap align="RIGHT"><img width="51" height="43" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img43.gif" alt="$\displaystyle \tilde E'(\omega)$"></td>
+<td align="CENTER" nowrap><img width="19" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img41.gif" alt="$\textstyle =$"></td>
+<td align="LEFT" nowrap><img width="85" height="59" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img44.gif" alt="$\displaystyle -\frac{i}{1+i \omega \tau}$"></td>
+<td width="10" align="RIGHT">
+(15)</td></tr>
+</table></div><br clear="ALL"><p></p>
 and the sideband energy density is exactly as before.
 
-<P>
+<p>
 As we saw for the exponential case, the bandwidth is dominated by the
 rise and fall time. Therefore it seems reasonable to try to optimize
 the rise and fall waveform of the keying pulse. In terms of the function
-<IMG
- WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img45.gif"
- ALT="$E'(t)$"> whose integral is the rising and falling wave form, we want to
+<img width="46" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img45.gif" alt="$E'(t)$"> whose integral is the rising and falling wave form, we want to
 simultaneously make its width in real time and in frequency small.
-One measure of this is the product of <IMG
- WIDTH="33" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img46.gif"
- ALT="$\Delta \omega$"> and <IMG
- WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img47.gif"
- ALT="$\Delta t$"> where
+One measure of this is the product of <img width="33" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img46.gif" alt="$\Delta \omega$"> and <img width="27" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img47.gif" alt="$\Delta t$"> where
 they are defined as the variances in frequency and time
-<BR>
-<DIV ALIGN="CENTER">
+<br>
+<div align="CENTER">
 
 <!-- MATH
  \begin{eqnarray}
@@ -774,95 +592,64 @@ they are defined as the variances in frequency and time
 \,.
 \end{eqnarray}
  -->
-<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
-<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
- WIDTH="49" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.gif"
- ALT="$\displaystyle (\Delta t)^2$"></TD>
-<TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img41.gif"
- ALT="$\textstyle =$"></TD>
-<TD ALIGN="LEFT" NOWRAP><IMG
- WIDTH="271" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img49.gif"
- ALT="$\displaystyle \int_{-\infty}^\infty dt &nbsp; t^2 E'(t)
-- \left [ \int_{-\infty}^\infty dt &nbsp; t E'(t)\right ]^2$"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
- WIDTH="55" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
- SRC="img50.gif"
- ALT="$\displaystyle (\Delta \omega)^2$"></TD>
-<TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
- SRC="img41.gif"
- ALT="$\textstyle =$"></TD>
-<TD ALIGN="LEFT" NOWRAP><IMG
- WIDTH="316" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
- SRC="img51.gif"
- ALT="$\displaystyle \int_{-\infty}^\infty d\omega &nbsp; \omega^2 \tilde E'(\omega)
-- \left [ \int_{-\infty}^\infty d\omega &nbsp;\omega \tilde E'(\omega)\right ]^2
- .$"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(16)</TD></TR>
-</TABLE></DIV><BR CLEAR="ALL"><P></P>
+<table align="CENTER" cellpadding="0" width="100%">
+<tr valign="MIDDLE"><td nowrap align="RIGHT"><img width="49" height="40" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img48.gif" alt="$\displaystyle (\Delta t)^2$"></td>
+<td align="CENTER" nowrap><img width="19" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img41.gif" alt="$\textstyle =$"></td>
+<td align="LEFT" nowrap><img width="271" height="62" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img49.gif" alt="$\displaystyle \int_{-\infty}^\infty dt   t^2 E'(t)
+- \left [ \int_{-\infty}^\infty dt   t E'(t)\right ]^2$"></td>
+<td width="10" align="RIGHT">
+&nbsp;</td></tr>
+<tr valign="MIDDLE"><td nowrap align="RIGHT"><img width="55" height="40" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img50.gif" alt="$\displaystyle (\Delta \omega)^2$"></td>
+<td align="CENTER" nowrap><img width="19" height="35" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img41.gif" alt="$\textstyle =$"></td>
+<td align="LEFT" nowrap><img width="316" height="62" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img51.gif" alt="$\displaystyle \int_{-\infty}^\infty d\omega   \omega^2 \tilde E'(\omega)
+- \left [ \int_{-\infty}^\infty d\omega  \omega \tilde E'(\omega)\right ]^2
+ .$"></td>
+<td width="10" align="RIGHT">
+(16)</td></tr>
+</table></div><br clear="ALL"><p></p>
 This problem is well known in optics and quantum mechanics where it
-goes by the name of the minimum uncertainty wave-packet[<A
- HREF="click.html#merzbacher">1</A>] .
+goes by the name of the minimum uncertainty wave-packet[<a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#merzbacher">1</a>] .
 The solution is a gaussian
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 E'(t) = \frac{1}{\sqrt{\pi \tau^2}} e^{-\frac{t^2}{\tau^2}} \,.
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="158" HEIGHT="49" BORDER="0"
- SRC="img52.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="158" height="49" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img52.gif" alt="\begin{displaymath}
 E'(t) = \frac{1}{\sqrt{\pi \tau^2}} e^{-\frac{t^2}{\tau^2}}  .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(17)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(17)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 The Fourier transform of this gaussian is
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 \tilde E'(\omega) = e^{-\frac{\omega^2 \tau^2}{4.}}
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="121" HEIGHT="35" BORDER="0"
- SRC="img53.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="121" height="35" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img53.gif" alt="\begin{displaymath}
 \tilde E'(\omega) = e^{-\frac{\omega^2 \tau^2}{4.}}
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(18)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-and the keying wave form with this <IMG
- WIDTH="36" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img54.gif"
- ALT="$g(t)$"> has
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(18)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+and the keying wave form with this <img width="36" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img54.gif" alt="$g(t)$"> has
 <!-- MATH
  $E(t) = 1/2[1+{\rm erf}(t/\tau)]$
  -->
-<IMG
- WIDTH="200" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img55.gif"
- ALT="$E(t) = 1/2[1+{\rm erf}(t/\tau)]$">
-<BR>
-<DIV ALIGN="RIGHT">
+<img width="200" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img55.gif" alt="$E(t) = 1/2[1+{\rm erf}(t/\tau)]$">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
@@ -871,167 +658,115 @@ A(t) = \frac{1}{2} \left [
 -{\rm erf}\left ( \frac{t-T/2}{\tau} \right ) \right ]
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="347" HEIGHT="55" BORDER="0"
- SRC="img56.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="347" height="55" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img56.gif" alt="\begin{displaymath}
 A(t) = \frac{1}{2} \left [
 {\rm erf}\left ( \frac{t+T/2}{\ta...
 ...right )
 -{\rm erf}\left ( \frac{t-T/2}{\tau} \right ) \right ]
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(19)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
-where <IMG
- WIDTH="53" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
- SRC="img57.gif"
- ALT="${\rm erf}(x)$"> is the error function[<A
- HREF="click.html#abramowitz">2</A>]
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(19)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
+where <img width="53" height="37" align="MIDDLE" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img57.gif" alt="${\rm erf}(x)$"> is the error function[<a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#abramowitz">2</a>]
 defined to be
-<BR>
-<DIV ALIGN="RIGHT">
+<br>
+<div align="RIGHT">
 
 <!-- MATH
  \begin{equation}
 {\rm erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x du e^{-u^2} \,.
 \end{equation}
  -->
-<TABLE WIDTH="100%" ALIGN="CENTER">
-<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
- WIDTH="196" HEIGHT="50" BORDER="0"
- SRC="img58.gif"
- ALT="\begin{displaymath}
+<table width="100%" align="CENTER">
+<tr valign="MIDDLE"><td align="CENTER" nowrap><img width="196" height="50" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img58.gif" alt="\begin{displaymath}
 {\rm erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x du e^{-u^2}  .
-\end{displaymath}"></TD>
-<TD WIDTH=10 ALIGN="RIGHT">
-(20)</TD></TR>
-</TABLE>
-<BR CLEAR="ALL"></DIV><P></P>
+\end{displaymath}"></td>
+<td width="10" align="RIGHT">
+(20)</td></tr>
+</table>
+<br clear="ALL"></div><p></p>
 The differences in the keying wave form are shown by the turn on
-shape of the keying pulses in figure <A HREF="click.html#f9">5</A>.
+shape of the keying pulses in figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f9">5</a>.
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f9"></A><A NAME="153"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f9"></a><a name="153"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 5:</strong>
 A comparison of the error function turn on
 with the exponential turn on, both for their respective
-<IMG
- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.gif"
- ALT="$\tau $"> values of 4 milliseconds.</CAPTION>
-<TR><TD><IMG
- WIDTH="501" HEIGHT="370" ALIGN="BOTTOM" BORDER="0"
- SRC="img59.gif"
- ALT="\includegraphics[width=12cm]{click9.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+<img width="15" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img1.gif" alt="$\tau $"> values of 4 milliseconds.</caption>
+<tr><td><img width="501" height="370" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img59.gif" alt="\includegraphics[width=12cm]{click9.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P>
-In figure <A HREF="click.html#f5">6</A> I show
-the keying wave form for <IMG
- WIDTH="50" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img3.gif"
- ALT="$\tau =4$"> milliseconds and
-<IMG
- WIDTH="62" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img60.gif"
- ALT="$T = 20$"> and 50 milliseconds as in figure <A HREF="click.html#f1">1</A> for both the exponential
+<p>
+In figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f5">6</a> I show
+the keying wave form for <img width="50" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img3.gif" alt="$\tau =4$"> milliseconds and
+<img width="62" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img60.gif" alt="$T = 20$"> and 50 milliseconds as in figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f1">1</a> for both the exponential
 and optimized wave form. Notice that the abrupt changes in the exponential
 form are absent from the error function form.
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f5"></A><A NAME="160"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f5"></a><a name="160"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 6:</strong>
 The error function
-keying waveforms for <IMG
- WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img1.gif"
- ALT="$\tau $"> of 4 milliseconds
+keying waveforms for <img width="15" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img1.gif" alt="$\tau $"> of 4 milliseconds
 and durations of 20 and 50 milliseconds. The 50 millisecond pulse
-begins at <IMG
- WIDTH="65" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img2.gif"
- ALT="$t=100$"> milliseconds to separate it from the 20 millisecond
-pulse.</CAPTION>
-<TR><TD><IMG
- WIDTH="519" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img61.gif"
- ALT="\includegraphics[width=12cm]{click5.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+begins at <img width="65" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img2.gif" alt="$t=100$"> milliseconds to separate it from the 20 millisecond
+pulse.</caption>
+<tr><td><img width="519" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img61.gif" alt="\includegraphics[width=12cm]{click5.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P>
-Figures <A HREF="click.html#f6">7</A> and <A HREF="click.html#f7">8</A> show the sideband energy density.
+<p>
+Figures <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f6">7</a> and <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f7">8</a> show the sideband energy density.
 
-<P>
+<p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f6"></A><A NAME="167"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f6"></a><a name="167"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 7:</strong>
 The sideband energy density for an error function keying
-wave form with <IMG
- WIDTH="50" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img3.gif"
- ALT="$\tau =4$"> milliseconds and <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> of 20
+wave form with <img width="50" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img3.gif" alt="$\tau =4$"> milliseconds and <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> of 20
 milliseconds. The carrier energy density is set to 0 dB.
-</CAPTION>
-<TR><TD><IMG
- WIDTH="509" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img62.gif"
- ALT="\includegraphics[width=12cm]{click6.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+</caption>
+<tr><td><img width="509" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img62.gif" alt="\includegraphics[width=12cm]{click6.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f7"></A><A NAME="199"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8:</STRONG>
+<p></p>
+<div align="CENTER"><a name="f7"></a><a name="199"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 8:</strong>
 The sideband energy density for an error function keying
-wave form with <IMG
- WIDTH="50" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
- SRC="img3.gif"
- ALT="$\tau =4$"> milliseconds and <IMG
- WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.gif"
- ALT="$T$"> of 50
-milliseconds. The scale is the same as figure <A HREF="click.html#f6">7</A>.
-</CAPTION>
-<TR><TD><IMG
- WIDTH="509" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img63.gif"
- ALT="\includegraphics[width=12cm]{click7.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+wave form with <img width="50" height="18" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img3.gif" alt="$\tau =4$"> milliseconds and <img width="18" height="17" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img4.gif" alt="$T$"> of 50
+milliseconds. The scale is the same as figure <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f6">7</a>.
+</caption>
+<tr><td><img width="509" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img63.gif" alt="\includegraphics[width=12cm]{click7.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P></P>
-<DIV ALIGN="CENTER"><A NAME="f8"></A><A NAME="200"></A>
-<TABLE>
-<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9:</STRONG>
-The plots of figures <A HREF="click.html#f6">7</A> and <A HREF="click.html#f7">8</A> combined.
-</CAPTION>
-<TR><TD><IMG
- WIDTH="509" HEIGHT="368" ALIGN="BOTTOM" BORDER="0"
- SRC="img64.gif"
- ALT="\includegraphics[width=12cm]{click8.ps}"></TD></TR>
-</TABLE>
-</DIV><P></P>
+<p></p>
+<div align="CENTER"><a name="f8"></a><a name="200"></a>
+<table>
+<caption align="BOTTOM"><strong>Figure 9:</strong>
+The plots of figures <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f6">7</a> and <a href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/click/click.html#f7">8</a> combined.
+</caption>
+<tr><td><img width="509" height="368" align="BOTTOM" border="0" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/img64.gif" alt="\includegraphics[width=12cm]{click8.ps}"></td></tr>
+</table>
+</div><p></p>
 
-<P>
+<p>
 
-<H1><A NAME="SECTION00050000000000000000">
-5 Extensions and Conclusions</A>
-</H1>
+<h1><a name="SECTION00050000000000000000">
+5 Extensions and Conclusions</a>
+</h1>
 
-<P>
+<p>
 The sideband energy density for many pulse shapes factorizes. The first
 of the two factors is proportional to the Fourier
 transform squared of the square pulse and the second by the Fourier transform
@@ -1043,37 +778,56 @@ the sequence of square pulses. For a given rise time, the error function
 shape for the rise and fall will attenuate unnecessary interference away from
 the carrier frequency much better than exponential keying.
 
-<P>
+<p>
 
-<P>
+<p>
  
-<H2><A NAME="SECTION00060000000000000000">
-Bibliography</A>
-</H2><DL COMPACT><DD>
-<P>
-<P></P><DT><A NAME="merzbacher">1</A>
-<DD>
-E. Merzbacher, <EM>Quantum Mechanics</EM>, 3rd Ed. (John Wiley and Sons,
+<h2><a name="SECTION00060000000000000000">
+Bibliography</a>
+</h2><dl compact><dd>
+<p>
+<p></p><dt><a name="merzbacher">1</a>
+<dd>
+E. Merzbacher, <em>Quantum Mechanics</em>, 3rd Ed. (John Wiley and Sons,
 New York, 1998).
 
-<P>
-<P></P><DT><A NAME="abramowitz">2</A>
-<DD>
-M. Abramowitz and I. Stegun, <EM>Handbook of Mathematical Functions</EM> (National
+<p>
+<p></p><dt><a name="abramowitz">2</a>
+<dd>
+M. Abramowitz and I. Stegun, <em>Handbook of Mathematical Functions</em> (National
 Bureau of Standards, New York, 1964).
-</DL><HR>
+</dl><hr>
 <!--Navigation Panel-->
-<IMG WIDTH="81" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next_inactive" SRC="nx_grp_g.png"> 
-<A NAME="tex2html10"
-  HREF="../index.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.png">   
-<BR>
-<B> Up:</B> <A NAME="tex2html11"
-  HREF="../index.html">W9CF Links</A>
+<img width="81" height="24" align="BOTTOM" border="0" alt="next_inactive" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/nx_grp_g.png"> 
+<a name="tex2html10" href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/index.html">
+<img width="26" height="24" align="BOTTOM" border="0" alt="up" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/up.png"></a> 
+<img width="63" height="24" align="BOTTOM" border="0" alt="previous" src="https://web.archive.org/web/20200514070321im_/http://fermi.la.asu.edu/w9cf/articles/click/prev_g.png">   
+<br>
+<b> Up:</b> <a name="tex2html11" href="https://web.archive.org/web/20200514070321/http://fermi.la.asu.edu/w9cf/articles/index.html">W9CF Links</a>
 <!--End of Navigation Panel-->
-<ADDRESS>
+<address>
  
-</ADDRESS>
-</BODY>
-</HTML>
+</address>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 07:03:21 May 14, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 01:23:27 Aug 01, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 140.394
+  exclusion.robots: 0.132
+  exclusion.robots.policy: 0.119
+  cdx.remote: 0.09
+  esindex: 0.012
+  LoadShardBlock: 91.679 (3)
+  PetaboxLoader3.datanode: 82.5 (4)
+  CDXLines.iter: 19.085 (3)
+  PetaboxLoader3.resolve: 78.579 (2)
+  load_resource: 1301.856
+-->
