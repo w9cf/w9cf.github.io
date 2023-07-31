@@ -121,8 +121,8 @@ along with the example code at
 and noting that the Adafruit board sets the default I$^2$C address
 0x20, made everything easy to program. I have provided a patch file with
 the changes I made at
-\href{file://w9cf.github.io/articles/so2rmini/auxiliary_mcp23017.patch}
-{\nolinkurl{auxiliary_mcp23017.patch}}.
+\href{https://w9cf.github.io/articles/so2rmini/auxiliary_mcp23017.txt}
+{\nolinkurl{auxiliary_mcp23017.txt}}.
 I program in linux, so the patch command is always
 available there. It can be applied by downloading the sketch from
 \href{https://nn1c.org/wp-content/uploads/2020/01/SO2R_Mini_Arduino_Sketch_Configured.zip}
@@ -130,7 +130,7 @@ available there. It can be applied by downloading the sketch from
 and in linux
 \begin{verbatim}
 unzip SO2R_Mini_Arduino_Sketch_Configured.zip
-patch -p 1 < auxiliary_mcp23017.patch
+patch -p 1 < auxiliary_mcp23017.txt
 \end{verbatim}
 
 If you use Windows, and want to patch the code, you can install
