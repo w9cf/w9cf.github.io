@@ -16,7 +16,7 @@ Adding auxiliary outputs to the YCCC SO2R mini
 \author{
 Kevin Schmidt, W9CF\\
 6510 South Roosevelt Street\\
-Tempe, Arizona 85283\\
+Tempe, Arizona 85283 USA\\
 }
 \date{}
 \maketitle
@@ -256,6 +256,19 @@ to complete the physical part of the project is left.
 
 \section{My current implementation}
 
+\begin{figure}[htb]
+\includegraphics[width=.5\textwidth]{Adafruit_MCP23017_mounted_1.jpg}
+\includegraphics[width=.5\textwidth]{i2c_plug_and_db9_1.jpg}
+
+\includegraphics[width=.5\textwidth]{db9_position_1.jpg}
+\includegraphics[width=.5\textwidth]{opposite_end_1.jpg}
+
+\caption{Photographs of the SO2R Mini board with the Adafruit MCP23017
+board attached with double sided tape and connected to the Mini's
+I$^2$C bus and a DB-9 connector.
+}
+\label{f1.mcp23017_mount}
+\end{figure}
 I used double sided tape to secure the Adafruit board to the audio
 transformers in the Mini.
 I don't think that will 
@@ -273,25 +286,12 @@ revert to the original Mini.
 The MCP23017 mounting and the scrap aluminum end plate with
 DB-9  are shown in
 Fig. \ref{f1.mcp23017_mount}.
-\begin{figure}
-\includegraphics[width=.5\textwidth]{Adafruit_MCP23017_mounted_1.jpg}
-\includegraphics[width=.5\textwidth]{i2c_plug_and_db9_1.jpg}
-
-\includegraphics[width=.5\textwidth]{db9_position_1.jpg}
-\includegraphics[width=.5\textwidth]{opposite_end_1.jpg}
-
-\caption{Photographs of the SO2R Mini board with the Adafruit MCP23017
-board attached with double sided tape and connected to the Mini's
-I$^2$C bus and a DB-9 connector.
-}
-\label{f1.mcp23017_mount}
-\end{figure}
 
 As a first test, of my quick and dirty packaging,
 I wired a DB-9 male connector to some jumpers and
 breadboarded 8-LEDs. These follow the antenna outputs in N1MM+ and
 the outputs using TR log in linux as shown in Fig. \ref{f2.leds}.
-\begin{figure}
+\begin{figure}[htb]
 \includegraphics[width=.5\textwidth]{led_test_1.jpg}
 \caption{A test showing LEDs following the logging program.}
 \label{f2.leds}
