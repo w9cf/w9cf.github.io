@@ -1,0 +1,89 @@
+diff -u arduino/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/k3ng_keyer.ino arduino_aux/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/k3ng_keyer.ino
+--- arduino/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/k3ng_keyer.ino	2019-12-17 12:36:02.000000000 -0700
++++ arduino_aux/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/k3ng_keyer.ino	2023-07-30 17:41:32.721443022 -0700
+@@ -2017,6 +2017,12 @@
+   #endif //FEATURE_SO2R_SWITCHES
+  
+   #ifdef FEATURE_SO2R_ANTENNA
++    #include <Wire.h>
++    #define SO2R_ANTENNA_ADDR (0x20) // low low low
++    #define SO2R_ANTENNA_GPIOA (0x12)
++    #define SO2R_ANTENNA_GPIOB (0x13)
++    #define SO2R_ANTENNA_IODIRA (0x00)
++    #define SO2R_ANTENNA_IODIRB (0x01)
+     uint8_t so2r_antenna_1 = 0;
+     uint8_t so2r_antenna_2 = 0;
+   #endif //FEATURE_SO2R_ANTENNA
+@@ -2078,6 +2084,7 @@
+   initialize_udp();
+   initialize_web_server();
+   initialize_sd_card();  
++  initialize_so2r_antenna();
+   initialize_debug_startup();
+ 
+ }
+@@ -16993,6 +17000,34 @@
+ #endif //DEBUG_STARTUP  
+ }
+ 
++void initialize_so2r_antenna() {
++#ifdef FEATURE_SO2R_ANTENNA
++  Wire.begin();
++  #if defined(WIRE_HAS_TIMEOUT)
++    Wire.setWireTimeout(10000,true); // 10ms  -- timeout should never occur
++  #endif
++// Set all 16 pins to outputs, default 0, so they will all be low
++// We only use register A 8 pins for SO2R mini
++  Wire.beginTransmission(SO2R_ANTENNA_ADDR);
++  Wire.write(SO2R_ANTENNA_IODIRA);
++  Wire.write(0x00);
++  Wire.endTransmission();
++  Wire.beginTransmission(SO2R_ANTENNA_ADDR);
++  Wire.write(SO2R_ANTENNA_IODIRB);
++  Wire.write(0x00);
++  Wire.endTransmission();
++#endif //FEATURE_SO2R_ANTENNA
++}
++
++#ifdef FEATURE_SO2R_ANTENNA
++  void update_so2r_antenna() {
++    Wire.beginTransmission(SO2R_ANTENNA_ADDR);
++    Wire.write(SO2R_ANTENNA_GPIOA);
++    Wire.write(((so2r_antenna_2 << 4) | so2r_antenna_1) & 0xff);
++    Wire.endTransmission();
++  }
++#endif //FEATURE_SO2R_ANTENNA
++
+  
+ //--------------------------------------------------------------------- 
+   
+@@ -21367,14 +21402,14 @@
+     if ((incoming_serial_byte & 0xf0) == 0xa0)
+     {
+       so2r_antenna_1 = incoming_serial_byte & 0x0f;
+-      // TBD:  Provide antenna information outputs
++      update_so2r_antenna();
+       return;
+     }
+ 
+     if ((incoming_serial_byte & 0xf0) == 0xb0)
+     {
+       so2r_antenna_2 = incoming_serial_byte & 0x0f;
+-      // TBD:  Provide antenna information outputs
++      update_so2r_antenna();
+       return;
+     }
+   #endif //FEATURE_SO2R_ANTENNA
+diff -u arduino/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/keyer_features_and_options_yccc_so2r_mini.h arduino_aux/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/keyer_features_and_options_yccc_so2r_mini.h
+--- arduino/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/keyer_features_and_options_yccc_so2r_mini.h	2019-12-17 12:36:02.000000000 -0700
++++ arduino_aux/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/keyer_features_and_options_yccc_so2r_mini.h	2023-07-30 13:55:47.124117658 -0700
+@@ -58,7 +58,7 @@
+ // #define FEATURE_SEQUENCER
+ #define FEATURE_SO2R_BASE           // SO2R Box base protocol extensions
+ //#define FEATURE_SO2R_SWITCHES       // SO2R Box TX and RX switches
+-// #define FEATURE_SO2R_ANTENNA        // SO2R Box antenna selection (not fully implemented)
++#define FEATURE_SO2R_ANTENNA        // SO2R Box antenna selection (not fully implemented)
+ 
+ // #define FEATURE_COMMAND_LINE_INTERFACE_ON_SECONDARY_PORT     // Activate the Command Line interface on the secondary serial port
+ #define OPTION_PRIMARY_SERIAL_PORT_DEFAULT_WINKEY_EMULATION  // Use when activating both FEATURE_WINKEY_EMULATION and FEATURE_COMMAND_LINE_INTERFACE 
+Common subdirectories: arduino/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/src and arduino_aux/SO2R_Mini_Arduino_Sketch_Configured/k3ng_keyer/src
