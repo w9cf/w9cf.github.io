@@ -101,14 +101,18 @@ sys.exit(1)
 
 
 
-Note! Looking at lsusb and the device number, the serial port has a higher
-device number than the sound card device when DC is applied to
-the TS590SG. This suggests that there may be a race condition between
-the sound card udev rule getting triggered and the USB serial port
-getting set up. I have not seen this problem. It may be that the
-udev sound card processing in /lib/udev/rules.d/78-sound-card.rules
-which waits for the card* device to be setup takes enough time that
-the serial port is connected before the change event occurs. In any
-case, it appears to work for me. If there is a problem, we can revert
-to the previous method that identifies the KERNELS value to use.
+Note! Looking at lsusb and the device number, the serial port has a
+higher device number than the sound card device when DC is applied
+to the TS590SG. This suggests that there may be a race condition
+between the sound card udev rule getting triggered and the USB serial
+port getting set up. I have not seen this problem. From the output
+of udevadm monitor, it looks like the udev sound card processing in
+/lib/udev/rules.d/78-sound-card.rules which waits for the card* device
+to be setup takes enough time that the serial port is connected before
+the change event occurs, which seems to be the last thing that happens
+from the monitor output.  A failure to find the serial port should simply
+cause the python code to exit with status 1, which will make the rule
+not match, and the default names would be used for the sound card.
 
+If there is a problem, I can revert to the previous method that
+identifies the KERNELS value to use.
