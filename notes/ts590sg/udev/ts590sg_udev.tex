@@ -30,13 +30,13 @@ and the VGS-1 voice guide recorder/player/annunciator.
 The only difference is cosmetic,
 one of the rigs is an anniversary edition. They are otherwise identical.
 
-\section{Internal serial Ports}
 Fortunately, the internal Silicon Labs CP210x USB serial adapters have
 unique serial numbers. Unfortunately, the internal PCM2903B Audio codecs
 do not. My shack computer dual boots linux and Windows 10, but I nearly
 always use linux. These notes are how I set up udev to identify which
 rig is which and give the serial and sound-card devices unique names.
 
+\section{Internal serial Ports}
 The serial ports have unique serial numbers. I added the udev rules
 \begin{verbatim}
 SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60",
